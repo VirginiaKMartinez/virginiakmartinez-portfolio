@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-
+import { Outlet } from "react-router-dom";
 const MainLayout = ({ children }) => {
     const { i18n } = useTranslation();
 
@@ -19,6 +19,9 @@ const MainLayout = ({ children }) => {
                     </button>
                 </nav>
             </header>
+            <div>
+                <Outlet />
+            </div>
 
             <main>{children}</main>
 
