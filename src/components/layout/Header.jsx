@@ -9,26 +9,38 @@ function Header() {
     };
 
     return (
-        <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
+        <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-md border-b border-gray-200">
             <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
                 {/* Logo / Nombre */}
                 <div className="text-2xl font-semibold tracking-tight">
-                    <Link to="/">Virginia</Link>
+                    <Link to="/">Virginia Martínez</Link>
                 </div>
 
                 {/* Navegación */}
                 <nav className="flex gap-6 text-sm font-medium">
                     <Link
-                        to="/"
+                        to="/experience"
                         className="hover:text-blue-600 transition-colors"
                     >
-                        {t("nav.home")}
+                        {t("header.experience")}
+                    </Link>
+                    <Link
+                        to="/education"
+                        className="hover:text-blue-600 transition-colors"
+                    >
+                        {t("header.education")}
+                    </Link>
+                    <Link
+                        to="/caseStudies"
+                        className="hover:text-blue-600 transition-colors"
+                    >
+                        {t("header.caseStudies")}
                     </Link>
                     <Link
                         to="/contact"
                         className="hover:text-blue-600 transition-colors"
                     >
-                        {t("nav.contact")}
+                        {t("header.contact")}
                     </Link>
                 </nav>
 
