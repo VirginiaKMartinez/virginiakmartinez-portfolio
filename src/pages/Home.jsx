@@ -14,6 +14,12 @@ function Home() {
             <Education />
             <CaseStudies />
             <ContactSection />
+            <div className="bg-background text-textDark font-sans p-8">
+                <h1 className="text-3xl font-bold">
+                    Esto debería verse con tus estilos
+                </h1>
+                <p className="text-link mt-2">Y este texto en azul link</p>
+            </div>
         </>
     );
 }
