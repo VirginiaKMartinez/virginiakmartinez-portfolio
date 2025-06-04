@@ -1,5 +1,12 @@
 {
+    "home": {
+        "title": "Bonjour, je suis Virginia — Product Designer",
+        "subtitle": "Je conçois des expériences utilisateurs intuitives, accessibles et engageantes.",
+        "cta": "Voir mon travail"
+    },
+
     "welcome": "Bonjour, je m'appelle Virginia",
     "description": "Je suis Product Designer avec plus de 6 ans d’expérience et une formation en développement FrontEnd.",
-    "downloadResume": "Télécharger le CV"
+    "downloadResume": "Télécharger le CV",
+    "tradTest": "Mode français"
 }

@@ -1,5 +1,11 @@
 {
+    "home": {
+    "title": "Hello, I'm Virginia — Product Designer",
+    "subtitle": "I craft intuitive, accessible and engaging user experiences.",
+    "cta": "View my work"
+  },
     "welcome": "Hi, my name is Virginia",
     "description": "I’m a Product Designer with more than 6 years experience and a background in FrontEnd development.",
-    "downloadResume": "Download resume"
+    "downloadResume": "Download resume",
+    "tradTest": "English mode"
 }
