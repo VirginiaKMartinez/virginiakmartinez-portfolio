@@ -9,36 +9,36 @@ function Header() {
     };
 
     return (
-        <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-md border-b border-gray-200">
+        <header className="fixed top-0 left-0 w-full z-50 bg-white border-b border-divider">
             <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
                 {/* Logo / Nombre */}
-                <div className="text-2xl font-semibold tracking-tight">
+                <div className="text-2xl font-normal tracking-tight">
                     <Link to="/">Virginia Martínez</Link>
                 </div>
 
                 {/* Navegación */}
-                <nav className="flex gap-6 text-sm font-medium">
+                <nav className="flex gap-6 text-sm font-medium text-textMuted">
                     <Link
                         to="/experience"
-                        className="hover:text-blue-600 transition-colors"
+                        className="hover:text-link transition-colors"
                     >
                         {t("header.experience")}
                     </Link>
                     <Link
                         to="/education"
-                        className="hover:text-blue-600 transition-colors"
+                        className="hover:text-link transition-colors"
                     >
                         {t("header.education")}
                     </Link>
                     <Link
                         to="/caseStudies"
-                        className="hover:text-blue-600 transition-colors"
+                        className="hover:text-link transition-colors"
                     >
                         {t("header.caseStudies")}
                     </Link>
                     <Link
                         to="/contact"
-                        className="hover:text-blue-600 transition-colors"
+                        className="hover:text-link transition-colors"
                     >
                         {t("header.contact")}
                     </Link>

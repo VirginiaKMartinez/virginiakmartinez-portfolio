@@ -1,8 +1,11 @@
 import { useTranslation } from "react-i18next";
+import experiencesEN from "../../data/experiences.en";
+import experiencesFR from "../../data/experiences.fr";
 
 function Experience() {
-    const { t } = useTranslation();
-    const experiences = t("experience.items", { returnObjects: true });
+    const { i18n, t } = useTranslation();
+    const lang = i18n.language;
+    const experiences = lang === "fr" ? experiencesFR : experiencesEN;
 
     return (
         <section className="py-16 px-6 bg-background font-sans">

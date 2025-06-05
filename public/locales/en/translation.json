@@ -10,18 +10,6 @@
         "caseStudies": "Case Studies",
         "contact": "Contact"
     },
-    "experience": {
-        "title": "Experience",
-        "items": [
-            {
-                "position": "Product Designer",
-                "company": "Staff & Go",
-                "location": "France",
-                "period": "Jul 2023 – Sep 2024",
-                "description": "Led the design system and collaborated closely with developers to implement component libraries from scratch."
-            }
-        ]
-    },
 
     "welcome": "Hi, my name is Virginia",
     "description": "I’m a Product Designer with more than 6 years experience and a background in FrontEnd development.",
