@@ -3,18 +3,18 @@ import experiencesEN from "../../data/experiences.en";
 import experiencesFR from "../../data/experiences.fr";
 
 function Experience() {
-    const { i18n, t } = useTranslation();
+    const { i18n } = useTranslation();
     const lang = i18n.language;
-    const experiences = lang === "fr" ? experiencesFR : experiencesEN;
+    const { title, items } = lang === "fr" ? experiencesFR : experiencesEN;
 
     return (
-        <section className="py-16 px-6 bg-background font-sans">
+        <section className="py-16 px-6 bg-background font-sans grid-2-columns">
             <h2 className="text-3xl font-bold text-center text-textDark mb-12">
-                {t("experience.title")}
+                {title}
             </h2>
 
             <div className="max-w-4xl mx-auto space-y-8">
-                {experiences.map((exp, index) => (
+                {items.map((exp, index) => (
                     <div key={index} className="border-l-4 border-primary pl-4">
                         <h3 className="text-xl font-semibold text-textDark">
                             {exp.position} —{" "}

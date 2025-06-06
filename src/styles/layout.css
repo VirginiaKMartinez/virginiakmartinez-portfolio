@@ -1,0 +1,12 @@
+/* ==========================================================================
+   Layout Styles
+   --------------------------------------------------------------------------
+   This file contains global layout and structural classes used across pages,
+   such as grid systems, column setups, and reusable section containers.
+   Use it to define how elements are arranged, not how they look.
+========================================================================== */
+.grid-2-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
