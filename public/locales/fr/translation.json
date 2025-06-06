@@ -19,7 +19,7 @@
     },
     "footer": {
         "copyright": "© Virginia Martínez. Tous droits réservés.",
-        "madeWith": "Réalisé avec React & Tailwind CSS",
+        "madeWith": "Conçu sous Figma, développé avec React & Tailwind CSS",
         "linkedin": "LinkedIn",
         "github": "GitHub",
         "email": "Email"
