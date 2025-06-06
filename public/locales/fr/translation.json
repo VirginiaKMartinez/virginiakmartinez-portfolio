@@ -17,6 +17,13 @@
         "ctaMail": "mailto:hello@virginiak.dev",
         "altCTA": "Envoyez-moi un e-mail"
     },
+    "footer": {
+        "copyright": "© Virginia Martínez. Tous droits réservés.",
+        "madeWith": "Réalisé avec React & Tailwind CSS",
+        "linkedin": "LinkedIn",
+        "github": "GitHub",
+        "email": "Email"
+    },
 
     "welcome": "Bonjour, je m'appelle Virginia",
     "description": "Je suis Product Designer avec plus de 6 ans d’expérience et une formation en développement FrontEnd.",

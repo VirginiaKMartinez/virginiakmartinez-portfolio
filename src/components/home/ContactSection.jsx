@@ -1,4 +1,6 @@
 import { useTranslation } from "react-i18next";
+import Lottie from "lottie-react";
+import superhero from "../../assets/lottie/superhero-animation.json";
 
 export default function ContactSection() {
     const { t } = useTranslation();
@@ -11,6 +13,12 @@ export default function ContactSection() {
                 <h2 className="text-3xl font-bold text-textDark mb-6">
                     {t("contact.title")}
                 </h2>
+
+                <div className="w-full lg:w-1/2 flex justify-center">
+          <div className="w-64 h-64 md:w-80 md:h-80">
+            <Lottie animationData={superhero} loop={true} />
+          </div>
+        </div>
 
                 {/* Botón CTA */}
                 <a

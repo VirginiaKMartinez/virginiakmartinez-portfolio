@@ -1,5 +1,6 @@
 // import { useTranslation } from "react-i18next";
 import Header from "../components/layout/Header";
+import Footer from "../components/home/Footer";
 import { Outlet } from "react-router-dom";
 const MainLayout = () => {
     // const { i18n } = useTranslation();
@@ -16,9 +17,7 @@ const MainLayout = () => {
                 <Outlet />
             </main>
 
-            <footer className="p-4 text-center border-t border-gray-200">
-                <p>&copy; Virginia Martínez</p>
-            </footer>
+            <Footer />
         </div>
     );
 };

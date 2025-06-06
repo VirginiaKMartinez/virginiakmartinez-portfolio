@@ -12,11 +12,18 @@
         "contact": "Contact"
     },
     "contact": {
-    "title": "I love making connections, so please reach out if you want to work with me or just say hello!",
-    "button": "Get in touch",
-    "ctaMail": "mailto:hello@virginiak.dev",
-    "altCTA": "Send me an email"
-  },
+        "title": "I love making connections, so please reach out if you want to work with me or just say hello!",
+        "button": "Get in touch",
+        "ctaMail": "mailto:hello@virginiak.dev",
+        "altCTA": "Send me an email"
+    },
+    "footer": {
+        "copyright": "© Virginia Martínez. All rights reserved.",
+        "madeWith": "Made with React & Tailwind CSS",
+        "linkedin": "LinkedIn",
+        "github": "GitHub",
+        "email": "Email"
+    },
 
     "welcome": "Hi, my name is Virginia",
     "description": "I’m a Product Designer with more than 6 years experience and a background in FrontEnd development.",
