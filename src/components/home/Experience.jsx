@@ -8,7 +8,10 @@ function Experience() {
     const { title, items } = lang === "fr" ? experiencesFR : experiencesEN;
 
     return (
-        <section className="py-16 px-6 bg-background font-sans grid-2-columns">
+        <section
+            id="experience"
+            className="py-16 px-6 bg-background font-sans grid-2-columns"
+        >
             <h2 className="text-3xl font-bold text-center text-textDark mb-12">
                 {title}
             </h2>

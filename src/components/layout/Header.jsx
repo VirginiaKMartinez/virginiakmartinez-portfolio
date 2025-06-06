@@ -13,35 +13,40 @@ function Header() {
             <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
                 {/* Logo / Nombre */}
                 <div className="text-2xl font-normal tracking-tight">
-                    <Link to="/">Virginia Martínez</Link>
+                    <a
+                        href="#hero"
+                        className="hover:text-link transition-colors"
+                    >
+                        Virginia Martínez
+                    </a>{" "}
                 </div>
 
                 {/* Navegación */}
                 <nav className="flex gap-6 text-sm font-medium text-textMuted">
-                    <Link
-                        to="/experience"
+                    <a
+                        href="#experience"
                         className="hover:text-link transition-colors"
                     >
                         {t("header.experience")}
-                    </Link>
-                    <Link
-                        to="/education"
+                    </a>
+                    <a
+                        href="#education"
                         className="hover:text-link transition-colors"
                     >
                         {t("header.education")}
-                    </Link>
-                    <Link
-                        to="/caseStudies"
+                    </a>
+                    <a
+                        href="#casestudies"
                         className="hover:text-link transition-colors"
                     >
                         {t("header.caseStudies")}
-                    </Link>
-                    <Link
-                        to="/contact"
+                    </a>
+                    <a
+                        href="#contact"
                         className="hover:text-link transition-colors"
                     >
                         {t("header.contact")}
-                    </Link>
+                    </a>
                 </nav>
 
                 {/* Idiomas */}
