@@ -12,7 +12,7 @@ function Experience() {
             id="experience"
             className="py-16 px-6 bg-background font-sans grid-2-columns border-b border-divider"
         >
-            <h2 className="section-title text-start text-textDark mb-12">
+            <h2 className="section-title text-start text-textMuted mb-12">
                 {title}
             </h2>
 

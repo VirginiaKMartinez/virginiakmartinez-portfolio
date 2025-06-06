@@ -13,7 +13,7 @@ function Education() {
             className="bg-background py-16 px-4 font-sans grid-2-columns border-b border-divider"
         >
             {/* Título de sección ya viene traducido en el data file */}
-            <h2 className="section-title text-start text-textDark mb-12">
+            <h2 className="section-title text-start text-textMuted mb-12">
                 {title}
             </h2>
 

@@ -22,7 +22,7 @@ function Header() {
                 </div>
 
                 {/* Navegación */}
-                <nav className="flex gap-6 text-sm font-medium text-textMuted">
+                <nav className="flex gap-6 text-base font-nromal text-textMuted">
                     <a
                         href="#experience"
                         className="hover:text-link transition-colors"
