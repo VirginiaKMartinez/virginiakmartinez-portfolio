@@ -7,6 +7,11 @@
 ========================================================================== */
 .grid-2-columns {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 25% 75%;
     gap: 1rem;
+}
+.grid-3-columns {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    gap: 2rem;
 }

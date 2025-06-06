@@ -10,15 +10,15 @@ function Experience() {
     return (
         <section
             id="experience"
-            className="py-16 px-6 bg-background font-sans grid-2-columns"
+            className="py-16 px-6 bg-background font-sans grid-2-columns border-b border-divider"
         >
-            <h2 className="text-3xl font-bold text-center text-textDark mb-12">
+            <h2 className="section-title text-start text-textDark mb-12">
                 {title}
             </h2>
 
             <div className="max-w-4xl mx-auto space-y-8">
                 {items.map((exp, index) => (
-                    <div key={index} className="border-l-4 border-primary pl-4">
+                    <div key={index}>
                         <h3 className="text-xl font-semibold text-textDark">
                             {exp.position} —{" "}
                             <span className="text-link">{exp.company}</span>
