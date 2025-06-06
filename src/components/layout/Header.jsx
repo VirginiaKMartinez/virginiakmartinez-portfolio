@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 function Header() {
@@ -40,6 +39,12 @@ function Header() {
                         className="hover:text-link transition-colors"
                     >
                         {t("header.caseStudies")}
+                    </a>
+                    <a
+                        href="#testimonials"
+                        className="hover:text-link transition-colors"
+                    >
+                        {t("header.testimonials")}
                     </a>
                     <a
                         href="#contact"

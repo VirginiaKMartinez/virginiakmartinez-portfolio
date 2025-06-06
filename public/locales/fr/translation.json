@@ -8,7 +8,14 @@
         "experience": "Expérience",
         "education": "Formation",
         "caseStudies": "Études de cas",
+        "testimonials": "Ce que disent les gens",
         "contact": "Contact"
+    },
+    "contact": {
+        "title": "J'adore nouer des contacts, alors n'hésitez pas à me contacter si vous voulez travailler avec moi ou simplement dire bonjour !",
+        "button": "Contactez-moi",
+        "ctaMail": "mailto:hello@virginiak.dev",
+        "altCTA": "Envoyez-moi un e-mail"
     },
 
     "welcome": "Bonjour, je m'appelle Virginia",

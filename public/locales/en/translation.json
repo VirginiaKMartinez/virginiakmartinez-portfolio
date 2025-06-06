@@ -8,8 +8,15 @@
         "experience": "Experience",
         "education": "Education",
         "caseStudies": "Case Studies",
+        "testimonials": "What people say",
         "contact": "Contact"
     },
+    "contact": {
+    "title": "I love making connections, so please reach out if you want to work with me or just say hello!",
+    "button": "Get in touch",
+    "ctaMail": "mailto:hello@virginiak.dev",
+    "altCTA": "Send me an email"
+  },
 
     "welcome": "Hi, my name is Virginia",
     "description": "I’m a Product Designer with more than 6 years experience and a background in FrontEnd development.",
