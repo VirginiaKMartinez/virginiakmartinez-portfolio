@@ -1,6 +1,8 @@
+// src/components/home/Experience.jsx
 import { useTranslation } from "react-i18next";
 import experiencesEN from "../../data/experiences.en";
 import experiencesFR from "../../data/experiences.fr";
+import SectionWrapper from "../layout/SectionWrapper";
 
 function Experience() {
     const { i18n } = useTranslation();
@@ -8,14 +10,7 @@ function Experience() {
     const { title, items } = lang === "fr" ? experiencesFR : experiencesEN;
 
     return (
-        <section
-            id="experience"
-            className="py-16 px-6 bg-background font-sans grid-2-columns border-b border-divider"
-        >
-            <h2 className="section-title text-start text-textMuted mb-12">
-                {title}
-            </h2>
-
+        <SectionWrapper title={title} id="experience">
             <div className="max-w-4xl mx-auto space-y-8">
                 {items.map((exp, index) => (
                     <div key={index}>
@@ -30,7 +25,7 @@ function Experience() {
                     </div>
                 ))}
             </div>
-        </section>
+        </SectionWrapper>
     );
 }
 

@@ -1,40 +1,32 @@
+// src/components/home/Education.jsx
 import { useTranslation } from "react-i18next";
+import SectionWrapper from "../layout/SectionWrapper";
 import educationEN from "../../data/education.en";
 import educationFR from "../../data/education.fr";
 
-function Education() {
+export default function Education() {
     const { i18n } = useTranslation();
     const lang = i18n.language;
     const { title, items } = lang === "fr" ? educationFR : educationEN;
 
     return (
-        <section
-            id="education"
-            className="bg-background py-16 px-4 font-sans grid-2-columns border-b border-divider"
-        >
-            {/* Título de sección ya viene traducido en el data file */}
-            <h2 className="section-title text-start text-textMuted mb-12">
-                {title}
-            </h2>
-
-            <div className="max-w-4xl mx-auto grid-3-columns">
+        <SectionWrapper title={title} id="education">
+            <div className="grid gap-8 grid-cols-1 md:grid-cols-3 max-w-4xl mx-auto">
                 {items.map((edu, index) => (
-                    <div key={index}>
+                    <div key={index} className="space-y-2">
                         <h3 className="text-xl font-semibold text-textDark">
-                            {edu.degree}{" "}
+                            {edu.degree}
                         </h3>
-                        <p className="text-sm text-textMuted mb-2">
+                        <p className="text-sm text-textMuted">
                             {edu.location} · {edu.period}
                         </p>
                         <h4 className="text-xl font-medium text-link">
                             {edu.institution}
                         </h4>
-                        <p className="mt-2 text-textDark">{edu.description}</p>
+                        <p className="text-textDark">{edu.description}</p>
                     </div>
                 ))}
             </div>
-        </section>
+        </SectionWrapper>
     );
 }
-
-export default Education;
