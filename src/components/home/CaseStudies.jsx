@@ -1,56 +1,43 @@
+// src/components/home/CaseStudies.jsx
 import { useTranslation } from "react-i18next";
 import caseStudiesEN from "../../data/caseStudies.en";
 import caseStudiesFR from "../../data/caseStudies.fr";
 
 export default function CaseStudies() {
-    const { i18n } = useTranslation();
-    const lang = i18n.language;
+  const { i18n } = useTranslation();
+  const lang = i18n.language;
+  const { title, items } = lang === "fr" ? caseStudiesFR : caseStudiesEN;
 
-    // Seleccionamos los datos en función del idioma
-    const { title, items } = lang === "fr" ? caseStudiesFR : caseStudiesEN;
+  return (
+    <section id="casestudies" className="bg-background py-16 px-4 font-sans border-b border-divider">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
+        {/* Columna 1: Título */}
+        <h2 className="section-title text-textMuted text-start">
+          {title}
+        </h2>
 
-    return (
-        <section
-            id="casestudies"
-            className="bg-background py-16 px-4 font-sans grid-2-columns border-b border-divider"
-        >
-            {/* Título de sección */}
-            <h2 className="section-title text-start text-textMuted mb-8">
-                {title}
-            </h2>
-
-            {/* Grid responsivo: 1 col en móvil, 2 en sm+ */}
-            <div className="max-w-6xl mx-auto grid gap-8 grid-cols-1 sm:grid-cols-2">
-                {items.map((caseItem) => (
-                    <div key={caseItem.id} className="flex flex-col">
-                        {/* Contenedor de imagen + título superpuesto */}
-                        <div className="relative overflow-hidden rounded-lg shadow-md hover:scale-105 transition-transform">
-                            {/* Imagen */}
-                            <img
-                                src={caseItem.image}
-                                alt={caseItem.title}
-                                loading="lazy"
-                                className="w-full h-48 sm:h-60 md:h-72 object-cover"
-                            />
-
-                            {/* Texto superpuesto */}
-                            {/* <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-                <h3 className="text-white text-xl sm:text-2xl font-semibold drop-shadow-md">
-                  {caseItem.title}
-                </h3>
-              </div> */}
-                        </div>
-
-                        {/* Enlace debajo de la imagen */}
-                        <a
-                            href={caseItem.link}
-                            className="mt-4 text-link text-lg font-medium hover:underline"
-                        >
-                            {caseItem.linkText}
-                        </a>
-                    </div>
-                ))}
+        {/* Columna 2: Grid de tarjetas */}
+        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2">
+          {items.map((caseItem) => (
+            <div key={caseItem.id} className="flex flex-col">
+              <div className="relative w-full aspect-w-16 aspect-h-9 overflow-hidden rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
+                <img
+                  src={caseItem.image}
+                  alt={caseItem.title}
+                  loading="lazy"
+                  className="absolute inset-0 w-full h-full object-contain"
+                />
+              </div>
+              <a
+                href={caseItem.link}
+                className="mt-4 text-link text-lg font-medium hover:underline"
+              >
+                {caseItem.linkText}
+              </a>
             </div>
-        </section>
-    );
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }

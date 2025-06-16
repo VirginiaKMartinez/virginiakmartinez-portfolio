@@ -15,15 +15,15 @@ export default function ContactSection() {
                 </h2>
 
                 <div className="w-full lg:w-1/2 flex justify-center">
-          <div className="w-64 h-64 md:w-80 md:h-80">
-            <Lottie animationData={superhero} loop={true} />
-          </div>
-        </div>
+                    <div className="w-64 h-64 md:w-80 md:h-80">
+                        <Lottie animationData={superhero} loop={true} />
+                    </div>
+                </div>
 
                 {/* Botón CTA */}
                 <a
                     href={mailtoLink}
-                    className="inline-flex items-center bg-primary text-white font-medium px-6 py-3 rounded-lg shadow-lg hover:scale-105 hover:bg-link transition-colors"
+                    className="inline-flex items-center bg-primary text-white font-medium px-6 py-3 rounded-lg shadow-lg duration-300 transition-all hover:scale-105 hover:bg-accent-indigo"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
