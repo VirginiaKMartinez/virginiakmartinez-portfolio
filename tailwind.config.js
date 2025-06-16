@@ -4,12 +4,18 @@ export default {
     theme: {
         extend: {
             colors: {
-                primary: "#3AD8FA",
-                link: "#00ABD1",
-                textDark: "#333333",
-                textMuted: "#6a6a6a",
-                divider: "#f2f2f2",
-                background: "#FDFDFD",
+                primary: "var(--color-primary)",
+                link: "var(--color-link)",
+                accent: {
+                    coral: "var(--color-accent-coral)",
+                    mustard: "var(--color-accent-mustard)",
+                    indigo: "var(--color-accent-indigo)",
+                    tealDark: "var(--color-accent-teal)",
+                },
+                textDark: "var(--color-text-dark)",
+                textMuted: "var(--color-text-muted)",
+                background: "var(--color-bg)",
+                divider: "var(--color-divider)",
             },
             fontFamily: {
                 sans: ["Noto Sans", "sans-serif"],

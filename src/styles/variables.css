@@ -1,0 +1,17 @@
+:root {
+    /* Primary colors*/
+    --color-primary: #3ad8fa;
+    --color-link: #00abd1;
+    --color-accent-coral: #ff6b6c;
+    --color-accent-mustard: #ffc75f;
+    --color-accent-indigo: #6c5ce7;
+    --color-accent-teal: #079992;
+
+    /* Neutral / text */
+    --color-text-dark: #333333;
+    --color-text-muted: #6a6a6a;
+
+    /* Backgrounds and dividers */
+    --color-bg: #fdfdfd;
+    --color-divider: #f2f2f2;
+}
