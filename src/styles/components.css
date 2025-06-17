@@ -5,3 +5,27 @@
    tags, and any reusable elements with consistent design.
    Use it to define how elements look, not where they go.
 ========================================================================== */
+@layer components {
+    /* Scroll horizontal con fade en los extremos */
+    .scroll-mask {
+        overflow-x: auto;
+        white-space: nowrap;
+        /* mask-image: linear-gradient(
+            to right,
+            transparent,
+            #fff 10%,
+            #fff 90%,
+            transparent
+        );
+        -webkit-mask-image: linear-gradient(
+            to right,
+            transparent,
+            #fff 10%,
+            #fff 90%,
+            transparent
+        ); */
+    }
+    .scroll-mask::-webkit-scrollbar {
+        display: none;
+    }
+}

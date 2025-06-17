@@ -8,7 +8,6 @@ export default function Header() {
 
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
-        // si cambias idioma en móvil, cerramos el menú
         if (open) setOpen(false);
     };
 
@@ -23,10 +22,10 @@ export default function Header() {
     return (
         <>
             <header className="fixed top-0 left-0 w-full bg-white border-b border-divider z-50">
-                <div className="max-w-6xl mx-auto px-4 py-4 grid grid-cols-2 sm:grid-cols-[auto_1fr_auto] items-center">
-                    {/* botón hamburguesa móvil */}
+                <div className="max-w-6xl mx-auto px-4 py-4 grid grid-cols-2 lg:grid-cols-[auto_1fr_auto] items-center">
+                    {/* Botón hamburguesa en < lg */}
                     <button
-                        className="sm:hidden p-2 rounded-md hover:bg-divider transition-colors"
+                        className="lg:hidden w-11 h-11 flex items-center justify-center rounded transition-colors hover:bg-divider focus:outline-none"
                         aria-label={open ? "Close menu" : "Open menu"}
                         aria-expanded={open}
                         onClick={() => setOpen((o) => !o)}
@@ -50,8 +49,8 @@ export default function Header() {
                         </svg>
                     </button>
 
-                    {/* logo en desktop */}
-                    <div className="hidden sm:block justify-self-start font-sans text-2xl">
+                    {/* Logo en ≥ lg */}
+                    <div className="hidden lg:block justify-self-start font-sans text-2xl">
                         <a
                             href="#hero"
                             className="hover:text-link transition-colors"
@@ -60,28 +59,28 @@ export default function Header() {
                         </a>
                     </div>
 
-                    {/* nav desktop */}
-                    <nav className="hidden sm:flex justify-self-center gap-8 text-base text-textMuted font-sans">
+                    {/* Nav desktop ≥ lg con scroll-mask */}
+                    <nav className="hidden lg:flex scroll-mask justify-self-center space-x-8 text-base text-textMuted font-sans px-4">
                         {sections.map(({ id, label }) => (
                             <a
                                 key={id}
                                 href={`#${id}`}
-                                className="hover:text-link transition-colors"
+                                className="inline-block hover:text-link transition-colors"
+                                onClick={() => setOpen(false)}
                             >
                                 {label}
                             </a>
                         ))}
                     </nav>
 
-                    {/* idiomas */}
-                    <div className="flex justify-end gap-4 text-sm font-sans">
+                    {/* Selector de idioma siempre visible */}
+                    <div className="justify-self-end flex gap-4 text-sm font-sans">
                         {["en", "fr"].map((lng) => (
                             <button
                                 key={lng}
                                 onClick={() => changeLanguage(lng)}
                                 className={`
-                  px-3 py-1 rounded-lg transition-colors
-                  hover:bg-divider
+                  px-3 py-1 rounded-lg transition-colors hover:bg-divider
                   ${i18n.language === lng ? "font-bold underline" : ""}
                 `}
                             >
@@ -92,20 +91,17 @@ export default function Header() {
                 </div>
             </header>
 
-            {/* Overlay full-screen */}
+            {/* Overlay full-screen en < lg */}
             {open && (
                 <div
-                    className="fixed inset-0 bg-white z-40 flex flex-col justify-between px-6 py-8"
+                    className="fixed inset-0 bg-white z-40 flex flex-col px-6 py-8 lg:hidden"
                     role="dialog"
                     aria-modal="true"
                 >
-                    {/* Header del overlay */}
-                    <div className="flex items-center justify-between">
-                        <span className="text-3xl font-bold font-sans text-textDark">
-                            Virginia Martínez
-                        </span>
+                    {/* Cerrar */}
+                    <div className="flex justify-end">
                         <button
-                            className="p-2 rounded-md hover:bg-divider transition-colors"
+                            className="w-11 h-11 flex items-center justify-center rounded transition-colors hover:bg-divider focus:outline-none"
                             aria-label="Close menu"
                             onClick={() => setOpen(false)}
                         >
@@ -125,19 +121,21 @@ export default function Header() {
                         </button>
                     </div>
 
-                    {/* Enlaces de sección */}
-                    <nav className="flex flex-col items-center space-y-6 text-xl text-textDark">
-                        {sections.map(({ id, label }) => (
-                            <a
-                                key={id}
-                                href={`#${id}`}
-                                role="menuitem"
-                                className="hover:text-link transition-colors"
-                                onClick={() => setOpen(false)}
-                            >
-                                {label}
-                            </a>
-                        ))}
+                    {/* Enlaces centrados verticalmente, bloque centrado y texto a la izquierda */}
+                    <nav className="flex-1 flex items-center justify-center">
+                        <ul className="space-y-6 text-xl text-textDark w-full max-w-xs">
+                            {sections.map(({ id, label }) => (
+                                <li key={id}>
+                                    <a
+                                        href={`#${id}`}
+                                        className="block text-left hover:text-link transition-colors"
+                                        onClick={() => setOpen(false)}
+                                    >
+                                        {label}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
                     </nav>
                 </div>
             )}
