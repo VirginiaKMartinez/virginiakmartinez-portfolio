@@ -13,5 +13,6 @@
 
     /* Backgrounds and dividers */
     --color-bg: #fdfdfd;
+    --color-dots-default: #E3E6E9;
     --color-divider: #f2f2f2;
 }
