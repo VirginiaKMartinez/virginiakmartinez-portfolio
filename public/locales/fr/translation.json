@@ -12,10 +12,9 @@
         "contact": "Contact"
     },
     "contact": {
-        "title": "J'adore nouer des contacts, alors n'hésitez pas à me contacter si vous voulez travailler avec moi ou simplement dire bonjour !",
-        "button": "Contactez-moi",
-        "ctaMail": "mailto:hello@virginiak.dev",
-        "altCTA": "Envoyez-moi un e-mail"
+        "title": "J'adore créer des connexions, contactez-moi si vous souhaitez travailler ensemble ou simplement dire bonjour !",
+        "subtitle": "N'hésitez pas à m'envoyer un message pour créer quelque chose d'incroyable ensemble.",
+        "cta": "Entrer en contact"
     },
     "footer": {
         "copyright": "© Virginia Martínez. Tous droits réservés.",

@@ -13,9 +13,8 @@
     },
     "contact": {
         "title": "I love making connections, so please reach out if you want to work with me or just say hello!",
-        "button": "Get in touch",
-        "ctaMail": "mailto:hello@virginiak.dev",
-        "altCTA": "Send me an email"
+        "subtitle": "Feel free to drop me a line and let's create something amazing together.",
+        "cta": "Get in touch"
     },
     "footer": {
         "copyright": "© Virginia Martínez. All rights reserved.",
