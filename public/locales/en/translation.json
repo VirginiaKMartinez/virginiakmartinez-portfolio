@@ -1,8 +1,9 @@
 {
-    "home": {
-        "title": "Hello, I'm Virginia — Product Designer",
-        "subtitle": "I craft intuitive, accessible and engaging user experiences.",
-        "cta": "View my work"
+    "hero": {
+        "greeting": "Hi, I’m Virginia Martínez",
+        "tagline": "I craft intuitive, accessible and engaging user experiences for web and mobile.",
+        "cta": "View my work",
+        "scrollDown": "Scroll down"
     },
     "header": {
         "experience": "Experience",
