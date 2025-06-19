@@ -1,6 +1,13 @@
 /* src/components/home/Hero.module.css */
 .root {
     position: relative;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+
+    /* 2) Altura completa */
     height: 100vh;
     overflow: hidden;
 

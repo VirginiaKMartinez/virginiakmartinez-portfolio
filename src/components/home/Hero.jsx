@@ -16,7 +16,7 @@ export default function Hero() {
                     src={photoVir}
                     alt="Virginia Martínez"
                     aria-hidden="true"
-                    className="w-48 h-48 object-cover rounded-full mb-8"
+                    className="w-45 h-48 object-cover rounded-full mb-8"
                 />
 
                 {/* Título */}
