@@ -3,12 +3,20 @@
     position: relative;
     height: 100vh;
     overflow: hidden;
-    /* 1) Imagen AVIF de fondo */
-    background-image: url("/images/dregrad.avif"),
-        radial-gradient(rgba(0, 0, 0, 0.05) 1.5px, transparent 1.5px);
-    /* 2) Tamaños: cover para AVIF, 20x20 para los puntos */
-    background-size: cover, 20px 20px;
-    /* 3) Posiciones: centrado para AVIF, origen (0,0) para los puntos */
-    background-position: center center, 0 0;
-    background-repeat: no-repeat, repeat;
+
+    /* 1) El patrón de puntos VA PRIMERO, para que quede encima */
+    background-image:
+    /* puntos: color + transparencia */ radial-gradient(
+            var(--color-divider) 1.5px,
+            transparent 1.5px
+        ),
+        /* degradado AVIF */ url("/images/dregrad.avif");
+
+    /* 2) Tamaños: 20×20 para el patrón, cover para la imagen */
+    background-size: 20px 20px, cover;
+
+    /* 3) Posiciones: patrón repetido desde (0,0), AVIF centrado */
+    background-position: 0 0, center center;
+
+    background-repeat: repeat, no-repeat;
 }
