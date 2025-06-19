@@ -17,7 +17,7 @@
             var(--color-divider) 1.5px,
             transparent 1.5px
         ),
-        /* degradado AVIF */ url("/images/dregrad.avif");
+        /* degradado AVIF */ url("/images/bg_01.avif");
 
     /* 2) Tamaños: 20×20 para el patrón, cover para la imagen */
     background-size: 20px 20px, cover;
