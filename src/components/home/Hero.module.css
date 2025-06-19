@@ -1,0 +1,14 @@
+/* src/components/home/Hero.module.css */
+.root {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    /* 1) Imagen AVIF de fondo */
+    background-image: url("/images/dregrad.avif"),
+        radial-gradient(rgba(0, 0, 0, 0.05) 1.5px, transparent 1.5px);
+    /* 2) Tamaños: cover para AVIF, 20x20 para los puntos */
+    background-size: cover, 20px 20px;
+    /* 3) Posiciones: centrado para AVIF, origen (0,0) para los puntos */
+    background-position: center center, 0 0;
+    background-repeat: no-repeat, repeat;
+}

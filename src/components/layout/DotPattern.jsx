@@ -1,14 +1,19 @@
+// src/components/layout/DotPattern.jsx
 import React from "react";
 
 export default function DotPattern({
     className = "",
+    /** Distancia entre los puntos (grid size) */
     size = 20,
-    colorVar = "--color-divider",
+    /** Tamaño del punto en píxeles */
+    dotSize = 1,
+    /** Color CSS var de cada punto, p.e. "--color-divider" */
+    colorVar = " --color-accent-coral",
 }) {
-    // Creamos el patrón usando CSS vars para el color
+    // Creamos dos gradients desplazados para formar la cuadrícula
     const bgImage = `
-    radial-gradient(var(${colorVar}) 1px, transparent 1px),
-    radial-gradient(var(${colorVar}) 1px, transparent 1px)
+    radial-gradient(var(${colorVar}) ${dotSize}px, transparent ${dotSize}px),
+    radial-gradient(var(${colorVar}) ${dotSize}px, transparent ${dotSize}px)
   `;
     const bgSize = `${size}px ${size}px`;
     const offset = size / 2;
