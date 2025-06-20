@@ -1,8 +1,8 @@
 :root {
     /* Primary colors*/
     --color-primary: #3ad8fa;
-    --color-link: #00ab--color-accent-corald1;
-    : #ff6b6c;
+    --color-link: #00abd1 !important;
+    --color-accent-coral: #ff6b6c;
     --color-accent-mustard: #ffc75f;
     --color-accent-indigo: #6c5ce7;
     --color-accent-teal: #079992;
@@ -13,6 +13,6 @@
 
     /* Backgrounds and dividers */
     --color-bg: #fdfdfd;
-    --color-dots-default: #E3E6E9;
+    --color-dots-default: #e3e6e9;
     --color-divider: #f2f2f2;
 }

@@ -17,6 +17,7 @@ export default {
                 textDark: "var(--color-text-dark)",
                 textMuted: "var(--color-text-muted)",
                 background: "var(--color-bg)",
+                dotsDefault: "var(--color-dots-default)",
                 divider: "var(--color-divider)",
             },
             fontFamily: {

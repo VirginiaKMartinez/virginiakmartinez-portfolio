@@ -29,3 +29,7 @@
         display: none;
     }
 }
+.rich-text a {
+    color: inherit;
+    text-decoration: inherit;
+}

@@ -1,7 +1,7 @@
 // src/components/home/Hero.jsx
 import { useTranslation } from "react-i18next";
 import Icon from "../Icon";
-import photoVir from "../../../public/images/photoVir.png";
+import photoVir from "../../assets/images/photoVir.png";
 import "../../styles/hero.css";
 
 export default function Hero() {
