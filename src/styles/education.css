@@ -1,15 +1,29 @@
 /* src/styles/education.css */
 .education-bg-layer {
-    position: absolute;
-    inset: 0; /* top/right/bottom/left: 0 */
+    position: relative;
+    width: 100vw;
+    /* left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw; */
+
+    /* 2) Altura completa */
+    /* height: 100vh; */
+    overflow: hidden;
+
+    /* 1) El patrón de puntos VA PRIMERO, para que quede encima */
     background-image:
-    /* 1) patrón de dots encima */ radial-gradient(
+    /* puntos: color + transparencia */ radial-gradient(
             var(--color-dots-default) 1px,
             transparent 1px
         ),
-        /* 2) tu degradado AVIF debajo */ url("/images/bg_01.avif");
+        /* degradado AVIF */ url("/images/bg_02.png");
+
+    /* 2) Tamaños: 20×20 para el patrón, cover para la imagen */
     background-size: 20px 20px, cover;
+
+    /* 3) Posiciones: patrón repetido desde (0,0), AVIF centrado */
     background-position: 0 0, center center;
+
     background-repeat: repeat, no-repeat;
-    z-index: -1;
 }
