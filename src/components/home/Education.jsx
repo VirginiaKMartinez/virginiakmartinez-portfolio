@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import SectionWrapper from "../layout/SectionWrapper";
 import educationEN from "../../data/education.en";
 import educationFR from "../../data/education.fr";
+import "../../styles/education.css";
 
 export default function Education() {
     const { i18n } = useTranslation();
@@ -10,8 +11,8 @@ export default function Education() {
     const { title, items } = lang === "fr" ? educationFR : educationEN;
 
     return (
-        <SectionWrapper title={title} id="education">
-            <div className="grid gap-8 grid-cols-1 md:grid-cols-3 max-w-4xl mx-auto">
+        <SectionWrapper title={title} id="education" className="education-bg">
+            <div className=" grid gap-8 grid-cols-1 md:grid-cols-3 max-w-4xl mx-auto">
                 {items.map((edu, index) => (
                     <div key={index} className="space-y-2">
                         <h3 className="text-xl font-semibold text-textDark">
