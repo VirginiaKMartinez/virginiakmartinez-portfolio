@@ -2,13 +2,13 @@
 import { useTranslation } from "react-i18next";
 import Icon from "../Icon";
 import photoVir from "../../../public/images/photoVir.png";
-import styles from "./Hero.module.css";
+import "../../styles/hero.css";
 
 export default function Hero() {
     const { t } = useTranslation();
 
     return (
-        <section id="hero" className={styles.root}>
+        <section id="hero" className="hero-section">
             {/* — Contenido centrado — */}
             <div className="relative z-10 flex flex-col items-center justify-center h-full px-6 lg:px-12 text-center">
                 {/* Foto */}

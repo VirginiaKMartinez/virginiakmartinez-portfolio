@@ -1,5 +1,6 @@
 /* src/components/home/Hero.module.css */
-.root {
+
+.hero-section {
     position: relative;
     width: 100vw;
     left: 50%;

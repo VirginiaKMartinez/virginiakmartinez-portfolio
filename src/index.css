@@ -1,10 +1,11 @@
 @import "./styles/variables.css";
-@import "./styles/components.css";
-@import "./styles/layout.css";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import "./styles/components.css";
+@import "./styles/layout.css";
 
 section[id] {
     scroll-margin-top: 4rem;
