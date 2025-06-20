@@ -14,8 +14,8 @@
     /* 1) El patrón de puntos VA PRIMERO, para que quede encima */
     background-image:
     /* puntos: color + transparencia */ radial-gradient(
-            var(--color-divider) 1.5px,
-            transparent 1.5px
+            var(--color-dots-default) 1px,
+            transparent 1px
         ),
         /* degradado AVIF */ url("/images/bg_01.avif");
 
