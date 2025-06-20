@@ -1,30 +1,15 @@
-/* src/components/home/Hero.module.css */
-
-.education-bg {
-    position: relative;
-    width: 100vw;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-
-    /* 2) Altura completa */
-    height: 100vh;
-    overflow: hidden;
-
-    /* 1) El patrón de puntos VA PRIMERO, para que quede encima */
+/* src/styles/education.css */
+.education-bg-layer {
+    position: absolute;
+    inset: 0; /* top/right/bottom/left: 0 */
     background-image:
-    /* puntos: color + transparencia */ radial-gradient(
+    /* 1) patrón de dots encima */ radial-gradient(
             var(--color-dots-default) 1px,
             transparent 1px
         ),
-        /* degradado AVIF */ url("/images/bg_01.avif");
-
-    /* 2) Tamaños: 20×20 para el patrón, cover para la imagen */
+        /* 2) tu degradado AVIF debajo */ url("/images/bg_01.avif");
     background-size: 20px 20px, cover;
-
-    /* 3) Posiciones: patrón repetido desde (0,0), AVIF centrado */
     background-position: 0 0, center center;
-
     background-repeat: repeat, no-repeat;
+    z-index: -1;
 }
