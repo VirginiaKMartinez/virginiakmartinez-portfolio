@@ -9,10 +9,15 @@ function Home() {
     return (
         <div>
             <Hero />
+            <div className="border-b border-divider"></div>
             <Experience />
+            <div className="border-b border-divider"></div>
             <Education />
+            <div className="border-b border-divider"></div>
             <CaseStudies />
+            <div className="border-b border-divider"></div>
             <Testimonials />
+            <div className="border-b border-divider"></div>
             <ContactSection />
         </div>
     );

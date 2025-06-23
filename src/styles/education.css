@@ -14,10 +14,10 @@
     /* 1) El patrón de puntos VA PRIMERO, para que quede encima */
     background-image:
     /* puntos: color + transparencia */ radial-gradient(
-            var(--color-dots-default) 1px,
+            var(--color-divider) 1px,
             transparent 1px
         ),
-        /* degradado AVIF */ url("/images/bg_02.png");
+        /* degradado PNG */ url("/images/bg_02.png");
 
     /* 2) Tamaños: 20×20 para el patrón, cover para la imagen */
     background-size: 20px 20px, cover;

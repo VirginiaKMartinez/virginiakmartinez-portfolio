@@ -11,9 +11,9 @@ export default function SectionWrapper({
         <section
             id={id}
             className={`
-        relative overflow-hidden
+        relative overflow-hidden 
         bg-background py-16 px-4 font-sans
-        border-b border-divider
+        
         ${className}
       `}
         >

@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 import aspectRatio from "@tailwindcss/aspect-ratio";
+import plugin from "tailwindcss/plugin";
 
 export default {
     content: ["./index.html", "./src/**/*.{js,jsx}"],
@@ -23,7 +24,25 @@ export default {
             fontFamily: {
                 sans: ["Noto Sans", "sans-serif"],
             },
+            scrollPadding: {
+                header: "var(--header-height)",
+            },
         },
     },
-    plugins: [aspectRatio],
+    plugins: [
+        aspectRatio,
+        // este plugin inyecta nuestra regla base
+        plugin(({ addBase }) => {
+            addBase({
+                // define tu variable CSS
+                ":root": {
+                    "--header-height": "65px",
+                },
+                // aplica scroll-padding-top a html
+                html: {
+                    scrollPaddingTop: "var(--header-height)",
+                },
+            });
+        }),
+    ],
 };
