@@ -14,7 +14,7 @@ export default function Education() {
         <SectionWrapper
             title={title}
             id="education"
-            className="education-bg-layer"
+            className="lg:min-h-[31.25rem] lg:flex lg:items-center education-bg-layer"
         >
             <div className=" grid gap-8 grid-cols-1 md:grid-cols-3 max-w-4xl mx-auto ">
                 {items.map((edu, index) => (
