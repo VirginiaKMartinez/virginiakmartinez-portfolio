@@ -20,6 +20,7 @@ export default {
                 background: "var(--color-bg)",
                 dotsDefault: "var(--color-dots-default)",
                 divider: "var(--color-divider)",
+                textWhite:"var(--color-bg)",
             },
             fontFamily: {
                 sans: ["Noto Sans", "sans-serif"],
