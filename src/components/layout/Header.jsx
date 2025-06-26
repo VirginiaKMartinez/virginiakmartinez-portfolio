@@ -1,144 +1,95 @@
 // src/components/layout/Header.jsx
-import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useLocation, useNavigate, Link } from "react-router-dom";
 
 export default function Header() {
-    const [open, setOpen] = useState(false);
-    const { i18n, t } = useTranslation();
+    const { t, i18n } = useTranslation();
+    const location = useLocation();
+    const navigate = useNavigate();
 
-    const changeLanguage = (lng) => {
-        i18n.changeLanguage(lng);
-        if (open) setOpen(false);
-    };
+    // Solo true en /case-studies/<algo>
+    const isCaseDetail = location.pathname.startsWith("/case-studies/");
 
-    const sections = [
-        { id: "experience", label: t("header.experience") },
-        { id: "education", label: t("header.education") },
-        { id: "casestudies", label: t("header.caseStudies") },
-        { id: "testimonials", label: t("header.testimonials") },
-        { id: "contact", label: t("header.contact") },
-    ];
+    const changeLanguage = (lng) => i18n.changeLanguage(lng);
 
     return (
-        <>
-            <header className="fixed top-0 left-0 w-full bg-white border-b border-divider z-50">
-                <div className="max-w-6xl mx-auto px-4 py-4 grid grid-cols-2 lg:grid-cols-[auto_1fr_auto] items-center">
-                    {/* Botón hamburguesa en < lg */}
-                    <button
-                        className="lg:hidden w-11 h-11 flex items-center justify-center rounded transition-colors hover:bg-divider focus:outline-none"
-                        aria-label={open ? "Close menu" : "Open menu"}
-                        aria-expanded={open}
-                        onClick={() => setOpen((o) => !o)}
-                    >
-                        <svg
-                            className="w-6 h-6 text-textMuted"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
+        <header className="fixed top-0 left-0 w-full z-50 bg-white border-b border-divider">
+            <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+                {/* Izquierda: Back ó Logo */}
+                <div className="flex items-center space-x-4">
+                    {isCaseDetail ? (
+                        <button
+                            onClick={() => navigate(-1)}
+                            className="text-textMuted hover:text-textDark transition-colors"
                         >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d={
-                                    open
-                                        ? "M6 18L18 6M6 6l12 12"
-                                        : "M4 8h16M4 16h16"
-                                }
-                            />
-                        </svg>
-                    </button>
-
-                    {/* Logo en ≥ lg */}
-                    <div className="hidden lg:block justify-self-start font-sans text-2xl">
+                            ← {t("header.backToHome")}
+                        </button>
+                    ) : (
                         <a
                             href="#hero"
-                            className="hover:text-link transition-colors"
+                            className="text-2xl font-normal tracking-tight hover:text-link transition-colors"
                         >
                             Virginia Martínez
                         </a>
-                    </div>
-
-                    {/* Nav desktop ≥ lg con scroll-mask */}
-                    <nav className="hidden lg:flex scroll-mask justify-self-center space-x-8 text-base text-textMuted font-sans px-4">
-                        {sections.map(({ id, label }) => (
-                            <a
-                                key={id}
-                                href={`#${id}`}
-                                className="inline-block hover:text-link transition-colors"
-                                onClick={() => setOpen(false)}
-                            >
-                                {label}
-                            </a>
-                        ))}
-                    </nav>
-
-                    {/* Selector de idioma siempre visible */}
-                    <div className="justify-self-end flex gap-4 text-sm font-sans">
-                        {["en", "fr"].map((lng) => (
-                            <button
-                                key={lng}
-                                onClick={() => changeLanguage(lng)}
-                                className={`
-                  px-3 py-1 rounded-lg transition-colors hover:bg-divider
-                  ${i18n.language === lng ? "font-bold underline" : ""}
-                `}
-                            >
-                                {lng.toUpperCase()}
-                            </button>
-                        ))}
-                    </div>
+                    )}
                 </div>
-            </header>
 
-            {/* Overlay full-screen en < lg */}
-            {open && (
-                <div
-                    className="fixed inset-0 bg-white z-40 flex flex-col px-6 py-8 lg:hidden"
-                    role="dialog"
-                    aria-modal="true"
-                >
-                    {/* Cerrar */}
-                    <div className="flex justify-end">
-                        <button
-                            className="w-11 h-11 flex items-center justify-center rounded transition-colors hover:bg-divider focus:outline-none"
-                            aria-label="Close menu"
-                            onClick={() => setOpen(false)}
+                {/* Centro: navegación interna SOLO en Home */}
+                {!isCaseDetail && (
+                    <nav className="flex gap-6 text-base text-textMuted">
+                        <a
+                            href="#experience"
+                            className="hover:text-link transition-colors"
                         >
-                            <svg
-                                className="w-6 h-6 text-textMuted"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth={2}
-                                    d="M6 18L18 6M6 6l12 12"
-                                />
-                            </svg>
-                        </button>
-                    </div>
-
-                    {/* Enlaces centrados verticalmente, bloque centrado y texto a la izquierda */}
-                    <nav className="flex-1 flex items-center justify-center">
-                        <ul className="space-y-6 text-xl text-textDark w-full max-w-xs">
-                            {sections.map(({ id, label }) => (
-                                <li key={id}>
-                                    <a
-                                        href={`#${id}`}
-                                        className="block text-left hover:text-link transition-colors"
-                                        onClick={() => setOpen(false)}
-                                    >
-                                        {label}
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
+                            {t("header.experience")}
+                        </a>
+                        <a
+                            href="#education"
+                            className="hover:text-link transition-colors"
+                        >
+                            {t("header.education")}
+                        </a>
+                        <a
+                            href="#casestudies"
+                            className="hover:text-link transition-colors"
+                        >
+                            {t("header.caseStudies")}
+                        </a>
+                        <a
+                            href="#testimonials"
+                            className="hover:text-link transition-colors"
+                        >
+                            {t("header.testimonials")}
+                        </a>
+                        <a
+                            href="#contact"
+                            className="hover:text-link transition-colors"
+                        >
+                            {t("header.contact")}
+                        </a>
                     </nav>
+                )}
+
+                {/* Derecha: idiomas (siempre) */}
+                <div className="flex gap-2 text-sm">
+                    <button
+                        onClick={() => changeLanguage("en")}
+                        className={`px-2 py-1 rounded hover:bg-gray-100 ${
+                            i18n.language === "en" ? "font-bold underline" : ""
+                        }`}
+                    >
+                        EN
+                    </button>
+                    <button
+                        onClick={() => changeLanguage("fr")}
+                        className={`px-2 py-1 rounded hover:bg-gray-100 ${
+                            i18n.language === "fr" ? "font-bold underline" : ""
+                        }`}
+                    >
+                        FR
+                    </button>
                 </div>
-            )}
-        </>
+            </div>
+        </header>
     );
 }
