@@ -1,6 +1,7 @@
 // src/components/home/CaseStudies.jsx
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom"; // <-- importa Link
+import { Link } from "react-router-dom";
+import SectionWrapper from "../layout/SectionWrapper";
 import DotPattern from "../layout/DotPattern";
 import caseStudiesEN from "../../data/caseStudies.en";
 import caseStudiesFR from "../../data/caseStudies.fr";
@@ -11,25 +12,15 @@ export default function CaseStudies() {
     const { title, items } = lang === "fr" ? caseStudiesFR : caseStudiesEN;
 
     return (
-        <section
+        <SectionWrapper
             id="casestudies"
-            className="relative bg-background py-16 px-4 font-sans border-b border-divider"
+            title={title} // 1) pasamos el título
+            className="relative overflow-hidden" // para que el DotPattern no se salga
         >
-            {/* Fondo de puntos full-bleed */}
-            <DotPattern
-                className="absolute inset-0 -z-10 pointer-events-none"
-                colorVar="--color-dots-default"
-                size={20}
-            />
-
-            <h2 className="section-title text-start text-textMuted mb-8">
-                {title}
-            </h2>
-
+            {/* 3) Grid de tarjetas en la segunda columna */}
             <div className="relative z-10 max-w-6xl mx-auto grid gap-8 grid-cols-1 sm:grid-cols-2">
                 {items.map((caseItem) => (
                     <div key={caseItem.id} className="flex flex-col">
-                        {/* Imagen clicable: Link en lugar de <a> */}
                         <Link
                             to={caseItem.link}
                             className="relative w-full aspect-w-16 aspect-h-9 overflow-hidden rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
@@ -42,7 +33,6 @@ export default function CaseStudies() {
                             />
                         </Link>
 
-                        {/* Texto clicable */}
                         <Link
                             to={caseItem.link}
                             className="mt-4 text-link text-lg font-medium hover:underline"
@@ -52,6 +42,6 @@ export default function CaseStudies() {
                     </div>
                 ))}
             </div>
-        </section>
+        </SectionWrapper>
     );
 }
