@@ -1,6 +1,7 @@
 // src/components/home/CaseStudies.jsx
 import { useTranslation } from "react-i18next";
-import SectionWrapper from "../layout/SectionWrapper";
+import { Link } from "react-router-dom";
+import DotPattern from "../layout/DotPattern";
 import caseStudiesEN from "../../data/caseStudies.en";
 import caseStudiesFR from "../../data/caseStudies.fr";
 
@@ -10,29 +11,44 @@ export default function CaseStudies() {
     const { title, items } = lang === "fr" ? caseStudiesFR : caseStudiesEN;
 
     return (
-        <SectionWrapper title={title} id="casestudies">
-            <div className="grid gap-8 grid-cols-1 sm:grid-cols-2">
-                {items.map(({ id, image, link, linkText }) => (
-                    <div key={id} className="flex flex-col">
-                        {/* Contenedor 16:9 */}
-                        <div className="relative w-full aspect-w-16 aspect-h-9 overflow-hidden rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
+        <section
+            id="casestudies"
+            className="relative bg-background py-16 px-4 font-sans border-b border-divider"
+        >
+            <DotPattern
+                className="absolute inset-0 -z-10 pointer-events-none"
+                colorVar="--color-dots-default"
+                size={20}
+            />
+
+            <h2 className="section-title text-start text-textMuted mb-8">
+                {title}
+            </h2>
+
+            <div className="relative z-10 max-w-6xl mx-auto grid gap-8 grid-cols-1 sm:grid-cols-2">
+                {items.map((caseItem) => (
+                    <div key={caseItem.id} className="flex flex-col">
+                        <Link
+                            to={`/case-studies/${caseItem.id}`}
+                            className="relative w-full aspect-w-16 aspect-h-9 overflow-hidden rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
+                        >
                             <img
-                                src={image}
-                                alt={linkText}
+                                src={caseItem.image}
+                                alt={caseItem.title}
                                 loading="lazy"
                                 className="absolute inset-0 w-full h-full object-contain"
                             />
-                        </div>
-                        {/* CTA */}
-                        <a
-                            href={link}
+                        </Link>
+
+                        <Link
+                            to={`/case-studies/${caseItem.id}`}
                             className="mt-4 text-link text-lg font-medium hover:underline"
                         >
-                            {linkText}
-                        </a>
+                            {caseItem.linkText}
+                        </Link>
                     </div>
                 ))}
             </div>
-        </SectionWrapper>
+        </section>
     );
 }

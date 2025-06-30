@@ -7,15 +7,16 @@ export default function Header() {
     const location = useLocation();
     const navigate = useNavigate();
 
-    // Solo true en /case-studies/<algo>
-    const isCaseDetail = location.pathname.startsWith("/case-studies/");
+    // Consideramos detalle cualquier ruta /case-studies/<slug>
+    const isCaseDetail =
+        location.pathname.startsWith("/case-studies/") &&
+        location.pathname !== "/case-studies";
 
     const changeLanguage = (lng) => i18n.changeLanguage(lng);
 
     return (
         <header className="fixed top-0 left-0 w-full z-50 bg-white border-b border-divider">
             <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-                {/* Izquierda: Back ó Logo */}
                 <div className="flex items-center space-x-4">
                     {isCaseDetail ? (
                         <button
@@ -25,16 +26,15 @@ export default function Header() {
                             ← {t("header.backToHome")}
                         </button>
                     ) : (
-                        <a
-                            href="#hero"
+                        <Link
+                            to="/"
                             className="text-2xl font-normal tracking-tight hover:text-link transition-colors"
                         >
                             Virginia Martínez
-                        </a>
+                        </Link>
                     )}
                 </div>
 
-                {/* Centro: navegación interna SOLO en Home */}
                 {!isCaseDetail && (
                     <nav className="flex gap-6 text-base text-textMuted">
                         <a
@@ -70,7 +70,6 @@ export default function Header() {
                     </nav>
                 )}
 
-                {/* Derecha: idiomas (siempre) */}
                 <div className="flex gap-2 text-sm">
                     <button
                         onClick={() => changeLanguage("en")}

@@ -1,15 +1,15 @@
-// src/pages/case-studies/DesignSystem.jsx
+// src/pages/case-studies/Flows.jsx
 import { useNavigate } from "react-router-dom";
 import SectionWrapper from "../../components/layout/SectionWrapper";
 import DotPattern from "../../components/layout/DotPattern";
 
-export default function DesignSystem() {
+export default function Flows() {
     const navigate = useNavigate();
 
     return (
         <SectionWrapper
-            id="case-design-system"
-            title="Design System"
+            id="case-flows"
+            title="Interaction Flows"
             className="relative overflow-hidden"
         >
             <DotPattern
@@ -27,13 +27,12 @@ export default function DesignSystem() {
 
             <div className="space-y-6">
                 <h3 className="text-2xl font-semibold text-textDark">
-                    What is our Design System?
+                    Mapping User Flows
                 </h3>
                 <p className="text-textMuted">
-                    Aquí exploras en detalle cómo diseñamos y mantuvimos la
-                    librería de componentes desde cero…
+                    Descripción de cómo definimos y refinamos los flujos de
+                    usuario…
                 </p>
-                {/* …añade aquí secciones, imágenes, Lottie… */}
             </div>
         </SectionWrapper>
     );
