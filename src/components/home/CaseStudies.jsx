@@ -1,6 +1,6 @@
 // src/components/home/CaseStudies.jsx
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"; // <-- importa Link
 import DotPattern from "../layout/DotPattern";
 import caseStudiesEN from "../../data/caseStudies.en";
 import caseStudiesFR from "../../data/caseStudies.fr";
@@ -15,6 +15,7 @@ export default function CaseStudies() {
             id="casestudies"
             className="relative bg-background py-16 px-4 font-sans border-b border-divider"
         >
+            {/* Fondo de puntos full-bleed */}
             <DotPattern
                 className="absolute inset-0 -z-10 pointer-events-none"
                 colorVar="--color-dots-default"
@@ -28,6 +29,7 @@ export default function CaseStudies() {
             <div className="relative z-10 max-w-6xl mx-auto grid gap-8 grid-cols-1 sm:grid-cols-2">
                 {items.map((caseItem) => (
                     <div key={caseItem.id} className="flex flex-col">
+                        {/* Imagen clicable: Link en lugar de <a> */}
                         <Link
                             to={`/case-studies/${caseItem.id}`}
                             className="relative w-full aspect-w-16 aspect-h-9 overflow-hidden rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
@@ -40,6 +42,7 @@ export default function CaseStudies() {
                             />
                         </Link>
 
+                        {/* Texto clicable */}
                         <Link
                             to={`/case-studies/${caseItem.id}`}
                             className="mt-4 text-link text-lg font-medium hover:underline"
