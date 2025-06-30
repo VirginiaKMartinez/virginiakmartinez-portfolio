@@ -3,8 +3,6 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import MainLayout from "../layouts/MainLayout";
 import Home from "../pages/Home";
 import Contact from "../pages/Contact";
-
-// case-studies pages
 import DesignSystem from "../pages/case-studies/DesignSystem";
 import Flows from "../pages/case-studies/Flows";
 import UXResearch from "../pages/case-studies/UXResearch";
@@ -12,26 +10,19 @@ import UXResearch from "../pages/case-studies/UXResearch";
 export default function AppRouter() {
   return (
     <Router>
-      <MainLayout>
-        <Routes>
+      <Routes>
+        {/* Layout común para todas estas rutas */}
+        <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
-
-          {/* rutas por cada caso de estudio */}
-          <Route
-            path="/case-studies/design-system"
-            element={<DesignSystem />}
-          />
+          <Route path="/case-studies/design-system" element={<DesignSystem />} />
           <Route path="/case-studies/flows" element={<Flows />} />
-          <Route
-            path="/case-studies/ux-research"
-            element={<UXResearch />}
-          />
+          <Route path="/case-studies/ux-research" element={<UXResearch />} />
+        </Route>
 
-          {/* fallback */}
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
-      </MainLayout>
+        {/* Fallback a Home si no existe la ruta */}
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
     </Router>
   );
 }
