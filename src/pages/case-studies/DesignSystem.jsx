@@ -1,40 +1,57 @@
 // src/pages/case-studies/DesignSystem.jsx
-import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import SectionWrapper from "../../components/layout/SectionWrapper";
 import DotPattern from "../../components/layout/DotPattern";
+import designSystemEN from "../../data/designSystem.en";
+import designSystemFR from "../../data/designSystem.fr";
 
 export default function DesignSystem() {
-    const navigate = useNavigate();
+    const { i18n, t } = useTranslation();
+    const data = i18n.language === "fr" ? designSystemFR : designSystemEN;
 
     return (
-        <SectionWrapper
-            id="case-design-system"
-            title="Design System"
-            className="relative overflow-hidden"
-        >
-            <DotPattern
-                className="absolute inset-0 -z-10 pointer-events-none"
-                colorVar="--color-dots-default"
-                size={20}
-            />
-
-            <button
-                onClick={() => navigate(-1)}
-                className="mb-8 text-textMuted hover:text-textDark transition-colors"
-            >
-                ← Back to Home
-            </button>
-
-            <div className="space-y-6">
-                <h3 className="text-2xl font-semibold text-textDark">
-                    What is our Design System?
-                </h3>
-                <p className="text-textMuted">
-                    Aquí exploras en detalle cómo diseñamos y mantuvimos la
-                    librería de componentes desde cero…
-                </p>
-                {/* …añade aquí secciones, imágenes, Lottie… */}
+        <main className="pt-[var(--header-height)]">
+            {/* Back to Home */}
+            <div className="max-w-6xl mx-auto px-4 mt-4">
+                <Link
+                    to="/"
+                    className="inline-flex items-center text-link font-medium hover:underline"
+                >
+                    ← {t("backToHome", "Back to Home")}
+                </Link>
             </div>
-        </SectionWrapper>
+
+            {/* Sección principal */}
+            <SectionWrapper
+                id="case-design-system"
+                title={data.title}
+                className="relative overflow-hidden"
+            >
+                {/* Fondo de dots */}
+                <DotPattern
+                    className="absolute inset-0 -z-10 pointer-events-none"
+                    colorVar="--color-dots-default"
+                    size={20}
+                />
+
+                <div className="space-y-6">
+                    <h2 className="text-xl font-semibold text-textDark">
+                        {data.subtitle}
+                    </h2>
+                    <p className="text-textMuted">{data.intro}</p>
+
+                    {/* Secciones internas */}
+                    {data.sections.map((section) => (
+                        <article key={section.id} className="pt-8">
+                            <h3 className="text-lg font-semibold text-textDark mb-2">
+                                {section.title}
+                            </h3>
+                            <p className="text-textMuted">{section.content}</p>
+                        </article>
+                    ))}
+                </div>
+            </SectionWrapper>
+        </main>
     );
 }

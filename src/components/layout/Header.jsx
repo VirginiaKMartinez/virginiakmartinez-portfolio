@@ -1,79 +1,62 @@
 // src/components/layout/Header.jsx
+import React from "react";
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { useLocation, useNavigate, Link } from "react-router-dom";
 
 export default function Header() {
     const { t, i18n } = useTranslation();
-    const location = useLocation();
-    const navigate = useNavigate();
-
-    // Consideramos detalle cualquier ruta /case-studies/<slug>
-    const isCaseDetail =
-        location.pathname.startsWith("/case-studies/") &&
-        location.pathname !== "/case-studies";
-
     const changeLanguage = (lng) => i18n.changeLanguage(lng);
 
     return (
         <header className="fixed top-0 left-0 w-full z-50 bg-white border-b border-divider">
-            <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-                <div className="flex items-center space-x-4">
-                    {isCaseDetail ? (
-                        <button
-                            onClick={() => navigate(-1)}
-                            className="text-textMuted hover:text-textDark transition-colors"
-                        >
-                            ← {t("header.backToHome")}
-                        </button>
-                    ) : (
-                        <Link
-                            to="/"
-                            className="text-2xl font-normal tracking-tight hover:text-link transition-colors"
-                        >
-                            Virginia Martínez
-                        </Link>
-                    )}
-                </div>
+            <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
+                {/* Logo / Nombre */}
+                <Link
+                    to="/"
+                    className="text-xl font-medium hover:text-link transition-colors"
+                >
+                    Virginia Martínez
+                </Link>
 
-                {!isCaseDetail && (
-                    <nav className="flex gap-6 text-base text-textMuted">
-                        <a
-                            href="#experience"
-                            className="hover:text-link transition-colors"
-                        >
-                            {t("header.experience")}
-                        </a>
-                        <a
-                            href="#education"
-                            className="hover:text-link transition-colors"
-                        >
-                            {t("header.education")}
-                        </a>
-                        <a
-                            href="#casestudies"
-                            className="hover:text-link transition-colors"
-                        >
-                            {t("header.caseStudies")}
-                        </a>
-                        <a
-                            href="#testimonials"
-                            className="hover:text-link transition-colors"
-                        >
-                            {t("header.testimonials")}
-                        </a>
-                        <a
-                            href="#contact"
-                            className="hover:text-link transition-colors"
-                        >
-                            {t("header.contact")}
-                        </a>
-                    </nav>
-                )}
+                {/* Navegación interna via anclas */}
+                <nav className="flex items-center space-x-6 text-textMuted">
+                    <a
+                        href="#experience"
+                        className="hover:text-link transition-colors"
+                    >
+                        {t("header.experience")}
+                    </a>
+                    <a
+                        href="#education"
+                        className="hover:text-link transition-colors"
+                    >
+                        {t("header.education")}
+                    </a>
+                    <a
+                        href="#casestudies"
+                        className="hover:text-link transition-colors"
+                    >
+                        {t("header.caseStudies")}
+                    </a>
+                    <a
+                        href="#testimonials"
+                        className="hover:text-link transition-colors"
+                    >
+                        {t("header.testimonials")}
+                    </a>
+                    <a
+                        href="#contact"
+                        className="hover:text-link transition-colors"
+                    >
+                        {t("header.contact")}
+                    </a>
+                </nav>
 
+                {/* Switch idioma */}
                 <div className="flex gap-2 text-sm">
                     <button
                         onClick={() => changeLanguage("en")}
-                        className={`px-2 py-1 rounded hover:bg-gray-100 ${
+                        className={`px-2 py-1 rounded hover:bg-gray-100 transition-colors ${
                             i18n.language === "en" ? "font-bold underline" : ""
                         }`}
                     >
@@ -81,7 +64,7 @@ export default function Header() {
                     </button>
                     <button
                         onClick={() => changeLanguage("fr")}
-                        className={`px-2 py-1 rounded hover:bg-gray-100 ${
+                        className={`px-2 py-1 rounded hover:bg-gray-100 transition-colors ${
                             i18n.language === "fr" ? "font-bold underline" : ""
                         }`}
                     >
