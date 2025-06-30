@@ -8,7 +8,7 @@ import {
 import MainLayout from "../layouts/MainLayout";
 import Home from "../pages/Home";
 import Contact from "../pages/Contact";
-import DesignSystem from "../pages/case-studies/DesignSystem";
+import DesignSystem from "../pages/case-studies/design-system/DesignSystem";
 import Flows from "../pages/case-studies/Flows";
 import UXResearch from "../pages/case-studies/UXResearch";
 

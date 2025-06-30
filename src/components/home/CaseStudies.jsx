@@ -2,7 +2,6 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import SectionWrapper from "../layout/SectionWrapper";
-import DotPattern from "../layout/DotPattern";
 import caseStudiesEN from "../../data/caseStudies.en";
 import caseStudiesFR from "../../data/caseStudies.fr";
 

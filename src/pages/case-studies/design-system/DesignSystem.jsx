@@ -1,10 +1,10 @@
 // src/pages/case-studies/DesignSystem.jsx
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import SectionWrapper from "../../components/layout/SectionWrapper";
-import DotPattern from "../../components/layout/DotPattern";
-import designSystemEN from "../../data/designSystem.en";
-import designSystemFR from "../../data/designSystem.fr";
+import SectionWrapper from "../../../components/layout/SectionWrapper";
+
+import designSystemEN from "../../../data/designSystem.en";
+import designSystemFR from "../../../data/designSystem.fr";
 
 export default function DesignSystem() {
     const { i18n, t } = useTranslation();
@@ -28,13 +28,6 @@ export default function DesignSystem() {
                 title={data.title}
                 className="relative overflow-hidden"
             >
-                {/* Fondo de dots */}
-                <DotPattern
-                    className="absolute inset-0 -z-10 pointer-events-none"
-                    colorVar="--color-dots-default"
-                    size={20}
-                />
-
                 <div className="space-y-6">
                     <h2 className="text-xl font-semibold text-textDark">
                         {data.subtitle}
