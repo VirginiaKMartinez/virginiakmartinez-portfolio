@@ -1,7 +1,6 @@
-// import { useTranslation } from "react-i18next";
+import { Outlet } from "react-router-dom";
 import Header from "../components/layout/Header";
 import Footer from "../components/home/Footer";
-import { Outlet } from "react-router-dom";
 const MainLayout = () => {
     // const { i18n } = useTranslation();
 
@@ -13,7 +12,7 @@ const MainLayout = () => {
         <div className="min-h-screen flex flex-col">
             <Header />
 
-            <main className="flex-grow">
+            <main className="flex-grow pt-20">
                 <Outlet />
             </main>
 

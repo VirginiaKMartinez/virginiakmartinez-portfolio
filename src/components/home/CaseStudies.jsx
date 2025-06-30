@@ -31,7 +31,7 @@ export default function CaseStudies() {
                     <div key={caseItem.id} className="flex flex-col">
                         {/* Imagen clicable: Link en lugar de <a> */}
                         <Link
-                            to={`/case-studies/${caseItem.id}`}
+                            to={caseItem.link}
                             className="relative w-full aspect-w-16 aspect-h-9 overflow-hidden rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
                         >
                             <img
@@ -44,7 +44,7 @@ export default function CaseStudies() {
 
                         {/* Texto clicable */}
                         <Link
-                            to={`/case-studies/${caseItem.id}`}
+                            to={caseItem.link}
                             className="mt-4 text-link text-lg font-medium hover:underline"
                         >
                             {caseItem.linkText}
