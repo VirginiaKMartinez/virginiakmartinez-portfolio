@@ -2,6 +2,7 @@
 import { useTranslation } from "react-i18next";
 import Icon from "../Icon";
 import ProfileCard from "../react-bits/ProfileCard";
+import DotGrid from "../react-bits/DotGrid";
 import photoVir from "../../assets/images/photoVir.png";
 import "../../styles/hero.css";
 
@@ -20,20 +21,19 @@ export default function Hero() {
                     className="w-45 h-48 object-cover rounded-full mb-8"
                 />
                 {/* ← Aquí va la ProfileCard */}
-                <div className="flex items-center justify-center px-6 lg:px-12">
-                    
+                {/* <div className="flex items-center justify-center px-6 lg:px-12">
                     <ProfileCard
-                        name="Javi A. Torres"
-                        title="Software Engineer"
-                        handle="javicodes"
-                        status="Online"
+                        name="Virginia"
+                        title="Product Designer"
+                        handle="virginia"
+                        status="Searching"
                         contactText="Contact Me"
                         avatarUrl={photoVir}
                         showUserInfo={true}
                         enableTilt={true}
                         onContactClick={() => console.log("Contact clicked")}
                     />
-                </div>
+                </div> */}
 
                 {/* Título */}
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-textDark mb-4">
@@ -60,6 +60,25 @@ export default function Hero() {
                     <Icon name="ArrowRight" className="w-5 h-5" />
                     {t("hero.cta")}
                 </a>
+                <div
+                    style={{
+                        width: "100%",
+                        height: "600px",
+                        position: "relative",
+                    }}
+                >
+                    <DotGrid
+                        dotSize={10}
+                        gap={15}
+                        baseColor="#3ad8fa"
+                        activeColor="#00abd1"
+                        proximity={120}
+                        shockRadius={250}
+                        shockStrength={5}
+                        resistance={750}
+                        returnDuration={1.5}
+                    />
+                </div>
             </div>
         </section>
     );
