@@ -1,6 +1,7 @@
 // src/components/home/Hero.jsx
 import { useTranslation } from "react-i18next";
 import Icon from "../Icon";
+import ProfileCard from "../react-bits/ProfileCard";
 import photoVir from "../../assets/images/photoVir.png";
 import "../../styles/hero.css";
 
@@ -18,6 +19,21 @@ export default function Hero() {
                     aria-hidden="true"
                     className="w-45 h-48 object-cover rounded-full mb-8"
                 />
+                {/* ← Aquí va la ProfileCard */}
+                <div className="flex items-center justify-center px-6 lg:px-12">
+                    
+                    <ProfileCard
+                        name="Javi A. Torres"
+                        title="Software Engineer"
+                        handle="javicodes"
+                        status="Online"
+                        contactText="Contact Me"
+                        avatarUrl={photoVir}
+                        showUserInfo={true}
+                        enableTilt={true}
+                        onContactClick={() => console.log("Contact clicked")}
+                    />
+                </div>
 
                 {/* Título */}
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-textDark mb-4">
