@@ -25,8 +25,20 @@
         "email": "Email"
     },
 
-    "welcome": "Hi, my name is Virginia",
-    "description": "I’m a Product Designer with more than 6 years experience and a background in FrontEnd development.",
-    "downloadResume": "Download resume",
-    "tradTest": "English mode"
+    "projects": {
+        "backToHome": "Back to Home",
+        "sections": {
+            "problem": "Problem",
+            "goals": "Goals",
+            "process": "Process",
+            "components": "Components",
+            "outcome": "Outcome",
+            "next": "Next steps"
+        },
+
+        "welcome": "Hi, my name is Virginia",
+        "description": "I’m a Product Designer with more than 6 years experience and a background in FrontEnd development.",
+        "downloadResume": "Download resume",
+        "tradTest": "English mode"
+    }
 }

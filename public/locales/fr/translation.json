@@ -24,9 +24,20 @@
         "github": "GitHub",
         "email": "Email"
     },
+    "projects": {
+        "backToHome": "Retour à l’accueil",
+        "sections": {
+            "problem": "Problème",
+            "goals": "Objectifs",
+            "process": "Processus",
+            "components": "Composants",
+            "outcome": "Résultat",
+            "next": "Prochaines étapes"
+        },
 
-    "welcome": "Bonjour, je m'appelle Virginia",
-    "description": "Je suis Product Designer avec plus de 6 ans d’expérience et une formation en développement FrontEnd.",
-    "downloadResume": "Télécharger le CV",
-    "tradTest": "Mode français"
+        "welcome": "Bonjour, je m'appelle Virginia",
+        "description": "Je suis Product Designer avec plus de 6 ans d’expérience et une formation en développement FrontEnd.",
+        "downloadResume": "Télécharger le CV",
+        "tradTest": "Mode français"
+    }
 }

@@ -6,214 +6,215 @@ import Icon from "../../../components/Icon";
 
 // Data bilingüe del caso
 import dsEN from "../../../data/designSystem.en.js";
-import dsFR from "../../../data/designSystem.en.js";
+import dsFR from "../../../data/designSystem.fr.js";
 
 export default function DesignSystem() {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
+
+  // Cogemos el dataset por idioma
   const data = i18n.language === "fr" ? dsFR : dsEN;
 
+  // Fallbacks defensivos para no romper la UI si falta algo
+  const title    = data?.title    ?? "Design System";
+  const subtitle = data?.subtitle ?? "";
+  const UI       = data?.ui       ?? {};
+  const S        = data?.sections ?? {}; // nombres de secciones
+  const meta     = data?.meta     ?? [];
+
+  const ov       = data?.overview ?? {};
+  const tokens   = data?.tokens   ?? [];
+  const library  = data?.library  ?? [];
+  const gov      = data?.governance ?? {};
+  const dev      = data?.dev ?? {};
+  const chall    = data?.challenges ?? [];
+  const results  = data?.results ?? {};
+  const learn    = data?.learnings ?? [];
+  const next     = data?.next ?? [];
+
   return (
-    <main className="bg-background">
-      {/* Back bar (en la página, no en Header) */}
-      <div className="max-w-6xl mx-auto px-4 pt-24 pb-4 flex items-center justify-between">
+    <>
+      {/* “Back to home” fuera del Header, arriba de la página */}
+      <div className="max-w-6xl mx-auto px-4 pt-24 pb-4">
         <Link
-          to="/#casestudies"
+          to="/"
           className="inline-flex items-center gap-2 text-link hover:underline"
         >
           <Icon name="ArrowLeft" className="w-4 h-4" />
-          {data.ui.backToHome}
+          {UI.backToHome ?? t("projects.backToHome", "Back to home")}
         </Link>
-
-        {/* CTA corto para contacto opcional */}
-        <a
-          href="#contact"
-          className="hidden sm:inline-flex items-center gap-2 text-link hover:underline"
-        >
-          <Icon name="Mail" className="w-4 h-4" />
-          {data.ui.contactCta}
-        </a>
       </div>
 
-      {/* Intro / Meta */}
-      <SectionWrapper id="ds-intro" title={data.sections.intro}>
-        <div className="space-y-6">
-          <h1 className="text-3xl md:text-4xl font-bold text-textDark">
-            {data.title}
+      {/* HERO */}
+      <SectionWrapper id="ds-hero">
+        <div className="max-w-6xl mx-auto">
+          <h1 className="text-3xl sm:text-4xl font-bold text-textDark">
+            {title}
           </h1>
-          <p className="text-textDark">{data.subtitle}</p>
+          {subtitle && (
+            <p className="text-textMuted mt-2 max-w-3xl">{subtitle}</p>
+          )}
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {data.meta.map((item, i) => (
-              <div key={i} className="rounded-lg border border-divider p-4">
-                <p className="text-xs uppercase tracking-wide text-textMuted">
-                  {item.label}
-                </p>
-                <p className="text-textDark mt-1">{item.value}</p>
-              </div>
-            ))}
-          </div>
+          {/* Meta badges */}
+          {meta.length > 0 && (
+            <ul className="flex flex-wrap gap-3 mt-6">
+              {meta.map((m, i) => (
+                <li
+                  key={i}
+                  className="text-sm bg-[var(--color-bg)] border border-divider rounded-md px-3 py-1"
+                >
+                  <span className="text-textMuted">{m.label}:</span>{" "}
+                  <span className="text-textDark">{m.value}</span>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       </SectionWrapper>
 
-      {/* Problema & Objetivos */}
-      <SectionWrapper id="ds-overview" title={data.sections.overview}>
-        <div className="space-y-8">
+      {/* OVERVIEW (Problem & Goals) */}
+      <SectionWrapper id="ds-overview" title={S.overview ?? "Overview"}>
+        <div className="grid gap-8 md:grid-cols-2">
           <div>
-            <h3 className="text-xl font-semibold text-textDark mb-2">
-              {data.overview.problem.title}
+            <h3 className="font-semibold text-textDark mb-2">
+              {ov?.problem?.title ?? "The problem"}
             </h3>
-            <p className="text-textDark">{data.overview.problem.text}</p>
+            <p className="text-textMuted">{ov?.problem?.text}</p>
           </div>
-
           <div>
-            <h3 className="text-xl font-semibold text-textDark mb-2">
-              {data.overview.goals.title}
+            <h3 className="font-semibold text-textDark mb-2">
+              {ov?.goals?.title ?? "Goals"}
             </h3>
-            <ul className="list-disc pl-5 space-y-2 text-textDark">
-              {data.overview.goals.items.map((g, i) => (
-                <li key={i}>{g}</li>
+            <ul className="list-disc pl-5 space-y-1 text-textDark">
+              {(ov?.goals?.items ?? []).map((g, idx) => (
+                <li key={idx}>{g}</li>
               ))}
             </ul>
           </div>
         </div>
       </SectionWrapper>
 
-      {/* Fundamentos (tokens) */}
-      <SectionWrapper id="ds-tokens" title={data.sections.tokens}>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {data.tokens.map((t, i) => (
-            <div key={i} className="rounded-lg border border-divider p-4">
-              <h4 className="font-semibold text-textDark">{t.name}</h4>
-              <p className="text-textMuted mt-1">{t.desc}</p>
-              {t.examples?.length ? (
-                <div className="mt-3 flex flex-wrap gap-2">
-                  {t.examples.map((ex, k) => (
+      {/* TOKENS */}
+      <SectionWrapper id="ds-tokens" title={S.tokens ?? "Foundations"}>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {tokens.map((tk, i) => (
+            <div key={i} className="border border-divider rounded-lg p-4">
+              <h4 className="font-semibold text-textDark">{tk.name}</h4>
+              {tk.desc && (
+                <p className="text-textMuted mt-1">{tk.desc}</p>
+              )}
+              {tk.examples?.length > 0 && (
+                <div className="flex gap-3 mt-3 flex-wrap">
+                  {tk.examples.map((ex, j) => (
                     <span
-                      key={k}
-                      className="inline-block rounded px-2 py-1 text-sm border border-divider text-textDark"
-                      style={ex.style || {}}
+                      key={j}
+                      className="text-sm border border-divider rounded px-2 py-1"
+                      style={ex.style}
                     >
                       {ex.label}
                     </span>
                   ))}
                 </div>
-              ) : null}
+              )}
             </div>
           ))}
         </div>
       </SectionWrapper>
 
-      {/* Librería de componentes */}
-      <SectionWrapper id="ds-library" title={data.sections.library}>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {data.library.map((c, i) => (
-            <div key={i} className="rounded-lg border border-divider p-4">
+      {/* LIBRARY */}
+      <SectionWrapper id="ds-library" title={S.library ?? "Components"}>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {library.map((c, i) => (
+            <div key={i} className="border border-divider rounded-lg p-4">
               <h4 className="font-semibold text-textDark">{c.name}</h4>
-              <p className="text-textMuted mt-1">{c.purpose}</p>
-              <ul className="mt-3 list-disc pl-5 text-textDark space-y-1">
-                {c.notes.map((n, k) => (
-                  <li key={k}>{n}</li>
-                ))}
-              </ul>
+              {c.purpose && (
+                <p className="text-textMuted mt-1">{c.purpose}</p>
+              )}
+              {c.notes?.length > 0 && (
+                <ul className="list-disc pl-5 mt-2 text-sm text-textDark">
+                  {c.notes.map((n, j) => (
+                    <li key={j}>{n}</li>
+                  ))}
+                </ul>
+              )}
             </div>
           ))}
         </div>
       </SectionWrapper>
 
-      {/* Documentación & Gobierno */}
-      <SectionWrapper id="ds-governance" title={data.sections.governance}>
-        <div className="space-y-6">
-          <p className="text-textDark">{data.governance.summary}</p>
-          <ul className="list-disc pl-5 space-y-2 text-textDark">
-            {data.governance.points.map((p, i) => (
-              <li key={i}>{p}</li>
-            ))}
-          </ul>
-        </div>
+      {/* GOVERNANCE */}
+      <SectionWrapper id="ds-governance" title={S.governance ?? "Docs & Governance"}>
+        <p className="text-textMuted">{gov.summary}</p>
+        <ul className="list-disc pl-5 mt-2 text-textDark">
+          {(gov.points ?? []).map((p, i) => (
+            <li key={i}>{p}</li>
+          ))}
+        </ul>
       </SectionWrapper>
 
-      {/* Implantación con devs */}
-      <SectionWrapper id="ds-dev" title={data.sections.devhandoff}>
-        <div className="space-y-6">
-          <p className="text-textDark">{data.dev.summary}</p>
-          <ul className="list-disc pl-5 space-y-2 text-textDark">
-            {data.dev.points.map((p, i) => (
-              <li key={i}>{p}</li>
-            ))}
-          </ul>
-        </div>
+      {/* DEV HANDOFF */}
+      <SectionWrapper id="ds-dev" title={S.devhandoff ?? "Dev Handoff"}>
+        <p className="text-textMuted">{dev.summary}</p>
+        <ul className="list-disc pl-5 mt-2 text-textDark">
+          {(dev.points ?? []).map((p, i) => (
+            <li key={i}>{p}</li>
+          ))}
+        </ul>
       </SectionWrapper>
 
-      {/* Retos y soluciones */}
-      <SectionWrapper id="ds-challenges" title={data.sections.challenges}>
-        <div className="space-y-6">
-          {data.challenges.map((ch, i) => (
-            <div key={i} className="rounded-lg border border-divider p-4">
-              <h4 className="font-semibold text-textDark">{ch.title}</h4>
-              <p className="text-textMuted mt-2">{ch.context}</p>
-              <p className="text-textDark mt-2">
-                <span className="font-semibold">{data.labels.solution}:</span>{" "}
-                {ch.solution}
-              </p>
+      {/* CHALLENGES */}
+      <SectionWrapper id="ds-challenges" title={S.challenges ?? "Challenges"}>
+        <div className="space-y-4">
+          {chall.map((it, i) => (
+            <div key={i} className="border border-divider rounded-lg p-4">
+              <h4 className="font-semibold text-textDark">{it.title}</h4>
+              <p className="text-textMuted mt-1">{it.context}</p>
+              {it.solution && (
+                <p className="text-textDark mt-2">
+                  <span className="font-medium">{data?.labels?.solution ?? "Solution"}:</span>{" "}
+                  {it.solution}
+                </p>
+              )}
             </div>
           ))}
         </div>
       </SectionWrapper>
 
-      {/* Resultados */}
-      <SectionWrapper id="ds-results" title={data.sections.results}>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {data.results.metrics.map((m, i) => (
-            <div key={i} className="rounded-lg border border-divider p-6 text-center">
-              <p className="text-3xl font-bold text-textDark">{m.value}</p>
-              <p className="text-textMuted mt-1">{m.label}</p>
+      {/* RESULTS */}
+      <SectionWrapper id="ds-results" title={S.results ?? "Results"}>
+        <div className="grid gap-6 sm:grid-cols-3">
+          {(results.metrics ?? []).map((m, i) => (
+            <div key={i} className="text-center border border-divider rounded-lg p-4">
+              <div className="text-2xl font-bold text-textDark">{m.value}</div>
+              <div className="text-textMuted">{m.label}</div>
             </div>
           ))}
         </div>
-        {data.results.notes?.length ? (
-          <ul className="mt-6 list-disc pl-5 space-y-2 text-textDark">
-            {data.results.notes.map((n, i) => (
+        {(results.notes ?? []).length > 0 && (
+          <ul className="list-disc pl-5 mt-4 text-textDark">
+            {results.notes.map((n, i) => (
               <li key={i}>{n}</li>
             ))}
           </ul>
-        ) : null}
+        )}
       </SectionWrapper>
 
-      {/* Aprendizajes y siguientes pasos */}
-      <SectionWrapper id="ds-learnings" title={data.sections.learnings}>
-        <div className="space-y-4">
-          <ul className="list-disc pl-5 space-y-2 text-textDark">
-            {data.learnings.map((l, i) => (
-              <li key={i}>{l}</li>
-            ))}
-          </ul>
-          {data.next?.length ? (
-            <>
-              <h4 className="font-semibold text-textDark mt-6">
-                {data.sections.next}
-              </h4>
-              <ul className="list-disc pl-5 space-y-2 text-textDark">
-                {data.next.map((n, i) => (
-                  <li key={i}>{n}</li>
-                ))}
-              </ul>
-            </>
-          ) : null}
-        </div>
+      {/* LEARNINGS */}
+      <SectionWrapper id="ds-learnings" title={S.learnings ?? "Learnings"}>
+        <ul className="list-disc pl-5 text-textDark">
+          {learn.map((l, i) => (
+            <li key={i}>{l}</li>
+          ))}
+        </ul>
       </SectionWrapper>
 
-      {/* CTA final */}
-      <SectionWrapper id="ds-cta" title="">
-        <div className="flex flex-col items-start md:items-center">
-          <a
-            href="mailto:hello@virginiak.dev"
-            className="inline-flex items-center gap-2 bg-primary text-white font-medium px-6 py-3 rounded-lg shadow-lg duration-300 transition-all hover:scale-105 hover:bg-accent-indigo"
-          >
-            <Icon name="MessageSquare" className="w-5 h-5" />
-            {data.ui.hireMe}
-          </a>
-        </div>
+      {/* NEXT */}
+      <SectionWrapper id="ds-next" title={S.next ?? "Next steps"}>
+        <ul className="list-disc pl-5 text-textDark">
+          {next.map((n, i) => (
+            <li key={i}>{n}</li>
+          ))}
+        </ul>
       </SectionWrapper>
-    </main>
+    </>
   );
 }
