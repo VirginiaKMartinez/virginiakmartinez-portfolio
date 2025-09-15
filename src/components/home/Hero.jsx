@@ -20,6 +20,13 @@ export default function Hero() {
                     aria-hidden="true"
                     className="w-45 h-48 object-cover rounded-full mb-8"
                 />
+                {/* <DotGrid
+                    className="absolute inset-0 -z-300 pointer-events-none"
+                    color="var(--color-dots-default)" // puedes usar tus variables CSS
+                    dotSize={2} // tamaño del punto
+                    gap={20} // separación
+                /> */}
+
                 {/* ← Aquí va la ProfileCard */}
                 {/* <div className="flex items-center justify-center px-6 lg:px-12">
                     <ProfileCard
@@ -60,25 +67,6 @@ export default function Hero() {
                     <Icon name="ArrowRight" className="w-5 h-5" />
                     {t("hero.cta")}
                 </a>
-                <div
-                    style={{
-                        width: "100%",
-                        height: "600px",
-                        position: "relative",
-                    }}
-                >
-                    <DotGrid
-                        dotSize={10}
-                        gap={15}
-                        baseColor="#3ad8fa"
-                        activeColor="#00abd1"
-                        proximity={120}
-                        shockRadius={250}
-                        shockStrength={5}
-                        resistance={750}
-                        returnDuration={1.5}
-                    />
-                </div>
             </div>
         </section>
     );
