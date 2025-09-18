@@ -26,14 +26,30 @@
     },
 
     "projects": {
-        "backToHome": "Back to Home",
+        "backToProjects": "Back to all Case Studies",
         "sections": {
-            "problem": "Problem",
-            "goals": "Goals",
-            "process": "Process",
-            "components": "Components",
-            "outcome": "Outcome",
-            "next": "Next steps"
+            "intro": "Design System",
+            "overview": "Overview",
+            "tokens": "Foundations (Tokens)",
+            "library": "Components Library",
+            "governance": "Docs & Governance",
+            "devhandoff": "Dev handoff",
+            "challenges": "Challenges & Solutions",
+            "results": "Results & Impact",
+            "learnings": "Learnings",
+            "next": "Next steps",
+            "problem": "The problem",
+            "goals": "Goals"
+        },
+        "labels": {
+            "role": "Role",
+            "company": "Company",
+            "timeframe": "Timeframe",
+            "stack": "Stack",
+            "solution": "Solution"
+        },
+        "common": {
+            "onThisPage": "On this page"
         },
 
         "welcome": "Hi, my name is Virginia",

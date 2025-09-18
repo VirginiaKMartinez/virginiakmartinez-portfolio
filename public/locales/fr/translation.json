@@ -25,14 +25,30 @@
         "email": "Email"
     },
     "projects": {
-        "backToHome": "Retour à l’accueil",
+        "backToProjects": "Retour à toutes les études de cas",
         "sections": {
-            "problem": "Problème",
-            "goals": "Objectifs",
-            "process": "Processus",
-            "components": "Composants",
-            "outcome": "Résultat",
-            "next": "Prochaines étapes"
+            "intro": "Design System",
+            "overview": "Présentation",
+            "tokens": "Fondations (Tokens)",
+            "library": "Bibliothèque de composants",
+            "governance": "Docs & Gouvernance",
+            "devhandoff": "Handoff dev",
+            "challenges": "Défis & Solutions",
+            "results": "Résultats & Impact",
+            "learnings": "Enseignements",
+            "next": "Prochaines étapes",
+            "problem": "Le problème",
+            "goals": "Objectifs"
+        },
+        "labels": {
+            "role": "Rôle",
+            "company": "Entreprise",
+            "timeframe": "Période",
+            "stack": "Stack",
+            "solution": "Solution"
+        },
+        "common": {
+            "onThisPage": "Sur cette page"
         },
 
         "welcome": "Bonjour, je m'appelle Virginia",
