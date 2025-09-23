@@ -1,55 +1,13 @@
 // src/pages/case-studies/design-system/DesignSystem.jsx
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import Icon from "../../../components/Icon";
+import OnThisPage from "../../../components/nav/onThisPage.jsx";
 
 // Data bilingüe del caso
 import dsEN from "../../../data/designSystem.en.js";
 import dsFR from "../../../data/designSystem.fr.js";
-
-// --- Hook: sección activa con IntersectionObserver
-function useActiveSection(ids, rootMargin = "-40% 0px -55% 0px") {
-    const [active, setActive] = useState(ids[0] || null);
-    const observersRef = useRef([]);
-
-    useEffect(() => {
-        const sections = ids
-            .map((id) => document.getElementById(id))
-            .filter(Boolean);
-
-        observersRef.current.forEach((o) => o.disconnect());
-        observersRef.current = [];
-
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) setActive(entry.target.id);
-                });
-            },
-            { root: null, rootMargin, threshold: 0.01 }
-        );
-
-        sections.forEach((el) => {
-            observer.observe(el);
-        });
-        observersRef.current.push(observer);
-
-        return () => {
-            observersRef.current.forEach((o) => o.disconnect());
-            observersRef.current = [];
-        };
-    }, [ids, rootMargin]);
-
-    return active;
-}
-
-// --- Utilidad: scroll suave con offset (header fijo)
-function scrollToId(id) {
-    const el = document.getElementById(id);
-    if (!el) return;
-    el.scrollIntoView({ behavior: "smooth", block: "start" });
-}
 
 export default function DesignSystem() {
     const { i18n, t } = useTranslation();
@@ -97,8 +55,6 @@ export default function DesignSystem() {
         [t]
     );
 
-    const active = useActiveSection(toc.map((x) => x.id));
-
     // Fallbacks defensivos
     const title = data?.title ?? "Design System";
     const subtitle = data?.subtitle ?? "";
@@ -124,10 +80,13 @@ export default function DesignSystem() {
                     <h1 className="mt-6 text-3xl sm:text-4xl font-bold text-textDark">
                         {title}
                     </h1>
+
                     <img
                         src="../../../../public/images/EN_thumb_design_system.png"
-                        className=" rounded-lg"
-                    ></img>
+                        alt=""
+                        className="rounded-lg mt-4"
+                    />
+
                     {!!subtitle && (
                         <p className="mt-3 text-textMuted">{subtitle}</p>
                     )}
@@ -156,33 +115,11 @@ export default function DesignSystem() {
                         </div>
                     )}
 
-                    {/* TOC */}
-                    <nav
-                        aria-label="On this page"
-                        className="border border-divider rounded-lg p-3"
-                    >
-                        <div className="text-xs uppercase tracking-wide text-textMuted mb-2">
-                            {t("common.onThisPage", "On this page")}
-                        </div>
-                        <ul className="space-y-1">
-                            {toc.map((item) => (
-                                <li key={item.id}>
-                                    <button
-                                        type="button"
-                                        onClick={() => scrollToId(item.id)}
-                                        className={`w-full text-left px-2 py-1 rounded transition-colors
-                      ${
-                          active === item.id
-                              ? "text-textDark bg-[rgba(0,0,0,0.04)]"
-                              : "text-textMuted hover:text-link"
-                      }`}
-                                    >
-                                        {item.label}
-                                    </button>
-                                </li>
-                            ))}
-                        </ul>
-                    </nav>
+                    {/* TOC unificado */}
+                    <OnThisPage
+                        items={toc}
+                        title={t("common.onThisPage", "On this page")}
+                    />
                 </aside>
 
                 {/* --- Contenido derecha --- */}
