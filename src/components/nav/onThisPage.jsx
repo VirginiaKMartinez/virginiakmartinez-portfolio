@@ -1,45 +1,63 @@
-import { memo } from "react";
+import { memo, useState } from "react";
 import { useScrollSpy, scrollToId } from "../../hooks/useScrollSpy";
 
 /**
  * items: [{ id, label }]
  */
 function OnThisPageInner({ items = [], title = "On this page" }) {
-    const activeId = useScrollSpy(items.map((i) => i.id));
+    const [clickedId, setClickedId] = useState(null);
+
+    const activeId = useScrollSpy(
+        items.map((i) => i.id),
+        {
+            rootMargin: "0px 0px -70% 0px",
+            threshold: 0.01,
+            lockToId: clickedId,
+            lockDuration: 700,
+        },
+    );
+
+    const onClick = (e, id) => {
+        setClickedId(id);
+        scrollToId(id);
+
+        // evita que el foco “pinte” como si fuera otro activo (mouse)
+        setTimeout(() => e.currentTarget?.blur?.(), 0);
+
+        // soltamos el lock tras el scroll
+        setTimeout(() => setClickedId(null), 750);
+    };
 
     return (
         <nav
             aria-label={title}
-            className="border border-divider rounded-lg p-3"
+            className="border border-divider rounded-2xl p-6 bg-background"
         >
-            <div className="text-xs uppercase tracking-wide text-textMuted mb-2">
+            <div className="text-xs uppercase tracking-wide text-textMuted mb-3">
                 {title}
             </div>
+
             <ul className="space-y-1">
                 {items.map((item) => {
                     const isActive = activeId === item.id;
+
                     return (
-                        <li key={item.id} className="relative">
+                        <li key={item.id}>
                             <button
                                 type="button"
-                                onClick={() => scrollToId(item.id)}
+                                onClick={(e) => onClick(e, item.id)}
                                 aria-current={isActive ? "true" : undefined}
-                                className={`w-full text-left px-2 py-1 rounded transition-colors
-                  focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2
-                  ${
-                      isActive
-                          ? "text-textDark bg-[rgba(0,0,0,0.04)]"
-                          : "text-textMuted hover:text-link"
-                  }`}
+                                className={[
+                                    "w-full text-left rounded-lg py-2 px-3 transition-colors",
+                                    "focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2",
+                                    "border-l-2",
+                                    isActive
+                                        ? "bg-[rgba(0,0,0,0.04)] border-primary text-textDark font-medium"
+                                        : "border-transparent text-textDark/70 hover:bg-[rgba(0,0,0,0.03)] hover:text-textDark",
+                                ].join(" ")}
                             >
                                 {item.label}
                             </button>
-                            {isActive && (
-                                <span
-                                    aria-hidden="true"
-                                    className="hidden lg:block absolute -left-2 top-1/2 -translate-y-1/2 h-5 w-1 rounded bg-primary"
-                                />
-                            )}
                         </li>
                     );
                 })}
@@ -48,5 +66,4 @@ function OnThisPageInner({ items = [], title = "On this page" }) {
     );
 }
 
-const OnThisPage = memo(OnThisPageInner);
-export default OnThisPage;
+export default memo(OnThisPageInner);
