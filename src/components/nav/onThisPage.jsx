@@ -31,7 +31,7 @@ function OnThisPageInner({ items = [], title = "On this page" }) {
     return (
         <nav
             aria-label={title}
-            className="border border-divider rounded-2xl p-6 bg-background"
+            className="border border-divider rounded-2xl p-6 bg-backgroundWhite"
         >
             <div className="text-xs uppercase tracking-wide text-textMuted mb-3">
                 {title}

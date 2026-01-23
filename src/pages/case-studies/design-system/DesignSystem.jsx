@@ -69,7 +69,7 @@ export default function DesignSystem() {
                 {/* Sidebar */}
                 <aside className="space-y-6 lg:sticky lg:top-24 h-max">
                     {meta.length > 0 && (
-                        <div className="border border-divider rounded-2xl p-5 bg-background">
+                        <div className="border border-divider rounded-2xl p-5 bg-backgroundWhite">
                             <div className="text-[11px] uppercase tracking-wide text-textMuted mb-4">
                                 {t("projects.projectInfo", "Project info")}
                             </div>
@@ -198,7 +198,7 @@ export default function DesignSystem() {
                                     .map((tk, i) => (
                                         <div
                                             key={i}
-                                            className="border border-divider rounded-2xl p-5 bg-background"
+                                            className="border border-divider rounded-2xl p-5 bg-backgroundWhite"
                                         >
                                             <h4 className="font-semibold text-textDark">
                                                 {tk.name}
@@ -256,7 +256,7 @@ export default function DesignSystem() {
                                 {(data?.library ?? []).map((c, i) => (
                                     <div
                                         key={i}
-                                        className="border border-divider rounded-2xl p-5 bg-background"
+                                        className="border border-divider rounded-2xl p-5 bg-backgroundWhite"
                                     >
                                         <h4 className="font-semibold text-textDark">
                                             {c.name}
@@ -353,7 +353,7 @@ export default function DesignSystem() {
                                 {(data?.challenges ?? []).map((it, i) => (
                                     <div
                                         key={i}
-                                        className="border border-divider rounded-2xl p-5 bg-background"
+                                        className="border border-divider rounded-2xl p-5 bg-backgroundWhite"
                                     >
                                         <h4 className="font-semibold text-textDark">
                                             {it.title}
@@ -392,7 +392,7 @@ export default function DesignSystem() {
                                         (m, i) => (
                                             <div
                                                 key={i}
-                                                className="text-center border border-divider rounded-lg p-4"
+                                                className="bg-backgroundWhite text-center border border-divider rounded-lg p-4"
                                             >
                                                 <div className="text-2xl font-bold text-textDark">
                                                     {m.value}
@@ -453,7 +453,7 @@ export default function DesignSystem() {
 
                         {/* CTA final */}
                         <section className="pt-10">
-                            <div className="border border-divider rounded-2xl bg-background px-6 py-10 sm:px-10 text-center">
+                            <div className="border border-divider rounded-2xl bg-backgroundWhite px-6 py-10 sm:px-10 text-center">
                                 <h3 className="text-textDark text-xl sm:text-2xl font-semibold">
                                     {t(
                                         "projects.ctaTitle",

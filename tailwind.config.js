@@ -18,10 +18,10 @@ export default {
                 textDark: "var(--color-text-dark)",
                 textMuted: "var(--color-text-muted)",
                 background: "var(--color-bg)",
+                backgroundWhite: "var(--color-bg-white)",
                 dotsDefault: "var(--color-dots-default)",
                 divider: "var(--color-divider)",
                 textWhite: "var(--color-bg)",
-                
             },
             fontFamily: {
                 sans: ["Noto Sans", "sans-serif"],
