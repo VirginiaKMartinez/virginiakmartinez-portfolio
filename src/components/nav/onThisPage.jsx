@@ -48,12 +48,12 @@ function OnThisPageInner({ items = [], title = "On this page" }) {
                                 onClick={(e) => onClick(e, item.id)}
                                 aria-current={isActive ? "true" : undefined}
                                 className={[
-                                    "w-full text-left rounded-lg py-2 px-3 transition-colors",
+                                    "w-full text-left py-2 px-3 transition-colors",
                                     "focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2",
                                     "border-l-2",
                                     isActive
-                                        ? "bg-[rgba(0,0,0,0.04)] border-primary text-textDark font-medium"
-                                        : "border-transparent text-textDark/70 hover:bg-[rgba(0,0,0,0.03)] hover:text-textDark",
+                                        ? "bg-[rgba(0,0,0,0.04)] border-primary text-link font-medium"
+                                        : "border-transparent text-textDark/70 hover:text-link",
                                 ].join(" ")}
                             >
                                 {item.label}

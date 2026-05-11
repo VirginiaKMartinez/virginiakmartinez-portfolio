@@ -70,13 +70,13 @@ export default function DesignSystem() {
                 <aside className="space-y-6 lg:sticky lg:top-24 h-max">
                     {meta.length > 0 && (
                         <div className="border border-divider rounded-2xl p-5 bg-backgroundWhite">
-                            <div className="text-[11px] uppercase tracking-wide text-textMuted mb-4">
+                            <div className="text-xs uppercase tracking-wide text-textMuted mb-4">
                                 {t("projects.projectInfo", "Project info")}
                             </div>
                             <ul className="space-y-4">
                                 {meta.map((m, i) => (
                                     <li key={i}>
-                                        <div className="text-[11px] uppercase tracking-wide text-textMuted">
+                                        <div className="text-xs uppercase tracking-wide text-textMuted">
                                             {m.label}
                                         </div>
                                         <div className="text-textDark">
@@ -392,7 +392,7 @@ export default function DesignSystem() {
                                         (m, i) => (
                                             <div
                                                 key={i}
-                                                className="bg-backgroundWhite text-center border border-divider rounded-lg p-4"
+                                                className="bg-backgroundWhite text-center border border-divider rounded-2xl p-4"
                                             >
                                                 <div className="text-2xl font-bold text-textDark">
                                                     {m.value}
