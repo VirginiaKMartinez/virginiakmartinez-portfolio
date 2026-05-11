@@ -12,8 +12,8 @@ function Experience() {
     return (
         <SectionWrapper title={title} id="experience">
             <div className="max-w-4xl mx-auto space-y-8">
-                {items.map((exp, index) => (
-                    <div key={index}>
+                {items.map((exp) => (
+                    <div key={`${exp.company}-${exp.period}`}>
                         <h3 className="text-xl font-semibold text-textDark">
                             {exp.position} —{" "}
                             <span className="text-link">{exp.company}</span>
@@ -21,7 +21,14 @@ function Experience() {
                         <p className="text-sm text-textMuted">
                             {exp.location} · {exp.period}
                         </p>
-                        <p className="mt-2 text-textDark">{exp.description}</p>
+                        {exp.summary && (
+                            <p className="mt-2 text-textDark">{exp.summary}</p>
+                        )}
+                        <ul className="mt-3 list-disc space-y-2 pl-5 text-textDark">
+                            {exp.description.map((item) => (
+                                <li key={item}>{item}</li>
+                            ))}
+                        </ul>
                     </div>
                 ))}
             </div>

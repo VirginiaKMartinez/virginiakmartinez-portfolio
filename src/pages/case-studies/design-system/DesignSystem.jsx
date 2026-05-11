@@ -8,6 +8,164 @@ import OnThisPage from "../../../components/nav/onThisPage.jsx";
 import dsEN from "../../../data/designSystem.en.js";
 import dsFR from "../../../data/designSystem.fr.js";
 
+function TokenPreview({ token, index }) {
+    if (index === 0) {
+        const examples = token.examples?.length
+            ? token.examples.slice(0, 2)
+            : [
+                  { label: token.name },
+                  { label: token.desc },
+              ];
+
+        return (
+            <div className="mt-4 grid grid-cols-2 gap-3">
+                {examples.map((example, itemIndex) => (
+                    <div
+                        key={`${example.label}-${itemIndex}`}
+                        className="rounded-xl border border-divider bg-background p-3"
+                    >
+                        <div
+                            className={[
+                                "h-10 rounded-lg border border-divider",
+                                itemIndex === 0 ? "bg-primary" : "bg-link",
+                            ].join(" ")}
+                        />
+                        <div className="mt-2 truncate text-xs font-medium text-textDark">
+                            {example.label}
+                        </div>
+                    </div>
+                ))}
+            </div>
+        );
+    }
+
+    if (index === 1) {
+        return (
+            <div className="mt-4 rounded-xl border border-divider bg-background p-4">
+                <div className="text-2xl font-semibold leading-none text-textDark">
+                    Aa
+                </div>
+                <div className="mt-3 space-y-2">
+                    <div className="h-2 w-4/5 rounded-full bg-textDark" />
+                    <div className="h-2 w-3/5 rounded-full bg-textMuted" />
+                    <div className="h-2 w-2/5 rounded-full bg-divider" />
+                </div>
+            </div>
+        );
+    }
+
+    if (index === 2) {
+        return (
+            <div className="mt-4 flex h-24 items-end gap-2 rounded-xl border border-divider bg-background p-4">
+                {[2, 4, 6, 8].map((height) => (
+                    <div
+                        key={height}
+                        className="flex flex-1 items-end justify-center rounded-md bg-backgroundWhite"
+                    >
+                        <div
+                            className={[
+                                "w-full rounded-md bg-primary",
+                                height === 2 && "h-2",
+                                height === 4 && "h-4",
+                                height === 6 && "h-6",
+                                height === 8 && "h-8",
+                            ]
+                                .filter(Boolean)
+                                .join(" ")}
+                        />
+                    </div>
+                ))}
+            </div>
+        );
+    }
+
+    return (
+        <div className="mt-4 rounded-xl border border-divider bg-background p-4">
+            <div className="h-3 w-2/3 rounded-full bg-primary" />
+            <div className="mt-2 h-3 w-1/2 rounded-full bg-divider" />
+        </div>
+    );
+}
+
+function ComponentPreview({ component, index }) {
+    if (index === 0) {
+        return (
+            <div className="mt-4 flex flex-wrap items-center gap-2">
+                <span className="rounded-lg bg-primary px-3 py-2 text-xs font-medium text-backgroundWhite">
+                    {component.name}
+                </span>
+                <span className="rounded-lg border border-divider px-3 py-2 text-xs font-medium text-textDark">
+                    {component.notes?.[0]}
+                </span>
+            </div>
+        );
+    }
+
+    if (index === 1) {
+        return (
+            <div className="mt-4 rounded-xl border border-divider bg-background p-3">
+                <div className="h-2 w-1/3 rounded-full bg-textMuted" />
+                <div className="mt-3 flex h-9 items-center rounded-lg border border-divider bg-backgroundWhite px-3">
+                    <div className="h-2 w-3/5 rounded-full bg-divider" />
+                </div>
+                <div className="mt-2 h-2 w-1/2 rounded-full bg-primary" />
+            </div>
+        );
+    }
+
+    if (index === 2) {
+        return (
+            <div className="mt-4 rounded-xl border border-divider bg-background p-3">
+                <div className="flex items-center gap-2">
+                    {component.notes?.slice(0, 2).map((note, noteIndex) => (
+                        <span
+                            key={note}
+                            className={[
+                                "rounded-full px-3 py-1 text-xs font-medium",
+                                noteIndex === 0
+                                    ? "bg-primary text-backgroundWhite"
+                                    : "bg-backgroundWhite text-textDark",
+                            ].join(" ")}
+                        >
+                            {note}
+                        </span>
+                    ))}
+                </div>
+                <div className="mt-3 h-2 w-4/5 rounded-full bg-divider" />
+            </div>
+        );
+    }
+
+    return (
+        <div className="mt-4 rounded-xl border border-divider bg-background p-3">
+            <div className="h-3 w-2/3 rounded-full bg-primary" />
+        </div>
+    );
+}
+
+function ComponentShowcaseStrip({ components }) {
+    return (
+        <div className="mt-6 overflow-hidden rounded-2xl border border-divider bg-backgroundWhite">
+            <div className="flex gap-3 overflow-x-auto p-4">
+                {components.map((component, index) => (
+                    <div
+                        key={component.name}
+                        className="min-w-48 flex-1 rounded-xl border border-divider bg-background p-4"
+                    >
+                        <div className="flex items-center justify-between gap-3">
+                            <span className="text-sm font-semibold text-textDark">
+                                {component.name}
+                            </span>
+                            <span className="h-2.5 w-2.5 rounded-full bg-primary" />
+                        </div>
+                        <ComponentPreview component={component} index={index} />
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
+}
+
 export default function DesignSystem() {
     const { i18n, t } = useTranslation();
 
@@ -197,7 +355,7 @@ export default function DesignSystem() {
                                     .slice(0, 6)
                                     .map((tk, i) => (
                                         <div
-                                            key={i}
+                                            key={tk.name}
                                             className="border border-divider rounded-2xl p-5 bg-backgroundWhite"
                                         >
                                             <h4 className="font-semibold text-textDark">
@@ -208,23 +366,10 @@ export default function DesignSystem() {
                                                     {tk.desc}
                                                 </p>
                                             )}
-
-                                            {/* ejemplos, si hay (pero discretos) */}
-                                            {tk.examples?.length > 0 && (
-                                                <div className="flex gap-2 mt-3 flex-wrap">
-                                                    {tk.examples
-                                                        .slice(0, 2)
-                                                        .map((ex, j) => (
-                                                            <span
-                                                                key={j}
-                                                                className="text-xs border border-divider rounded-lg px-2 py-1"
-                                                                style={ex.style}
-                                                            >
-                                                                {ex.label}
-                                                            </span>
-                                                        ))}
-                                                </div>
-                                            )}
+                                            <TokenPreview
+                                                token={tk}
+                                                index={i}
+                                            />
                                         </div>
                                     ))}
                             </div>
@@ -242,20 +387,14 @@ export default function DesignSystem() {
                                 )}
                             </p>
 
-                            {/* Showcase visual (tipo Figma). Si no quieres este bloque, lo quitamos. */}
-                            <div className="mt-6 border border-divider rounded-2xl bg-[rgba(0,0,0,0.03)] overflow-hidden">
-                                <div className="aspect-[21/9] w-full flex items-center justify-center text-textMuted text-sm">
-                                    {t(
-                                        "projects.componentsShowcase",
-                                        "Component Library Showcase",
-                                    )}
-                                </div>
-                            </div>
+                            <ComponentShowcaseStrip
+                                components={data?.library ?? []}
+                            />
 
                             <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                                 {(data?.library ?? []).map((c, i) => (
                                     <div
-                                        key={i}
+                                        key={c.name}
                                         className="border border-divider rounded-2xl p-5 bg-backgroundWhite"
                                     >
                                         <h4 className="font-semibold text-textDark">
