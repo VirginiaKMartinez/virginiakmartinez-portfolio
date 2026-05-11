@@ -8,12 +8,17 @@ function Experience() {
     const { i18n } = useTranslation();
     const lang = i18n.language;
     const { title, items } = lang === "fr" ? experiencesFR : experiencesEN;
+    const cardBaseClasses =
+        "rounded-lg border border-divider bg-white p-8 shadow-sm md:p-10";
 
     return (
         <SectionWrapper title={title} id="experience">
-            <div className="max-w-4xl mx-auto space-y-8">
+            <div className="max-w-4xl mx-auto space-y-10">
                 {items.map((exp) => (
-                    <div key={`${exp.company}-${exp.period}`}>
+                    <div
+                        key={`${exp.company}-${exp.period}`}
+                        className={cardBaseClasses}
+                    >
                         <h3 className="text-xl font-semibold text-textDark">
                             {exp.position} —{" "}
                             <span className="text-link">{exp.company}</span>
@@ -22,7 +27,9 @@ function Experience() {
                             {exp.location} · {exp.period}
                         </p>
                         {exp.summary && (
-                            <p className="mt-2 text-textDark">{exp.summary}</p>
+                            <p className="mt-2 font-medium text-textDark">
+                                {exp.summary}
+                            </p>
                         )}
                         <ul className="mt-3 list-disc space-y-2 pl-5 text-textDark">
                             {exp.description.map((item) => (
