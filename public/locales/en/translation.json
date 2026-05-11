@@ -1,9 +1,12 @@
 {
     "hero": {
         "greeting": "Hi, I’m Virginia Martínez",
-        "tagline": "I craft intuitive, accessible and engaging user experiences for web and mobile.",
+        "tagline": "I design B2B digital products — and I can build them. Specialised in design systems and front-end collaboration.",
+        "badge": "Open to new opportunities",
         "cta": "View my work",
-        "scrollDown": "Scroll down"
+        "ctaSecondary": "Download CV",
+        "scrollDown": "Scroll down",
+        "photoAlt": "Portrait of Virginia Martínez, Digital Product Designer"
     },
     "header": {
         "experience": "Experience",

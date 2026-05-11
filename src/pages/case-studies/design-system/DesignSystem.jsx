@@ -8,161 +8,160 @@ import OnThisPage from "../../../components/nav/onThisPage.jsx";
 import dsEN from "../../../data/designSystem.en.js";
 import dsFR from "../../../data/designSystem.fr.js";
 
-function TokenPreview({ token, index }) {
-    if (index === 0) {
-        const examples = token.examples?.length
-            ? token.examples.slice(0, 2)
-            : [
-                  { label: token.name },
-                  { label: token.desc },
-              ];
-
-        return (
-            <div className="mt-4 grid grid-cols-2 gap-3">
-                {examples.map((example, itemIndex) => (
-                    <div
-                        key={`${example.label}-${itemIndex}`}
-                        className="rounded-xl border border-divider bg-background p-3"
-                    >
-                        <div
-                            className={[
-                                "h-10 rounded-lg border border-divider",
-                                itemIndex === 0 ? "bg-primary" : "bg-link",
-                            ].join(" ")}
-                        />
-                        <div className="mt-2 truncate text-xs font-medium text-textDark">
-                            {example.label}
-                        </div>
-                    </div>
-                ))}
-            </div>
-        );
-    }
-
-    if (index === 1) {
-        return (
-            <div className="mt-4 rounded-xl border border-divider bg-background p-4">
-                <div className="text-2xl font-semibold leading-none text-textDark">
-                    Aa
+function SectionHeader({ kicker, title, children }) {
+    return (
+        <header className="max-w-3xl">
+            {kicker && (
+                <p className="text-xs font-semibold uppercase tracking-wide text-link">
+                    {kicker}
+                </p>
+            )}
+            <h2 className="mt-2 text-2xl font-semibold tracking-tight text-textDark sm:text-3xl">
+                {title}
+            </h2>
+            {children && (
+                <div className="mt-4 text-base leading-relaxed text-textMuted">
+                    {children}
                 </div>
-                <div className="mt-3 space-y-2">
-                    <div className="h-2 w-4/5 rounded-full bg-textDark" />
-                    <div className="h-2 w-3/5 rounded-full bg-textMuted" />
-                    <div className="h-2 w-2/5 rounded-full bg-divider" />
-                </div>
-            </div>
-        );
-    }
+            )}
+        </header>
+    );
+}
 
-    if (index === 2) {
-        return (
-            <div className="mt-4 flex h-24 items-end gap-2 rounded-xl border border-divider bg-background p-4">
-                {[2, 4, 6, 8].map((height) => (
-                    <div
-                        key={height}
-                        className="flex flex-1 items-end justify-center rounded-md bg-backgroundWhite"
-                    >
-                        <div
-                            className={[
-                                "w-full rounded-md bg-primary",
-                                height === 2 && "h-2",
-                                height === 4 && "h-4",
-                                height === 6 && "h-6",
-                                height === 8 && "h-8",
-                            ]
-                                .filter(Boolean)
-                                .join(" ")}
-                        />
-                    </div>
-                ))}
-            </div>
-        );
-    }
+function VisualPlaceholder({ label, variant = "default", className = "" }) {
+    const isHero = variant === "hero";
+    const isLarge = variant === "large";
 
     return (
-        <div className="mt-4 rounded-xl border border-divider bg-background p-4">
-            <div className="h-3 w-2/3 rounded-full bg-primary" />
-            <div className="mt-2 h-3 w-1/2 rounded-full bg-divider" />
+        <figure
+            className={[
+                "overflow-hidden rounded-2xl border border-divider bg-backgroundWhite",
+                className,
+            ]
+                .filter(Boolean)
+                .join(" ")}
+        >
+            <div
+                className={[
+                    "flex flex-col justify-between bg-background p-5",
+                    isHero ? "min-h-80 sm:min-h-96" : "",
+                    isLarge ? "min-h-72" : "",
+                    !isHero && !isLarge ? "min-h-56" : "",
+                ]
+                    .filter(Boolean)
+                    .join(" ")}
+            >
+                <div className="grid gap-3 sm:grid-cols-3">
+                    <div className="h-24 rounded-xl border border-divider bg-backgroundWhite" />
+                    <div className="h-24 rounded-xl border border-divider bg-backgroundWhite sm:col-span-2" />
+                    <div className="h-16 rounded-xl border border-divider bg-backgroundWhite sm:col-span-2" />
+                    <div className="h-16 rounded-xl border border-divider bg-backgroundWhite" />
+                </div>
+                <figcaption className="mt-8 text-sm font-medium text-textMuted">
+                    {label}
+                </figcaption>
+            </div>
+        </figure>
+    );
+}
+
+function ComparisonPlaceholder({ labels }) {
+    return (
+        <div className="grid gap-4 md:grid-cols-2">
+            {labels.map((label) => (
+                <div
+                    key={label}
+                    className="rounded-2xl border border-divider bg-backgroundWhite p-5"
+                >
+                    <div className="text-sm font-semibold text-textDark">
+                        {label}
+                    </div>
+                    <div className="mt-4 space-y-3 rounded-xl bg-background p-4">
+                        <div className="h-5 w-2/3 rounded-full bg-divider" />
+                        <div className="grid grid-cols-2 gap-3">
+                            <div className="h-24 rounded-lg border border-divider bg-backgroundWhite" />
+                            <div className="h-24 rounded-lg border border-divider bg-backgroundWhite" />
+                        </div>
+                        <div className="h-4 w-4/5 rounded-full bg-divider" />
+                        <div className="h-4 w-1/2 rounded-full bg-divider" />
+                    </div>
+                </div>
+            ))}
         </div>
     );
 }
 
-function ComponentPreview({ component, index }) {
-    if (index === 0) {
-        return (
-            <div className="mt-4 flex flex-wrap items-center gap-2">
-                <span className="rounded-lg bg-primary px-3 py-2 text-xs font-medium text-backgroundWhite">
-                    {component.name}
-                </span>
-                <span className="rounded-lg border border-divider px-3 py-2 text-xs font-medium text-textDark">
-                    {component.notes?.[0]}
-                </span>
-            </div>
-        );
-    }
-
-    if (index === 1) {
-        return (
-            <div className="mt-4 rounded-xl border border-divider bg-background p-3">
-                <div className="h-2 w-1/3 rounded-full bg-textMuted" />
-                <div className="mt-3 flex h-9 items-center rounded-lg border border-divider bg-backgroundWhite px-3">
-                    <div className="h-2 w-3/5 rounded-full bg-divider" />
-                </div>
-                <div className="mt-2 h-2 w-1/2 rounded-full bg-primary" />
-            </div>
-        );
-    }
-
-    if (index === 2) {
-        return (
-            <div className="mt-4 rounded-xl border border-divider bg-background p-3">
-                <div className="flex items-center gap-2">
-                    {component.notes?.slice(0, 2).map((note, noteIndex) => (
-                        <span
-                            key={note}
-                            className={[
-                                "rounded-full px-3 py-1 text-xs font-medium",
-                                noteIndex === 0
-                                    ? "bg-primary text-backgroundWhite"
-                                    : "bg-backgroundWhite text-textDark",
-                            ].join(" ")}
-                        >
-                            {note}
-                        </span>
-                    ))}
-                </div>
-                <div className="mt-3 h-2 w-4/5 rounded-full bg-divider" />
-            </div>
-        );
-    }
-
+function CollaborationPlaceholder({ labels }) {
     return (
-        <div className="mt-4 rounded-xl border border-divider bg-background p-3">
-            <div className="h-3 w-2/3 rounded-full bg-primary" />
+        <div className="grid gap-3 rounded-2xl border border-divider bg-backgroundWhite p-5 sm:grid-cols-3">
+            {labels.map((label) => (
+                <div
+                    key={label}
+                    className="rounded-xl border border-divider bg-background p-4 text-center"
+                >
+                    <div className="mx-auto h-12 w-12 rounded-full border border-divider bg-backgroundWhite" />
+                    <div className="mt-3 text-sm font-medium text-textDark">
+                        {label}
+                    </div>
+                </div>
+            ))}
+            <p className="text-sm font-medium text-textMuted sm:col-span-3">
+                Visual placeholder — Product / Design / Development collaboration
+            </p>
         </div>
     );
 }
 
-function ComponentShowcaseStrip({ components }) {
+function WorkflowPlaceholder({ steps }) {
     return (
-        <div className="mt-6 overflow-hidden rounded-2xl border border-divider bg-backgroundWhite">
-            <div className="flex gap-3 overflow-x-auto p-4">
-                {components.map((component, index) => (
+        <div className="rounded-2xl border border-divider bg-backgroundWhite p-5">
+            <div className="grid gap-3 md:grid-cols-4">
+                {steps.map((step, index) => (
                     <div
-                        key={component.name}
-                        className="min-w-48 flex-1 rounded-xl border border-divider bg-background p-4"
+                        key={step}
+                        className="rounded-xl border border-divider bg-background p-4"
                     >
-                        <div className="flex items-center justify-between gap-3">
-                            <span className="text-sm font-semibold text-textDark">
-                                {component.name}
-                            </span>
-                            <span className="h-2.5 w-2.5 rounded-full bg-primary" />
+                        <div className="text-xs font-semibold uppercase tracking-wide text-link">
+                            Step {index + 1}
                         </div>
-                        <ComponentPreview component={component} index={index} />
+                        <div className="mt-2 text-sm font-medium text-textDark">
+                            {step}
+                        </div>
                     </div>
                 ))}
             </div>
+            <p className="mt-5 text-sm font-medium text-textMuted">
+                Visual placeholder — Figma to Angular handoff workflow
+            </p>
         </div>
+    );
+}
+
+function MetricCard({ value, label }) {
+    return (
+        <div className="rounded-2xl border border-divider bg-backgroundWhite p-6">
+            <div className="text-3xl font-semibold text-textDark">{value}</div>
+            <div className="mt-2 text-sm leading-relaxed text-textMuted">
+                {label}
+            </div>
+        </div>
+    );
+}
+
+function BulletList({ items, className = "" }) {
+    return (
+        <ul
+            className={[
+                "list-disc space-y-2 pl-5 text-textDark marker:text-link",
+                className,
+            ]
+                .filter(Boolean)
+                .join(" ")}
+        >
+            {items.map((item) => (
+                <li key={item}>{item}</li>
+            ))}
+        </ul>
     );
 }
 
@@ -174,77 +173,129 @@ export default function DesignSystem() {
         .toLowerCase();
 
     const data = lang === "fr" ? dsFR : dsEN;
+    const copy =
+        lang === "fr"
+            ? {
+                  overview: "Vue d’ensemble",
+                  problem: "Problème",
+                  role: "Mon rôle",
+                  foundations: "Fondations",
+                  library: "Bibliothèque",
+                  badge: "Exemple Badge",
+                  designDev: "Design-dev",
+                  decisions: "Décisions",
+                  outcomes: "Résultats",
+                  learnings: "Enseignements",
+                  next: "Prochaines étapes",
+                  productDesign: "Product Design B2B",
+                  mainContribution: "Contribution principale",
+                  mainContributionText:
+                      "Design system B2B documenté à partir de zéro, conçu pour les équipes produit, développement et projet.",
+                  problemTitle: "Le problème",
+                  problemCardTitle: "Trois problèmes à résoudre",
+                  beforeAfter: ["Avant", "Après"],
+                  collaboration: ["Produit", "Design", "Développement"],
+                  roleTitle: "Mon rôle",
+                  responsibilities: "Responsabilités",
+                  foundationsTitle: "Fondations du système",
+                  foundationsIntro:
+                      "Le système a commencé par des fondations partagées capables de soutenir des décisions cohérentes entre la documentation design et l’implémentation front-end.",
+                  libraryTitle: "Bibliothèque de composants",
+                  libraryIntro:
+                      "La bibliothèque couvrait plus de 25 fondations UI et composants, des contrôles de base aux patterns produit plus complexes. Chaque composant était documenté avec des conseils d’usage, variantes, états et considérations d’implémentation.",
+                  covered: "Fondations et composants couverts",
+                  documentationExample: "Exemple de documentation",
+                  badgeTitle: "Composant Badge",
+                  designDevTitle: "Collaboration design-dev",
+                  challengesTitle: "Défis et décisions",
+                  challenge: "Défi",
+                  decision: "Décision",
+                  outcomesTitle: "Résultats",
+                  outcomesIntro:
+                      "Pas de métriques quantitatives inventées ici : l’impact est présenté à travers des livrables défendables et des bénéfices qualitatifs pour l’équipe.",
+                  learningsTitle: "Enseignements",
+                  nextTitle: "Prochaines étapes",
+              }
+            : {
+                  overview: "Overview",
+                  problem: "Problem",
+                  role: "My role",
+                  foundations: "Foundations",
+                  library: "Component library",
+                  badge: "Badge example",
+                  designDev: "Design-dev",
+                  decisions: "Decisions",
+                  outcomes: "Outcomes",
+                  learnings: "Learnings",
+                  next: "Next steps",
+                  productDesign: "B2B Product Design",
+                  mainContribution: "Main contribution",
+                  mainContributionText:
+                      "Documented B2B design system from scratch, built for product, development and project teams.",
+                  problemTitle: "The problem",
+                  problemCardTitle: "Three problems to solve",
+                  beforeAfter: ["Before", "After"],
+                  collaboration: ["Product", "Design", "Development"],
+                  roleTitle: "My role",
+                  responsibilities: "Responsibilities",
+                  foundationsTitle: "System foundations",
+                  foundationsIntro:
+                      "The system started with shared foundations that could support consistent decisions across design documentation and front-end implementation.",
+                  libraryTitle: "Component library",
+                  libraryIntro:
+                      "The library covered 25+ UI foundations and components, from basic controls to more complex product patterns. Each component was documented with usage guidance, variants, states and implementation considerations.",
+                  covered: "Covered foundations and components",
+                  documentationExample: "Documentation example",
+                  badgeTitle: "Badge component",
+                  designDevTitle: "Design-dev collaboration",
+                  challengesTitle: "Challenges and decisions",
+                  challenge: "Challenge",
+                  decision: "Decision",
+                  outcomesTitle: "Outcomes",
+                  outcomesIntro:
+                      "No fake quantitative metrics here: the impact is presented through defensible outputs and qualitative team benefits.",
+                  learningsTitle: "Learnings",
+                  nextTitle: "Next steps",
+              };
 
     const toc = useMemo(
         () => [
-            {
-                id: "ds-overview",
-                label: t("projects.sections.overview", "Overview"),
-            },
-            { id: "ds-tokens", label: t("projects.sections.tokens", "Tokens") },
-            {
-                id: "ds-library",
-                label: t("projects.sections.library", "Components"),
-            },
-            {
-                id: "ds-governance",
-                label: t("projects.sections.governance", "Governance"),
-            },
-            {
-                id: "ds-dev",
-                label: t("projects.sections.devhandoff", "Dev handoff"),
-            },
-            {
-                id: "ds-challenges",
-                label: t("projects.sections.challenges", "Challenges"),
-            },
-            {
-                id: "ds-results",
-                label: t("projects.sections.results", "Results & Impact"),
-            },
-            {
-                id: "ds-learnings",
-                label: t("projects.sections.learnings", "Learnings"),
-            },
-            { id: "ds-next", label: t("projects.sections.next", "Next steps") },
+            { id: "ds-overview", label: copy.overview },
+            { id: "ds-problem", label: copy.problem },
+            { id: "ds-role", label: copy.role },
+            { id: "ds-foundations", label: copy.foundations },
+            { id: "ds-library", label: copy.library },
+            { id: "ds-badge", label: copy.badge },
+            { id: "ds-dev", label: copy.designDev },
+            { id: "ds-challenges", label: copy.decisions },
+            { id: "ds-results", label: copy.outcomes },
+            { id: "ds-learnings", label: copy.learnings },
+            { id: "ds-next", label: copy.next },
         ],
-        [t],
+        [copy],
     );
-
-    const title = data?.title ?? "Design System";
-    const subtitle = data?.subtitle ?? "";
-    const meta = Array.isArray(data?.meta) ? data.meta : [];
-
-    // Helpers de estilo “Figma”
-    const sectionTitle = "text-textDark text-xl font-semibold";
-    const sectionIntro =
-        "mt-2 text-sm text-textMuted leading-relaxed max-w-2xl";
 
     return (
         <main className="bg-background">
-            {/* Layout tipo Figma: mucho aire y columna derecha más estrecha */}
-            <div className="max-w-6xl mx-auto px-4 pt-24 pb-20 grid gap-12 lg:grid-cols-[280px_1fr]">
-                {/* Sidebar */}
-                <aside className="space-y-6 lg:sticky lg:top-24 h-max">
-                    {meta.length > 0 && (
-                        <div className="border border-divider rounded-2xl p-5 bg-backgroundWhite">
-                            <div className="text-xs uppercase tracking-wide text-textMuted mb-4">
-                                {t("projects.projectInfo", "Project info")}
-                            </div>
-                            <ul className="space-y-4">
-                                {meta.map((m, i) => (
-                                    <li key={i}>
-                                        <div className="text-xs uppercase tracking-wide text-textMuted">
-                                            {m.label}
-                                        </div>
-                                        <div className="text-textDark">
-                                            {m.value}
-                                        </div>
-                                    </li>
-                                ))}
-                            </ul>
+            <div className="mx-auto grid max-w-6xl gap-12 px-4 pb-20 pt-24 lg:grid-cols-[280px_1fr]">
+                <aside className="space-y-6 lg:sticky lg:top-24 lg:h-max">
+                    <div className="rounded-2xl border border-divider bg-backgroundWhite p-5">
+                        <div className="mb-4 text-xs font-semibold uppercase tracking-wide text-textMuted">
+                            {t("projects.projectInfo", "Project info")}
                         </div>
-                    )}
+                        <dl className="space-y-4">
+                            {data.meta.map((item) => (
+                                <div key={item.label}>
+                                    <dt className="text-xs font-semibold uppercase tracking-wide text-textMuted">
+                                        {item.label}
+                                    </dt>
+                                    <dd className="mt-1 text-sm leading-relaxed text-textDark">
+                                        {item.value}
+                                    </dd>
+                                </div>
+                            ))}
+                        </dl>
+                    </div>
 
                     <OnThisPage
                         items={toc}
@@ -252,370 +303,295 @@ export default function DesignSystem() {
                     />
                 </aside>
 
-                {/* Columna derecha */}
                 <article className="min-w-0">
-                    {/* Back link */}
                     <Link
                         to="/#casestudies"
-                        className="inline-flex items-center gap-2 text-link hover:underline"
+                        className="inline-flex items-center gap-2 rounded-md text-link transition-colors hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                     >
-                        <Icon name="ArrowLeft" className="w-4 h-4" />
-                        {data?.ui?.backToHome ??
-                            t(
-                                "projects.backToProjects",
-                                "Back to all Case Studies",
-                            )}
+                        <Icon name="ArrowLeft" className="h-4 w-4" />
+                        {data.ui.backToHome}
                     </Link>
 
-                    {/* H1 (más parecido a Figma: grande pero no “gigante”) */}
-                    <h1 className="mt-4 text-4xl sm:text-5xl font-extrabold tracking-tight text-textDark">
-                        {title}
-                    </h1>
+                    <header id="ds-overview" className="scroll-mt-24">
+                        <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_260px] lg:items-end">
+                            <div>
+                                <p className="text-sm font-semibold uppercase tracking-wide text-link">
+                                    {copy.productDesign}
+                                </p>
+                                <h1 className="mt-3 text-4xl font-semibold tracking-tight text-textDark sm:text-5xl">
+                                    {data.title}
+                                </h1>
+                                <p className="mt-5 max-w-3xl text-xl leading-relaxed text-textDark">
+                                    {data.subtitle}
+                                </p>
+                                <p className="mt-5 max-w-3xl text-base leading-relaxed text-textMuted">
+                                    {data.intro}
+                                </p>
+                            </div>
 
-                    {/* Hero media: bloque gris grande, estilo Figma */}
-                    <div className="mt-6 border border-divider rounded-2xl bg-[rgba(0,0,0,0.04)] overflow-hidden">
-                        <div className="aspect-[16/9] w-full flex items-center justify-center">
-                            <img
-                                src="/images/EN_thumb_design_system.png"
-                                alt=""
-                                className="w-full h-full object-cover"
-                                loading="lazy"
-                            />
+                            <div className="rounded-2xl border border-divider bg-backgroundWhite p-5">
+                                <div className="text-xs font-semibold uppercase tracking-wide text-textMuted">
+                                    {copy.mainContribution}
+                                </div>
+                                <p className="mt-3 text-sm leading-relaxed text-textDark">
+                                    {copy.mainContributionText}
+                                </p>
+                            </div>
                         </div>
-                    </div>
 
-                    {/* Intro / subtitle */}
-                    {!!subtitle && (
-                        <p className="mt-4 text-textMuted leading-relaxed max-w-3xl">
-                            {subtitle}
-                        </p>
-                    )}
+                        <VisualPlaceholder
+                            className="mt-10"
+                            label="Visual placeholder — Design System cover"
+                            variant="hero"
+                        />
+                    </header>
 
-                    {/* Contenido (ritmo Figma: headings pequeños + spacing consistente) */}
-                    <div className="mt-12 space-y-14">
-                        {/* OVERVIEW */}
-                        <section id="ds-overview" className="scroll-mt-24">
-                            <h2 className={sectionTitle}>
-                                {t("projects.sections.overview", "Overview")}
-                            </h2>
-                            <p className={sectionIntro}>
-                                {data?.overview?.summary ??
-                                    t(
-                                        "projects.overviewSummary",
-                                        "This project involved creating a comprehensive design system from the ground up, establishing tokens, components, and governance for consistency across touchpoints.",
-                                    )}
-                            </p>
+                    <div className="mt-20 space-y-24">
+                        <section id="ds-problem" className="scroll-mt-24">
+                            <SectionHeader title={copy.problemTitle}>
+                                <p>{data.problem.intro}</p>
+                            </SectionHeader>
 
-                            <div className="mt-6 grid gap-10 md:grid-cols-2">
-                                <div>
-                                    <h3 className="font-semibold text-textDark mb-2">
-                                        {data?.overview?.problem?.title ??
-                                            t(
-                                                "projects.sections.problem",
-                                                "The problem",
-                                            )}
+                            <div className="mt-8 grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
+                                <div className="rounded-2xl border border-divider bg-backgroundWhite p-6">
+                                    <h3 className="text-lg font-semibold text-textDark">
+                                        {copy.problemCardTitle}
                                     </h3>
-                                    <p className="text-textDark leading-relaxed">
-                                        {data?.overview?.problem?.text}
+                                    <BulletList
+                                        items={data.problem.points}
+                                        className="mt-4"
+                                    />
+                                </div>
+                                <div>
+                                    <ComparisonPlaceholder
+                                        labels={copy.beforeAfter}
+                                    />
+                                    <p className="mt-3 text-sm font-medium text-textMuted">
+                                        Visual placeholder — Before / after UI
+                                        consistency
                                     </p>
                                 </div>
-                                <div>
-                                    <h3 className="font-semibold text-textDark mb-2">
-                                        {data?.overview?.goals?.title ??
-                                            t(
-                                                "projects.sections.goals",
-                                                "Goals",
-                                            )}
+                            </div>
+                        </section>
+
+                        <section id="ds-role" className="scroll-mt-24">
+                            <SectionHeader title={copy.roleTitle}>
+                                <p>{data.role.intro}</p>
+                            </SectionHeader>
+
+                            <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_0.9fr]">
+                                <div className="rounded-2xl border border-divider bg-backgroundWhite p-6">
+                                    <h3 className="text-lg font-semibold text-textDark">
+                                        {copy.responsibilities}
                                     </h3>
-                                    <ul className="list-disc pl-5 space-y-2 text-textDark">
-                                        {(
-                                            data?.overview?.goals?.items ?? []
-                                        ).map((g, idx) => (
-                                            <li key={idx}>{g}</li>
-                                        ))}
-                                    </ul>
+                                    <BulletList
+                                        items={data.role.responsibilities}
+                                        className="mt-4"
+                                    />
                                 </div>
+                                <CollaborationPlaceholder
+                                    labels={copy.collaboration}
+                                />
                             </div>
                         </section>
 
-                        {/* TOKENS (cards compactas tipo Figma) */}
-                        <section id="ds-tokens" className="scroll-mt-24">
-                            <h2 className={sectionTitle}>
-                                {t("projects.sections.tokens", "Tokens")}
-                            </h2>
-                            <p className={sectionIntro}>
-                                {t(
-                                    "projects.tokensIntro",
-                                    "Design tokens form the foundation of the system, ensuring visual consistency and enabling scalable UI decisions.",
-                                )}
-                            </p>
+                        <section id="ds-foundations" className="scroll-mt-24">
+                            <SectionHeader title={copy.foundationsTitle}>
+                                <p>{copy.foundationsIntro}</p>
+                            </SectionHeader>
 
-                            <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                                {(data?.tokens ?? [])
-                                    .slice(0, 6)
-                                    .map((tk, i) => (
-                                        <div
-                                            key={tk.name}
-                                            className="border border-divider rounded-2xl p-5 bg-backgroundWhite"
-                                        >
-                                            <h4 className="font-semibold text-textDark">
-                                                {tk.name}
-                                            </h4>
-                                            {tk.desc && (
-                                                <p className="text-textMuted mt-2 text-sm leading-relaxed">
-                                                    {tk.desc}
-                                                </p>
-                                            )}
-                                            <TokenPreview
-                                                token={tk}
-                                                index={i}
-                                            />
-                                        </div>
-                                    ))}
+                            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                                {data.foundations.map((item) => (
+                                    <div
+                                        key={item.title}
+                                        className="rounded-2xl border border-divider bg-backgroundWhite p-6"
+                                    >
+                                        <h3 className="text-lg font-semibold text-textDark">
+                                            {item.title}
+                                        </h3>
+                                        <p className="mt-3 text-sm leading-relaxed text-textMuted">
+                                            {item.text}
+                                        </p>
+                                    </div>
+                                ))}
                             </div>
+
+                            <VisualPlaceholder
+                                className="mt-8"
+                                label="Visual placeholder — Design tokens structure"
+                            />
                         </section>
 
-                        {/* COMPONENTS (mantengo tus cards, pero con intro + un “showcase” como Figma) */}
                         <section id="ds-library" className="scroll-mt-24">
-                            <h2 className={sectionTitle}>
-                                {t("projects.sections.library", "Components")}
-                            </h2>
-                            <p className={sectionIntro}>
-                                {t(
-                                    "projects.componentsIntro",
-                                    "A reusable component library built with accessibility and scalability in mind, covering core UI patterns.",
-                                )}
-                            </p>
+                            <SectionHeader title={copy.libraryTitle}>
+                                <p>{copy.libraryIntro}</p>
+                            </SectionHeader>
 
-                            <ComponentShowcaseStrip
-                                components={data?.library ?? []}
+                            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                                {data.componentCategories.map((category) => (
+                                    <div
+                                        key={category}
+                                        className="rounded-2xl border border-divider bg-backgroundWhite p-5"
+                                    >
+                                        <div className="h-2 w-10 rounded-full bg-primary" />
+                                        <h3 className="mt-4 text-base font-semibold text-textDark">
+                                            {category}
+                                        </h3>
+                                    </div>
+                                ))}
+                            </div>
+
+                            <VisualPlaceholder
+                                className="mt-8"
+                                label="Visual placeholder — Component inventory overview"
+                                variant="large"
                             />
 
-                            <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                                {(data?.library ?? []).map((c, i) => (
-                                    <div
-                                        key={c.name}
-                                        className="border border-divider rounded-2xl p-5 bg-backgroundWhite"
-                                    >
-                                        <h4 className="font-semibold text-textDark">
-                                            {c.name}
-                                        </h4>
-                                        {c.purpose && (
-                                            <p className="text-textMuted mt-2 text-sm leading-relaxed">
-                                                {c.purpose}
-                                            </p>
-                                        )}
-                                        {c.notes?.length > 0 && (
-                                            <ul className="list-disc pl-5 mt-3 text-sm text-textDark space-y-1">
-                                                {c.notes.map((n, j) => (
-                                                    <li key={j}>{n}</li>
-                                                ))}
-                                            </ul>
-                                        )}
-                                    </div>
-                                ))}
-                            </div>
-                        </section>
-
-                        {/* GOVERNANCE (más editorial, menos “cardy”) */}
-                        <section id="ds-governance" className="scroll-mt-24">
-                            <h2 className={sectionTitle}>
-                                {t(
-                                    "projects.sections.governance",
-                                    "Governance",
-                                )}
-                            </h2>
-                            <p className={sectionIntro}>
-                                {t(
-                                    "projects.governanceIntro",
-                                    "Clear guidelines and processes for contributing, reviewing, and versioning to keep the system consistent.",
-                                )}
-                            </p>
-
-                            <div className="mt-4">
-                                <p className="text-textDark leading-relaxed">
-                                    {data?.governance?.summary}
-                                </p>
-                                <ul className="list-disc pl-5 mt-4 text-textDark space-y-2">
-                                    {(data?.governance?.points ?? []).map(
-                                        (p, i) => (
-                                            <li key={i}>{p}</li>
-                                        ),
-                                    )}
-                                </ul>
-                            </div>
-                        </section>
-
-                        {/* DEV HANDOFF */}
-                        <section id="ds-dev" className="scroll-mt-24">
-                            <h2 className={sectionTitle}>
-                                {t(
-                                    "projects.sections.devhandoff",
-                                    "Dev handoff",
-                                )}
-                            </h2>
-                            <p className={sectionIntro}>
-                                {t(
-                                    "projects.devIntro",
-                                    "Seamless handoff processes and documentation to help teams ship faster with less ambiguity.",
-                                )}
-                            </p>
-
-                            <div className="mt-4">
-                                <p className="text-textDark leading-relaxed">
-                                    {data?.dev?.summary}
-                                </p>
-                                <ul className="list-disc pl-5 mt-4 text-textDark space-y-2">
-                                    {(data?.dev?.points ?? []).map((p, i) => (
-                                        <li key={i}>{p}</li>
-                                    ))}
-                                </ul>
-                            </div>
-                        </section>
-
-                        {/* CHALLENGES (cards como Figma) */}
-                        <section id="ds-challenges" className="scroll-mt-24">
-                            <h2 className={sectionTitle}>
-                                {t(
-                                    "projects.sections.challenges",
-                                    "Challenges",
-                                )}
-                            </h2>
-                            <p className={sectionIntro}>
-                                {t(
-                                    "projects.challengesIntro",
-                                    "Building a design system across teams introduced alignment, adoption, and migration challenges.",
-                                )}
-                            </p>
-
-                            <div className="mt-6 space-y-4">
-                                {(data?.challenges ?? []).map((it, i) => (
-                                    <div
-                                        key={i}
-                                        className="border border-divider rounded-2xl p-5 bg-backgroundWhite"
-                                    >
-                                        <h4 className="font-semibold text-textDark">
-                                            {it.title}
-                                        </h4>
-                                        <p className="text-textMuted mt-2 text-sm leading-relaxed">
-                                            {it.context}
-                                        </p>
-                                        {it.solution && (
-                                            <p className="text-textDark mt-3 text-sm leading-relaxed">
-                                                <span className="font-medium">
-                                                    {data?.labels?.solution ??
-                                                        "Solution"}
-                                                    :
-                                                </span>{" "}
-                                                {it.solution}
-                                            </p>
-                                        )}
-                                    </div>
-                                ))}
-                            </div>
-                        </section>
-
-                        {/* ✅ RESULTS: dejamos TU sección tal cual (solo ajusto el heading para encajar) */}
-                        <section id="ds-results" className="scroll-mt-24">
-                            <h2 className={sectionTitle}>
-                                {t(
-                                    "projects.sections.results",
-                                    "Results & Impact",
-                                )}
-                            </h2>
-
-                            {/* TU BLOQUE ACTUAL */}
-                            <div className="mt-6">
-                                <div className="grid gap-6 sm:grid-cols-3">
-                                    {(data?.results?.metrics ?? []).map(
-                                        (m, i) => (
-                                            <div
-                                                key={i}
-                                                className="bg-backgroundWhite text-center border border-divider rounded-2xl p-4"
-                                            >
-                                                <div className="text-2xl font-bold text-textDark">
-                                                    {m.value}
-                                                </div>
-                                                <div className="text-textMuted">
-                                                    {m.label}
-                                                </div>
-                                            </div>
-                                        ),
-                                    )}
-                                </div>
-
-                                {(data?.results?.notes ?? []).length > 0 && (
-                                    <ul className="list-disc pl-5 mt-4 text-textDark">
-                                        {data.results.notes.map((n, i) => (
-                                            <li key={i}>{n}</li>
-                                        ))}
-                                    </ul>
-                                )}
-                            </div>
-                        </section>
-
-                        {/* LEARNINGS */}
-                        <section id="ds-learnings" className="scroll-mt-24">
-                            <h2 className={sectionTitle}>
-                                {t("projects.sections.learnings", "Learnings")}
-                            </h2>
-                            <p className={sectionIntro}>
-                                {t(
-                                    "projects.learningsIntro",
-                                    "Key takeaways about documentation, semantics, and governance to drive adoption.",
-                                )}
-                            </p>
-                            <ul className="list-disc pl-5 mt-4 text-textDark space-y-2">
-                                {(data?.learnings ?? []).map((l, i) => (
-                                    <li key={i}>{l}</li>
-                                ))}
-                            </ul>
-                        </section>
-
-                        {/* NEXT */}
-                        <section id="ds-next" className="scroll-mt-24">
-                            <h2 className={sectionTitle}>
-                                {t("projects.sections.next", "Next steps")}
-                            </h2>
-                            <p className={sectionIntro}>
-                                {t(
-                                    "projects.nextIntro",
-                                    "Planned iterations to expand coverage and improve workflows.",
-                                )}
-                            </p>
-                            <ul className="list-disc pl-5 mt-4 text-textDark space-y-2">
-                                {(data?.next ?? []).map((n, i) => (
-                                    <li key={i}>{n}</li>
-                                ))}
-                            </ul>
-                        </section>
-
-                        {/* CTA final */}
-                        <section className="pt-10">
-                            <div className="border border-divider rounded-2xl bg-backgroundWhite px-6 py-10 sm:px-10 text-center">
-                                <h3 className="text-textDark text-xl sm:text-2xl font-semibold">
-                                    {t(
-                                        "projects.ctaTitle",
-                                        "Let’s work together",
-                                    )}
+                            <div className="mt-8 rounded-2xl border border-divider bg-backgroundWhite p-6">
+                                <h3 className="text-lg font-semibold text-textDark">
+                                    {copy.covered}
                                 </h3>
+                                <div className="mt-5 flex flex-wrap gap-2">
+                                    {data.componentInventory.map((component) => (
+                                        <span
+                                            key={component}
+                                            className="rounded-full border border-divider bg-background px-3 py-1 text-sm text-textDark"
+                                        >
+                                            {component}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+                        </section>
 
-                                <p className="mt-2 text-textMuted text-sm leading-relaxed max-w-xl mx-auto">
-                                    {t(
-                                        "projects.ctaSubtitle",
-                                        "Interested in discussing design systems or collaboration?",
-                                    )}
-                                </p>
+                        <section id="ds-badge" className="scroll-mt-24">
+                            <SectionHeader
+                                kicker={copy.documentationExample}
+                                title={copy.badgeTitle}
+                            >
+                                <p>{data.badge.intro}</p>
+                            </SectionHeader>
 
+                            <div className="mt-8 grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+                                <div className="rounded-2xl border border-divider bg-backgroundWhite p-6">
+                                    <BulletList items={data.badge.points} />
+                                    <p className="mt-6 border-t border-divider pt-5 text-sm font-medium leading-relaxed text-textDark">
+                                        {data.badge.outcome}
+                                    </p>
+                                </div>
+                                <VisualPlaceholder
+                                    label="Visual placeholder — Badge component documentation"
+                                    variant="large"
+                                />
+                            </div>
+
+                            <div className="mt-6 grid gap-4 md:grid-cols-3">
+                                {[
+                                    "Visual placeholder — Badge anatomy",
+                                    "Visual placeholder — Badge variants",
+                                    "Visual placeholder — Badge usage guidelines",
+                                ].map((label) => (
+                                    <VisualPlaceholder key={label} label={label} />
+                                ))}
+                            </div>
+                        </section>
+
+                        <section id="ds-dev" className="scroll-mt-24">
+                            <SectionHeader title={copy.designDevTitle}>
+                                <p>{data.dev.intro}</p>
+                            </SectionHeader>
+
+                            <div className="mt-8 grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
+                                <div className="rounded-2xl border border-divider bg-backgroundWhite p-6">
+                                    <BulletList items={data.dev.points} />
+                                </div>
+                                <WorkflowPlaceholder steps={data.dev.workflow} />
+                            </div>
+                        </section>
+
+                        <section id="ds-challenges" className="scroll-mt-24">
+                            <SectionHeader title={copy.challengesTitle} />
+
+                            <div className="mt-8 grid gap-4">
+                                {data.challenges.map((item) => (
+                                    <div
+                                        key={item.challenge}
+                                        className="grid gap-5 rounded-2xl border border-divider bg-backgroundWhite p-6 md:grid-cols-2"
+                                    >
+                                        <div>
+                                            <div className="text-xs font-semibold uppercase tracking-wide text-textMuted">
+                                                {copy.challenge}
+                                            </div>
+                                            <p className="mt-2 font-medium leading-relaxed text-textDark">
+                                                {item.challenge}
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <div className="text-xs font-semibold uppercase tracking-wide text-link">
+                                                {copy.decision}
+                                            </div>
+                                            <p className="mt-2 leading-relaxed text-textDark">
+                                                {item.decision}
+                                            </p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+
+                        <section id="ds-results" className="scroll-mt-24">
+                            <SectionHeader title={copy.outcomesTitle}>
+                                <p>{copy.outcomesIntro}</p>
+                            </SectionHeader>
+
+                            <div className="mt-8 grid gap-4 md:grid-cols-3">
+                                {data.results.metrics.map((metric) => (
+                                    <MetricCard
+                                        key={metric.label}
+                                        value={metric.value}
+                                        label={metric.label}
+                                    />
+                                ))}
+                            </div>
+
+                            <div className="mt-8 grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+                                <div className="rounded-2xl border border-divider bg-backgroundWhite p-6">
+                                    <BulletList items={data.results.notes} />
+                                </div>
+                                <VisualPlaceholder
+                                    label="Visual placeholder — Shared source of truth / system adoption"
+                                    variant="large"
+                                />
+                            </div>
+                        </section>
+
+                        <section id="ds-learnings" className="scroll-mt-24">
+                            <SectionHeader title={copy.learningsTitle}>
+                                <p>{data.learnings.intro}</p>
+                            </SectionHeader>
+                            <div className="mt-8 rounded-2xl border border-divider bg-backgroundWhite p-6">
+                                <BulletList items={data.learnings.points} />
+                            </div>
+                        </section>
+
+                        <section id="ds-next" className="scroll-mt-24">
+                            <SectionHeader title={copy.nextTitle} />
+                            <div className="mt-8 rounded-2xl border border-divider bg-backgroundWhite p-6">
+                                <BulletList items={data.next} />
+                            </div>
+                        </section>
+
+                        <section className="pt-2">
+                            <div className="rounded-2xl border border-divider bg-backgroundWhite px-6 py-10 text-center sm:px-10">
+                                <h2 className="mx-auto max-w-2xl text-2xl font-semibold tracking-tight text-textDark">
+                                    {data.cta.title}
+                                </h2>
                                 <a
                                     href="mailto:hello@virginiak.dev"
-                                    className="mt-6 inline-flex items-center justify-center gap-2 bg-primary text-white font-medium px-6 py-3 rounded-lg shadow-lg duration-300 transition-all hover:scale-105 hover:bg-accent-indigo focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
+                                    className="mt-6 inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 font-medium text-backgroundWhite shadow-sm transition-colors hover:bg-link focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                                 >
-                                    {t("projects.ctaButton", "Get in touch")}
-                                    <Icon
-                                        name="MessageSquare"
-                                        className="w-5 h-5"
-                                    />
+                                    {data.cta.button}
+                                    <Icon name="MessageSquare" className="h-5 w-5" />
                                 </a>
                             </div>
                         </section>

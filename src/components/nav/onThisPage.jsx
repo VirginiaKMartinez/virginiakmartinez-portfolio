@@ -31,9 +31,9 @@ function OnThisPageInner({ items = [], title = "On this page" }) {
     return (
         <nav
             aria-label={title}
-            className="border border-divider rounded-2xl p-6 bg-backgroundWhite"
+            className="rounded-2xl border border-divider bg-backgroundWhite p-5"
         >
-            <div className="text-xs uppercase tracking-wide text-textMuted mb-3">
+            <div className="mb-3 text-xs font-semibold uppercase tracking-wide text-textMuted">
                 {title}
             </div>
 
@@ -46,14 +46,13 @@ function OnThisPageInner({ items = [], title = "On this page" }) {
                             <button
                                 type="button"
                                 onClick={(e) => onClick(e, item.id)}
-                                aria-current={isActive ? "true" : undefined}
+                                aria-current={isActive ? "location" : undefined}
                                 className={[
-                                    "w-full text-left py-2 px-3 transition-colors",
-                                    "focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2",
-                                    "border-l-2",
+                                    "w-full rounded-lg border-l-2 px-3 py-2 text-left text-sm transition-colors",
+                                    "focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",
                                     isActive
-                                        ? "bg-[rgba(0,0,0,0.04)] border-primary text-link font-medium"
-                                        : "border-transparent text-textDark/70 hover:text-link",
+                                        ? "border-primary bg-background text-link font-semibold"
+                                        : "border-transparent text-textMuted hover:bg-background hover:text-textDark",
                                 ].join(" ")}
                             >
                                 {item.label}
