@@ -5,20 +5,17 @@
 Personal portfolio for Virginia Martínez, Digital Product Designer based in Saint-Malo, France. In active job search. The site must be polished and shippable, not perfect.
 
 **Primary goals**
-
 - Communicate her real differential: Product Designer with front-end fluency.
 - Showcase 4 selected case studies (quality over quantity).
 - Be sendable to recruiters in EN and FR.
 
 **Avoid**
-
 - Generic hero patterns like "Hi, I'm X, I design Y".
 - Positioning her as a designer-plus-developer hybrid.
 - Adding new product features. The job is to polish, not expand.
 - Perfectionism that blocks shipping.
 
 **Stack**
-
 - Vite + React 19, React Router 7
 - Tailwind 3 + CSS variables as design tokens (`src/styles/variables.css`)
 - i18next EN/FR, JSON files in `public/locales/{en,fr}/translation.json`
@@ -57,7 +54,6 @@ Personal portfolio for Virginia Martínez, Digital Product Designer based in Sai
 ## Success Criteria
 
 A good change:
-
 - Compiles green with `npm run build`.
 - Passes `npm run lint` without introducing new warnings.
 - Looks intentional, not "starter template".
@@ -107,4 +103,4 @@ Do not reopen these unless Virginia explicitly says so.
 
 ---
 
-_Last updated: 2026-05-11. Living document. Update Decisions Already Closed every time we close a new one._
+*Last updated: 2026-05-11. Living document. Update Decisions Already Closed every time we close a new one.*

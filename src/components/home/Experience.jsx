@@ -8,35 +8,56 @@ function Experience() {
     const { i18n } = useTranslation();
     const lang = i18n.language;
     const { title, items } = lang === "fr" ? experiencesFR : experiencesEN;
-    const cardBaseClasses =
-        "rounded-lg border border-divider bg-white p-8 shadow-sm md:p-10";
 
     return (
         <SectionWrapper title={title} id="experience">
-            <div className="max-w-4xl mx-auto space-y-10">
+            <div className="divide-y divide-divider">
                 {items.map((exp) => (
-                    <div
+                    <article
                         key={`${exp.company}-${exp.period}`}
-                        className={cardBaseClasses}
+                        className="grid grid-cols-1 md:grid-cols-[120px_1fr] gap-x-10 gap-y-3 py-12 first:pt-0 last:pb-0"
                     >
-                        <h3 className="text-xl font-semibold text-textDark">
-                            {exp.position} —{" "}
-                            <span className="text-link">{exp.company}</span>
-                        </h3>
-                        <p className="text-sm text-textMuted">
-                            {exp.location} · {exp.period}
-                        </p>
-                        {exp.summary && (
-                            <p className="mt-2 font-medium text-textDark">
-                                {exp.summary}
+                        <div>
+                            <p className="text-base font-medium text-textDark">
+                                {exp.period}
                             </p>
-                        )}
-                        <ul className="mt-3 list-disc space-y-2 pl-5 text-textDark">
-                            {exp.description.map((item) => (
-                                <li key={item}>{item}</li>
-                            ))}
-                        </ul>
-                    </div>
+                            <p className="text-sm text-textMuted mt-1">
+                                {exp.location}
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 className="text-xl font-medium text-textDark">
+                                {exp.position}
+                            </h3>
+                            <p className="text-base text-textMuted mb-5">
+                                {exp.company}
+                            </p>
+
+                            {exp.summary && (
+                                <p className="text-base text-textDark leading-relaxed mb-5">
+                                    {exp.summary}
+                                </p>
+                            )}
+
+                            <ul className="space-y-3">
+                                {exp.description.map((item) => (
+                                    <li
+                                        key={item}
+                                        className="text-base text-textDark leading-relaxed pl-5 relative"
+                                    >
+                                        <span
+                                            className="absolute left-0 text-textMuted"
+                                            aria-hidden="true"
+                                        >
+                                            —
+                                        </span>
+                                        {item}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </article>
                 ))}
             </div>
         </SectionWrapper>

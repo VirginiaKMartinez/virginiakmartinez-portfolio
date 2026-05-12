@@ -1,11 +1,12 @@
 {
     "hero": {
-        "greeting": "Hi, I’m Virginia Martínez",
-        "tagline": "I design B2B digital products — and I can build them. Specialised in design systems and front-end collaboration.",
-        "badge": "Open to new opportunities",
-        "cta": "View my work",
-        "ctaSecondary": "Download CV",
-        "scrollDown": "Scroll down",
+        "role": "Product Designer · Saint-Malo",
+        "tagline": "I design B2B digital products that ship clean. Design systems specialist with a deep understanding of what front-end can deliver.",
+        "availability": "Currently available for new opportunities.",
+        "navLabel": "Primary actions",
+        "linkWork": "View work",
+        "linkCV": "Download CV",
+        "linkEmail": "Email",
         "photoAlt": "Portrait of Virginia Martínez, Digital Product Designer"
     },
     "header": {

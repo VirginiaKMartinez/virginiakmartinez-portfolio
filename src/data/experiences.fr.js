@@ -5,7 +5,7 @@ const experiences = {
             position: "Product Designer",
             company: "Staff & Go",
             location: "Télétravail, France",
-            period: "Juillet 2023 – Décembre 2024",
+            period: "2023 – 2024",
             summary:
                 "Conception et documentation des fondations UX/UI d’un produit digital B2B, entre design produit, design system et collaboration front-end.",
             description: [
@@ -21,7 +21,7 @@ const experiences = {
             position: "Développeuse Front-End",
             company: "Power Electronics",
             location: "Télétravail, Espagne",
-            period: "Octobre 2021 – Septembre 2022",
+            period: "2021 – 2022",
             summary:
                 "Intégration de l’équipe de développement avec un profil hybride Front-End et UX/UI pour aider à faire le lien entre design et ingénierie sur des logiciels industriels B2B.",
             description: [
@@ -36,7 +36,7 @@ const experiences = {
             position: "Développeuse Front-End",
             company: "Optiva Media",
             location: "Madrid, Espagne",
-            period: "Mars 2021 – Octobre 2021",
+            period: "2021",
             summary:
                 "Travail sur des plateformes de contenus audiovisuels de type streaming pour de grands clients comme Orange, HBO et Filmin.",
             description: [
@@ -50,7 +50,7 @@ const experiences = {
             position: "UX/UI Designer et Analyste",
             company: "Walmeric",
             location: "Madrid, Espagne",
-            period: "Février 2020 – Septembre 2020",
+            period: "2020",
             summary:
                 "Travail sur des produits digitaux B2C orientés lead generation, en collaboration étroite avec le Product Owner sur les projets en cours de l’entreprise.",
             description: [
@@ -64,7 +64,7 @@ const experiences = {
             position: "UX/UI Designer",
             company: "Akimad Agency",
             location: "Madrid, Espagne",
-            period: "Juillet 2019 – Février 2020",
+            period: "2019 – 2020",
             summary:
                 "Conception de MVP mobile-first pour des startups, en transformant des idées business early-stage en parcours utilisateurs structurés, wireframes et prototypes prêts à être présentés à des investisseurs.",
             description: [

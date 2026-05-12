@@ -5,7 +5,7 @@ const experiences = {
             position: "Product Designer",
             company: "Staff & Go",
             location: "Remote, France",
-            period: "July 2023 – December 2024",
+            period: "2023 – 2024",
             summary:
                 "Designed and documented the UX/UI foundations of a B2B digital product, working across product design, design systems and front-end collaboration.",
             description: [
@@ -21,7 +21,7 @@ const experiences = {
             position: "Front-End Developer",
             company: "Power Electronics",
             location: "Remote, Spain",
-            period: "October 2021 – September 2022",
+            period: "2021 – 2022",
             summary:
                 "Joined the development team with a dual Front-End and UX/UI profile to help bridge the gap between design and engineering on B2B industrial software products.",
             description: [
@@ -36,7 +36,7 @@ const experiences = {
             position: "Front-End Developer",
             company: "Optiva Media",
             location: "Madrid, Spain",
-            period: "March 2021 – October 2021",
+            period: "2021",
             summary:
                 "Worked on streaming-style audiovisual content platforms for major clients such as Orange, HBO and Filmin.",
             description: [
@@ -50,7 +50,7 @@ const experiences = {
             position: "UX/UI Designer and Analyst",
             company: "Walmeric",
             location: "Madrid, Spain",
-            period: "February 2020 – September 2020",
+            period: "2020",
             summary:
                 "Worked on B2C digital products focused on lead generation, collaborating closely with the Product Owner on ongoing company projects.",
             description: [
@@ -64,7 +64,7 @@ const experiences = {
             position: "UX/UI Designer",
             company: "Akimad Agency",
             location: "Madrid, Spain",
-            period: "July 2019 – February 2020",
+            period: "2019 – 2020",
             summary:
                 "Designed mobile-first MVPs for startup clients, helping transform early-stage business ideas into structured user journeys, wireframes and investor-ready prototypes.",
             description: [
