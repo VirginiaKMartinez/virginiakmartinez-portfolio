@@ -80,7 +80,7 @@
             "location": "Based in",
             "locationV": "Saint-Malo, FR",
             "status": "Status",
-            "statusV": "Open to roles",
+            "statusV": "Open to work",
             "edition": "Edition",
             "editionV": "№ 002"
         },
@@ -97,7 +97,7 @@
         },
         "foot": {
             "now": "Currently",
-            "nowV": "Available for senior Product Design roles, remote or on-site between Saint-Malo and Rennes.",
+            "nowV": "Available for Product Design roles, remote or on-site between Saint-Malo and Rennes.",
             "doing": "Most days",
             "doingV": "B2B product design, design systems and the awkward bits where Figma meets Angular.",
             "scroll": "Read on",

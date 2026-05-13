@@ -1,6 +1,6 @@
 {
     "topbar": {
-        "role": "Designeuse Produit",
+        "role": "Product Designer",
         "mid": "Travaux choisis · Saint-Malo, FR",
         "contact": "Contact",
         "cv": "CV"
@@ -97,7 +97,7 @@
         },
         "foot": {
             "now": "Actuellement",
-            "nowV": "Disponible pour des postes senior en Design Produit, en remote ou entre Saint-Malo et Rennes.",
+            "nowV": "Disponible pour des postes en Design Produit, en remote ou entre Saint-Malo et Rennes.",
             "doing": "Au quotidien",
             "doingV": "Design produit B2B, design systems et la zone où Figma rencontre Angular.",
             "scroll": "Lire",

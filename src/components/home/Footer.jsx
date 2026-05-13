@@ -6,8 +6,8 @@ export default function Footer() {
 
     // URLs reales
     const linkedinUrl = "https://www.linkedin.com/in/virginiakmartinez/";
-    const githubUrl = "https://github.com/VirginiaKM";
-    const emailUrl = "mailto:hello@virginiaik.dev";
+    const githubUrl = "https://github.com/VirginiaKMartinez";
+    const emailUrl = "mailto:hello@virginiak.dev";
 
     return (
         <footer className="bg-background border-t border-divider py-8">
