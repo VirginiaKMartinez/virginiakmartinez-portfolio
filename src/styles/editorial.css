@@ -74,13 +74,15 @@
     gap: 8px;
     padding: 6px 10px;
     border: 1px solid var(--fg);
+    border-radius: 3px;
     color: var(--fg);
     background: transparent;
     font: inherit;
     transition: 200ms var(--easeo);
 }
-.cv-btn:hover {
-    background: var(--fg);
+.topbar .cv-btn:hover {
+    background: var(--accent);
+    border-color: var(--accent);
     color: var(--paper);
 }
 
@@ -444,6 +446,7 @@ html[data-projects="cards"] .works {
 html[data-projects="cards"] .work {
     grid-template-columns: 1fr;
     border: 1px solid var(--line);
+    border-radius: 4px;
     padding: 24px;
     background: var(--paper);
     align-items: start;
@@ -509,7 +512,7 @@ html[data-projects="dense"] .work .title {
     color: var(--mute);
     transition: 200ms var(--easeo);
 }
-.side-index a:hover {
+.side-index a:hover{
     color: var(--fg);
 }
 .side-index a.is-current {
