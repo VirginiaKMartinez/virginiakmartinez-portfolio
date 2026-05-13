@@ -12,11 +12,7 @@ Personal portfolio for Virginia Martínez, Digital Product Designer based in Sai
 
 **Avoid**
 
-- Generic hero patterns like "Hi, I'm X, I design Y".
-- Positioning her as a designer-plus-developer hybrid.
-- Adding new product features. The job is to polish, not expand.
-- Perfectionism that blocks shipping.
-
+x
 **Stack**
 
 - Vite + React 19, React Router 7
