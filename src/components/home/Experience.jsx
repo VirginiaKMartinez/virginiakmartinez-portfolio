@@ -29,7 +29,7 @@ export default function Experience() {
                     >
                         <div className="when">{exp.period}</div>
 
-                        <div>
+                        <div className="who">
                             <h3>{exp.position}</h3>
                             <p className="where">
                                 {exp.company} · {exp.location}
