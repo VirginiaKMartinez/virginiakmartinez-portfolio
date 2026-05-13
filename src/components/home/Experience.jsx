@@ -1,4 +1,4 @@
-// src/components/home/Experience.jsx — v2 editorial timeline
+// src/components/home/Experience.jsx — v2 editorial timeline (opción A)
 import { useTranslation } from "react-i18next";
 import experiencesEN from "../../data/experiences.en";
 import experiencesFR from "../../data/experiences.fr";
@@ -28,14 +28,25 @@ export default function Experience() {
                         className="t-row"
                     >
                         <div className="when">{exp.period}</div>
-                        <div className="who">
+
+                        <div>
                             <h3>{exp.position}</h3>
-                            <div className="where">
+                            <p className="where">
                                 {exp.company} · {exp.location}
-                            </div>
-                        </div>
-                        <div className="what">
-                            <p>{exp.description}</p>
+                            </p>
+
+                            {exp.description && (
+                                <p className="lead">{exp.description}</p>
+                            )}
+
+                            {exp.bullets && exp.bullets.length > 0 && (
+                                <ul className="bullets">
+                                    {exp.bullets.map((item) => (
+                                        <li key={item}>{item}</li>
+                                    ))}
+                                </ul>
+                            )}
+
                             {exp.stack && exp.stack.length > 0 && (
                                 <div className="stack">
                                     {exp.stack.map((tech) => (
