@@ -1,13 +1,15 @@
 // src/components/layout/SectionHeader.jsx — v2 numbered editorial header
-import PropTypes from "prop-types";
-
 /**
  * Numbered section header in editorial style.
- * Renders: "01" mono label  |  big serif title (with italic accent segment)  +  mono kicker
+ * Renders: mono num label  +  big serif title (with italic accent segment)  +  mono kicker.
+ *
+ * Props:
+ *   - num: string (e.g. "01")
+ *   - title: string or [main, italic] tuple — second segment renders italic + accent
+ *   - kicker: string (optional, mono uppercase right-aligned)
  *
  * Usage:
- *   <SectionHeader num="01" title={["Selected", "work."]} kicker="Four projects · 2019—2024" />
- *   First word(s) = regular fg, second segment = italic accent.
+ *   <SectionHeader num="01" title={["Selected", "work."]} kicker="Four projects" />
  */
 export default function SectionHeader({ num, title, kicker }) {
     const [main, italic] = Array.isArray(title) ? title : [title, ""];
@@ -30,12 +32,3 @@ export default function SectionHeader({ num, title, kicker }) {
         </div>
     );
 }
-
-SectionHeader.propTypes = {
-    num: PropTypes.string.isRequired,
-    title: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.arrayOf(PropTypes.string),
-    ]).isRequired,
-    kicker: PropTypes.string,
-};

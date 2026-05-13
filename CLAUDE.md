@@ -98,6 +98,7 @@ Do not reopen these unless Virginia explicitly says so.
 - i18next loads JSON via `i18next-http-backend` from `public/locales/`. Vite does NOT hot-reload `public/` changes. After editing translations, do a hard refresh (`Cmd+Shift+R`) or restart the dev server.
 - The `Icon` component is a wrapper over lucide-react: `<Icon name="ArrowRight" />` resolves to `lucide-react.ArrowRight`. Use lucide icon names exactly.
 - ESLint already reports one pre-existing warning in `DesignSystem.jsx` (line 176). Do not flag it as new.
+- `prop-types` is NOT installed and is NOT to be added. For a JS-only React 19 project without TypeScript, skip prop validation entirely — components use plain destructured props.
 
 ## See Also
 
