@@ -466,6 +466,215 @@
     transition: width 60ms linear;
 }
 
+/* ============== About (02) ============== */
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--col-gap);
+}
+.about-grid .lede {
+    grid-column: 1 / 9;
+}
+.about-grid .about-meta {
+    grid-column: 10 / -1;
+}
+
+.lede p {
+    font-family: var(--ff-display);
+    font-size: clamp(24px, 2.6vw, 38px);
+    line-height: 1.18;
+    letter-spacing: -0.005em;
+    color: var(--fg);
+    margin: 0 0 28px 0;
+    text-wrap: pretty;
+}
+.lede p em {
+    color: var(--accent);
+    font-style: italic;
+}
+.lede .small {
+    font-family: var(--ff-body);
+    font-size: var(--t-md);
+    color: var(--fg-soft);
+    line-height: 1.7;
+    max-width: 56ch;
+}
+.lede .small p {
+    font-family: var(--ff-body);
+    font-size: var(--t-md);
+    margin: 0 0 1em 0;
+}
+
+.about-meta dl {
+    margin: 0;
+    display: grid;
+    gap: 22px;
+}
+.about-meta dt {
+    font-family: var(--ff-mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--mute);
+    margin-bottom: 6px;
+}
+.about-meta dd {
+    margin: 0;
+    font-family: var(--ff-body);
+    font-size: var(--t-md);
+    color: var(--fg);
+    line-height: 1.5;
+}
+
+/* ============== Experience timeline (03) ============== */
+.timeline {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.t-row {
+    display: grid;
+    grid-template-columns: 130px 1fr 280px;
+    gap: var(--col-gap);
+    padding: 28px 0;
+    border-bottom: 1px solid var(--line);
+    align-items: baseline;
+}
+.t-row:first-child {
+    border-top: 1px solid var(--line);
+}
+.t-row .when {
+    font-family: var(--ff-mono);
+    font-size: var(--t-sm);
+    color: var(--mute);
+}
+.t-row .who h3 {
+    margin: 0 0 6px 0;
+    font-family: var(--ff-display);
+    font-weight: 400;
+    font-size: clamp(22px, 2.4vw, 32px);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+}
+.t-row .who .where {
+    font-family: var(--ff-mono);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    color: var(--fg-soft);
+    text-transform: uppercase;
+}
+.t-row .what p {
+    margin: 0;
+    color: var(--fg-soft);
+    font-size: var(--t-sm);
+    line-height: 1.55;
+}
+.t-row .what .stack {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+.t-row .what .stack span {
+    font-family: var(--ff-mono);
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    padding: 3px 8px;
+    border: 1px solid var(--line);
+    color: var(--fg-soft);
+}
+
+/* ============== Education + Languages (04/05) ============== */
+.pair {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--col-gap);
+}
+.pair .a {
+    grid-column: 1 / 8;
+}
+.pair .b {
+    grid-column: 9 / -1;
+}
+
+.edu-row {
+    display: grid;
+    grid-template-columns: 100px 1fr 80px;
+    gap: 16px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line);
+    align-items: baseline;
+}
+.edu-row:first-child {
+    border-top: 1px solid var(--line);
+}
+.edu-row .y {
+    font-family: var(--ff-mono);
+    font-size: var(--t-sm);
+    color: var(--mute);
+}
+.edu-row .y.r {
+    text-align: right;
+}
+.edu-row .e h4 {
+    margin: 0 0 4px 0;
+    font-family: var(--ff-display);
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: -0.005em;
+    line-height: 1.1;
+}
+.edu-row .e p {
+    margin: 0;
+    color: var(--fg-soft);
+    font-size: var(--t-sm);
+}
+
+.lang-list {
+    display: grid;
+    gap: 14px;
+}
+.lang-item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: baseline;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+}
+.lang-item:first-child {
+    border-top: 1px solid var(--line);
+}
+.lang-item .l {
+    font-family: var(--ff-display);
+    font-size: 28px;
+    letter-spacing: -0.01em;
+}
+.lang-item .lv {
+    font-family: var(--ff-mono);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--mute);
+}
+
+@media (max-width: 920px) {
+    .about-grid,
+    .pair {
+        grid-template-columns: 1fr !important;
+    }
+    .about-grid .lede,
+    .about-grid .about-meta,
+    .pair .a,
+    .pair .b {
+        grid-column: 1 / -1 !important;
+    }
+    .t-row {
+        grid-template-columns: 90px 1fr;
+    }
+    .t-row .what {
+        grid-column: 1 / -1;
+    }
+}
+
 /* Responsive */
 @media (max-width: 920px) {
     .hero-body,

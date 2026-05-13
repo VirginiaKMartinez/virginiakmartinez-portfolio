@@ -33,6 +33,44 @@
             }
         }
     },
+    "about": {
+        "h1": "About",
+        "h2": "the designer.",
+        "kicker": "A short, honest bio",
+        "bio": {
+            "line1": "I’m a <em>Product Designer</em> working on B2B digital products. I shape end-to-end flows, draw the interfaces, and build the design systems that keep them coherent over time.",
+            "line2": "Before designing, I wrote code — <em>Angular, TypeScript, Sass</em> — in real production teams. That part of the past isn’t a second job offer; it’s a quiet superpower: I design with implementation in mind, document like a developer reads, and stay close to engineering without losing the product point of view.",
+            "line3": "Behavioral Design certified, fluent in French, English and Spanish. Based in Saint-Malo since 2023, after a decade of motion and editorial work in Madrid.",
+            "line4": "I like quiet interfaces, opinionated documentation, and the moment a developer says “ah, that’s clear.”"
+        },
+        "meta": {
+            "focus": "Focus",
+            "focusV": "Senior Product Design · Design Systems · B2B SaaS",
+            "craft": "Craft",
+            "craftV": "UX research lite, IA, prototyping, hi-fi UI, component docs, design tokens.",
+            "fluency": "Engineering fluency",
+            "fluencyV": "Angular, TypeScript, HTML, Sass, Git. Used in production, kept current as context — not a side hustle.",
+            "tools": "Tools",
+            "toolsV": "Figma · Adobe CS · Jira · Sourcetree"
+        }
+    },
+    "experience": {
+        "h1": "Experience,",
+        "h2": "in chapters.",
+        "kicker": "2006 — Today"
+    },
+    "education": {
+        "h1": "Education",
+        "h2": "& languages.",
+        "kicker": "Madrid · Paris · Saint-Malo"
+    },
+    "languages": {
+        "items": [
+            { "name": "Français", "level": "Full professional" },
+            { "name": "English", "level": "Full professional" },
+            { "name": "Español", "level": "Native" }
+        ]
+    },
     "hero": {
         "masthead": {
             "folio": "Portfolio",

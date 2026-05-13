@@ -1,67 +1,52 @@
-// src/components/home/Experience.jsx
+// src/components/home/Experience.jsx — v2 editorial timeline
 import { useTranslation } from "react-i18next";
 import experiencesEN from "../../data/experiences.en";
 import experiencesFR from "../../data/experiences.fr";
-import SectionWrapper from "../layout/SectionWrapper";
+import SectionHeader from "../layout/SectionHeader";
 
-function Experience() {
-    const { i18n } = useTranslation();
-    const lang = i18n.language;
-    const { title, items } = lang === "fr" ? experiencesFR : experiencesEN;
+export default function Experience() {
+    const { t, i18n } = useTranslation();
+    const lang = i18n.language?.startsWith("fr") ? "fr" : "en";
+    const { items } = lang === "fr" ? experiencesFR : experiencesEN;
 
     return (
-        <SectionWrapper title={title} id="experience">
-            <div className="divide-y divide-divider">
+        <section
+            id="experience"
+            className="editorial-section"
+            data-screen-label="03 Experience"
+        >
+            <SectionHeader
+                num="03"
+                title={[t("experience.h1"), t("experience.h2")]}
+                kicker={t("experience.kicker")}
+            />
+
+            <div className="timeline">
                 {items.map((exp) => (
                     <article
                         key={`${exp.company}-${exp.period}`}
-                        className="grid grid-cols-1 md:grid-cols-[120px_1fr] gap-x-10 gap-y-3 py-12 first:pt-0 last:pb-0"
+                        className="t-row"
                     >
-                        <div>
-                            <p className="text-base font-medium text-textDark">
-                                {exp.period}
-                            </p>
-                            <p className="text-sm text-textMuted mt-1">
-                                {exp.location}
-                            </p>
+                        <div className="when">{exp.period}</div>
+                        <div className="who">
+                            <h3>{exp.position}</h3>
+                            <div className="where">
+                                {exp.company} · {exp.location}
+                            </div>
                         </div>
-
-                        <div>
-                            <h3 className="text-xl font-medium text-textDark">
-                                {exp.position}
-                            </h3>
-                            <p className="text-base text-textMuted mb-5">
-                                {exp.company}
-                            </p>
-
-                            {exp.summary && (
-                                <p className="text-base text-textDark leading-relaxed mb-5">
-                                    {exp.summary}
-                                </p>
+                        <div className="what">
+                            <p>{exp.description}</p>
+                            {exp.stack && exp.stack.length > 0 && (
+                                <div className="stack">
+                                    {exp.stack.map((tech) => (
+                                        <span key={tech}>{tech}</span>
+                                    ))}
+                                </div>
                             )}
-
-                            <ul className="space-y-3">
-                                {exp.description.map((item) => (
-                                    <li
-                                        key={item}
-                                        className="text-base text-textDark leading-relaxed pl-5 relative"
-                                    >
-                                        <span
-                                            className="absolute left-0 text-textMuted"
-                                            aria-hidden="true"
-                                        >
-                                            —
-                                        </span>
-                                        {item}
-                                    </li>
-                                ))}
-                            </ul>
                         </div>
                     </article>
                 ))}
             </div>
-        </SectionWrapper>
+        </section>
     );
 }
-
-export default Experience;

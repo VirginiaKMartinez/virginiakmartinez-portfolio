@@ -33,6 +33,44 @@
             }
         }
     },
+    "about": {
+        "h1": "À propos",
+        "h2": "de la designeuse.",
+        "kicker": "Une biographie courte et honnête",
+        "bio": {
+            "line1": "Je suis <em>Designeuse Produit</em>, je travaille sur des produits digitaux B2B. Je conçois les flux de bout en bout, je dessine les interfaces, et je construis les design systems qui les gardent cohérents dans le temps.",
+            "line2": "Avant de designer, j’ai écrit du code — <em>Angular, TypeScript, Sass</em> — dans de vraies équipes de production. Ce passage n’est pas une seconde offre d’emploi ; c’est un super-pouvoir discret : je dessine en pensant à l’implémentation, je documente comme les dev’ aiment lire, et je reste proche de l’ingénierie sans perdre le point de vue produit.",
+            "line3": "Certifiée en Behavioral Design, je parle couramment français, anglais et espagnol. Installée à Saint-Malo depuis 2023, après dix ans de motion et d’éditorial à Madrid.",
+            "line4": "J’aime les interfaces calmes, la documentation tranchée, et l’instant où un dev’ dit « ah, c’est clair »."
+        },
+        "meta": {
+            "focus": "Spécialité",
+            "focusV": "Senior Product Design · Design Systems · SaaS B2B",
+            "craft": "Métier",
+            "craftV": "Recherche UX légère, IA, prototypage, UI hi-fi, doc de composants, design tokens.",
+            "fluency": "Aisance technique",
+            "fluencyV": "Angular, TypeScript, HTML, Sass, Git. Utilisés en production, gardés comme contexte — pas une activité parallèle.",
+            "tools": "Outils",
+            "toolsV": "Figma · Adobe CS · Jira · Sourcetree"
+        }
+    },
+    "experience": {
+        "h1": "Expérience,",
+        "h2": "en chapitres.",
+        "kicker": "2006 — Aujourd’hui"
+    },
+    "education": {
+        "h1": "Formation",
+        "h2": "& langues.",
+        "kicker": "Madrid · Paris · Saint-Malo"
+    },
+    "languages": {
+        "items": [
+            { "name": "Français", "level": "Professionnel complet" },
+            { "name": "English", "level": "Professionnel complet" },
+            { "name": "Español", "level": "Langue maternelle" }
+        ]
+    },
     "hero": {
         "masthead": {
             "folio": "Portfolio",
