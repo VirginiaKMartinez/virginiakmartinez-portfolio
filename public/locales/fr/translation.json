@@ -1,13 +1,81 @@
 {
+    "topbar": {
+        "role": "Designeuse Produit",
+        "mid": "Travaux choisis · Saint-Malo, FR",
+        "contact": "Contact",
+        "cv": "CV"
+    },
+    "side": {
+        "cover": "Couverture",
+        "work": "Travaux choisis",
+        "about": "À propos",
+        "experience": "Expérience",
+        "education": "Formation",
+        "languages": "Langues",
+        "contact": "Contact"
+    },
+    "work": {
+        "h1": "Travaux",
+        "h2": "choisis.",
+        "kicker": "Quatre projets · 2019 — 2024 · Études de cas sur demande",
+        "items": {
+            "staffAndGo": {
+                "desc": "Design system de zéro · 25+ composants"
+            },
+            "powerElectronics": {
+                "desc": "Logiciel industriel B2B · Angular 12"
+            },
+            "optivaMedia": {
+                "desc": "Plateformes de streaming · Orange, HBO, Filmin, UEFA"
+            },
+            "hawi": {
+                "desc": "MVP mobile contre la solitude des aînés"
+            }
+        }
+    },
     "hero": {
-        "role": "Product Designer · Saint-Malo",
-        "tagline": "Je conçois des produits numériques B2B qui s'implémentent proprement. Spécialisée en design systems, avec une réelle compréhension de ce que le front-end peut produire.",
-        "availability": "Disponible pour de nouvelles opportunités.",
-        "navLabel": "Actions principales",
-        "linkWork": "Voir mes projets",
-        "linkCV": "Télécharger le CV",
-        "linkEmail": "Email",
-        "photoAlt": "Portrait de Virginia Martínez, Digital Product Designer"
+        "masthead": {
+            "folio": "Portfolio",
+            "folioV": "Vol. 02 · MMXXVI",
+            "discipline": "Discipline",
+            "disciplineV": "Design Produit",
+            "location": "Basée à",
+            "locationV": "Saint-Malo, FR",
+            "status": "Statut",
+            "statusV": "Ouverte aux propositions",
+            "edition": "Édition",
+            "editionV": "№ 002"
+        },
+        "h1": {
+            "line1": "Dessiner des produits",
+            "line2": "qui sortent,",
+            "line3": "avec",
+            "line4": "celles et ceux qui les construisent."
+        },
+        "portrait": {
+            "working": "En cours",
+            "plate": "Plate 01",
+            "self": "Autoportrait, 2026"
+        },
+        "foot": {
+            "now": "Actuellement",
+            "nowV": "Disponible pour des postes senior en Design Produit, en remote ou entre Saint-Malo et Rennes.",
+            "doing": "Au quotidien",
+            "doingV": "Design produit B2B, design systems et la zone où Figma rencontre Angular.",
+            "scroll": "Lire",
+            "scrollV": "Six chapitres, un CV, une boîte mail qui répond sous 24 h."
+        },
+        "marquee": [
+            "Design Produit",
+            "Design Systems",
+            "UX / UI",
+            "Prototypage",
+            "Architecture de l'information",
+            "Collaboration Front-End",
+            "Angular · TypeScript · Sass",
+            "Behavioral Design",
+            "Accessibilité"
+        ]
     },
     "header": {
         "experience": "Expérience",
@@ -54,7 +122,6 @@
         "common": {
             "onThisPage": "Sur cette page"
         },
-
         "welcome": "Bonjour, je m'appelle Virginia",
         "description": "Je suis Product Designer avec plus de 6 ans d’expérience et une formation en développement FrontEnd.",
         "downloadResume": "Télécharger le CV",

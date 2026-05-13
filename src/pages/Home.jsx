@@ -1,25 +1,19 @@
-// import { useTranslation } from "react-i18next";
 import Hero from "../components/home/Hero";
-import Experience from "../components/home/Experience";
-import Education from "../components/home/Education";
-import CaseStudies from "../components/home/CaseStudies";
-import Testimonials from "../components/home/Testimonials";
-import ContactSection from "../components/home/ContactSection";
+import SelectedWork from "../components/home/SelectedWork";
+import SideIndex from "../components/layout/SideIndex";
+
 function Home() {
     return (
-        <div>
+        <>
+            <SideIndex />
             <Hero />
-            <div className="border-b border-divider"></div>
-            <Experience />
-            <div className="border-b border-divider"></div>
-            <Education />
-            <div className="border-b border-divider"></div>
-            <CaseStudies />
-            <div className="border-b border-divider"></div>
-            <Testimonials />
-            <div className="border-b border-divider"></div>
-            <ContactSection />
-        </div>
+            <SelectedWork />
+            {/*
+                v2 tanda 2.2 done — Hero + Selected Work + SideIndex.
+                About, Experience, Education, Languages, Contact
+                are coming in tandas v2.3 → v2.4.
+            */}
+        </>
     );
 }
 

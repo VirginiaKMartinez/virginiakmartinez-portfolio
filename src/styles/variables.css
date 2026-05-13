@@ -1,19 +1,108 @@
+/* -----------------------------------------------------
+   Virginia Martínez — v2 editorial tokens
+   ----------------------------------------------------- */
+
 :root {
-    /* Primary colors*/
-    --color-primary: #3ad8fa;
-    --color-link: #00abd1;
-    --color-accent-coral: #ff6b6c;
-    --color-accent-mustard: #ffc75f;
-    --color-accent-indigo: #6c5ce7;
-    --color-accent-teal: #079992;
+    /* Palette: Bone / Ink / Terracotta (default) */
+    --bg: oklch(0.972 0.006 80);
+    --bg-2: oklch(0.945 0.008 80);
+    --fg: oklch(0.18 0.012 60);
+    --fg-soft: oklch(0.4 0.012 60);
+    --mute: oklch(0.58 0.01 60);
+    --line: oklch(0.85 0.012 70);
+    --line-soft: oklch(0.92 0.01 70);
+    --accent: oklch(0.62 0.16 35);
+    --accent-ink: oklch(0.32 0.1 35);
+    --paper: oklch(0.98 0.006 80);
 
-    /* Neutral / text */
-    --color-text-dark: #333333;
-    --color-text-muted: #6a6a6a;
+    /* Type families */
+    --ff-display: "Instrument Serif", "Newsreader", Georgia, serif;
+    --ff-body: "Söhne", "Helvetica Neue", Helvetica, "Inter", system-ui,
+        sans-serif;
+    --ff-mono: "JetBrains Mono", "Geist Mono", ui-monospace, monospace;
 
-    /* Backgrounds and dividers */
-    --color-bg-white: #ffffff;
-    --color-bg: #fdfdfd;
-    --color-dots-default: #e3e6e9;
-    --color-divider: #f2f2f2;
+    /* Rhythm */
+    --rhythm: 1;
+    --maxw: 1320px;
+    --gutter: clamp(20px, 4vw, 56px);
+    --col-gap: clamp(16px, 2vw, 32px);
+
+    /* Type scale */
+    --t-xs: 11px;
+    --t-sm: 13px;
+    --t-md: 15px;
+    --t-lg: 18px;
+    --t-xl: 22px;
+    --t-2xl: 32px;
+    --t-3xl: 48px;
+    --t-4xl: clamp(56px, 9vw, 140px);
+    --t-5xl: clamp(80px, 13vw, 200px);
+
+    /* Misc */
+    --radius: 0px;
+    --easeo: cubic-bezier(0.2, 0.7, 0.2, 1);
+
+    /* -------------------------------------------------------
+       Legacy aliases — kept so v1 components keep rendering
+       while we migrate to the editorial system one by one.
+       ------------------------------------------------------- */
+    --color-bg: var(--bg);
+    --color-bg-white: var(--paper);
+    --color-text-dark: var(--fg);
+    --color-text-muted: var(--fg-soft);
+    --color-divider: var(--line);
+    --color-primary: var(--accent);
+    --color-link: var(--accent-ink);
+    --color-dots-default: var(--line);
+    --color-accent-coral: var(--accent);
+    --color-accent-mustard: var(--accent);
+    --color-accent-indigo: var(--accent-ink);
+    --color-accent-teal: var(--accent-ink);
+}
+
+/* Palette variants set via [data-palette] on <html> */
+html[data-palette="moss"] {
+    --bg: oklch(0.965 0.012 95);
+    --bg-2: oklch(0.935 0.014 95);
+    --fg: oklch(0.17 0.012 90);
+    --fg-soft: oklch(0.38 0.012 90);
+    --accent: oklch(0.55 0.1 130);
+    --accent-ink: oklch(0.3 0.08 130);
+    --paper: oklch(0.978 0.01 95);
+    --line: oklch(0.85 0.012 95);
+    --line-soft: oklch(0.92 0.01 95);
+}
+html[data-palette="rosso"] {
+    --bg: oklch(0.975 0.004 250);
+    --bg-2: oklch(0.945 0.006 250);
+    --fg: oklch(0.18 0.012 260);
+    --fg-soft: oklch(0.38 0.012 260);
+    --accent: oklch(0.55 0.18 25);
+    --accent-ink: oklch(0.3 0.12 25);
+    --paper: oklch(0.985 0.004 250);
+    --line: oklch(0.86 0.008 260);
+    --line-soft: oklch(0.93 0.008 260);
+}
+html[data-palette="ink"] {
+    --bg: oklch(0.14 0.012 60);
+    --bg-2: oklch(0.18 0.012 60);
+    --fg: oklch(0.96 0.008 80);
+    --fg-soft: oklch(0.72 0.01 80);
+    --mute: oklch(0.62 0.01 80);
+    --accent: oklch(0.72 0.14 60);
+    --accent-ink: oklch(0.86 0.1 60);
+    --paper: oklch(0.18 0.012 60);
+    --line: oklch(0.3 0.012 60);
+    --line-soft: oklch(0.22 0.012 60);
+}
+
+/* Display font tweaks */
+html[data-display="newsreader"] {
+    --ff-display: "Newsreader", "Instrument Serif", Georgia, serif;
+}
+html[data-display="cormorant"] {
+    --ff-display: "Cormorant Garamond", "Instrument Serif", Georgia, serif;
+}
+html[data-display="dmserif"] {
+    --ff-display: "DM Serif Display", "Instrument Serif", Georgia, serif;
 }

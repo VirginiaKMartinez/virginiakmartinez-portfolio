@@ -66,6 +66,9 @@ A good change:
 
 Do not reopen these unless Virginia explicitly says so.
 
+- **v2 (current branch `redesign-v2-editorial`)**: Editorial redesign using Claude Design's handoff as visual reference. Stays on Vite + React + Tailwind v3 — NO migration to Next.js or Astro. Tokens, fonts and palette adopted from the handoff (see Editorial system below).
+- **Editorial system**: Default palette `bone` (warm off-white + terracotta accent). Three alt palettes available via `<html data-palette="moss|rosso|ink">`. Display font `Instrument Serif` (Google Fonts), body sans `Söhne` with fallback chain (`Helvetica Neue` → `Inter` → `system-ui`), mono `JetBrains Mono`. Use accent extremely sparingly — only for hero italic word, hovered project rows, link underlines, case-study `→` arrows.
+- **Tailwind tokens**: v2 names = `bg`, `fg`, `fgSoft`, `mute`, `line`, `lineSoft`, `accent`, `accentInk`, `paper`. Legacy names (`textDark`, `textMuted`, `divider`, `primary`, `link`, `background`) still work via CSS var aliases — DO NOT use them in new code, use the v2 names. Old aliases retire as components get rewritten.
 - **Stack**: Tailwind v3, not v4. `@tailwindcss/postcss` removed from devDeps.
 - **Hero copy**: Tagline closed → "I design B2B digital products that ship clean. Design systems specialist with a deep understanding of what front-end can deliver." (EN) and the parallel FR version. Voice is sober, editorial. Never include "I can build them" or any dev-positioning phrasing.
 - **Hero layout**: Quiet minimal with editorial photo. Asymmetric grid: left = name + role + statement + availability + three underline links (View work, Download CV, Email); right = vertical portrait photo (`w-64 h-80`, `object-top`). No badge, no buttons, no circular avatar.

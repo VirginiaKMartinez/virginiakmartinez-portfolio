@@ -1,64 +1,95 @@
-// src/components/home/Hero.jsx
+// src/components/home/Hero.jsx — v2 editorial cover
 import { useTranslation } from "react-i18next";
-import photoVir from "../../assets/images/photoVir.png";
-import "../../styles/hero.css";
 
 export default function Hero() {
     const { t } = useTranslation();
+    const marquee = t("hero.marquee", { returnObjects: true });
+
+    // Render marquee twice for a seamless infinite loop
+    const renderMarqueeItems = (keyPrefix) =>
+        marquee.flatMap((skill, idx) => [
+            <span key={`${keyPrefix}-skill-${idx}`}>{skill}</span>,
+            <span key={`${keyPrefix}-dot-${idx}`} className="dot">
+                ·
+            </span>,
+        ]);
 
     return (
-        <section id="hero" className="hero-bg relative">
-            <div className="relative z-10 h-full flex items-center px-6 lg:px-12">
-                <div className="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-10 lg:gap-16 items-center">
-                    <div>
-                        <p className="text-base font-medium text-textDark">
-                            Virginia Martínez
-                        </p>
-                        <p className="text-base text-textMuted mb-10">
-                            {t("hero.role")}
-                        </p>
+        <section
+            id="cover"
+            className="hero"
+            data-screen-label="00 Cover"
+            data-variant="manifesto"
+        >
+            <div className="masthead">
+                <div className="m">
+                    {t("hero.masthead.folio")}
+                    <strong>{t("hero.masthead.folioV")}</strong>
+                </div>
+                <div className="m">
+                    {t("hero.masthead.discipline")}
+                    <strong>{t("hero.masthead.disciplineV")}</strong>
+                </div>
+                <div className="m">
+                    {t("hero.masthead.location")}
+                    <strong>{t("hero.masthead.locationV")}</strong>
+                </div>
+                <div className="m">
+                    {t("hero.masthead.status")}
+                    <strong style={{ color: "var(--accent)" }}>
+                        {t("hero.masthead.statusV")}
+                    </strong>
+                </div>
+                <div className="m issue">
+                    {t("hero.masthead.edition")}
+                    <strong>{t("hero.masthead.editionV")}</strong>
+                </div>
+            </div>
 
-                        <p className="text-2xl sm:text-3xl lg:text-4xl text-textDark leading-snug max-w-2xl mb-10">
-                            {t("hero.tagline")}
-                        </p>
+            <div className="hero-body">
+                <h1 className="manifesto">
+                    {t("hero.h1.line1")}
+                    <br />
+                    {t("hero.h1.line2")}{" "}
+                    <span className="it">{t("hero.h1.line3")}</span>
+                    <br />
+                    <span className="it">{t("hero.h1.line4")}</span>
+                </h1>
 
-                        <p className="text-sm text-textMuted mb-3">
-                            {t("hero.availability")}
-                        </p>
-
-                        <nav
-                            aria-label={t("hero.navLabel")}
-                            className="flex flex-wrap gap-x-6 gap-y-2 text-sm"
-                        >
-                            <a
-                                href="#casestudies"
-                                className="text-textDark border-b border-textDark pb-0.5 hover:text-link hover:border-link transition-colors"
-                            >
-                                {t("hero.linkWork")}
-                            </a>
-                            <a
-                                href="/Virginia_Martinez_CV.pdf"
-                                download
-                                className="text-textDark border-b border-textDark pb-0.5 hover:text-link hover:border-link transition-colors"
-                            >
-                                {t("hero.linkCV")}
-                            </a>
-                            <a
-                                href="mailto:hello@virginiak.dev"
-                                className="text-textDark border-b border-textDark pb-0.5 hover:text-link hover:border-link transition-colors"
-                            >
-                                {t("hero.linkEmail")}
-                            </a>
-                        </nav>
+                <div className="portrait-wrap">
+                    <div className="portrait">
+                        <div className="stripes" aria-hidden="true" />
+                        <div className="silhouette" aria-hidden="true">
+                            VM
+                        </div>
+                        <span className="pulse">{t("hero.portrait.working")}</span>
+                        <div className="caption">
+                            <span>{t("hero.portrait.plate")}</span>
+                            <span>{t("hero.portrait.self")}</span>
+                        </div>
                     </div>
+                </div>
+            </div>
 
-                    <div className="hidden lg:flex justify-end">
-                        <img
-                            src={photoVir}
-                            alt={t("hero.photoAlt")}
-                            className="w-64 h-80 object-cover object-top rounded-md"
-                        />
-                    </div>
+            <div className="hero-foot">
+                <div className="l">
+                    <span className="label">{t("hero.foot.now")}</span>
+                    <p>{t("hero.foot.nowV")}</p>
+                </div>
+                <div className="c">
+                    <span className="label">{t("hero.foot.doing")}</span>
+                    <p>{t("hero.foot.doingV")}</p>
+                </div>
+                <div className="r">
+                    <span className="label">{t("hero.foot.scroll")}</span>
+                    <p>{t("hero.foot.scrollV")}</p>
+                </div>
+            </div>
+
+            <div className="marquee" aria-hidden="true">
+                <div className="track">
+                    {renderMarqueeItems("a")}
+                    {renderMarqueeItems("b")}
                 </div>
             </div>
         </section>
