@@ -71,6 +71,29 @@
             { "name": "Español", "level": "Langue maternelle" }
         ]
     },
+    "contactSection": {
+        "h1": "On en",
+        "h2": "parle ?",
+        "kicker": "Réponse sous 24 h, en FR / EN / ES",
+        "or": "ou",
+        "foot": {
+            "elsewhere": "Ailleurs",
+            "located": "Située",
+            "locatedV": "Saint-Malo, France",
+            "locatedTz": "UTC+1",
+            "available": "Disponible",
+            "availableV1": "Senior Product Design",
+            "availableV2": "CDI · Freelance · Remote",
+            "document": "Document",
+            "downloadCV": "Télécharger le CV ↓",
+            "caseStudy": "Lire l’étude de cas →"
+        },
+        "colophon": {
+            "copy": "© MMXXVI · Virginia Martínez",
+            "set": "Composé en Instrument Serif & Helvetica · Codé à la main en React",
+            "egg": "Tape ⌘K pour ouvrir la console"
+        }
+    },
     "hero": {
         "masthead": {
             "folio": "Portfolio",

@@ -3,20 +3,20 @@ import SelectedWork from "../components/home/SelectedWork";
 import About from "../components/home/About";
 import Experience from "../components/home/Experience";
 import Education from "../components/home/Education";
-import SideIndex from "../components/layout/SideIndex";
+import Contact from "../components/home/Contact";
 
 function Home() {
     return (
         <>
-            <SideIndex />
             <Hero />
             <SelectedWork />
             <About />
             <Experience />
             <Education />
+            <Contact />
             {/*
-                v2 tanda 2.3 done — Hero + Selected Work + About + Experience + Education/Languages.
-                Contact + colophon coming in tanda v2.4.
+                v2.4.2 — nav lives in the topbar (Header.jsx) with hamburger
+                on mobile. SideIndex retired.
             */}
         </>
     );

@@ -47,6 +47,97 @@
     justify-content: flex-end;
 }
 
+/* Primary nav in the topbar center */
+.topbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    justify-self: center;
+}
+.topbar-nav a {
+    position: relative;
+    padding: 4px 0;
+    color: var(--fg-soft);
+    font-family: var(--ff-mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition: color 200ms var(--easeo);
+}
+.topbar-nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 1px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 200ms var(--easeo);
+}
+.topbar-nav a:hover { color: var(--fg); }
+.topbar-nav a.is-current { color: var(--fg); }
+.topbar-nav a.is-current::after { transform: scaleX(1); }
+
+/* Hamburger button (mobile only) */
+.nav-burger {
+    display: none;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    color: var(--fg);
+    padding: 4px;
+}
+
+/* Mobile full-screen overlay nav */
+.nav-overlay {
+    position: fixed;
+    inset: 56px 0 0 0;
+    background: var(--bg);
+    z-index: 25;
+    display: flex;
+    flex-direction: column;
+    padding: 56px var(--gutter);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 200ms var(--easeo);
+}
+.nav-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+.nav-overlay nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.nav-overlay a {
+    font-family: var(--ff-display);
+    font-size: clamp(32px, 7vw, 56px);
+    font-weight: 400;
+    color: var(--fg);
+    line-height: 1;
+    letter-spacing: -0.01em;
+}
+.nav-overlay a.is-current {
+    color: var(--accent);
+    font-style: italic;
+}
+
+@media (max-width: 920px) {
+    .topbar-nav { display: none; }
+    .topbar .mid { display: none; }
+    .nav-burger {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+@media (min-width: 921px) {
+    .nav-overlay { display: none; }
+}
+
 .lang-pill {
     display: inline-flex;
     gap: 2px;
@@ -490,10 +581,13 @@ html[data-projects="dense"] .work .title {
     }
 }
 
-/* ============== Side Index (sticky left rail) ============== */
+/* ============== Side Index (sticky left rail) — DEPRECATED v2.4.2
+   Component retired in favour of topbar nav + mobile hamburger.
+   Styles kept commented in case we revisit. */
+/*
 .side-index {
     position: fixed;
-    left: var(--gutter);
+    left: 20px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 20;
@@ -506,13 +600,14 @@ html[data-projects="dense"] .work .title {
     text-transform: uppercase;
 }
 .side-index a {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 10px;
     color: var(--mute);
     transition: 200ms var(--easeo);
 }
-.side-index a:hover{
+.side-index a:hover {
     color: var(--fg);
 }
 .side-index a.is-current {
@@ -532,11 +627,50 @@ html[data-projects="dense"] .work .title {
     width: 36px;
     background: var(--accent);
 }
-@media (max-width: 1100px) {
+.side-index a .label {
+    transition: color 200ms var(--easeo);
+}
+
+/* Wide desktop (>1400px): full rail with labels visible — placed in the left margin */
+@media (min-width: 1401px) {
+    .side-index {
+        left: max(20px, calc((100vw - var(--maxw)) / 2 - 160px));
+    }
+}
+
+/* Medium desktop (920–1400px): compact — only num + tick, label appears as tooltip on hover */
+@media (max-width: 1400px) {
+    .side-index a .label {
+        position: absolute;
+        left: 56px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: var(--fg);
+        color: var(--paper);
+        padding: 4px 10px;
+        white-space: nowrap;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 200ms var(--easeo);
+        font-family: var(--ff-mono);
+        font-size: 10px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        z-index: 1;
+    }
+    .side-index a:hover .label,
+    .side-index a:focus-visible .label {
+        opacity: 1;
+    }
+}
+
+/* Mobile (<920px): hidden — navigation via scroll + topbar */
+@media (max-width: 920px) {
     .side-index {
         display: none;
     }
 }
+*/
 
 /* ============== Scroll progress bar ============== */
 .progress {
@@ -777,6 +911,93 @@ html[data-projects="dense"] .work .title {
     .t-row {
         grid-template-columns: 90px 1fr;
         gap: 16px;
+    }
+}
+
+/* ============== Contact (06) + Colophon ============== */
+.contact-section {
+    padding-top: calc(140px * var(--rhythm));
+    padding-bottom: 80px;
+}
+.contact-section .big {
+    font-family: var(--ff-display);
+    font-size: clamp(40px, 5vw, 72px);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin: 0 0 48px 0;
+}
+.contact-section .big a {
+    border-bottom: 1px solid var(--line);
+    transition: 200ms var(--easeo);
+}
+.contact-section .big a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+.contact-section .big .it {
+    font-style: italic;
+    color: var(--accent);
+}
+
+.foot-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--col-gap);
+    padding-top: 40px;
+    border-top: 1px solid var(--line);
+}
+.foot-grid > div {
+    grid-column: span 3;
+}
+.foot-grid .label {
+    display: block;
+    margin-bottom: 10px;
+}
+.foot-grid p {
+    margin: 0;
+    line-height: 1.9;
+}
+.foot-grid a {
+    color: var(--fg);
+    transition: 200ms var(--easeo);
+}
+.foot-grid a:hover {
+    color: var(--accent);
+}
+
+.colophon {
+    margin-top: 80px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line-soft);
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    font-family: var(--ff-mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mute);
+}
+.colophon kbd {
+    font: inherit;
+    border: 1px solid var(--line-soft);
+    padding: 1px 5px;
+    color: var(--fg);
+    background: var(--paper);
+}
+
+@media (max-width: 920px) {
+    .foot-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .foot-grid > div {
+        grid-column: span 1;
+    }
+}
+@media (max-width: 560px) {
+    .foot-grid {
+        grid-template-columns: 1fr;
     }
 }
 
