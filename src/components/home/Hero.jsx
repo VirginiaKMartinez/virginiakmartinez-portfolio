@@ -1,9 +1,14 @@
 // src/components/home/Hero.jsx — v2 editorial cover
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import photoVir from "../../assets/images/photoVir.png";
 
 export default function Hero() {
     const { t } = useTranslation();
     const marquee = t("hero.marquee", { returnObjects: true });
+    const [photoLoaded, setPhotoLoaded] = useState(false);
+    const [photoFailed, setPhotoFailed] = useState(false);
+    const showPhoto = photoLoaded && !photoFailed;
 
     // Render marquee twice for a seamless infinite loop
     const renderMarqueeItems = (keyPrefix) =>
@@ -58,17 +63,32 @@ export default function Hero() {
 
                 <div className="portrait-wrap">
                     <div className="portrait">
-                        <div className="stripes" aria-hidden="true" />
-                        <div className="silhouette" aria-hidden="true">
-                            VM
-                        </div>
-                        <span className="pulse">
-                            {t("hero.portrait.working")}
-                        </span>
-                        <div className="caption">
-                            <span>{t("hero.portrait.plate")}</span>
-                            <span>{t("hero.portrait.self")}</span>
-                        </div>
+                        <img
+                            src={photoVir}
+                            alt="Virginia Martínez"
+                            className={showPhoto ? "is-visible" : ""}
+                            onLoad={() => setPhotoLoaded(true)}
+                            onError={() => setPhotoFailed(true)}
+                        />
+
+                        {!showPhoto && (
+                            <>
+                                <div className="stripes" aria-hidden="true" />
+                                <div
+                                    className="silhouette"
+                                    aria-hidden="true"
+                                >
+                                    VM
+                                </div>
+                                <span className="pulse">
+                                    {t("hero.portrait.working")}
+                                </span>
+                                <div className="caption">
+                                    <span>{t("hero.portrait.plate")}</span>
+                                    <span>{t("hero.portrait.self")}</span>
+                                </div>
+                            </>
+                        )}
                     </div>
                 </div>
             </div>

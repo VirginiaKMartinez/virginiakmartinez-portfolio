@@ -20,7 +20,9 @@ export default function Contact() {
             <p className="big">
                 <a href="mailto:hello@virginiak.dev">hello@virginiak.dev</a>
                 <br />
-                <span className="it">{t("contactSection.or")}</span> +33{" "}
+                <span className="it">
+                    {t("contactSection.or")}
+                </span> &nbsp;+33{" "}
                 <span style={{ letterSpacing: "-0.02em" }}>
                     7&nbsp;68&nbsp;52&nbsp;15&nbsp;43
                 </span>
