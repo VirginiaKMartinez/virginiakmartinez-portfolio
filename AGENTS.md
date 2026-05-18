@@ -5,16 +5,17 @@
 Personal portfolio for Virginia Martínez, Digital Product Designer based in Saint-Malo, France. In active job search. The site must be polished and shippable, not perfect.
 
 **Primary goals**
-
 - Communicate her real differential: Product Designer with front-end fluency.
 - Showcase 4 selected case studies (quality over quantity).
 - Be sendable to recruiters in EN and FR.
 
 **Avoid**
+- Generic hero patterns like "Hi, I'm X, I design Y".
+- Positioning her as a designer-plus-developer hybrid.
+- Adding new product features. The job is to polish, not expand.
+- Perfectionism that blocks shipping.
 
-x
 **Stack**
-
 - Vite + React 19, React Router 7
 - Tailwind 3 + CSS variables as design tokens (`src/styles/variables.css`)
 - i18next EN/FR, JSON files in `public/locales/{en,fr}/translation.json`
@@ -53,7 +54,6 @@ x
 ## Success Criteria
 
 A good change:
-
 - Compiles green with `npm run build`.
 - Passes `npm run lint` without introducing new warnings.
 - Looks intentional, not "starter template".
@@ -66,10 +66,14 @@ A good change:
 
 Do not reopen these unless Virginia explicitly says so.
 
+- **v2 (current branch `redesign-v2-editorial`)**: Editorial redesign using Claude Design's handoff as visual reference. Stays on Vite + React + Tailwind v3 — NO migration to Next.js or Astro. Tokens, fonts and palette adopted from the handoff (see Editorial system below).
+- **Editorial system**: Active palette `rosso` (cool white + editorial red accent). Three alt palettes available via `<html data-palette="bone|moss|ink">`. Display font `Instrument Serif` (Google Fonts), body sans `Söhne` with fallback chain (`Helvetica Neue` → `Inter` → `system-ui`), mono `JetBrains Mono`. Use accent extremely sparingly — only for hero italic word, hovered project rows, link underlines, case-study `→` arrows.
+- **Tailwind tokens**: v2 names = `bg`, `fg`, `fgSoft`, `mute`, `line`, `lineSoft`, `accent`, `accentInk`, `paper`. Legacy names (`textDark`, `textMuted`, `divider`, `primary`, `link`, `background`) still work via CSS var aliases — DO NOT use them in new code, use the v2 names. Old aliases retire as components get rewritten.
 - **Stack**: Tailwind v3, not v4. `@tailwindcss/postcss` removed from devDeps.
 - **Hero copy**: Tagline closed → "I design B2B digital products that ship clean. Design systems specialist with a deep understanding of what front-end can deliver." (EN) and the parallel FR version. Voice is sober, editorial. Never include "I can build them" or any dev-positioning phrasing.
 - **Hero layout**: Quiet minimal with editorial photo. Asymmetric grid: left = name + role + statement + availability + three underline links (View work, Download CV, Email); right = vertical portrait photo (`w-64 h-80`, `object-top`). No badge, no buttons, no circular avatar.
 - **Hero background**: Dot pattern only on solid `var(--color-bg)`. The AVIF gradient (`bg_01.avif`) is OUT. Do not bring it back.
+- **Navigation (v2.4.2 final)**: Side-index editorial RETIRED. Reason: in 13" laptops it overlaps content and the compact-with-tooltip mode adds cognitive load that hurts a recruiter scanning quickly. Replaced by a standard pattern: primary nav in the fixed topbar (`Work · About · Experience · Education · Contact`) with `IntersectionObserver` tracking the active section, underline accent fades in on the current item. On `<920px` the nav collapses into a hamburger button that opens a full-screen overlay with the same sections in display serif. Esc and click-outside close the overlay. Body scroll locked while open. Component: `src/components/layout/Header.jsx`. `SideIndex.jsx` deleted.
 - **CV download path**: `/Virginia_Martinez_CV.pdf` in `public/`.
 - **Case study order**: Design System (Staff & Go) is the headliner. UX Research, Flows and Responsive Design follow.
 - **Site languages**: English and French only. Spanish is only used in our conversation, not on the site.
@@ -95,6 +99,7 @@ Do not reopen these unless Virginia explicitly says so.
 - i18next loads JSON via `i18next-http-backend` from `public/locales/`. Vite does NOT hot-reload `public/` changes. After editing translations, do a hard refresh (`Cmd+Shift+R`) or restart the dev server.
 - The `Icon` component is a wrapper over lucide-react: `<Icon name="ArrowRight" />` resolves to `lucide-react.ArrowRight`. Use lucide icon names exactly.
 - ESLint already reports one pre-existing warning in `DesignSystem.jsx` (line 176). Do not flag it as new.
+- `prop-types` is NOT installed and is NOT to be added. For a JS-only React 19 project without TypeScript, skip prop validation entirely — components use plain destructured props.
 
 ## See Also
 
@@ -103,4 +108,4 @@ Do not reopen these unless Virginia explicitly says so.
 
 ---
 
-_Last updated: 2026-05-11. Living document. Update Decisions Already Closed every time we close a new one._
+*Last updated: 2026-05-11. Living document. Update Decisions Already Closed every time we close a new one.*

@@ -757,9 +757,6 @@ html[data-projects="dense"] .work .title {
     border-bottom: 1px solid var(--line);
     align-items: start;
 }
-.t-row:first-child {
-    border-top: 1px solid var(--line);
-}
 .t-row .when {
     font-family: var(--ff-mono);
     font-size: var(--t-sm);
@@ -845,9 +842,6 @@ html[data-projects="dense"] .work .title {
     border-bottom: 1px solid var(--line);
     align-items: baseline;
 }
-.edu-row:first-child {
-    border-top: 1px solid var(--line);
-}
 .edu-row .y {
     font-family: var(--ff-mono);
     font-size: var(--t-sm);
@@ -880,9 +874,6 @@ html[data-projects="dense"] .work .title {
     align-items: baseline;
     padding: 14px 0;
     border-bottom: 1px solid var(--line);
-}
-.lang-item:first-child {
-    border-top: 1px solid var(--line);
 }
 .lang-item .l {
     font-family: var(--ff-display);
