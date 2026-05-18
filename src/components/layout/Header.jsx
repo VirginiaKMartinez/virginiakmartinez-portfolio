@@ -77,7 +77,6 @@ export default function Header() {
                     <a
                         href="#cover"
                         onClick={(e) => handleNavClick(e, "cover")}
-                        style={{ color: "var(--fg)" }}
                     >
                         Virginia Martínez
                     </a>

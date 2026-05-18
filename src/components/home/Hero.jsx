@@ -21,7 +21,7 @@ export default function Hero() {
             data-screen-label="00 Cover"
             data-variant="manifesto"
         >
-            <div className="masthead">
+            {/* <div className="masthead">
                 <div className="m">
                     {t("hero.masthead.folio")}
                     <strong>{t("hero.masthead.folioV")}</strong>
@@ -44,7 +44,7 @@ export default function Hero() {
                     {t("hero.masthead.edition")}
                     <strong>{t("hero.masthead.editionV")}</strong>
                 </div>
-            </div>
+            </div> */}
 
             <div className="hero-body">
                 <h1 className="manifesto">
@@ -62,7 +62,9 @@ export default function Hero() {
                         <div className="silhouette" aria-hidden="true">
                             VM
                         </div>
-                        <span className="pulse">{t("hero.portrait.working")}</span>
+                        <span className="pulse">
+                            {t("hero.portrait.working")}
+                        </span>
                         <div className="caption">
                             <span>{t("hero.portrait.plate")}</span>
                             <span>{t("hero.portrait.self")}</span>
