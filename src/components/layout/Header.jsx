@@ -30,11 +30,11 @@ export default function Header() {
                 });
                 const ordered = ids;
                 const firstVisible = ordered.find((id) =>
-                    visibilityRef.current.get(id)
+                    visibilityRef.current.get(id),
                 );
                 if (firstVisible) setCurrent(firstVisible);
             },
-            { rootMargin: "-30% 0px -50% 0px", threshold: 0 }
+            { rootMargin: "-30% 0px -50% 0px", threshold: 0 },
         );
         ids.forEach((id) => {
             const el = document.getElementById(id);
@@ -109,6 +109,7 @@ export default function Header() {
                         >
                             EN
                         </button>
+                        <span>·</span>
                         <button
                             type="button"
                             onClick={() => changeLanguage("fr")}
@@ -117,15 +118,6 @@ export default function Header() {
                             FR
                         </button>
                     </div>
-
-                    <a
-                        className="cv-btn"
-                        href="/Virginia_Martinez_CV.pdf"
-                        download
-                    >
-                        <span>{t("topbar.cv")}</span>
-                        <span aria-hidden="true">↓</span>
-                    </a>
 
                     <button
                         type="button"

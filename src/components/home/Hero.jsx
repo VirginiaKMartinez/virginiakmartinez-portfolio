@@ -108,6 +108,15 @@ export default function Hero() {
                 </div>
             </div>
 
+            <a
+                className="hero-cv"
+                href="/Virginia_Martinez_CV.pdf"
+                download
+            >
+                <span>{t("hero.downloadCV")}</span>
+                <span aria-hidden="true">↓</span>
+            </a>
+
             <div className="marquee" aria-hidden="true">
                 <div className="track">
                     {renderMarqueeItems("a")}
