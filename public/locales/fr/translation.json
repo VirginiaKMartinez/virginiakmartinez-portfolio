@@ -45,7 +45,7 @@
         },
         "meta": {
             "focus": "Spécialité",
-            "focusV": "Senior Product Design · Design Systems · SaaS B2B",
+            "focusV": "Product Design · Design Systems · SaaS B2B",
             "craft": "Métier",
             "craftV": "Recherche UX légère, IA, prototypage, UI hi-fi, doc de composants, design tokens.",
             "fluency": "Aisance technique",
@@ -92,6 +92,126 @@
             "copy": "© MMXXVI · Virginia Martínez",
             "set": "Composé en Instrument Serif & Helvetica · Codé à la main en React",
             "egg": "Tape ⌘K pour ouvrir la console"
+        }
+    },
+    "case": {
+        "topbar": {
+            "back": "← Virginia Martínez",
+            "of": "Étude de cas · 01 sur 04",
+            "contact": "Contact"
+        },
+        "hero": {
+            "year": "Année",
+            "yearValue": "2023 — 2024",
+            "role": "Rôle",
+            "roleValue": "Designeuse Produit",
+            "client": "Client",
+            "clientValue": "Staff & Go",
+            "sector": "Secteur",
+            "sectorValue": "SaaS B2B · FR",
+            "team": "Équipe",
+            "teamValue": "Design · Eng · PM",
+            "status": "Statut",
+            "statusValue": "En production · NDA",
+            "title": "Staff <it>&</it> Go.",
+            "sub": "Construire le design system et les fondations UI d'une plateforme RH B2B — d'une seule couleur d'accent à vingt-cinq composants, trois équipes, et un vocabulaire partagé avec l'ingénierie."
+        },
+        "context": {
+            "num": "01 · Contexte",
+            "title": "Un produit jeune,",
+            "titleIt": "sans système où s'appuyer.",
+            "gutter": "Brief",
+            "left": "Staff & Go est une plateforme française B2B dédiée aux opérations RH : entretiens annuels, contrats, bulletins de paie, congés, embauches — à travers des dizaines d'établissements par client. À mon arrivée, le produit avait grandi plus vite que son UI : des dizaines d'écrans, chaque bouton légèrement différent, chaque développeur choisissant ses propres paddings.",
+            "rightTop": "Le brief, finalement, est devenu simple : <em>faire en sorte que le produit ressemble à un seul produit</em>. Construire un design system de zéro. Le documenter pour les développeurs et les chefs de projet. Continuer à designer de nouvelles fonctionnalités en parallèle.",
+            "rightBottom": "J'ai travaillé aux côtés de l'équipe d'ingénierie en Angular 16. Pas comme développeuse — comme designeuse qui lit le code, ouvre une PR quand un nom de classe est mauvais, et rédige une documentation dans laquelle un développeur peut copier-coller."
+        },
+        "stats": {
+            "components": "Composants livrés",
+            "pages": "Pages de documentation",
+            "teams": "Équipes alignées",
+            "duration": "Du token à la v1"
+        },
+        "approach": {
+            "num": "02 · Approche",
+            "title": "D'abord les tokens,",
+            "titleIt": "ensuite les composants.",
+            "gutter": "Méthode",
+            "left": "J'ai commencé par le bas : les <em>design tokens</em>. Couleurs, espacements, rayons, typo, motion. Nommés pour qu'un développeur les nomme de la même manière. Chacun mappé à une variable Sass.",
+            "rightTop": "C'est seulement après que j'ai dessiné les composants — et uniquement ceux que le produit utilisait réellement. Chaque composant livré avec anatomie, variantes, comportements, règles d'usage, cas limites, et une courte note d'implémentation. Le fichier Figma et le code Angular partageaient le même vocabulaire.",
+            "rightBottom": "Le but n'a jamais été de gagner un fichier Figma. C'était de rendre chaque décision produit plus rapide que la précédente."
+        },
+        "engineering": {
+            "num": "03 · Ingénierie",
+            "title": "Je ne livre pas en passant —",
+            "titleIt": "je m'assois à côté.",
+            "gutter": "Pratique",
+            "left": "Mon background front-end me permet de relire les implémentations face à Figma, d'ouvrir les bons fichiers, et de proposer des corrections dans un vocabulaire auquel l'équipe fait confiance.",
+            "rightTop": "Ce n'est pas une histoire de designer-développeur. C'est une histoire de <em>retirer des frictions</em> : quand un composant dérive, je le remarque ; quand la doc n'est pas claire, je la réécris ; quand un token est nommé deux fois, je l'attrape avant la review. Le produit avance plus vite, avec moins de surprises."
+        },
+        "outcomes": {
+            "num": "04 · Résultats",
+            "title": "Un produit,",
+            "titleIt": "une voix.",
+            "gutter": "Résultat",
+            "left": "Au bout de dix-huit mois, chaque écran du produit utilisait les mêmes composants. L'onboarding d'un nouveau développeur prenait moitié moins de temps. De nouvelles fonctionnalités pouvaient être dessinées et construites en jours, pas en semaines.",
+            "rightTop": "Les chiffres business confidentiels restent confidentiels — mais les artefacts et le raisonnement sont disponibles sur demande. <em>Contactez-moi</em> pour un walkthrough."
+        },
+        "tokens": {
+            "col": { "token": "Token", "value": "Hex", "usedFor": "Utilisé pour", "sass": "Sass" },
+            "primary": "Actions principales, liens",
+            "accent": "Hovers, sélection",
+            "pressed": "Boutons pressés",
+            "inkDarkest": "Titres, en-têtes",
+            "inkDark": "Texte secondaire",
+            "inkMedium": "Bordures non décoratives",
+            "inkLight": "Bordures décoratives",
+            "inkLightest": "Fonds alternatifs",
+            "alert": "Actions destructives, alertes",
+            "success": "États de succès",
+            "warning": "États d'avertissement",
+            "advance": "Mode avancé (spécifique SG)",
+            "space": "Padding cartes · gap dialogs",
+            "radius": "Boutons, inputs · dialogs",
+            "type": "Titres de section · corps"
+        },
+        "snapshot": {
+            "title": "Aperçu de composants · Boutons, inputs, chips d'état",
+            "btnPrimary": "Bouton / primary",
+            "btnOutline": "Bouton / outline",
+            "btnStatus": "Bouton / état",
+            "input": "Input / texte",
+            "chip": "Chip / état"
+        },
+        "plates": {
+            "tag": { "dashboard": "UI · Entretiens annuels", "filter": "UI · Filtre", "dialog": "UI · Dialog", "library": "DS · Vue d'ensemble" },
+            "cap": { "dashboard": "Plate 02 · Liste d'entretiens, avec variantes de chips d'état", "filter": "Plate 03 · Filtre", "dialog": "Plate 04 · Dialog destructif", "library": "Plate 05 · Bibliothèque · La surface complète, documentée" },
+            "meta": { "dashboard": "Figma → Angular 16", "filter": "Composant", "dialog": "Composant", "library": "Figma · 25+ composants · Angular 16" }
+        },
+        "library": {
+            "title": "Staff & Go · Design System",
+            "lead": "Tokens et composants, documentés pour les designers, développeurs et PMs. La bibliothèque reflète l'implémentation Angular un pour un — chaque variable Figma correspond à un token Sass.",
+            "section": "Tokens et Composants",
+            "foot1": "v1.0 · 25+ composants · Roboto · #144D9D",
+            "foot2": "Saint-Malo · MMXXIV"
+        },
+        "other": {
+            "num": "Autres",
+            "title": "Trois de plus,",
+            "titleIt": "en bref.",
+            "pe": "Power <em>Electronics</em>",
+            "peDesc": "Logiciel industriel B2B en Angular 12. J'avais un rôle hybride — réparer les tickets UI que l'équipe design n'avait pas le temps de traiter, et pousser l'implémentation au plus près de l'intention design d'origine.",
+            "peMeta": "Dév Front-End · Remote, ES",
+            "om": "Optiva <em>Media</em>",
+            "omDesc": "Plateformes vidéo multi-écrans pour Orange, HBO et Filmin. Correction de bugs et support de fonctionnalités — y compris la build UEFA Euro 2020. AngularJS, JavaScript, Sass.",
+            "omMeta": "Dév Front-End · Madrid",
+            "hw": "Hawi <em>· Akimad</em>",
+            "hwDesc": "Concept d'application mobile contre la solitude des aînés. Des ateliers de découverte à un prototype Figma interactif basé sur les rôles, présenté à des clients ES / EN / FR.",
+            "hwMeta": "UX/UI · Madrid"
+        },
+        "foot": {
+            "back": "← Retour au portfolio",
+            "mid": "Cas · Staff & Go · NDA · Walkthrough sur demande",
+            "contact": "Contact →"
         }
     },
     "hero": {

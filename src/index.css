@@ -1,6 +1,8 @@
 @import "./styles/variables.css";
 @import "./styles/typography.css";
 @import "./styles/editorial.css";
+@import "./styles/case.css";
+@import "./styles/sg.css";
 @import "./styles/components.css";
 @import "./styles/layout.css";
 

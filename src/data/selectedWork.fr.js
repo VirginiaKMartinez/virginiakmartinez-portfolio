@@ -6,7 +6,7 @@ const selectedWork = [
         role: "Designeuse Produit",
         roleDescKey: "work.items.staffAndGo.desc",
         tag: "SaaS B2B · France",
-        href: "/case-studies/design-system",
+        href: "/case/staff-and-go",
         disabled: false,
     },
     {

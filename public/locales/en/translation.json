@@ -45,7 +45,7 @@
         },
         "meta": {
             "focus": "Focus",
-            "focusV": "Senior Product Design · Design Systems · B2B SaaS",
+            "focusV": "Product Design · Design Systems · B2B SaaS",
             "craft": "Craft",
             "craftV": "UX research lite, IA, prototyping, hi-fi UI, component docs, design tokens.",
             "fluency": "Engineering fluency",
@@ -92,6 +92,126 @@
             "copy": "© MMXXVI · Virginia Martínez",
             "set": "Set in Instrument Serif & Helvetica · Hand-built in React",
             "egg": "Press ⌘K to open the console"
+        }
+    },
+    "case": {
+        "topbar": {
+            "back": "← Virginia Martínez",
+            "of": "Case study · 01 of 04",
+            "contact": "Contact"
+        },
+        "hero": {
+            "year": "Year",
+            "yearValue": "2023 — 2024",
+            "role": "Role",
+            "roleValue": "Product Designer",
+            "client": "Client",
+            "clientValue": "Staff & Go",
+            "sector": "Sector",
+            "sectorValue": "B2B SaaS · FR",
+            "team": "Team",
+            "teamValue": "Design · Eng · PM",
+            "status": "Status",
+            "statusValue": "Live · NDA",
+            "title": "Staff <it>&</it> Go.",
+            "sub": "Building the design system and the UI foundations of a B2B HR platform — from a single accent color to twenty-five components, three teams, and one shared vocabulary with engineering."
+        },
+        "context": {
+            "num": "01 · Context",
+            "title": "A young product,",
+            "titleIt": "no system to lean on.",
+            "gutter": "Brief",
+            "left": "Staff & Go is a French B2B platform for human-resources operations: annual reviews, contracts, payslips, leaves, onboarding — across dozens of establishments per client. When I joined, the product had grown faster than its UI: dozens of screens, every button slightly different, every developer choosing their own paddings.",
+            "rightTop": "The brief, eventually, became simple: <em>make the product feel like one product</em>. Build a design system from scratch. Document it for developers and project managers. Keep designing new features in parallel.",
+            "rightBottom": "I worked alongside the engineering team in Angular 16. Not as a developer — as a designer who reads code, opens a PR when a class name is wrong, and writes documentation a developer can copy-paste from."
+        },
+        "stats": {
+            "components": "Components shipped",
+            "pages": "Pages of documentation",
+            "teams": "Teams aligned",
+            "duration": "From token to v1"
+        },
+        "approach": {
+            "num": "02 · Approach",
+            "title": "Tokens first,",
+            "titleIt": "components second.",
+            "gutter": "Method",
+            "left": "I started from the bottom: <em>design tokens</em>. Colors, spacing, radii, type, motion. Named them so a developer would name them the same way. Mapped each one to a Sass variable.",
+            "rightTop": "Only then I drew components — and only the ones the product actually used. Each component shipped with anatomy, variants, behaviors, usage rules, edge cases, and a short note on how to implement it. The Figma file and the Angular code shared the same vocabulary.",
+            "rightBottom": "The point was never to win a Figma file. It was to make every product decision faster than the previous one."
+        },
+        "engineering": {
+            "num": "03 · Engineering",
+            "title": "I don't hand off —",
+            "titleIt": "I sit next to it.",
+            "gutter": "Practice",
+            "left": "My background in front-end means I review implementations against Figma, open the right files, and propose corrections in a vocabulary the team trusts.",
+            "rightTop": "This isn't about being a designer-developer. It's about <em>removing friction</em>: when a component drifts, I notice; when documentation is unclear, I rewrite it; when a token gets named twice, I catch it before review. The product moves forward faster, with fewer surprises."
+        },
+        "outcomes": {
+            "num": "04 · Outcomes",
+            "title": "One product,",
+            "titleIt": "one voice.",
+            "gutter": "Result",
+            "left": "After eighteen months, every product screen used the same components. Onboarding a new developer took half the time. New features could be drawn and built in days, not weeks.",
+            "rightTop": "Confidential business numbers stay confidential — but the artifacts and reasoning are available on request. <em>Reach out</em> if you'd like a walkthrough."
+        },
+        "tokens": {
+            "col": { "token": "Token", "value": "Hex", "usedFor": "Used for", "sass": "Sass" },
+            "primary": "Primary actions, links",
+            "accent": "Hovers, focused selection",
+            "pressed": "Pressed buttons",
+            "inkDarkest": "Titles, headings",
+            "inkDark": "Secondary text",
+            "inkMedium": "Non-decorative borders",
+            "inkLight": "Decorative borders",
+            "inkLightest": "Alternate backgrounds",
+            "alert": "Destructive actions, alerts",
+            "success": "Success states",
+            "warning": "Warning states",
+            "advance": "Advance mode (SG-specific)",
+            "space": "Card padding · dialog gap",
+            "radius": "Buttons, inputs · dialogs",
+            "type": "Section titles · body"
+        },
+        "snapshot": {
+            "title": "Component snapshot · Buttons, inputs, status chips",
+            "btnPrimary": "Button / primary",
+            "btnOutline": "Button / outline",
+            "btnStatus": "Button / status",
+            "input": "Input / text",
+            "chip": "Chip / status"
+        },
+        "plates": {
+            "tag": { "dashboard": "UI · Annual reviews", "filter": "UI · Filter", "dialog": "UI · Dialog", "library": "DS · Library overview" },
+            "cap": { "dashboard": "Plate 02 · Annual-review list, with status chip variants", "filter": "Plate 03 · Filter", "dialog": "Plate 04 · Destructive dialog", "library": "Plate 05 · Library · The full surface, documented" },
+            "meta": { "dashboard": "Figma → Angular 16", "filter": "Component", "dialog": "Component", "library": "Figma · 25+ components · Angular 16" }
+        },
+        "library": {
+            "title": "Staff & Go · Design System",
+            "lead": "Tokens and components, documented for designers, developers and PMs. The library mirrors the Angular implementation one-to-one — every Figma variable maps to a Sass token.",
+            "section": "Tokens and Components",
+            "foot1": "v1.0 · 25+ components · Roboto · #144D9D",
+            "foot2": "Saint-Malo · MMXXIV"
+        },
+        "other": {
+            "num": "Other",
+            "title": "Three more,",
+            "titleIt": "briefly.",
+            "pe": "Power <em>Electronics</em>",
+            "peDesc": "B2B industrial software in Angular 12. I held a hybrid role — fixing UI tickets the design team didn't have time for, and pushing implementation closer to the original design intent.",
+            "peMeta": "Front-End Dev · Remote, ES",
+            "om": "Optiva <em>Media</em>",
+            "omDesc": "Multi-screen video platforms for Orange, HBO and Filmin. Bug-fixing and feature support — including the UEFA Euro 2020 build. AngularJS, JavaScript, Sass.",
+            "omMeta": "Front-End Dev · Madrid",
+            "hw": "Hawi <em>· Akimad</em>",
+            "hwDesc": "Mobile app concept against loneliness in older adults. From discovery workshops to a role-based interactive Figma prototype, presented to ES / EN / FR clients.",
+            "hwMeta": "UX/UI · Madrid"
+        },
+        "foot": {
+            "back": "← Back to portfolio",
+            "mid": "Case · Staff & Go · NDA · Walkthrough on request",
+            "contact": "Contact →"
         }
     },
     "hero": {

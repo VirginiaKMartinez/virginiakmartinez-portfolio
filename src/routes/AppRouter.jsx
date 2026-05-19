@@ -8,7 +8,7 @@ import {
 import MainLayout from "../layouts/MainLayout";
 import Home from "../pages/Home";
 import Contact from "../pages/Contact";
-import DesignSystem from "../pages/case-studies/design-system/DesignSystem";
+import CaseStaffAndGo from "../pages/CaseStaffAndGo";
 import Flows from "../pages/case-studies/Flows";
 import UXResearch from "../pages/case-studies/UXResearch";
 
@@ -16,22 +16,18 @@ export default function AppRouter() {
     return (
         <Router>
             <Routes>
-                {/* Todas estas rutas comparten el mismo layout */}
                 <Route element={<MainLayout />}>
-                    {/* ruta index = “/” */}
                     <Route index element={<Home />} />
-
-                    {/* /contact */}
                     <Route path="contact" element={<Contact />} />
 
-                    {/* /case-studies/... */}
+                    {/* v2 editorial — Staff & Go full case study */}
+                    <Route
+                        path="case/staff-and-go"
+                        element={<CaseStaffAndGo />}
+                    />
+
+                    {/* Legacy v1 case studies (other 3 — kept until rewritten) */}
                     <Route path="case-studies">
-                        {/* opcional: listado de case-studies si lo quisieras
-            <Route index element={<CaseStudiesListing />} /> */}
-                        <Route
-                            path="design-system"
-                            element={<DesignSystem />}
-                        />
                         <Route path="flows" element={<Flows />} />
                         <Route path="ux-research" element={<UXResearch />} />
                     </Route>
