@@ -4,7 +4,12 @@
    only renders correctly when nested inside one.
    ────────────────────────────────────────────────────── */
 
-.case-plate {
+/* SG product palette is shared by .case-plate (full surfaces) and
+   .case-snap (the component snapshot card on the editorial layer).
+   Keep both in the same selector so .sg-* utilities resolve their vars
+   in both contexts. */
+.case-plate,
+.case-snap {
   --sg-primary:   #144D9D;
   --sg-darkest:   #142133;
   --sg-dark:      #475466;
@@ -28,7 +33,11 @@
   --sg-bg-pink:    #FCDDEC;
   --sg-bg-soft:    #f5f7f9;
   --sg-line:       #E9EDF5;
+}
 
+/* Body type stays scoped to .case-plate only (the snapshot card uses
+   its own editorial rhythm, not the product type). */
+.case-plate {
   font-size: 14px;
   line-height: 1.4;
 }
