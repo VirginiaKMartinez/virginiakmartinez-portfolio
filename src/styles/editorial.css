@@ -410,6 +410,8 @@
 /* Portrait placeholder */
 .portrait-wrap {
     grid-column: 10 / -1;
+    width: clamp(240px, 24vw, 340px);
+    justify-self: end;
 }
 /* Portrait card — "original — as uploaded" treatment from the handoff.
    Figure background is --paper so the transparent cutout PNG reads as paper.
@@ -417,6 +419,7 @@
 .portrait {
     position: relative;
     aspect-ratio: 3 / 4;
+    padding: clamp(12px, 1.5vw, 20px) clamp(12px, 1.5vw, 20px) 0;
     background: var(--bg-2);
     overflow: hidden;
     border: 1px solid var(--line);
