@@ -1,14 +1,10 @@
-// src/components/home/Hero.jsx — v2 editorial cover
-import { useState } from "react";
+// src/components/home/Hero.jsx — v2 editorial cover · Portrait Chrome (Rosso)
 import { useTranslation } from "react-i18next";
-import photoVir from "../../assets/images/photoVir.png";
+import portrait from "../../assets/images/portrait.png";
 
 export default function Hero() {
     const { t } = useTranslation();
     const marquee = t("hero.marquee", { returnObjects: true });
-    const [photoLoaded, setPhotoLoaded] = useState(false);
-    const [photoFailed, setPhotoFailed] = useState(false);
-    const showPhoto = photoLoaded && !photoFailed;
 
     // Render marquee twice for a seamless infinite loop
     const renderMarqueeItems = (keyPrefix) =>
@@ -26,31 +22,6 @@ export default function Hero() {
             data-screen-label="00 Cover"
             data-variant="manifesto"
         >
-            {/* <div className="masthead">
-                <div className="m">
-                    {t("hero.masthead.folio")}
-                    <strong>{t("hero.masthead.folioV")}</strong>
-                </div>
-                <div className="m">
-                    {t("hero.masthead.discipline")}
-                    <strong>{t("hero.masthead.disciplineV")}</strong>
-                </div>
-                <div className="m">
-                    {t("hero.masthead.location")}
-                    <strong>{t("hero.masthead.locationV")}</strong>
-                </div>
-                <div className="m">
-                    {t("hero.masthead.status")}
-                    <strong style={{ color: "var(--accent)" }}>
-                        {t("hero.masthead.statusV")}
-                    </strong>
-                </div>
-                <div className="m issue">
-                    {t("hero.masthead.edition")}
-                    <strong>{t("hero.masthead.editionV")}</strong>
-                </div>
-            </div> */}
-
             <div className="hero-body">
                 <h1 className="manifesto">
                     {t("hero.h1.line1")}
@@ -62,34 +33,34 @@ export default function Hero() {
                 </h1>
 
                 <div className="portrait-wrap">
-                    <div className="portrait">
+                    <figure className="portrait">
                         <img
-                            src={photoVir}
-                            alt="Virginia Martínez"
-                            className={showPhoto ? "is-visible" : ""}
-                            onLoad={() => setPhotoLoaded(true)}
-                            onError={() => setPhotoFailed(true)}
+                            src={portrait}
+                            alt=""
+                            loading="eager"
+                            decoding="async"
                         />
 
-                        {!showPhoto && (
-                            <>
-                                <div className="stripes" aria-hidden="true" />
-                                <div
-                                    className="silhouette"
-                                    aria-hidden="true"
-                                >
-                                    VM
-                                </div>
-                                <span className="pulse">
-                                    {t("hero.portrait.working")}
-                                </span>
-                                <div className="caption">
-                                    <span>{t("hero.portrait.plate")}</span>
-                                    <span>{t("hero.portrait.self")}</span>
-                                </div>
-                            </>
-                        )}
-                    </div>
+                        {/* Editorial chrome — printed directly on the card */}
+                        <span className="vol">
+                            {t("hero.masthead.folioV")}
+                        </span>
+                        <span className="issue">
+                            {t("hero.masthead.editionV")}
+                        </span>
+                        <span className="pulse">
+                            {t("hero.portrait.working")}
+                        </span>
+                        <figcaption className="caption">
+                            <span className="line">
+                                {t("hero.portrait.caption")}
+                            </span>
+                            <span>{t("hero.portrait.plate")}</span>
+                            <span className="self">
+                                {t("hero.portrait.self")}
+                            </span>
+                        </figcaption>
+                    </figure>
                 </div>
             </div>
 

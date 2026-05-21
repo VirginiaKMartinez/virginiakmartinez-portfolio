@@ -311,47 +311,51 @@
 .portrait-wrap {
     grid-column: 10 / -1;
 }
+/* Portrait card — "original — as uploaded" treatment from the handoff.
+   Figure background is --paper so the transparent cutout PNG reads as paper.
+   No overlay, no filter, no stripes — chrome captions print directly on top. */
 .portrait {
     position: relative;
     aspect-ratio: 3 / 4;
     background: var(--bg-2);
     overflow: hidden;
     border: 1px solid var(--line);
+    border-radius: 4px;
 }
 .portrait img {
+    position: relative;
+    z-index: 1;
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: top center;
-    opacity: 0;
+    object-position: center top;
 }
-.portrait img.is-visible {
-    opacity: 1;
-}
-.portrait .stripes {
+.portrait .vol,
+.portrait .issue {
     position: absolute;
-    inset: 0;
-    background-image: repeating-linear-gradient(
-        135deg,
-        transparent 0 14px,
-        color-mix(in oklch, var(--fg) 5%, transparent) 14px 15px
-    );
+    top: 14px;
+    z-index: 3;
+    font-family: var(--ff-mono);
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--fg);
+    /*background-color: var(--paper);
+    padding: 4px 8px;
+    border-radius: 2px;*/
 }
-.portrait .silhouette {
-    position: absolute;
-    inset: 0;
-    display: grid;
-    place-items: center;
-    color: color-mix(in oklch, var(--fg) 22%, transparent);
-    font-family: var(--ff-display);
-    font-size: 180px;
-    line-height: 1;
+.portrait .vol {
+    left: 14px;
+}
+.portrait .issue {
+    right: 14px;
 }
 .portrait .pulse {
     position: absolute;
-    top: 14px;
+    top: 38px;
     right: 14px;
+    z-index: 3;
     display: inline-flex;
     align-items: center;
     gap: 6px;
@@ -374,13 +378,26 @@
     left: 12px;
     bottom: 12px;
     right: 12px;
+    z-index: 3;
     font-family: var(--ff-mono);
     font-size: 10px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--mute);
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 12px;
+    row-gap: 4px;
+}
+.portrait .caption .line {
+    grid-column: 1 / -1;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--line-soft);
+    font-size: 9px;
+    letter-spacing: 0.16em;
+}
+.portrait .caption .self {
+    text-align: right;
 }
 @keyframes vm-pulse {
     0%,
