@@ -447,8 +447,8 @@
    align-self: flex-start prevents the parent flex-column from stretching
    it to the full hero width — keep it sized to its content. */
 .hero-cv {
-    display: inline-flex;
-    align-self: flex-start;
+    display: flex;
+    align-self: center;
     align-items: center;
     gap: 12px;
     margin: clamp(48px, 7vw, 88px) 0;

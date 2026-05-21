@@ -42,9 +42,7 @@ export default function Hero() {
                         />
 
                         {/* Editorial chrome — printed directly on the card */}
-                        <span className="vol">
-                            {t("hero.masthead.folioV")}
-                        </span>
+                        <span className="vol">{t("hero.masthead.folioV")}</span>
                         <span className="issue">
                             {t("hero.masthead.editionV")}
                         </span>
@@ -78,15 +76,12 @@ export default function Hero() {
                     <p>{t("hero.foot.scrollV")}</p>
                 </div>
             </div>
-
-            <a
-                className="hero-cv"
-                href="/Virginia_Martinez_CV.pdf"
-                download
-            >
-                <span>{t("hero.downloadCV")}</span>
-                <span aria-hidden="true">↓</span>
-            </a>
+            <div className="hero-cv">
+                <a href="/Virginia_Martinez_CV.pdf" download>
+                    <span>{t("hero.downloadCV")}</span>
+                    <span aria-hidden="true">↓</span>
+                </a>
+            </div>
 
             <div className="marquee" aria-hidden="true">
                 <div className="track">
