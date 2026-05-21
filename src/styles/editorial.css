@@ -513,9 +513,12 @@
 }
 
 /* ============== Section headers (numbered) ============== */
+/* Unified vertical rhythm for every home section (Selected Work, About,
+   Experience, Education, Contact). Symmetric padding via clamp scales the
+   spacing down on mobile automatically — desktop 90px, mobile ~52px. */
 .editorial-section {
-    padding-top: calc(120px * var(--rhythm));
-    padding-bottom: calc(60px * var(--rhythm));
+    padding-top: calc(clamp(52px, 8vw, 90px) * var(--rhythm));
+    padding-bottom: calc(clamp(52px, 8vw, 90px) * var(--rhythm));
     position: relative;
 }
 
@@ -715,10 +718,6 @@ html[data-projects="dense"] .work .title {
         grid-template-columns: 1fr;
     }
     /* Reduce section padding on mobile — 120px was too much air */
-    .editorial-section {
-        padding-top: calc(72px * var(--rhythm));
-        padding-bottom: calc(40px * var(--rhythm));
-    }
 }
 
 /* ============== Side Index (sticky left rail) — DEPRECATED v2.4.2
@@ -1059,10 +1058,8 @@ html[data-projects="dense"] .work .title {
 }
 
 /* ============== Contact (06) + Colophon ============== */
-.contact-section {
-    padding-top: calc(140px * var(--rhythm));
-    padding-bottom: 80px;
-}
+/* Contact inherits the unified section padding from .editorial-section
+   (the component carries both classes). No bespoke vertical padding here. */
 .contact-section .big {
     font-family: var(--ff-display);
     font-size: clamp(40px, 5vw, 72px);
