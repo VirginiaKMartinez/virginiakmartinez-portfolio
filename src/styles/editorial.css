@@ -248,12 +248,112 @@
 
 /* ============== Hero (Cover) ============== */
 .hero {
+    position: relative;
+    isolation: isolate;
     padding-top: 120px;
     padding-bottom: calc(60px * var(--rhythm));
     min-height: 100svh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+/* ===== Hero dot pattern background (experimental — tweak via ?dots panel) =====
+   Soft dotted grid behind the hero content, faded out on left and right edges.
+   Live controls in HeroDotControls.jsx update these variables in real time. */
+:root {
+    --hero-dot-color: var(--mute);
+    --hero-dot-size: 1px;
+    --hero-dot-gap: 22px;
+    --hero-dot-opacity: 0.15;
+    --hero-dot-fade: 18%;
+    /* Where the vertical fade starts (and finishes) — keeps the pattern
+       clear of the marquee at the bottom of the hero. */
+    --hero-dot-fade-bottom: 62%;
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image: radial-gradient(
+        var(--hero-dot-color) var(--hero-dot-size),
+        transparent var(--hero-dot-size)
+    );
+    background-size: var(--hero-dot-gap) var(--hero-dot-gap);
+    opacity: var(--hero-dot-opacity);
+    /* Two masks intersected: horizontal fade (L/R edges) + vertical fade
+       (clears the bottom so dots never sit behind the marquee). */
+    -webkit-mask-image:
+        linear-gradient(
+            to right,
+            transparent 0,
+            black var(--hero-dot-fade),
+            black calc(100% - var(--hero-dot-fade)),
+            transparent 100%
+        ),
+        linear-gradient(
+            to bottom,
+            black 0,
+            black var(--hero-dot-fade-bottom),
+            transparent 96%
+        );
+    -webkit-mask-composite: source-in;
+    mask-image:
+        linear-gradient(
+            to right,
+            transparent 0,
+            black var(--hero-dot-fade),
+            black calc(100% - var(--hero-dot-fade)),
+            transparent 100%
+        ),
+        linear-gradient(
+            to bottom,
+            black 0,
+            black var(--hero-dot-fade-bottom),
+            transparent 96%
+        );
+    mask-composite: intersect;
+}
+
+/* Dev-only live controls panel (visible when URL has ?dots) */
+.dot-controls {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    z-index: 60;
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 14px 16px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    box-shadow: 0 12px 40px -20px rgba(0, 0, 0, 0.3);
+    font-family: var(--ff-mono);
+    font-size: 11px;
+    color: var(--fg);
+}
+.dot-controls__title {
+    margin: 0;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--mute);
+}
+.dot-controls__row {
+    display: grid;
+    grid-template-columns: 58px 1fr 46px;
+    align-items: center;
+    gap: 8px;
+}
+.dot-controls__row input {
+    width: 100%;
+}
+.dot-controls__row code {
+    text-align: right;
+    color: var(--accent);
 }
 
 .hero .masthead {
@@ -416,7 +516,7 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: var(--col-gap);
-    align-items: end;
+    align-items: start;
     margin-top: clamp(32px, 6vw, 80px);
 }
 .hero-foot .l {
@@ -456,7 +556,7 @@
     border: 1px solid var(--fg);
     border-radius: 4px;
     color: var(--fg);
-    background: transparent;
+    background: var(--bg);
     font-family: var(--ff-mono);
     font-size: 12px;
     letter-spacing: 0.14em;
