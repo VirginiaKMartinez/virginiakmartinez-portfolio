@@ -253,9 +253,15 @@
     padding-top: 120px;
     padding-bottom: calc(60px * var(--rhythm));
     min-height: 100svh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr clamp(240px, 24vw, 340px);
+    column-gap: clamp(24px, 4vw, 56px);
+    grid-template-areas:
+        "body     portrait"
+        "foot     portrait"
+        "cv       cv"
+        "marquee  marquee";
+    align-content: start;
 }
 
 /* ===== Hero dot pattern background (experimental — tweak via ?dots panel) =====
@@ -386,14 +392,11 @@
 }
 
 .hero-body {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: var(--col-gap);
-    align-items: end;
+    grid-area: body;
+    align-self: end;
     margin-top: clamp(40px, 8vw, 120px);
 }
 .hero h1.manifesto {
-    grid-column: 1 / 10;
     margin: 0;
     font-family: var(--ff-display);
     font-weight: 400;
@@ -407,11 +410,12 @@
     color: var(--accent);
 }
 
-/* Portrait placeholder */
+/* Portrait */
 .portrait-wrap {
-    grid-column: 10 / -1;
-    width: clamp(240px, 24vw, 340px);
-    justify-self: end;
+    grid-area: portrait;
+    width: 100%;
+    align-self: start;
+    margin-top: clamp(40px, 8vw, 120px);
 }
 /* Portrait card — "original — as uploaded" treatment from the handoff.
    Figure background is --paper so the transparent cutout PNG reads as paper.
@@ -516,20 +520,15 @@
 
 /* Hero foot — 3 columns */
 .hero-foot {
+    grid-area: foot;
+    align-self: start;
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--col-gap);
     align-items: start;
     margin-top: clamp(32px, 6vw, 80px);
 }
-.hero-foot .l {
-    grid-column: span 4;
-}
-.hero-foot .c {
-    grid-column: span 4;
-}
 .hero-foot .r {
-    grid-column: span 4;
     text-align: right;
 }
 .hero-foot p {
@@ -546,12 +545,12 @@
     margin-bottom: 8px;
 }
 
-/* Hero — CV download button (sits between hero-foot and marquee).
-   align-self: flex-start prevents the parent flex-column from stretching
-   it to the full hero width — keep it sized to its content. */
+/* Hero — CV download button (sits between hero-foot and marquee). */
 .hero-cv {
+    grid-area: cv;
     display: flex;
     align-self: center;
+    justify-self: center;
     align-items: center;
     gap: 12px;
     margin: clamp(48px, 7vw, 88px) 0;
@@ -578,6 +577,7 @@
 
 /* Marquee skills */
 .marquee {
+    grid-area: marquee;
     overflow: hidden;
     border-top: 1px solid var(--line);
     border-bottom: 1px solid var(--line);
@@ -1245,29 +1245,72 @@ html[data-projects="dense"] .work .title {
     }
 }
 
-/* Responsive */
-@media (max-width: 920px) {
-    .hero-body,
-    .hero-foot {
-        grid-template-columns: 1fr !important;
+/* Hero responsive — tablet: 621–920px
+   Headline ocupa el ancho completo; hero-foot y portrait comparten la fila inferior. */
+@media (min-width: 621px) and (max-width: 920px) {
+    .hero {
+        grid-template-columns: 1fr clamp(180px, 28vw, 260px);
+        grid-template-areas:
+            "body     body"
+            "foot     portrait"
+            "cv       cv"
+            "marquee  marquee";
     }
-    .hero h1.manifesto,
+    .hero h1.manifesto {
+        font-size: clamp(40px, 7vw, 88px);
+    }
+    .hero-body {
+        align-self: start;
+    }
     .portrait-wrap {
-        grid-column: 1 / -1 !important;
+        margin-top: clamp(24px, 4vw, 48px);
     }
-    .hero-foot .l,
-    .hero-foot .c,
+    .hero-foot {
+        grid-template-columns: 1fr;
+        margin-top: clamp(24px, 4vw, 48px);
+    }
     .hero-foot .r {
-        grid-column: 1 / -1 !important;
-        text-align: left !important;
+        text-align: left;
     }
     .hero-foot .r p {
-        margin-left: 0 !important;
+        margin-left: 0;
     }
     .hero .masthead .m {
         grid-column: span 6;
     }
-    .topbar .mid {
-        display: none;
+}
+
+/* Hero responsive — mobile: ≤620px
+   Columna única; portrait centrado entre headline y hero-foot. */
+@media (max-width: 620px) {
+    .hero {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "body"
+            "portrait"
+            "foot"
+            "cv"
+            "marquee";
+    }
+    .hero h1.manifesto {
+        font-size: clamp(36px, 10vw, 72px);
+    }
+    .hero-body {
+        align-self: start;
+    }
+    .portrait-wrap {
+        max-width: 300px;
+        justify-self: center;
+        margin-top: clamp(24px, 6vw, 40px);
+    }
+    .hero-foot {
+        grid-template-columns: 1fr;
+        margin-top: clamp(24px, 5vw, 48px);
+    }
+    .hero-foot .r {
+        text-align: left;
+    }
+    .hero-foot .r p {
+        margin-left: 0;
     }
 }

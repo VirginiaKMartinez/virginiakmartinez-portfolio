@@ -31,35 +31,35 @@ export default function Hero() {
                     <br />
                     <span className="it">{t("hero.h1.line4")}</span>
                 </h1>
+            </div>
 
-                <div className="portrait-wrap">
-                    <figure className="portrait">
-                        <img
-                            src={portrait}
-                            alt=""
-                            loading="eager"
-                            decoding="async"
-                        />
+            <div className="portrait-wrap">
+                <figure className="portrait">
+                    <img
+                        src={portrait}
+                        alt=""
+                        loading="eager"
+                        decoding="async"
+                    />
 
-                        {/* Editorial chrome — printed directly on the card */}
-                        <span className="vol">{t("hero.masthead.folioV")}</span>
-                        <span className="issue">
-                            {t("hero.masthead.editionV")}
+                    {/* Editorial chrome — printed directly on the card */}
+                    <span className="vol">{t("hero.masthead.folioV")}</span>
+                    <span className="issue">
+                        {t("hero.masthead.editionV")}
+                    </span>
+                    <span className="pulse">
+                        {t("hero.portrait.working")}
+                    </span>
+                    <figcaption className="caption">
+                        <span className="line">
+                            {t("hero.portrait.caption")}
                         </span>
-                        <span className="pulse">
-                            {t("hero.portrait.working")}
+                        <span>{t("hero.portrait.plate")}</span>
+                        <span className="self">
+                            {t("hero.portrait.self")}
                         </span>
-                        <figcaption className="caption">
-                            <span className="line">
-                                {t("hero.portrait.caption")}
-                            </span>
-                            <span>{t("hero.portrait.plate")}</span>
-                            <span className="self">
-                                {t("hero.portrait.self")}
-                            </span>
-                        </figcaption>
-                    </figure>
-                </div>
+                    </figcaption>
+                </figure>
             </div>
 
             <div className="hero-foot">
