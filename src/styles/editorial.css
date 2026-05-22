@@ -142,10 +142,6 @@
     .topbar .mid {
         display: none;
     }
-    /* Hide the role label in mobile — name alone has room to breathe */
-    .topbar .left span {
-        display: none;
-    }
     .topbar .left a {
         white-space: nowrap;
     }
@@ -1242,6 +1238,11 @@ html[data-projects="dense"] .work .title {
 @media (max-width: 560px) {
     .foot-grid {
         grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 460px) {
+    .topbar .left span {
+        display: none;
     }
 }
 
