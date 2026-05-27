@@ -43,6 +43,7 @@ export default {
                 mono: ["JetBrains Mono", "Geist Mono", "ui-monospace", "monospace"],
                 "mono-editorial": ["JetBrains Mono", "Geist Mono", "ui-monospace", "monospace"],
                 sg: ["Roboto", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
+                hawi: ["Nunito", "system-ui", "sans-serif"],
             },
             fontSize: {
                 "t-xs": "var(--t-xs)",

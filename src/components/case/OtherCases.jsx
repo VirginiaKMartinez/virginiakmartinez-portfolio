@@ -2,13 +2,16 @@ import { useTranslation, Trans } from 'react-i18next';
 import { Link } from 'react-router';
 
 const CASES = [
-  { id: 'power-electronics', year: '2021 — 22', titleKey: 'pe', descKey: 'peDesc', metaKey: 'peMeta' },
-  { id: 'optiva',            year: '2021',      titleKey: 'om', descKey: 'omDesc', metaKey: 'omMeta' },
-  { id: 'hawi',              year: '2019 — 20', titleKey: 'hw', descKey: 'hwDesc', metaKey: 'hwMeta' },
+  { id: 'staff-and-go',     to: '/case/staff-and-go', year: '2023 — 24', titleKey: 'sg', descKey: 'sgDesc', metaKey: 'sgMeta' },
+  { id: 'power-electronics', to: '#',                  year: '2021 — 22', titleKey: 'pe', descKey: 'peDesc', metaKey: 'peMeta' },
+  { id: 'optiva',            to: '#',                  year: '2021',      titleKey: 'om', descKey: 'omDesc', metaKey: 'omMeta' },
+  { id: 'hawi',              to: '/case/hawi',         year: '2019 — 20', titleKey: 'hw', descKey: 'hwDesc', metaKey: 'hwMeta' },
 ];
 
-export function OtherCases() {
+export function OtherCases({ exclude }) {
   const { t } = useTranslation();
+  const visible = exclude ? CASES.filter((c) => c.id !== exclude) : CASES;
+
   return (
     <section className="case-other" data-screen-label="Other cases">
       <div className="case-chapter__head" style={{ marginBottom: 24 }}>
@@ -19,8 +22,8 @@ export function OtherCases() {
         </h2>
       </div>
 
-      {CASES.map((c) => (
-        <Link key={c.id} to="#" id={c.id} className="case-other__row">
+      {visible.map((c) => (
+        <Link key={c.id} to={c.to} id={c.id} className="case-other__row">
           <div className="case-other__y">{c.year}</div>
           <div>
             <h3>

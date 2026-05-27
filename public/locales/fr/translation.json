@@ -98,6 +98,7 @@
         "topbar": {
             "back": "← Virginia Martínez",
             "of": "Étude de cas · 01 sur 04",
+            "hawiOf": "Étude de cas · 04 sur 04",
             "contact": "Contact"
         },
         "hero": {
@@ -204,6 +205,9 @@
             "om": "Optiva <em>Media</em>",
             "omDesc": "Plateformes vidéo multi-écrans pour Orange, HBO et Filmin. Correction de bugs et support de fonctionnalités — y compris la build UEFA Euro 2020. AngularJS, JavaScript, Sass.",
             "omMeta": "Dév Front-End · Madrid",
+            "sg": "Staff <em>& Go</em>",
+            "sgDesc": "Design system de zéro pour une plateforme RH B2B. 25+ composants, design tokens, trois équipes alignées.",
+            "sgMeta": "Designeuse Produit · Saint-Malo",
             "hw": "Hawi <em>· Akimad</em>",
             "hwDesc": "Concept d'application mobile contre la solitude des aînés. Des ateliers de découverte à un prototype Figma interactif basé sur les rôles, présenté à des clients ES / EN / FR.",
             "hwMeta": "UX/UI · Madrid"
@@ -212,6 +216,113 @@
             "back": "← Retour au portfolio",
             "mid": "Cas · Staff & Go · NDA · Walkthrough sur demande",
             "contact": "Contact →"
+        },
+        "hawi": {
+            "meta": {
+                "yearL":    "Année",     "year":    "2019 — 2020",
+                "roleL":    "Rôle",      "role":    "UX/UI Designer",
+                "clientL":  "Client",    "client":  "Akimad",
+                "sectorL":  "Secteur",   "sector":  "Mobile · Impact social",
+                "scopeL":   "Périmètre", "scope":   "UX/UI · Figma",
+                "outcomeL": "Livrable",  "outcome": "Prototype interactif"
+            },
+            "subtitle": "Une application mobile pour réduire la solitude des aînés. Des ateliers de découverte à un prototype Figma interactif basé sur les rôles.",
+            "ohana": {
+                "label": "Ohana /oˈhana/",
+                "body":  "<em>n.</em> Hawaïen. Le cercle des personnes qui forment votre famille — par le sang, le choix ou le temps."
+            },
+            "context": {
+                "num": "01 · Contexte",
+                "title": "Un concept pour",
+                "titleIt": "la génération oubliée.",
+                "gutter": "Brief",
+                "left": "Hawi a démarré comme un brief de fin d'études : <em>concevoir une application mobile contre la solitude des aînés</em>. Ni un outil médical, ni un bouton panique — une couche de présence pour les familles et leur entourage.",
+                "rightTop": "Le nom vient de l'hawaïen. Hawi est un lieu — une petite ville isolée. On l'a gardé comme rappel : les personnes pour qui on design sont souvent lointaines, même quand elles habitent à côté.",
+                "rightBottom": "Rôle : UX/UI designer. Durée : six mois du premier atelier au prototype interactif. Outils : Figma, papier, beaucoup de post-its."
+            },
+            "stats": [
+                { "n": "3",    "l": "Rôles acteurs" },
+                { "n": "12+",  "l": "Entretiens utilisateurs" },
+                { "n": "4",    "l": "Sessions d'atelier" },
+                { "n": "6 mo", "l": "Découverte au prototype" }
+            ],
+            "research": {
+                "num": "02 · Recherche",
+                "title": "Parler au cercle,",
+                "titleIt": "pas seulement à l'aîné.",
+                "gutter": "Méthode",
+                "left": "Nous avons animé quatre ateliers de co-design à Madrid avec trois groupes : des aînés de 68 à 82 ans, leurs aidants familiaux principaux, et des coordinateurs de résidences. Douze entretiens approfondis ont suivi.",
+                "rightTop": "Le schéma était constant : <em>les aînés ne se sentaient pas seuls — c'est l'entourage qui se sentait impuissant</em>. L'anxiété de ne pas savoir, de ne pas joindre, de ne pas être présent : c'était ça, le vrai problème."
+            },
+            "design": {
+                "num": "03 · Design",
+                "title": "Trois rôles,",
+                "titleIt": "un monde partagé.",
+                "gutter": "Processus",
+                "left": "La décision de design centrale : <em>trois vues séparées sur les mêmes données</em>. L'aîné a la simplicité. L'aidant familial a la tranquillité et la coordination. Le coordinateur a une vue d'ensemble sans intrusion.",
+                "rightTop": "Chaque écran est passé par esquisse papier, blockframe, et wireframe hi-fi avant le prototype. L'écran Localisateur — où est papa — a été le plus difficile à trouver."
+            },
+            "ohanaFlow": [
+                { "step": "01", "title": "Concept",     "desc": "Une app familiale pour les aînés — conçue pour ceux qui les entourent." },
+                { "step": "02", "title": "Découverte",  "desc": "Ateliers avec des familles et des professionnels du soin à Madrid. 12 entretiens, 4 sessions." },
+                { "step": "03", "title": "Design",      "desc": "Flux par rôle : l'aîné, l'aidant familial, le coordinateur. Trois vues, un seul modèle de données." },
+                { "step": "04", "title": "Prototype",   "desc": "Prototype Figma interactif, présenté en ES / EN / FR à des clients et parties prenantes." }
+            ],
+            "brand": {
+                "kicker": "Brand · Identité",
+                "heading": "Chaleureux, accessible,",
+                "headingIt": "jamais clinique.",
+                "body": "Nunito pour la chaleur et la lisibilité en grand corps. Une palette de brun-rouille, ardoise et blanc chaud — accessible pour les aînés, distincte des applications médicales.",
+                "logoAlt": "Logomark Hawi — trois cercles qui se chevauchent",
+                "paletteLabel": "Palette de marque",
+                "typeLabel": "Spécimen typographique"
+            },
+            "actors": [
+                { "tag": "01 · Acteur", "title": "L'aîné",           "desc": "Vit seul ou en résidence. A un smartphone, avec aide. Veut se sentir connecté, pas surveillé.",          "needs": "Simplicité · Dignité · Présence" },
+                { "tag": "02 · Acteur", "title": "L'aidant familial", "desc": "Un fils, une fille, un proche. Gère visites et rendez-vous. Inquiet, mais pas toujours à côté.",         "needs": "Tranquillité · Coordination · Contact rapide" },
+                { "tag": "03 · Acteur", "title": "Le coordinateur",   "desc": "Un professionnel ou bénévole gérant un groupe d'aînés. Besoin de vue globale, pas d'intimité.",          "needs": "Vue groupe · Statut · Alertes" },
+                { "tag": "04 · Acteur", "title": "L'ohana",           "desc": "Le cercle élargi — voisins, amis, bénévoles. Présence occasionnelle, impact significatif.",              "needs": "Peu de friction · Actions simples · Chaleur" }
+            ],
+            "processThree": {
+                "boceto": {
+                    "kicker": "Étape 01",
+                    "kind": "Esquisse papier",
+                    "heading": "Localisateur — première esquisse",
+                    "deviceLabel": "Esquisse papier de l'écran Localisateur",
+                    "desc": "Dessiné à la main après la première session de découverte. Le Localisateur est l'ancre de l'aidant familial : où est papa, peut-on le joindre, que puis-je faire maintenant ?"
+                },
+                "blockframe": {
+                    "kicker": "Étape 02",
+                    "kind": "Blockframe",
+                    "heading": "Structure avant le bruit",
+                    "desc": "Blocs uniquement — pas de couleur, pas de texte. Test de la hiérarchie : en-tête de statut, zone carte, bande d'actions. Une question par bloc."
+                },
+                "wireframe": {
+                    "kicker": "Étape 03",
+                    "kind": "Wireframe hi-fi",
+                    "heading": "Au plus près du final",
+                    "offline": "hors ligne",
+                    "howToGet": "Comment y aller",
+                    "callOhana": "Appeler l'ohana",
+                    "desc": "Tokens de marque appliqués. Vrai texte testé en taille réelle. Trajet et appel séparés par le poids visuel, pas seulement la position."
+                }
+            },
+            "mockup": {
+                "kicker": "Plate 06 · Chat · Hi-fi",
+                "headingPre": "Connectée quand",
+                "headingIt": "ça compte.",
+                "headingPost": "",
+                "body": "L'écran chat est le cœur d'Hawi. Pas une messagerie — une couche de présence. Accusés de lecture, notes vocales, réactions rapides. Conçu pour une utilisation à une main et une faible acuité visuelle."
+            },
+            "plates": {
+                "workshop": { "tag": "Recherche · Atelier", "cap": "Plate 02 · Atelier de découverte — Madrid, 2019",          "alt": "Photo d'atelier de découverte", "meta": "Recherche qualitative · Madrid" },
+                "flowmap":  { "tag": "IA · Flow map",       "cap": "Plate 03 · Flow map complet — trois rôles acteurs",         "alt": "Diagramme de flow map",         "meta": "Figma · IA par rôle" },
+                "brand":    { "tag": "Brand · Identité",    "cap": "Plate 04 · Découverte de marque — Nunito, palette sienna",  "alt": "Fiche d'identité de marque",    "meta": "Figma · Brand kit" },
+                "chat":     { "tag": "UI · Chat",           "cap": "Plate 06 · Chat — maquette hi-fi",                          "alt": "Maquette hi-fi de l'écran chat","meta": "Figma · Prototype" }
+            },
+            "foot": {
+                "mid": "Cas · Hawi · Akimad · Prototype sur demande"
+            }
         }
     },
     "hero": {

@@ -9,6 +9,7 @@ import MainLayout from "../layouts/MainLayout";
 import Home from "../pages/Home";
 import Contact from "../pages/Contact";
 import CaseStaffAndGo from "../pages/CaseStaffAndGo";
+import CaseHawi from "../pages/CaseHawi";
 import Flows from "../pages/case-studies/Flows";
 import UXResearch from "../pages/case-studies/UXResearch";
 
@@ -20,10 +21,14 @@ export default function AppRouter() {
                     <Route index element={<Home />} />
                     <Route path="contact" element={<Contact />} />
 
-                    {/* v2 editorial — Staff & Go full case study */}
+                    {/* v2 editorial — full case studies */}
                     <Route
                         path="case/staff-and-go"
                         element={<CaseStaffAndGo />}
+                    />
+                    <Route
+                        path="case/hawi"
+                        element={<CaseHawi />}
                     />
 
                     {/* Legacy v1 case studies (other 3 — kept until rewritten) */}

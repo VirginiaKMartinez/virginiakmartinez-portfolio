@@ -36,8 +36,8 @@ const selectedWork = [
         role: "UX/UI Designer",
         roleDescKey: "work.items.hawi.desc",
         tag: "Mobile · Social impact",
-        href: "#",
-        disabled: true,
+        href: "/case/hawi",
+        disabled: false,
     },
 ];
 

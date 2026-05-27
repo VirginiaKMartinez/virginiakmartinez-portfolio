@@ -98,6 +98,7 @@
         "topbar": {
             "back": "← Virginia Martínez",
             "of": "Case study · 01 of 04",
+            "hawiOf": "Case study · 04 of 04",
             "contact": "Contact"
         },
         "hero": {
@@ -204,6 +205,9 @@
             "om": "Optiva <em>Media</em>",
             "omDesc": "Multi-screen video platforms for Orange, HBO and Filmin. Bug-fixing and feature support — including the UEFA Euro 2020 build. AngularJS, JavaScript, Sass.",
             "omMeta": "Front-End Dev · Madrid",
+            "sg": "Staff <em>& Go</em>",
+            "sgDesc": "Design system from scratch for a B2B HR platform. 25+ components, design tokens, three teams aligned.",
+            "sgMeta": "Product Designer · Saint-Malo",
             "hw": "Hawi <em>· Akimad</em>",
             "hwDesc": "Mobile app concept against loneliness in older adults. From discovery workshops to a role-based interactive Figma prototype, presented to ES / EN / FR clients.",
             "hwMeta": "UX/UI · Madrid"
@@ -212,6 +216,117 @@
             "back": "← Back to portfolio",
             "mid": "Case · Staff & Go · NDA · Walkthrough on request",
             "contact": "Contact →"
+        },
+        "hawi": {
+            "meta": {
+                "yearL":    "Year",       "year":    "2019 — 2020",
+                "roleL":    "Role",       "role":    "UX/UI Designer",
+                "clientL":  "Client",     "client":  "Akimad",
+                "sectorL":  "Sector",     "sector":  "Mobile · Social impact",
+                "scopeL":   "Scope",      "scope":   "UX/UI · Figma",
+                "outcomeL": "Output",     "outcome": "Interactive prototype"
+            },
+            "subtitle": "A mobile app to reduce loneliness in older adults. From discovery workshops to a role-based interactive Figma prototype.",
+            "ohana": {
+                "label": "Ohana /oˈhana/",
+                "body":  "<em>n.</em> Hawaiian. The circle of people who are your family — whether by blood, choice, or time."
+            },
+            "context": {
+                "num": "01 · Context",
+                "title": "A concept for",
+                "titleIt": "the forgotten generation.",
+                "gutter": "Brief",
+                "left": "Hawi started as a graduation brief: <em>design a mobile app that addresses loneliness in older adults</em>. Not a medical tool, not a panic button — a presence layer for families and the people around them.",
+                "rightTop": "The name comes from Hawaiian. Hawi is a place — a small, remote town. We kept it as a reminder: the people we are designing for are often at a distance, even when they live nearby.",
+                "rightBottom": "Role: UX/UI designer. Timeline: six months from first workshop to interactive prototype. Tools: Figma, paper, a lot of sticky notes."
+            },
+            "stats": [
+                { "n": "3",    "l": "Actor roles" },
+                { "n": "12+",  "l": "User interviews" },
+                { "n": "4",    "l": "Workshop sessions" },
+                { "n": "6 mo", "l": "Discovery to prototype" }
+            ],
+            "research": {
+                "num": "02 · Research",
+                "title": "Talking to the circle,",
+                "titleIt": "not just the elder.",
+                "gutter": "Method",
+                "left": "We ran four co-design workshops in Madrid with three groups: older adults aged 68–82, their primary family carers, and care-home coordinators. Twelve in-depth interviews followed.",
+                "rightTop": "The pattern was consistent: <em>older adults didn't feel lonely — the people around them felt powerless</em>. The anxiety of not knowing, not reaching, not being present was the real problem to solve."
+            },
+            "design": {
+                "num": "03 · Design",
+                "title": "Three roles,",
+                "titleIt": "one shared world.",
+                "gutter": "Process",
+                "left": "The core design decision: <em>three separate views of the same data</em>. The elder gets simplicity. The family carer gets reassurance and coordination. The coordinator gets an overview without intrusion.",
+                "rightTop": "Every screen passed through paper sketch, blockframe, and hi-fi wireframe before the prototype. The Locator screen — where is Dad — was the hardest to get right."
+            },
+            "ohanaFlow": [
+                { "step": "01", "title": "Concept",    "desc": "A family app for older adults — designed for the people around them." },
+                { "step": "02", "title": "Discovery",  "desc": "Workshops with families and care professionals in Madrid. 12 interviews, 4 sessions." },
+                { "step": "03", "title": "Design",     "desc": "Role-based flows: the elder, the family carer, the coordinator. Three views, one data model." },
+                { "step": "04", "title": "Prototype",  "desc": "Interactive Figma prototype, presented in ES / EN / FR to clients and stakeholders." }
+            ],
+            "brandKit": {
+                "logoLabel":    "Logo variants",
+                "paletteLabel": "Corporate palette",
+                "typeLabel":    "Typography",
+                "typeSpec":     "Nunito · Sans-serif · Warm · 400 / 700 / 900",
+                "palette": {
+                    "rust":    "Sienna rust",
+                    "burnt":   "Burnt orange",
+                    "navy":    "Night navy",
+                    "inkBlue": "Ink blue",
+                    "sun":     "Sunlight"
+                }
+            },
+            "actors": [
+                { "name": "Peter",  "avatar": "P", "role": "The elder",        "body": "Lives alone. Has a smartphone, with support. Wants to feel connected, not monitored." },
+                { "name": "Susan",  "avatar": "S", "role": "The family carer", "body": "His daughter. Manages visits remotely. Worried, but not always nearby." },
+                { "name": "Mark",   "avatar": "M", "role": "The coordinator",  "body": "A care-home professional managing a group of residents. Needs overview, not intimacy." },
+                { "name": "Oliver", "avatar": "O", "role": "The ohana",        "body": "A neighbour. Occasional presence, meaningful impact. Low-friction touchpoints only." }
+            ],
+            "processThree": {
+                "boceto": {
+                    "kicker": "Stage 01",
+                    "kind": "Paper sketch",
+                    "heading": "Locator — first sketch",
+                    "deviceLabel": "Paper sketch of Locator screen",
+                    "desc": "Hand-drawn after the first discovery session. The Locator is the family carer's anchor: where is Dad, is he reachable, what can I do right now?"
+                },
+                "blockframe": {
+                    "kicker": "Stage 02",
+                    "kind": "Blockframe",
+                    "heading": "Structure before noise",
+                    "desc": "Blocks only — no colour, no copy. Testing the hierarchy: header status, map zone, action strip. One question per block."
+                },
+                "wireframe": {
+                    "kicker": "Stage 03",
+                    "kind": "Hi-fi wireframe",
+                    "heading": "Closest to final",
+                    "offline": "offline",
+                    "howToGet": "How to get there",
+                    "callOhana": "Call ohana",
+                    "desc": "Brand tokens applied. Real copy tested at size. Route and call are separated by visual weight, not just position."
+                }
+            },
+            "mockup": {
+                "kicker": "Plate 06 · Chat · Hi-fi",
+                "headingPre": "Connected when",
+                "headingIt": "it matters.",
+                "headingPost": "",
+                "body": "The chat screen is the heart of Hawi. Not a messaging app — a presence layer. Read receipts, voice notes, quick reactions. Designed for one-handed use and low visual acuity."
+            },
+            "plates": {
+                "workshop": { "tag": "Research · Workshop", "cap": "Plate 02 · Discovery workshop — Madrid, 2019",         "alt": "Discovery workshop photo",    "meta": "Qualitative research · Madrid" },
+                "flowmap":  { "tag": "IA · Flow map",       "cap": "Plate 03 · Full flow map — three actor roles",         "alt": "Flow map diagram",            "meta": "Figma · Role-based IA" },
+                "brand":    { "tag": "Brand · Identity",    "cap": "Plate 04 · Brand discovery — Nunito, sienna palette",  "alt": "Brand identity sheet",        "meta": "Figma · Brand kit" },
+                "chat":     { "tag": "UI · Chat",           "cap": "Plate 06 · Chat — hi-fi mockup",                       "alt": "Hi-fi chat screen mockup",    "meta": "Figma · Prototype" }
+            },
+            "foot": {
+                "mid": "Case · Hawi · Akimad · Prototype on request"
+            }
         }
     },
     "hero": {
