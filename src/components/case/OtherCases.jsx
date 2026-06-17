@@ -2,10 +2,9 @@ import { useTranslation, Trans } from 'react-i18next';
 import { Link } from 'react-router';
 
 const CASES = [
-  { id: 'staff-and-go',     to: '/case/staff-and-go', year: '2023 — 24', titleKey: 'sg', descKey: 'sgDesc', metaKey: 'sgMeta' },
-  { id: 'power-electronics', to: '#',                  year: '2021 — 22', titleKey: 'pe', descKey: 'peDesc', metaKey: 'peMeta' },
-  { id: 'optiva',            to: '#',                  year: '2021',      titleKey: 'om', descKey: 'omDesc', metaKey: 'omMeta' },
-  { id: 'hawi',              to: '/case/hawi',         year: '2019 — 20', titleKey: 'hw', descKey: 'hwDesc', metaKey: 'hwMeta' },
+  { id: 'staff-and-go', to: '/case/staff-and-go', year: '2023 — 24', titleKey: 'sg', descKey: 'sgDesc', metaKey: 'sgMeta' },
+  { id: 'hawi',         to: '/case/hawi',         year: '2019 — 20', titleKey: 'hw', descKey: 'hwDesc', metaKey: 'hwMeta' },
+  { id: 'gazella',      to: '/case/gazella',      year: '2019',      titleKey: 'gz', descKey: 'gzDesc', metaKey: 'gzMeta' },
 ];
 
 export function OtherCases({ exclude }) {

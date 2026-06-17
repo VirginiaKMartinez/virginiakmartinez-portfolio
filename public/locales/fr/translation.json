@@ -30,6 +30,9 @@
             },
             "hawi": {
                 "desc": "MVP mobile contre la solitude des aînés"
+            },
+            "gazella": {
+                "desc": "App de santé selon le cycle · calendrier éditable + premium"
             }
         }
     },
@@ -66,9 +69,18 @@
     },
     "languages": {
         "items": [
-            { "name": "Français", "level": "Professionnel complet" },
-            { "name": "English", "level": "Professionnel complet" },
-            { "name": "Español", "level": "Langue maternelle" }
+            {
+                "name": "Français",
+                "level": "Professionnel complet"
+            },
+            {
+                "name": "English",
+                "level": "Professionnel complet"
+            },
+            {
+                "name": "Español",
+                "level": "Langue maternelle"
+            }
         ]
     },
     "contactSection": {
@@ -97,9 +109,10 @@
     "case": {
         "topbar": {
             "back": "← Virginia Martínez",
-            "of": "Étude de cas · 01 sur 04",
-            "hawiOf": "Étude de cas · 04 sur 04",
-            "contact": "Contact"
+            "of": "Étude de cas · 01 sur 03",
+            "hawiOf": "Étude de cas · 02 sur 03",
+            "contact": "Contact",
+            "gazellaOf": "Étude de cas · 03 sur 03"
         },
         "hero": {
             "year": "Année",
@@ -158,7 +171,12 @@
             "rightTop": "Les chiffres business confidentiels restent confidentiels — mais les artefacts et le raisonnement sont disponibles sur demande. <em>Contactez-moi</em> pour un walkthrough."
         },
         "tokens": {
-            "col": { "token": "Token", "value": "Hex", "usedFor": "Utilisé pour", "sass": "Sass" },
+            "col": {
+                "token": "Token",
+                "value": "Hex",
+                "usedFor": "Utilisé pour",
+                "sass": "Sass"
+            },
             "primary": "Actions principales, liens",
             "accent": "Hovers, sélection",
             "pressed": "Boutons pressés",
@@ -184,9 +202,24 @@
             "chip": "Chip / état"
         },
         "plates": {
-            "tag": { "dashboard": "UI · Entretiens annuels", "filter": "UI · Filtre", "dialog": "UI · Dialog", "library": "DS · Vue d'ensemble" },
-            "cap": { "dashboard": "Plate 02 · Liste d'entretiens, avec variantes de chips d'état", "filter": "Plate 03 · Filtre", "dialog": "Plate 04 · Dialog destructif", "library": "Plate 05 · Bibliothèque · La surface complète, documentée" },
-            "meta": { "dashboard": "Figma → Angular 16", "filter": "Composant", "dialog": "Composant", "library": "Figma · 25+ composants · Angular 16" }
+            "tag": {
+                "dashboard": "UI · Entretiens annuels",
+                "filter": "UI · Filtre",
+                "dialog": "UI · Dialog",
+                "library": "DS · Vue d'ensemble"
+            },
+            "cap": {
+                "dashboard": "Plate 02 · Liste d'entretiens, avec variantes de chips d'état",
+                "filter": "Plate 03 · Filtre",
+                "dialog": "Plate 04 · Dialog destructif",
+                "library": "Plate 05 · Bibliothèque · La surface complète, documentée"
+            },
+            "meta": {
+                "dashboard": "Figma → Angular 16",
+                "filter": "Composant",
+                "dialog": "Composant",
+                "library": "Figma · 25+ composants · Angular 16"
+            }
         },
         "library": {
             "title": "Staff & Go · Design System",
@@ -197,7 +230,7 @@
         },
         "other": {
             "num": "Autres",
-            "title": "Trois de plus,",
+            "title": "Plus de projets,",
             "titleIt": "en bref.",
             "pe": "Power <em>Electronics</em>",
             "peDesc": "Logiciel industriel B2B en Angular 12. J'avais un rôle hybride — réparer les tickets UI que l'équipe design n'avait pas le temps de traiter, et pousser l'implémentation au plus près de l'intention design d'origine.",
@@ -210,7 +243,10 @@
             "sgMeta": "Designeuse Produit · Saint-Malo",
             "hw": "Hawi <em>· Akimad</em>",
             "hwDesc": "Concept d'application mobile contre la solitude des aînés. Des ateliers de découverte à un prototype Figma interactif basé sur les rôles, présenté à des clients ES / EN / FR.",
-            "hwMeta": "UX/UI · Madrid"
+            "hwMeta": "UX/UI · Madrid",
+            "gz": "Gazella <em>· Akimad</em>",
+            "gzDesc": "App de santé pour femmes qui adapte l'entraînement et la nutrition au cycle menstruel. J'ai mené un calendrier de cycle éditable et la section nutrition premium — avec une liste de courses générée automatiquement.",
+            "gzMeta": "UX/UI · Akimad"
         },
         "foot": {
             "back": "← Retour au portfolio",
@@ -219,17 +255,23 @@
         },
         "hawi": {
             "meta": {
-                "yearL":    "Année",     "year":    "2019 — 2020",
-                "roleL":    "Rôle",      "role":    "UX/UI Designer",
-                "clientL":  "Client",    "client":  "Akimad",
-                "sectorL":  "Secteur",   "sector":  "Mobile · Impact social",
-                "scopeL":   "Périmètre", "scope":   "UX/UI · Figma",
-                "outcomeL": "Livrable",  "outcome": "Prototype interactif"
+                "yearL": "Année",
+                "year": "2019 — 2020",
+                "roleL": "Rôle",
+                "role": "UX/UI Designer",
+                "clientL": "Client",
+                "client": "Akimad",
+                "sectorL": "Secteur",
+                "sector": "Mobile · Impact social",
+                "scopeL": "Périmètre",
+                "scope": "UX/UI · Figma",
+                "outcomeL": "Livrable",
+                "outcome": "Prototype interactif"
             },
             "subtitle": "Une application mobile pour réduire la solitude des aînés. Des ateliers de découverte à un prototype Figma interactif basé sur les rôles.",
             "ohana": {
                 "label": "Ohana /oˈhana/",
-                "body":  "<em>n.</em> Hawaïen. Le cercle des personnes qui forment votre famille — par le sang, le choix ou le temps."
+                "body": "<em>n.</em> Hawaïen. Le cercle des personnes qui forment votre famille — par le sang, le choix ou le temps."
             },
             "context": {
                 "num": "01 · Contexte",
@@ -241,10 +283,22 @@
                 "rightBottom": "Rôle : UX/UI designer. Durée : six mois du premier atelier au prototype interactif. Outils : Figma, papier, beaucoup de post-its."
             },
             "stats": [
-                { "n": "3",    "l": "Rôles acteurs" },
-                { "n": "12+",  "l": "Entretiens utilisateurs" },
-                { "n": "4",    "l": "Sessions d'atelier" },
-                { "n": "6 mo", "l": "Découverte au prototype" }
+                {
+                    "n": "3",
+                    "l": "Rôles acteurs"
+                },
+                {
+                    "n": "12+",
+                    "l": "Entretiens utilisateurs"
+                },
+                {
+                    "n": "4",
+                    "l": "Sessions d'atelier"
+                },
+                {
+                    "n": "6 mo",
+                    "l": "Découverte au prototype"
+                }
             ],
             "research": {
                 "num": "02 · Recherche",
@@ -263,10 +317,26 @@
                 "rightTop": "Chaque écran est passé par esquisse papier, blockframe, et wireframe hi-fi avant le prototype. L'écran Localisateur — où est papa — a été le plus difficile à trouver."
             },
             "ohanaFlow": [
-                { "step": "01", "title": "Concept",     "desc": "Une app familiale pour les aînés — conçue pour ceux qui les entourent." },
-                { "step": "02", "title": "Découverte",  "desc": "Ateliers avec des familles et des professionnels du soin à Madrid. 12 entretiens, 4 sessions." },
-                { "step": "03", "title": "Design",      "desc": "Flux par rôle : l'aîné, l'aidant familial, le coordinateur. Trois vues, un seul modèle de données." },
-                { "step": "04", "title": "Prototype",   "desc": "Prototype Figma interactif, présenté en ES / EN / FR à des clients et parties prenantes." }
+                {
+                    "step": "01",
+                    "title": "Concept",
+                    "desc": "Une app familiale pour les aînés — conçue pour ceux qui les entourent."
+                },
+                {
+                    "step": "02",
+                    "title": "Découverte",
+                    "desc": "Ateliers avec des familles et des professionnels du soin à Madrid. 12 entretiens, 4 sessions."
+                },
+                {
+                    "step": "03",
+                    "title": "Design",
+                    "desc": "Flux par rôle : l'aîné, l'aidant familial, le coordinateur. Trois vues, un seul modèle de données."
+                },
+                {
+                    "step": "04",
+                    "title": "Prototype",
+                    "desc": "Prototype Figma interactif, présenté en ES / EN / FR à des clients et parties prenantes."
+                }
             ],
             "brand": {
                 "kicker": "Brand · Identité",
@@ -278,10 +348,30 @@
                 "typeLabel": "Spécimen typographique"
             },
             "actors": [
-                { "tag": "01 · Acteur", "title": "L'aîné",           "desc": "Vit seul ou en résidence. A un smartphone, avec aide. Veut se sentir connecté, pas surveillé.",          "needs": "Simplicité · Dignité · Présence" },
-                { "tag": "02 · Acteur", "title": "L'aidant familial", "desc": "Un fils, une fille, un proche. Gère visites et rendez-vous. Inquiet, mais pas toujours à côté.",         "needs": "Tranquillité · Coordination · Contact rapide" },
-                { "tag": "03 · Acteur", "title": "Le coordinateur",   "desc": "Un professionnel ou bénévole gérant un groupe d'aînés. Besoin de vue globale, pas d'intimité.",          "needs": "Vue groupe · Statut · Alertes" },
-                { "tag": "04 · Acteur", "title": "L'ohana",           "desc": "Le cercle élargi — voisins, amis, bénévoles. Présence occasionnelle, impact significatif.",              "needs": "Peu de friction · Actions simples · Chaleur" }
+                {
+                    "tag": "01 · Acteur",
+                    "title": "L'aîné",
+                    "desc": "Vit seul ou en résidence. A un smartphone, avec aide. Veut se sentir connecté, pas surveillé.",
+                    "needs": "Simplicité · Dignité · Présence"
+                },
+                {
+                    "tag": "02 · Acteur",
+                    "title": "L'aidant familial",
+                    "desc": "Un fils, une fille, un proche. Gère visites et rendez-vous. Inquiet, mais pas toujours à côté.",
+                    "needs": "Tranquillité · Coordination · Contact rapide"
+                },
+                {
+                    "tag": "03 · Acteur",
+                    "title": "Le coordinateur",
+                    "desc": "Un professionnel ou bénévole gérant un groupe d'aînés. Besoin de vue globale, pas d'intimité.",
+                    "needs": "Vue groupe · Statut · Alertes"
+                },
+                {
+                    "tag": "04 · Acteur",
+                    "title": "L'ohana",
+                    "desc": "Le cercle élargi — voisins, amis, bénévoles. Présence occasionnelle, impact significatif.",
+                    "needs": "Peu de friction · Actions simples · Chaleur"
+                }
             ],
             "processThree": {
                 "boceto": {
@@ -315,13 +405,140 @@
                 "body": "L'écran chat est le cœur d'Hawi. Pas une messagerie — une couche de présence. Accusés de lecture, notes vocales, réactions rapides. Conçu pour une utilisation à une main et une faible acuité visuelle."
             },
             "plates": {
-                "workshop": { "tag": "Recherche · Atelier", "cap": "Plate 02 · Atelier de découverte — Madrid, 2019",          "alt": "Photo d'atelier de découverte", "meta": "Recherche qualitative · Madrid" },
-                "flowmap":  { "tag": "IA · Flow map",       "cap": "Plate 03 · Flow map complet — trois rôles acteurs",         "alt": "Diagramme de flow map",         "meta": "Figma · IA par rôle" },
-                "brand":    { "tag": "Brand · Identité",    "cap": "Plate 04 · Découverte de marque — Nunito, palette sienna",  "alt": "Fiche d'identité de marque",    "meta": "Figma · Brand kit" },
-                "chat":     { "tag": "UI · Chat",           "cap": "Plate 06 · Chat — maquette hi-fi",                          "alt": "Maquette hi-fi de l'écran chat","meta": "Figma · Prototype" }
+                "workshop": {
+                    "tag": "Recherche · Atelier",
+                    "cap": "Plate 02 · Atelier de découverte — Madrid, 2019",
+                    "alt": "Photo d'atelier de découverte",
+                    "meta": "Recherche qualitative · Madrid"
+                },
+                "flowmap": {
+                    "tag": "IA · Flow map",
+                    "cap": "Plate 03 · Flow map complet — trois rôles acteurs",
+                    "alt": "Diagramme de flow map",
+                    "meta": "Figma · IA par rôle"
+                },
+                "brand": {
+                    "tag": "Brand · Identité",
+                    "cap": "Plate 04 · Découverte de marque — Nunito, palette sienna",
+                    "alt": "Fiche d'identité de marque",
+                    "meta": "Figma · Brand kit"
+                },
+                "chat": {
+                    "tag": "UI · Chat",
+                    "cap": "Plate 06 · Chat — maquette hi-fi",
+                    "alt": "Maquette hi-fi de l'écran chat",
+                    "meta": "Figma · Prototype"
+                }
             },
             "foot": {
                 "mid": "Cas · Hawi · Akimad · Prototype sur demande"
+            }
+        },
+        "gazella": {
+            "meta": {
+                "yearL": "Année",
+                "year": "2019",
+                "roleL": "Rôle",
+                "role": "Designer UX/UI",
+                "clientL": "Client",
+                "client": "Akimad",
+                "sectorL": "Secteur",
+                "sector": "FemTech · Santé mobile",
+                "scopeL": "Périmètre",
+                "scope": "Calendrier du cycle · Nutrition premium",
+                "outcomeL": "Résultat",
+                "outcome": "Publiée · 10K+ installations"
+            },
+            "subtitle": "Une app de santé pour femmes qui adapte l'entraînement et la nutrition aux phases du cycle menstruel. J'ai mené deux nouvelles parties : un calendrier de cycle éditable et la section nutrition premium.",
+            "insight": {
+                "label": "Le constat",
+                "body": "<em>Le corps n'est pas une horloge.</em> L'app calculait tout à partir d'une seule date saisie à l'inscription — sans jamais permettre de la modifier. Or les cycles varient : un autre jour, une autre durée, parfois aucune règle."
+            },
+            "context": {
+                "num": "01 · Contexte",
+                "title": "Rejoindre un produit",
+                "titleIt": "déjà lancé.",
+                "gutter": "Brief",
+                "left": "Gazella est une app de santé pour femmes qui adapte la course, l'entraînement et la nutrition aux phases du cycle menstruel. J'ai rejoint un produit existant comme seule designer UX/UI, sous la direction d'un directeur créatif, pour <em>mener deux nouvelles parties</em>.",
+                "rightTop": "L'app avait déjà une marque et un moteur fonctionnel. Ce qui manquait, c'était le contrôle : le cycle — ce sur quoi repose tout le produit — n'était qu'une seule donnée figée.",
+                "rightBottom": "Rôle : seule designer UX/UI. Studio : Akimad. Les deux parties ont été livrées comme une première version, pensée pour itérer."
+            },
+            "stats": [
+                {
+                    "n": "10K+",
+                    "l": "Installations sur le store"
+                },
+                {
+                    "n": "2",
+                    "l": "Parties menées"
+                },
+                {
+                    "n": "1",
+                    "l": "Designer"
+                },
+                {
+                    "n": "2019",
+                    "l": "Première version"
+                }
+            ],
+            "calendar": {
+                "num": "02 · Le calendrier",
+                "title": "Un cycle qu'on peut",
+                "titleIt": "vraiment corriger.",
+                "gutter": "Problème",
+                "left": "L'app d'origine demandait votre dernière règle <em>une seule fois</em>, à l'inscription, et calculait chaque entraînement à partir de là. Impossible de la modifier. Dès qu'un cycle était plus court, en retard ou absent, le plan s'éloignait du corps qu'il était censé suivre.",
+                "rightTop": "Le calendrier redonne ce contrôle. Un accès direct dans la barre du bas, le début et la fin des règles définis en touchant les jours, la phase en cours affichée en contexte, et les jours d'entraînement marqués par des points — recalculés à chaque changement de date.",
+                "rightBottom": "J'ai analysé presque toutes les apps de suivi du cycle du marché, puis priorisé le plus petit ensemble de fonctionnalités rendant le calendrier assez fiable pour être livré et itéré."
+            },
+            "calShots": {
+                "kicker": "Calendrier · écrans clés",
+                "trainingCap": "Accueil selon le cycle — l'entraînement du jour",
+                "trainingAlt": "Écran d'accueil de Gazella avec le cycle et l'entraînement du jour",
+                "monthCap": "Vue mois — règles et jours d'entraînement marqués",
+                "monthAlt": "Vue mois du calendrier Gazella",
+                "editCap": "Corriger le premier jour des règles",
+                "editAlt": "Écran pour décaler le premier jour des règles"
+            },
+            "nutrition": {
+                "num": "03 · Nutrition & revenus",
+                "title": "Concevoir la première",
+                "titleIt": "source de revenus.",
+                "gutter": "Premium",
+                "left": "La nutrition était une commande du client : la première tentative de revenus de la startup. Le brief : une offre premium — des recettes adaptées à chaque phase du cycle, derrière un abonnement. J'ai conçu l'UI et le parcours d'achat.",
+                "rightTop": "Pour que le premium ne ressemble pas à un mur, j'ai étudié comment d'autres apps structuraient recettes et listes de courses, puis j'ai donné à la section payante <em>une allure distincte</em> — pour qu'elle paraisse meilleure et différente, pas seulement bloquée.",
+                "rightBottom": "J'ai été honnête sur le risque : face à d'innombrables apps de nutrition dédiées, je doutais que les utilisatrices paient pour cela. Je l'ai dit. La décision revenait au client — bien la concevoir m'appartenait."
+            },
+            "callout": {
+                "tag": "Ma proposition",
+                "heading": "Une liste de courses qui <em>s'écrit toute seule.</em>",
+                "body": "Ce que j'ai défendu : générer la liste de courses directement depuis les ingrédients d'une recette. Envie de la cuisiner ? Tout y est déjà — sans rien recopier. Une petite utilité du quotidien qui donne une raison d'être à une offre premium."
+            },
+            "recipe": {
+                "tag": "UI · Recette",
+                "cap": "Détail d'une recette — ingrédients, étapes, répartition des macros",
+                "alt": "Écran complet d'une recette Gazella"
+            },
+            "nutShots": {
+                "kicker": "Nutrition · écrans clés",
+                "bookCap": "Recettier, filtré par phase",
+                "bookAlt": "Écran recettier de Gazella",
+                "listCap": "Liste de courses, depuis les ingrédients",
+                "listAlt": "Écran liste de courses de Gazella",
+                "emptyCap": "État vide — rien d'ajouté",
+                "emptyAlt": "État vide de la liste de courses",
+                "premiumCap": "Le mur premium",
+                "premiumAlt": "Écran d'upsell premium de Gazella"
+            },
+            "reflection": {
+                "num": "04 · Bilan",
+                "title": "Ce que je garde,",
+                "titleIt": "ce que je questionne.",
+                "gutter": "À retenir",
+                "left": "Deux leçons sont restées. <em>Concevoir pour le corps réel, pas l'idéal</em> — le cycle éditable comptait justement parce que rien n'est régulier. Et concevoir avec les vraies limites d'une startup : livrer une première version assumée comme telle.",
+                "rightTop": "Je questionnerais encore le pari du premium. Faire payer la nutrition sur un marché saturé tenait plus de l'acte de foi que du besoin validé. L'avoir dit — et l'avoir conçu aussi bien que possible malgré tout — est ce dont je suis fière."
+            },
+            "foot": {
+                "mid": "Cas · Gazella · Akimad · 2019"
             }
         }
     },

@@ -1,0 +1,122 @@
+/* -----------------------------------------------------
+   case · Gazella — product skin + case-specific layout
+   ----------------------------------------------------- */
+
+/* === Gazella product palette (scoped to Gazella blocks) =============== */
+
+:where(.gz-def, .gz-screens, .gz-callout) {
+  --gz-yellow:    #F2BC00;
+  --gz-yellow-d:  #D9A800;
+  --gz-teal:      #14AEBE;
+  --gz-pink:      #E8568E;
+  --gz-ink:       #2B2B2B;
+  --gz-paper:     #FFFFFF;
+}
+
+/* === Hero insight block (mirrors .case-hero .ohana from hawi.css) ===== */
+
+.case-hero .gz-def {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: var(--col-gap);
+  align-items: start;
+}
+.case-hero .gz-def .label {
+  font-family: var(--ff-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mute);
+  padding-top: 6px;
+}
+.case-hero .gz-def .def {
+  font-family: var(--ff-display);
+  font-style: italic;
+  font-size: clamp(20px, 1.9vw, 26px);
+  line-height: 1.5;
+  color: var(--fg-soft);
+  max-width: 60ch;
+  border-left: 2px solid var(--accent);
+  padding: 4px 0 4px 24px;
+}
+.case-hero .gz-def .def em { font-style: normal; color: var(--accent); }
+
+/* === Screen strips — rows of phone screenshots ======================== */
+
+.gz-screens { margin-top: 56px; }
+.gz-screens__kicker {
+  font-family: var(--ff-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 22px;
+}
+.gz-screens__row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: clamp(18px, 3vw, 40px);
+  align-items: start;
+}
+.gz-screens__item { margin: 0; }
+.gz-screens__item figcaption {
+  margin-top: 16px;
+  font-family: var(--ff-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--mute);
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* === Callout — product-flavoured highlight (the shopping-list idea) === */
+
+.gz-callout {
+  margin-top: 56px;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: var(--col-gap);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--gz-yellow);
+  background: var(--paper);
+  padding: 36px 40px;
+  align-items: start;
+}
+.gz-callout .tag {
+  font-family: var(--ff-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gz-yellow-d);
+  padding-top: 6px;
+}
+.gz-callout h3 {
+  margin: 0 0 12px 0;
+  font-family: var(--ff-display);
+  font-weight: 400;
+  font-size: clamp(24px, 3vw, 36px);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--fg);
+}
+.gz-callout h3 em { font-style: italic; color: var(--accent); }
+.gz-callout p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--fg-soft);
+  max-width: 54ch;
+}
+
+/* === Responsive ======================================================== */
+
+@media (max-width: 920px) {
+  .case-hero .gz-def { grid-template-columns: 1fr; gap: 12px; }
+  .gz-callout { grid-template-columns: 1fr; gap: 14px; padding: 28px; }
+}
+
+@media (max-width: 620px) {
+  .gz-screens__row { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+}
