@@ -349,28 +349,28 @@
             },
             "actors": [
                 {
-                    "tag": "01 · Acteur",
-                    "title": "L'aîné",
-                    "desc": "Vit seul ou en résidence. A un smartphone, avec aide. Veut se sentir connecté, pas surveillé.",
-                    "needs": "Simplicité · Dignité · Présence"
+                    "name": "La personne âgée",
+                    "avatar": "01",
+                    "role": "Utilisateur principal",
+                    "body": "Vit seule, utilise un téléphone avec de l'aide. L'interface est épurée : grandes cibles, une action principale par écran, rien qui ressemble à de la surveillance."
                 },
                 {
-                    "tag": "02 · Acteur",
-                    "title": "L'aidant familial",
-                    "desc": "Un fils, une fille, un proche. Gère visites et rendez-vous. Inquiet, mais pas toujours à côté.",
-                    "needs": "Tranquillité · Coordination · Contact rapide"
+                    "name": "L'aidant familial",
+                    "avatar": "02",
+                    "role": "Usage quotidien",
+                    "body": "Un enfant adulte qui gère la prise en charge à distance. Besoin de réassurance et de coordination — savoir, joindre, agir — sans vivre dans l'app."
                 },
                 {
-                    "tag": "03 · Acteur",
-                    "title": "Le coordinateur",
-                    "desc": "Un professionnel ou bénévole gérant un groupe d'aînés. Besoin de vue globale, pas d'intimité.",
-                    "needs": "Vue groupe · Statut · Alertes"
+                    "name": "Le coordinateur",
+                    "avatar": "03",
+                    "role": "Professionnel",
+                    "body": "Un professionnel d'EHPAD qui suit plusieurs résidents. Besoin d'une vue d'ensemble et du contrôle des tâches, pas d'intimité."
                 },
                 {
-                    "tag": "04 · Acteur",
-                    "title": "L'ohana",
-                    "desc": "Le cercle élargi — voisins, amis, bénévoles. Présence occasionnelle, impact significatif.",
-                    "needs": "Peu de friction · Actions simples · Chaleur"
+                    "name": "L'ohana",
+                    "avatar": "04",
+                    "role": "Cercle élargi",
+                    "body": "Voisins et amis. Présence ponctuelle, points de contact à faible friction — le cercle élargi qui donne son nom au concept."
                 }
             ],
             "processThree": {
@@ -378,14 +378,15 @@
                     "kicker": "Étape 01",
                     "kind": "Esquisse papier",
                     "heading": "Localisateur — première esquisse",
-                    "deviceLabel": "Esquisse papier de l'écran Localisateur",
+                    "deviceLabel": "Croquis papier de l'écran Locator",
                     "desc": "Dessiné à la main après la première session de découverte. Le Localisateur est l'ancre de l'aidant familial : où est papa, peut-on le joindre, que puis-je faire maintenant ?"
                 },
                 "blockframe": {
                     "kicker": "Étape 02",
                     "kind": "Blockframe",
                     "heading": "Structure avant le bruit",
-                    "desc": "Blocs uniquement — pas de couleur, pas de texte. Test de la hiérarchie : en-tête de statut, zone carte, bande d'actions. Une question par bloc."
+                    "desc": "Blocs uniquement — pas de couleur, pas de texte. Test de la hiérarchie : en-tête de statut, zone carte, bande d'actions. Une question par bloc.",
+                    "deviceLabel": "Blockframe de l'écran Locator"
                 },
                 "wireframe": {
                     "kicker": "Étape 03",
@@ -394,7 +395,8 @@
                     "offline": "hors ligne",
                     "howToGet": "Comment y aller",
                     "callOhana": "Appeler l'ohana",
-                    "desc": "Tokens de marque appliqués. Vrai texte testé en taille réelle. Trajet et appel séparés par le poids visuel, pas seulement la position."
+                    "desc": "Tokens de marque appliqués. Vrai texte testé en taille réelle. Trajet et appel séparés par le poids visuel, pas seulement la position.",
+                    "deviceLabel": "Wireframe hi-fi de l'écran Locator"
                 }
             },
             "mockup": {
@@ -419,7 +421,7 @@
                 },
                 "brand": {
                     "tag": "Brand · Identité",
-                    "cap": "Plate 04 · Découverte de marque — Nunito, palette sienna",
+                    "cap": "Planche 04 · Atelier de marque — des valeurs au concept OHANA",
                     "alt": "Fiche d'identité de marque",
                     "meta": "Figma · Brand kit"
                 },
@@ -432,6 +434,19 @@
             },
             "foot": {
                 "mid": "Cas · Hawi · Akimad · Prototype sur demande"
+            },
+            "brandKit": {
+                "logoLabel": "Variantes du logo",
+                "paletteLabel": "Palette corporate",
+                "typeLabel": "Typographie",
+                "typeSpec": "Nunito · Sans-serif · Chaleureuse · 400 / 700 / 900",
+                "palette": {
+                    "rust": "Terre de Sienne",
+                    "burnt": "Orange brûlé",
+                    "navy": "Bleu nuit",
+                    "inkBlue": "Bleu encre",
+                    "sun": "Soleil"
+                }
             }
         },
         "gazella": {
@@ -516,7 +531,8 @@
             "recipe": {
                 "tag": "UI · Recette",
                 "cap": "Détail d'une recette — ingrédients, étapes, répartition des macros",
-                "alt": "Écran complet d'une recette Gazella"
+                "alt": "Écran complet d'une recette Gazella",
+                "scrollHint": "↕ Faire défiler"
             },
             "nutShots": {
                 "kicker": "Nutrition · écrans clés",

@@ -373,6 +373,19 @@
 .process-3 .device-content { width: 80%; height: 80%; position: relative; }
 .process-3 .step-desc { font-size: 13px; line-height: 1.55; color: var(--fg-soft); }
 
+/* real exported frames (cropped) instead of CSS-drawn devices */
+.process-3 .device.device--shot {
+  border: 0;
+  background: transparent;
+  aspect-ratio: auto;
+}
+.process-3 .device.device--shot img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--line);
+}
+
 /* sketch */
 .sketch-device { background: var(--paper); font-family: "Caveat","Marker Felt",cursive; color: var(--fg); }
 .sketch-device .sk-title { position: absolute; top: 8%; left: 6%; font-size: 16px; font-weight: 700; }
@@ -531,6 +544,10 @@
   max-width: 720px; height: clamp(520px, 90vw, 1200px);
   object-fit: contain; margin: 0 auto; display: block;
 }
+
+/* discreet, contained photo (privacy: smaller + softly desaturated) */
+.artifact--inset { max-width: 600px; margin-left: auto; margin-right: auto; }
+.artifact--photo > img { filter: grayscale(0.28) contrast(0.98); }
 
 .artifact .tag {
   position: absolute; top: 14px; left: 16px;

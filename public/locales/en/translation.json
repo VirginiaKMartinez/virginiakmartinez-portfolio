@@ -353,28 +353,28 @@
             },
             "actors": [
                 {
-                    "name": "Peter",
-                    "avatar": "P",
-                    "role": "The elder",
-                    "body": "Lives alone. Has a smartphone, with support. Wants to feel connected, not monitored."
+                    "name": "The elder",
+                    "avatar": "01",
+                    "role": "Primary user",
+                    "body": "Lives alone, uses a phone with help. The interface is stripped back: large targets, one main action per screen, nothing that feels like surveillance."
                 },
                 {
-                    "name": "Susan",
-                    "avatar": "S",
-                    "role": "The family carer",
-                    "body": "His daughter. Manages visits remotely. Worried, but not always nearby."
+                    "name": "The family carer",
+                    "avatar": "02",
+                    "role": "Daily driver",
+                    "body": "An adult child managing care from a distance. Needs reassurance and coordination — to know, to reach, to act — without living inside the app."
                 },
                 {
-                    "name": "Mark",
-                    "avatar": "M",
-                    "role": "The coordinator",
-                    "body": "A care-home professional managing a group of residents. Needs overview, not intimacy."
+                    "name": "The coordinator",
+                    "avatar": "03",
+                    "role": "Professional",
+                    "body": "A care-home professional overseeing several residents. Needs an overview and task control, not intimacy."
                 },
                 {
-                    "name": "Oliver",
-                    "avatar": "O",
-                    "role": "The ohana",
-                    "body": "A neighbour. Occasional presence, meaningful impact. Low-friction touchpoints only."
+                    "name": "The ohana",
+                    "avatar": "04",
+                    "role": "Extended circle",
+                    "body": "Neighbours and friends. Occasional presence, low-friction touchpoints — the wider circle the concept is named after."
                 }
             ],
             "processThree": {
@@ -382,14 +382,15 @@
                     "kicker": "Stage 01",
                     "kind": "Paper sketch",
                     "heading": "Locator — first sketch",
-                    "deviceLabel": "Paper sketch of Locator screen",
+                    "deviceLabel": "Paper sketch of the Locator screen",
                     "desc": "Hand-drawn after the first discovery session. The Locator is the family carer's anchor: where is Dad, is he reachable, what can I do right now?"
                 },
                 "blockframe": {
                     "kicker": "Stage 02",
                     "kind": "Blockframe",
                     "heading": "Structure before noise",
-                    "desc": "Blocks only — no colour, no copy. Testing the hierarchy: header status, map zone, action strip. One question per block."
+                    "desc": "Blocks only — no colour, no copy. Testing the hierarchy: header status, map zone, action strip. One question per block.",
+                    "deviceLabel": "Blockframe of the Locator screen"
                 },
                 "wireframe": {
                     "kicker": "Stage 03",
@@ -398,7 +399,8 @@
                     "offline": "offline",
                     "howToGet": "How to get there",
                     "callOhana": "Call ohana",
-                    "desc": "Brand tokens applied. Real copy tested at size. Route and call are separated by visual weight, not just position."
+                    "desc": "Brand tokens applied. Real copy tested at size. Route and call are separated by visual weight, not just position.",
+                    "deviceLabel": "Hi-fi wireframe of the Locator screen"
                 }
             },
             "mockup": {
@@ -423,7 +425,7 @@
                 },
                 "brand": {
                     "tag": "Brand · Identity",
-                    "cap": "Plate 04 · Brand discovery — Nunito, sienna palette",
+                    "cap": "Plate 04 · Brand workshop — from values to the OHANA concept",
                     "alt": "Brand identity sheet",
                     "meta": "Figma · Brand kit"
                 },
@@ -520,7 +522,8 @@
             "recipe": {
                 "tag": "UI · Recipe",
                 "cap": "Recipe detail — ingredients, steps, macro breakdown",
-                "alt": "Full Gazella recipe screen for a poke bowl"
+                "alt": "Full Gazella recipe screen for a poke bowl",
+                "scrollHint": "↕ Scroll the screen"
             },
             "nutShots": {
                 "kicker": "Nutrition · key screens",

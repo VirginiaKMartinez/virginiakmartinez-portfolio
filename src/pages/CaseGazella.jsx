@@ -8,6 +8,7 @@ import { BackFoot } from '@/components/case/BackFoot';
 
 import { GazellaHero } from '@/components/gazella/GazellaHero';
 import { ScreenStrip } from '@/components/gazella/ScreenStrip';
+import { ScrollPhone } from '@/components/gazella/ScrollPhone';
 
 /**
  * Case study — Gazella · Akimad.
@@ -88,10 +89,14 @@ export default function CaseGazella() {
             </div>
           </section>
 
-          <figure className="artifact ratio-tall">
-            <img src="/case/gazella/gz-recipe-full.png" alt={t('case.gazella.recipe.alt')} />
-            <span className="tag">{t('case.gazella.recipe.tag')}</span>
-            <figcaption className="cap">
+          <figure className="gz-recipe">
+            <ScrollPhone
+              src="/case/gazella/gz-recipe-full.png"
+              alt={t('case.gazella.recipe.alt')}
+              hint={t('case.gazella.recipe.scrollHint')}
+            />
+            <figcaption className="gz-recipe__cap">
+              <span className="tag">{t('case.gazella.recipe.tag')}</span>
               <span>{t('case.gazella.recipe.cap')}</span>
               <span>Figma · 2019</span>
             </figcaption>
