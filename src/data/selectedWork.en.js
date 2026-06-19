@@ -10,6 +10,16 @@ const selectedWork = [
         disabled: false,
     },
     {
+        id: "fiche-salarie",
+        year: "2023 — 2024",
+        titleHtml: "Fiche&nbsp;<em>salarié</em>",
+        role: "Product Designer",
+        roleDescKey: "work.items.ficheSalarie.desc",
+        tag: "B2B SaaS · France",
+        href: "/case/fiche-salarie",
+        disabled: false,
+    },
+    {
         id: "hawi",
         year: "2019 — 2020",
         titleHtml: "Hawi <em>·</em> Akimad",

@@ -33,6 +33,9 @@
             },
             "gazella": {
                 "desc": "App de santé selon le cycle · calendrier éditable + premium"
+            },
+            "ficheSalarie": {
+                "desc": "Refonte de la fiche salarié · AI + UI"
             }
         }
     },
@@ -109,10 +112,11 @@
     "case": {
         "topbar": {
             "back": "← Virginia Martínez",
-            "of": "Étude de cas · 01 sur 03",
-            "hawiOf": "Étude de cas · 02 sur 03",
+            "of": "Étude de cas · 01 sur 04",
+            "hawiOf": "Étude de cas · 03 sur 04",
             "contact": "Contact",
-            "gazellaOf": "Étude de cas · 03 sur 03"
+            "gazellaOf": "Étude de cas · 04 sur 04",
+            "ficheOf": "Étude de cas · 02 sur 04"
         },
         "hero": {
             "year": "Année",
@@ -246,7 +250,10 @@
             "hwMeta": "UX/UI · Madrid",
             "gz": "Gazella <em>· Akimad</em>",
             "gzDesc": "App de santé pour femmes qui adapte l'entraînement et la nutrition au cycle menstruel. J'ai mené un calendrier de cycle éditable et la section nutrition premium — avec une liste de courses générée automatiquement.",
-            "gzMeta": "UX/UI · Akimad"
+            "gzMeta": "UX/UI · Akimad",
+            "fs": "Fiche <em>salarié</em>",
+            "fsDesc": "Refonte de l'écran le plus dense d'une app RH B2B — la fiche salarié. D'un formulaire écrasant à des sections claires et ordonnées, déployée par phases.",
+            "fsMeta": "Designeuse Produit · Staff & Go"
         },
         "foot": {
             "back": "← Retour au portfolio",
@@ -555,6 +562,97 @@
             },
             "foot": {
                 "mid": "Cas · Gazella · Akimad · 2019"
+            }
+        },
+        "fiche": {
+            "meta": {
+                "yearL": "Année",
+                "year": "2023 — 2024",
+                "roleL": "Rôle",
+                "role": "Designer Produit",
+                "clientL": "Client",
+                "client": "Staff & Go",
+                "sectorL": "Secteur",
+                "sector": "SaaS B2B · RH / Paie",
+                "scopeL": "Périmètre",
+                "scope": "Architecture de l'information · refonte UI",
+                "outcomeL": "Résultat",
+                "outcome": "Déployé par phases"
+            },
+            "subtitle": "Refonte de l'écran le plus dense d'une app de gestion du personnel B2B — la fiche salarié — d'un mur de champs écrasant à quelque chose de lisible et apprenable.",
+            "insight": {
+                "label": "Le constat",
+                "body": "<em>Toute l'app était difficile à apprendre.</em> Un outil de gestion dense, à courbe d'apprentissage raide. J'ai pris en charge l'une de ses zones les plus surchargées — la fiche salarié — avec un schéma pensé pour aller plus loin."
+            },
+            "context": {
+                "num": "01 · Contexte",
+                "title": "Un outil puissant,",
+                "titleIt": "dur à apprendre.",
+                "gutter": "Brief",
+                "left": "Staff & Go est une plateforme B2B de gestion du personnel — paie, congés, RH, planning. Puissante, mais dense : sur tout le produit, les nouveaux utilisateurs affrontaient une courbe raide. <em>La fiche salarié en était l'écran le plus surchargé.</em>",
+                "rightTop": "Tout le détail d'un salarié y vivait — identité, contrats, sécurité sociale, banque, documents — entassé dans des formulaires serrés en petits caractères, réparti sur des vues difficiles à trouver.",
+                "rightBottom": "Rôle : Designer Produit, en lien avec les PM et le responsable du développement pour garder une friction faible côté utilisateurs et faisable côté ingénierie."
+            },
+            "problem": {
+                "num": "02 · Le problème",
+                "title": "La densité,",
+                "titleIt": "et une montée raide.",
+                "gutter": "Friction",
+                "left": "Trop d'information, trop petite, trop dure à parcourir. Trouver la bonne vue demandait un effort ; l'écran punissait les nouveaux venus. <em>L'objectif n'était pas plus de fonctionnalités — c'était moins de charge cognitive.</em>",
+                "rightTop": "Avant de toucher au pixel, j'ai analysé des outils comparables et réuni des références, puis cartographié ce que la fiche devait vraiment montrer, et dans quel ordre."
+            },
+            "redesign": {
+                "num": "03 · La refonte",
+                "title": "La structure",
+                "titleIt": "avant la décoration.",
+                "gutter": "Approche",
+                "left": "La solution était l'architecture, pas la peinture. J'ai regroupé la fiche en sections claires et étiquetées, avec de l'air et un ordre prévisible, pour que l'œil sache toujours où regarder. <em>Mêmes données, bien moins d'effort de lecture.</em>",
+                "rightTop": "J'ai aussi conçu les états réels — comptes initialisés, activés, désactivés, non configurés — pour que l'écran reste cohérent dans tous les cas, pas seulement le scénario idéal.",
+                "rightBottom": "Et je l'ai conçue avec l'ingénierie dans la pièce, pour que la structure soit réellement constructible et livrable par étapes."
+            },
+            "ba": {
+                "beforeLabel": "Avant",
+                "beforeNote": "Formulaire dense, petits caractères, dur à parcourir",
+                "beforeAlt": "Fiche salarié d'origine — formulaire dense (anonymisé)",
+                "afterLabel": "Après",
+                "afterNote": "En sections, lisible, ordre prévisible",
+                "afterAlt": "Fiche salarié redessinée — sections claires (anonymisé)"
+            },
+            "mobile": {
+                "kicker": "Responsive",
+                "heading": "Un seul ordre, <em>appris une fois.</em>",
+                "body": "À chaque breakpoint, la fiche se lit comme les mêmes sections ordonnées — Profil, Identification, Naissance, Coordonnées, etc. Les fiches salarié et établissement partagent cet ordre : l'utilisateur professionnel apprend le schéma une fois et le réutilise partout.",
+                "alt": "Fiche salarié redessinée sur mobile, défilable (anonymisé)",
+                "scrollHint": "↕ Faire défiler"
+            },
+            "outcome": {
+                "num": "04 · Résultat",
+                "title": "Déployé par phases,",
+                "titleIt": "pensé pour durer.",
+                "gutter": "Résultat",
+                "left": "La refonte a été déployée par phases — volontairement, pour accompagner les utilisateurs dans le changement plutôt que tout renommer du jour au lendemain. <em>Le schéma de sections ordonnées a été conçu pour s'étendre</em> de la fiche salarié aux établissements et au-delà.",
+                "rightTop": "Un rappel : dans un outil B2B dense, le geste de design le plus utile n'est souvent pas d'ajouter — c'est de rendre l'existant lisible, cohérent et accueillant pour un nouvel utilisateur."
+            },
+            "stats": [
+                {
+                    "n": "2",
+                    "l": "Fiches unifiées"
+                },
+                {
+                    "n": "4+",
+                    "l": "États de compte gérés"
+                },
+                {
+                    "n": "Par phases",
+                    "l": "Déploiement"
+                },
+                {
+                    "n": "2023—24",
+                    "l": "Staff & Go"
+                }
+            ],
+            "foot": {
+                "mid": "Cas · Staff & Go · NDA · Écrans anonymisés · Démo sur demande"
             }
         }
     },

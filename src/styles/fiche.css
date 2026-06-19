@@ -1,0 +1,89 @@
+/* -----------------------------------------------------
+   case · Fiche salarié (Staff & Go) — redesign case layout
+   ----------------------------------------------------- */
+
+/* === Hero insight block (mirrors .case-hero .ohana / .gz-def) ========= */
+
+.case-hero .ff-def {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: var(--col-gap);
+  align-items: start;
+}
+.case-hero .ff-def .label {
+  font-family: var(--ff-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mute);
+  padding-top: 6px;
+}
+.case-hero .ff-def .def {
+  font-family: var(--ff-display);
+  font-style: italic;
+  font-size: clamp(20px, 1.9vw, 26px);
+  line-height: 1.5;
+  color: var(--fg-soft);
+  max-width: 60ch;
+  border-left: 2px solid var(--accent);
+  padding: 4px 0 4px 24px;
+}
+.case-hero .ff-def .def em { font-style: normal; color: var(--accent); }
+
+/* === Before / After ==================================================== */
+
+.fiche-ba { margin-top: 56px; display: grid; gap: 28px; }
+.fiche-ba__item { margin: 0; }
+.fiche-ba__label {
+  display: flex; align-items: baseline; gap: 12px;
+  font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.14em;
+  text-transform: uppercase; margin-bottom: 14px;
+}
+.fiche-ba__label .k { color: var(--accent); }
+.fiche-ba__label .d { color: var(--mute); font-size: 10px; }
+.fiche-ba__shot {
+  border: 1px solid var(--line);
+  background: var(--bg-2);
+  overflow: hidden;
+}
+.fiche-ba__shot img { display: block; width: 100%; height: auto; }
+
+.fiche-ba__arrow {
+  justify-self: center;
+  font-family: var(--ff-display);
+  font-size: 26px; line-height: 1;
+  color: var(--accent);
+}
+
+/* === Mobile + note two-up ============================================== */
+
+.fiche-mobile {
+  margin-top: 56px;
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: clamp(28px, 5vw, 72px);
+  align-items: center;
+}
+.fiche-mobile__copy .kicker {
+  font-family: var(--ff-mono); font-size: 10px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--accent); margin-bottom: 16px;
+}
+.fiche-mobile__copy h3 {
+  margin: 0 0 14px 0;
+  font-family: var(--ff-display); font-weight: 400;
+  font-size: clamp(26px, 3vw, 40px); line-height: 1.1; letter-spacing: -0.01em;
+  color: var(--fg);
+}
+.fiche-mobile__copy h3 em { font-style: italic; color: var(--accent); }
+.fiche-mobile__copy p {
+  margin: 0; font-size: 15px; line-height: 1.65; color: var(--fg-soft); max-width: 46ch;
+}
+
+/* === Responsive ======================================================== */
+
+@media (max-width: 920px) {
+  .case-hero .ff-def { grid-template-columns: 1fr; gap: 12px; }
+  .fiche-mobile { grid-template-columns: 1fr; gap: 32px; }
+  .fiche-mobile .gz-scrollphone { margin: 0 auto; }
+}

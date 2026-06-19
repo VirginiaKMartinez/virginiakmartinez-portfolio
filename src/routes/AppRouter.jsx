@@ -11,6 +11,7 @@ import Contact from "../pages/Contact";
 import CaseStaffAndGo from "../pages/CaseStaffAndGo";
 import CaseHawi from "../pages/CaseHawi";
 import CaseGazella from "../pages/CaseGazella";
+import CaseFiche from "../pages/CaseFiche";
 import Flows from "../pages/case-studies/Flows";
 import UXResearch from "../pages/case-studies/UXResearch";
 
@@ -34,6 +35,10 @@ export default function AppRouter() {
                     <Route
                         path="case/gazella"
                         element={<CaseGazella />}
+                    />
+                    <Route
+                        path="case/fiche-salarie"
+                        element={<CaseFiche />}
                     />
 
                     {/* Legacy v1 case studies (other 3 — kept until rewritten) */}

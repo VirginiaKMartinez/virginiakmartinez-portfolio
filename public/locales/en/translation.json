@@ -33,6 +33,9 @@
             },
             "gazella": {
                 "desc": "Cycle-aware health app · editable calendar + premium"
+            },
+            "ficheSalarie": {
+                "desc": "Employee-record redesign · IA + UI"
             }
         }
     },
@@ -109,10 +112,11 @@
     "case": {
         "topbar": {
             "back": "← Virginia Martínez",
-            "of": "Case study · 01 of 03",
-            "hawiOf": "Case study · 02 of 03",
+            "of": "Case study · 01 of 04",
+            "hawiOf": "Case study · 03 of 04",
             "contact": "Contact",
-            "gazellaOf": "Case study · 03 of 03"
+            "gazellaOf": "Case study · 04 of 04",
+            "ficheOf": "Case study · 02 of 04"
         },
         "hero": {
             "year": "Year",
@@ -246,7 +250,10 @@
             "hwMeta": "UX/UI · Madrid",
             "gz": "Gazella <em>· Akimad</em>",
             "gzDesc": "Women's health app that adapts training and nutrition to the menstrual cycle. I led an editable cycle calendar and the premium nutrition section — including an auto-generated shopping list.",
-            "gzMeta": "UX/UI · Akimad"
+            "gzMeta": "UX/UI · Akimad",
+            "fs": "Fiche <em>salarié</em>",
+            "fsDesc": "Redesign of the densest screen in a B2B workforce app — the employee record. From an overwhelming form to clear, ordered sections, shipped in phases.",
+            "fsMeta": "Product Designer · Staff & Go"
         },
         "foot": {
             "back": "← Back to portfolio",
@@ -546,6 +553,97 @@
             },
             "foot": {
                 "mid": "Case · Gazella · Akimad · 2019"
+            }
+        },
+        "fiche": {
+            "meta": {
+                "yearL": "Year",
+                "year": "2023 — 2024",
+                "roleL": "Role",
+                "role": "Product Designer",
+                "clientL": "Client",
+                "client": "Staff & Go",
+                "sectorL": "Sector",
+                "sector": "B2B SaaS · HR / Payroll",
+                "scopeL": "Scope",
+                "scope": "Information architecture · UI redesign",
+                "outcomeL": "Output",
+                "outcome": "Shipped in phases"
+            },
+            "subtitle": "Redesigning the densest screen in a B2B workforce-management app — the employee record — from an overwhelming wall of fields into something legible and learnable.",
+            "insight": {
+                "label": "The premise",
+                "body": "<em>The whole app was hard to learn.</em> A dense management tool with a steep curve. I took on one of its most overloaded areas — the employee record — with a pattern meant to scale beyond it."
+            },
+            "context": {
+                "num": "01 · Context",
+                "title": "A powerful tool,",
+                "titleIt": "hard to learn.",
+                "gutter": "Brief",
+                "left": "Staff & Go is a B2B workforce-management platform — payroll, leave, HR, scheduling. Powerful, but dense: across the whole product, new users faced a steep learning curve. <em>The employee record was its most overloaded screen.</em>",
+                "rightTop": "Every detail of a worker lived there — identity, contracts, social security, banking, documents — crammed into tight forms in small type, spread across views that were hard to find.",
+                "rightBottom": "Role: Product Designer, working alongside the PMs and the head of development to keep friction low for users and feasible for engineering."
+            },
+            "problem": {
+                "num": "02 · The problem",
+                "title": "Density,",
+                "titleIt": "and a steep climb.",
+                "gutter": "Friction",
+                "left": "Too much information, too small, too hard to scan. Finding the right view took effort; the screen punished newcomers. <em>The goal wasn't more features — it was less cognitive load.</em>",
+                "rightTop": "Before touching pixels I benchmarked comparable tools and gathered design references, then mapped what the record actually needed to show, and in what order."
+            },
+            "redesign": {
+                "num": "03 · The redesign",
+                "title": "Structure",
+                "titleIt": "before decoration.",
+                "gutter": "Approach",
+                "left": "The fix was architecture, not paint. I grouped the record into clear, labelled sections with breathing room and a predictable order, so the eye always knows where to look. <em>Same data, far less effort to read.</em>",
+                "rightTop": "I designed the real states too — accounts initialised, activated, deactivated, not yet set up — so the screen stayed coherent across every case, not just the happy path.",
+                "rightBottom": "And I designed it with engineering in the room, so the structure was something the team could actually build and ship incrementally."
+            },
+            "ba": {
+                "beforeLabel": "Before",
+                "beforeNote": "Dense form, small type, hard to scan",
+                "beforeAlt": "Original employee record — dense form layout (anonymised)",
+                "afterLabel": "After",
+                "afterNote": "Sectioned, legible, predictable order",
+                "afterAlt": "Redesigned employee record — clear sections (anonymised)"
+            },
+            "mobile": {
+                "kicker": "Responsive",
+                "heading": "One order, <em>learned once.</em>",
+                "body": "On every breakpoint the record reads as the same ordered sections — Profile, Identification, Birth, Contact, and so on. The employee and establishment records share that order, so a professional user learns the pattern once and reuses it everywhere.",
+                "alt": "Redesigned employee record on mobile, scrollable (anonymised)",
+                "scrollHint": "↕ Scroll the screen"
+            },
+            "outcome": {
+                "num": "04 · Outcome",
+                "title": "Shipped in phases,",
+                "titleIt": "built to scale.",
+                "gutter": "Result",
+                "left": "The redesign rolled out in phases — deliberately, to ease users into the change rather than relabel everything overnight. <em>The ordered-section pattern was made to extend</em> from the employee record to establishments and beyond.",
+                "rightTop": "A reminder that in a dense B2B tool the highest-impact design move is often not adding — it's making what's already there legible, consistent, and kind to a first-time user."
+            },
+            "stats": [
+                {
+                    "n": "2",
+                    "l": "Records unified"
+                },
+                {
+                    "n": "4+",
+                    "l": "Account states handled"
+                },
+                {
+                    "n": "Phased",
+                    "l": "Rollout"
+                },
+                {
+                    "n": "2023—24",
+                    "l": "Staff & Go"
+                }
+            ],
+            "foot": {
+                "mid": "Case · Staff & Go · NDA · Screens anonymised · Walkthrough on request"
             }
         }
     },
