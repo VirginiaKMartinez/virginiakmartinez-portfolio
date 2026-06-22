@@ -93,6 +93,15 @@ Do not reopen these unless Virginia explicitly says so.
 - **Site languages**: English and French only. Spanish is only used in our conversation, not on the site.
 - **Files removed**: `src/App.css` and `src/pages/TestPage.jsx` were deleted. Do not reference them.
 
+## Open Threads (pick up here)
+
+In rough priority order:
+
+1. **Run `npm run build` on the Mac** to confirm the four cases compile green (the Cowork sandbox can't build — see Gotchas). Lint is already clean except the one known `DesignSystem.jsx` warning.
+2. **Hawi — verify research numbers**: the chapter claims "4 workshops · 12 interviews". Confirm they're real or soften the copy (`case.hawi.research.*`, `case.hawi.stats`).
+3. **Gazella — white-label/theming block (deferred)**: add a section showing the product re-skinned per brand. Needs the three home screens exported FLAT (Original / Oysho / Santander); neutralise third-party marks; frame honestly as a speculative pitch, never adopted.
+4. **Optional polish**: Fiche salarié could gain one anonymised process visual (benchmarking or the account-state screens) from `~/Downloads/staff and go ficha/`. Cleanup pass: delete dead v1 (`DesignSystem.jsx` v1 + `designSystem.{en,fr}.js`, the empty `flows.jsx` / `UXResearch.jsx` stubs and their routes).
+
 ## Important Context About Virginia
 
 - Spanish native, lives in Saint-Malo, France. Trilingual ES/EN/FR.
