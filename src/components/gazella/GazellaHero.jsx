@@ -1,9 +1,11 @@
 import { useTranslation } from 'react-i18next';
+import { DeviceFrame } from '@/components/hawi/DeviceFrame';
 
 /**
  * Hero — cover for Case · Gazella.
- * 12-col mono meta strip (6 cells) · big title · subtitle · insight block.
- * Reuses .case-hero chrome (case.css / hawi.css); .gz-def lives in gazella.css.
+ * 12-col mono meta strip (6 cells) · two-column lead (title + subtitle) with the
+ * home ("today") screen in a phone frame on the right · insight block full-width
+ * below. Reuses .case-hero chrome (case.css) and .gz-def (gazella.css).
  */
 export function GazellaHero() {
   const { t } = useTranslation();
@@ -22,10 +24,22 @@ export function GazellaHero() {
         </div>
       </div>
 
-      <h1 className="hero-title">
-        Gazella<span className="it">.</span>
-      </h1>
-      <p className="sub">{t('case.gazella.subtitle')}</p>
+      <div className="case-hero__cols">
+        <div className="case-hero__lead">
+          <h1 className="hero-title">
+            Gazella<span className="it">.</span>
+          </h1>
+          <p className="sub">{t('case.gazella.subtitle')}</p>
+        </div>
+
+        <figure className="case-hero__visual">
+          <DeviceFrame
+            src="/case/gazella/gz-home.png"
+            alt={t('case.gazella.heroVisualAlt')}
+          />
+          <figcaption>{t('case.gazella.heroVisualCap')}</figcaption>
+        </figure>
+      </div>
 
       <div className="gz-def">
         <div className="label">{t('case.gazella.insight.label')}</div>

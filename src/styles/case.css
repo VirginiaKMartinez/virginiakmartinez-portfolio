@@ -73,6 +73,45 @@
   color: var(--fg-soft);
 }
 
+/* ---------- Hero: title lead (left) + product visual (right) ---------- */
+/* Shared across all case heroes. The meta strip stays full-width above;
+   the definition/insight block stays full-width below (sibling of __cols). */
+.case-hero__cols {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+  gap: clamp(28px, 5vw, 72px);
+  align-items: center;
+}
+.case-hero__lead { min-width: 0; }
+.case-hero__visual {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+.case-hero__visual figcaption {
+  font-family: var(--ff-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mute);
+  text-align: center;
+}
+.case-hero__visual .device-frame { max-width: 290px; }
+/* Illustration variant — full bleed within its column, no frame. */
+.case-hero__visual--art img {
+  display: block;
+  width: 100%;
+  max-width: 440px;
+  height: auto;
+}
+@media (max-width: 860px) {
+  .case-hero__cols { grid-template-columns: 1fr; gap: 36px; }
+  .case-hero__visual .device-frame { max-width: 260px; }
+  .case-hero__visual--art img { max-width: 360px; }
+}
+
 /* ---------- Chapter ---------- */
 .case-chapter {
   padding: clamp(80px, 11vw, 140px) 0;

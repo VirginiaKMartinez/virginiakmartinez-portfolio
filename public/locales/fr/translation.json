@@ -276,6 +276,8 @@
                 "outcome": "Prototype interactif"
             },
             "subtitle": "Une application mobile pour réduire la solitude des aînés. Des ateliers de découverte à un prototype Figma interactif basé sur les rôles.",
+            "heroVisualCap": "Concept · l'ohana",
+            "heroVisualAlt": "Illustration d'une famille enlacée regardant l'application Hawi sur un téléphone",
             "ohana": {
                 "label": "Ohana /oˈhana/",
                 "body": "<em>n.</em> Hawaïen. Le cercle des personnes qui forment votre famille — par le sang, le choix ou le temps."
@@ -295,16 +297,16 @@
                     "l": "Rôles acteurs"
                 },
                 {
-                    "n": "12+",
-                    "l": "Entretiens utilisateurs"
-                },
-                {
-                    "n": "4",
-                    "l": "Sessions d'atelier"
+                    "n": "3",
+                    "l": "Groupes impliqués"
                 },
                 {
                     "n": "6 mo",
                     "l": "Découverte au prototype"
+                },
+                {
+                    "n": "ES·EN·FR",
+                    "l": "Présenté en"
                 }
             ],
             "research": {
@@ -312,7 +314,7 @@
                 "title": "Parler au cercle,",
                 "titleIt": "pas seulement à l'aîné.",
                 "gutter": "Méthode",
-                "left": "Nous avons animé quatre ateliers de co-design à Madrid avec trois groupes : des aînés de 68 à 82 ans, leurs aidants familiaux principaux, et des coordinateurs de résidences. Douze entretiens approfondis ont suivi.",
+                "left": "La découverte s'est déroulée à Madrid avec trois groupes : des aînés de 68 à 82 ans, leurs aidants familiaux principaux, et des coordinateurs de résidences — à travers des ateliers de co-design et des entretiens approfondis.",
                 "rightTop": "Le schéma était constant : <em>les aînés ne se sentaient pas seuls — c'est l'entourage qui se sentait impuissant</em>. L'anxiété de ne pas savoir, de ne pas joindre, de ne pas être présent : c'était ça, le vrai problème."
             },
             "design": {
@@ -332,7 +334,7 @@
                 {
                     "step": "02",
                     "title": "Découverte",
-                    "desc": "Ateliers avec des familles et des professionnels du soin à Madrid. 12 entretiens, 4 sessions."
+                    "desc": "Ateliers de co-design et entretiens avec des familles et des professionnels du soin à Madrid."
                 },
                 {
                     "step": "03",
@@ -472,6 +474,8 @@
                 "outcome": "Publiée · 10K+ installations"
             },
             "subtitle": "Une app de santé pour femmes qui adapte l'entraînement et la nutrition aux phases du cycle menstruel. J'ai mené deux nouvelles parties : un calendrier de cycle éditable et la section nutrition premium.",
+            "heroVisualCap": "Accueil · aujourd'hui",
+            "heroVisualAlt": "Écran d'accueil de Gazella avec l'entraînement du jour et des articles liés au cycle",
             "insight": {
                 "label": "Le constat",
                 "body": "<em>Le corps n'est pas une horloge.</em> L'app calculait tout à partir d'une seule date saisie à l'inscription — sans jamais permettre de la modifier. Or les cycles varient : un autre jour, une autre durée, parfois aucune règle."

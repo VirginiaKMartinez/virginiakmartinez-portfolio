@@ -2,7 +2,8 @@ import { useTranslation } from 'react-i18next';
 
 /**
  * Hero — cover for Case · Hawi.
- * 12-col mono meta strip (6 cells) · big title · subtitle · ohana definition.
+ * 12-col mono meta strip (6 cells) · two-column lead (title + subtitle) with the
+ * ohana brand illustration on the right · ohana definition full-width below.
  */
 export function HawiHero() {
   const { t } = useTranslation();
@@ -21,10 +22,22 @@ export function HawiHero() {
         </div>
       </div>
 
-      <h1 className="hero-title">
-        Hawi<span className="it">.</span>
-      </h1>
-      <p className="sub">{t('case.hawi.subtitle')}</p>
+      <div className="case-hero__cols">
+        <div className="case-hero__lead">
+          <h1 className="hero-title">
+            Hawi<span className="it">.</span>
+          </h1>
+          <p className="sub">{t('case.hawi.subtitle')}</p>
+        </div>
+
+        <figure className="case-hero__visual case-hero__visual--art">
+          <img
+            src="/case/hawi/hawi-cover.png"
+            alt={t('case.hawi.heroVisualAlt')}
+          />
+          <figcaption>{t('case.hawi.heroVisualCap')}</figcaption>
+        </figure>
+      </div>
 
       <div className="ohana">
         <div className="label">{t('case.hawi.ohana.label')}</div>

@@ -276,6 +276,8 @@
                 "outcome": "Interactive prototype"
             },
             "subtitle": "A mobile app to reduce loneliness in older adults. From discovery workshops to a role-based interactive Figma prototype.",
+            "heroVisualCap": "Concept · the ohana",
+            "heroVisualAlt": "Illustration of a family embracing while looking at the Hawi app on a phone",
             "ohana": {
                 "label": "Ohana /oˈhana/",
                 "body": "<em>n.</em> Hawaiian. The circle of people who are your family — whether by blood, choice, or time."
@@ -295,16 +297,16 @@
                     "l": "Actor roles"
                 },
                 {
-                    "n": "12+",
-                    "l": "User interviews"
-                },
-                {
-                    "n": "4",
-                    "l": "Workshop sessions"
+                    "n": "3",
+                    "l": "Groups engaged"
                 },
                 {
                     "n": "6 mo",
                     "l": "Discovery to prototype"
+                },
+                {
+                    "n": "ES·EN·FR",
+                    "l": "Presented in"
                 }
             ],
             "research": {
@@ -312,7 +314,7 @@
                 "title": "Talking to the circle,",
                 "titleIt": "not just the elder.",
                 "gutter": "Method",
-                "left": "We ran four co-design workshops in Madrid with three groups: older adults aged 68–82, their primary family carers, and care-home coordinators. Twelve in-depth interviews followed.",
+                "left": "Discovery ran in Madrid with three groups: older adults aged 68–82, their primary family carers, and care-home coordinators — through co-design workshops and in-depth interviews.",
                 "rightTop": "The pattern was consistent: <em>older adults didn't feel lonely — the people around them felt powerless</em>. The anxiety of not knowing, not reaching, not being present was the real problem to solve."
             },
             "design": {
@@ -332,7 +334,7 @@
                 {
                     "step": "02",
                     "title": "Discovery",
-                    "desc": "Workshops with families and care professionals in Madrid. 12 interviews, 4 sessions."
+                    "desc": "Co-design workshops and interviews with families and care professionals in Madrid."
                 },
                 {
                     "step": "03",
@@ -463,6 +465,8 @@
                 "outcome": "Shipped · 10K+ installs"
             },
             "subtitle": "A women's health app that tunes training and nutrition to the menstrual cycle. I led two new areas: an editable cycle calendar and the premium nutrition section.",
+            "heroVisualCap": "Home · today",
+            "heroVisualAlt": "Gazella home screen with the day's training and cycle-based articles",
             "insight": {
                 "label": "The premise",
                 "body": "<em>Bodies aren't clockwork.</em> The app planned everything from one date entered at sign-up — and never let you change it. But cycles shift: different day, different length, some months none at all."
