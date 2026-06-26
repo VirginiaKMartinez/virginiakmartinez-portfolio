@@ -13,6 +13,7 @@ import { BackFoot } from '@/components/case/BackFoot';
 import { DashboardPlate } from '@/components/case/plates/DashboardPlate';
 import { FilterPlate } from '@/components/case/plates/FilterPlate';
 import { DialogPlate } from '@/components/case/plates/DialogPlate';
+import { DocPlate } from '@/components/case/plates/DocPlate';
 import { LibraryPlate } from '@/components/case/plates/LibraryPlate';
 
 /**
@@ -28,7 +29,7 @@ export default function CaseStaffAndGo() {
     <div data-screen-label="Case · Staff & Go">
       <CaseTopbar />
 
-      <main className="wrap">
+      <div className="wrap">
         <CaseHero />
 
         <Chapter
@@ -65,6 +66,33 @@ export default function CaseStaffAndGo() {
         </Chapter>
 
         <Chapter
+          id="documentation"
+          num={t('case.documentation.num')}
+          title={t('case.documentation.title')}
+          titleIt={t('case.documentation.titleIt')}
+          gutter={t('case.documentation.gutter')}
+          left={t('case.documentation.left')}
+          rightTop={t('case.documentation.rightTop')}
+          rightBottom={t('case.documentation.rightBottom')}
+        >
+          <DocPlate />
+
+          <figure className="case-artifact">
+            <span className="case-artifact__tag">{t('case.docShot.tag')}</span>
+            <img
+              className="doc-shot__img"
+              src="/case/staff-and-go/sg-doc-buttons.svg"
+              alt={t('case.docShot.alt')}
+              loading="lazy"
+            />
+            <figcaption className="case-artifact__cap">
+              <span>{t('case.docShot.cap')}</span>
+              <span>{t('case.docShot.meta')}</span>
+            </figcaption>
+          </figure>
+        </Chapter>
+
+        <Chapter
           id="engineering"
           num={t('case.engineering.num')}
           title={t('case.engineering.title')}
@@ -90,7 +118,7 @@ export default function CaseStaffAndGo() {
 
         <OtherCases />
         <BackFoot />
-      </main>
+      </div>
     </div>
   );
 }

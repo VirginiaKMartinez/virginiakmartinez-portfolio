@@ -72,6 +72,9 @@ export default function Header() {
 
     return (
         <>
+            <a className="skip-link" href="#main">
+                {t("a11y.skip")}
+            </a>
             <header className="topbar">
                 <div className="left">
                     <a
@@ -141,6 +144,7 @@ export default function Header() {
                 role="dialog"
                 aria-modal="true"
                 aria-hidden={!menuOpen}
+                inert={!menuOpen}
                 onClick={(e) => {
                     if (e.target === e.currentTarget) setMenuOpen(false);
                 }}

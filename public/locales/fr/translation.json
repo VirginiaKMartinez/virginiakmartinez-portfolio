@@ -1,4 +1,7 @@
 {
+    "a11y": {
+        "skip": "Aller au contenu"
+    },
     "topbar": {
         "role": "Product Designer",
         "mid": "Travaux choisis · Saint-Malo, FR",
@@ -131,8 +134,20 @@
             "teamValue": "Design · Eng · PM",
             "status": "Statut",
             "statusValue": "En production · NDA",
-            "title": "Staff <it>&</it> Go.",
-            "sub": "Construire le design system et les fondations UI d'une plateforme RH B2B — d'une seule couleur d'accent à vingt-cinq composants, trois équipes, et un vocabulaire partagé avec l'ingénierie."
+            "title": "Design <it>System.</it>",
+            "sub": "Construire le design system et les fondations UI d'une plateforme RH B2B — d'une seule couleur d'accent à vingt-cinq composants, trois équipes, et un vocabulaire partagé avec l'ingénierie.",
+            "kit": {
+                "product": "Produit",
+                "label": "Table des entretiens",
+                "built": "Issu du système",
+                "cols": {
+                    "participant": "Participant",
+                    "status": "Statut",
+                    "date": "Date"
+                },
+                "caption": "Un composant, construit à partir des tokens",
+                "aria": "Une table de données — un composant assemblé à partir du design system de Staff & Go, avec participants, chips de statut et dates."
+            }
         },
         "context": {
             "num": "01 · Contexte",
@@ -159,7 +174,7 @@
             "rightBottom": "Le but n'a jamais été de gagner un fichier Figma. C'était de rendre chaque décision produit plus rapide que la précédente."
         },
         "engineering": {
-            "num": "03 · Ingénierie",
+            "num": "04 · Ingénierie",
             "title": "Je ne livre pas en passant —",
             "titleIt": "je m'assois à côté.",
             "gutter": "Pratique",
@@ -167,7 +182,7 @@
             "rightTop": "Ce n'est pas une histoire de designer-développeur. C'est une histoire de <em>retirer des frictions</em> : quand un composant dérive, je le remarque ; quand la doc n'est pas claire, je la réécris ; quand un token est nommé deux fois, je l'attrape avant la review. Le produit avance plus vite, avec moins de surprises."
         },
         "outcomes": {
-            "num": "04 · Résultats",
+            "num": "05 · Résultats",
             "title": "Un produit,",
             "titleIt": "une voix.",
             "gutter": "Résultat",
@@ -210,19 +225,67 @@
                 "dashboard": "UI · Entretiens annuels",
                 "filter": "UI · Filtre",
                 "dialog": "UI · Dialog",
+                "doc": "DS · Doc composant",
                 "library": "DS · Vue d'ensemble"
             },
             "cap": {
                 "dashboard": "Plate 02 · Liste d'entretiens, avec variantes de chips d'état",
                 "filter": "Plate 03 · Filtre",
                 "dialog": "Plate 04 · Dialog destructif",
-                "library": "Plate 05 · Bibliothèque · La surface complète, documentée"
+                "doc": "Plate 05 · Documentation · Button — anatomie, états & usage",
+                "library": "Plate 06 · Bibliothèque · La surface complète, documentée"
             },
             "meta": {
                 "dashboard": "Figma → Angular 16",
                 "filter": "Composant",
                 "dialog": "Composant",
+                "doc": "Recréé depuis la page de doc",
                 "library": "Figma · 25+ composants · Angular 16"
+            }
+        },
+        "docShot": {
+            "tag": "DS · Page de doc réelle",
+            "cap": "Plate 05b · Doc Button — guide d'usage des couleurs + la matrice type × état × taille",
+            "meta": "Exporté de Figma · conforme NDA",
+            "alt": "Une page de la documentation du bouton de Staff & Go : l'Intro, le guide d'usage des couleurs (Primary, Warning, Error, Success, Advance) et la matrice des types de boutons selon les états et les tailles."
+        },
+        "documentation": {
+            "num": "03 · Documentation",
+            "title": "Un système qui se lit,",
+            "titleIt": "pas seulement qui se regarde.",
+            "gutter": "Guide",
+            "left": "Un composant n'est pas fini quand il est dessiné — il l'est quand un dev ou un PM peut l'utiliser sans me demander. Chaque composant est donc livré avec sa propre page : une intro sur son rôle, ses états et variantes, les règles du quand-utiliser-quoi, les do's & don'ts, et les tokens et specs exacts pour l'implémenter.",
+            "rightTop": "Chaque page partait de la même question : <em>comment va-t-on le mal-utiliser ?</em> Les paires do/don't y répondaient avant la revue de code — et tout était indexé, pour que l'équipe se serve seule au lieu de me solliciter.",
+            "rightBottom": "Écrit pour qu'un dev copie-colle la spec et qu'un PM suive la décision."
+        },
+        "docPlate": {
+            "kicker": "Doc · Composant",
+            "component": "Button",
+            "backToIndex": "← Retour à l'index",
+            "introTitle": "Intro",
+            "introBody": "Les types, tailles et couleurs du bouton couvrent les combinaisons dont une vue a besoin — en gardant la hiérarchie visuelle et une expérience cohérente. Les icônes et la couleur rendent chaque action compréhensible et accessible.",
+            "statesLabel": "États & variantes",
+            "states": {
+                "primary": "Primaire",
+                "secondary": "Secondaire",
+                "pressed": "Pressé",
+                "disabled": "Désactivé"
+            },
+            "doLabel": "À faire",
+            "dontLabel": "À éviter",
+            "doBtn": "Enregistrer",
+            "dontBtn": "Continuer",
+            "doText": "Une seule action primaire par vue — l'étape décisive.",
+            "dontText": "Deux primaires en concurrence — l'utilisateur ne sait plus quoi choisir.",
+            "specs": {
+                "radius": "Rayon",
+                "radiusV": "4 / 999px",
+                "padding": "Padding",
+                "paddingV": "8 × 16",
+                "icon": "Icône",
+                "iconV": "16px",
+                "token": "Token",
+                "tokenV": "$btn-primary"
             }
         },
         "library": {
@@ -242,7 +305,7 @@
             "om": "Optiva <em>Media</em>",
             "omDesc": "Plateformes vidéo multi-écrans pour Orange, HBO et Filmin. Correction de bugs et support de fonctionnalités — y compris la build UEFA Euro 2020. AngularJS, JavaScript, Sass.",
             "omMeta": "Dév Front-End · Madrid",
-            "sg": "Staff <em>& Go</em>",
+            "sg": "Design <em>System</em>",
             "sgDesc": "Design system de zéro pour une plateforme RH B2B. 25+ composants, design tokens, trois équipes alignées.",
             "sgMeta": "Designeuse Produit · Saint-Malo",
             "hw": "Hawi <em>· Akimad</em>",
@@ -584,6 +647,13 @@
                 "outcome": "Déployé par phases"
             },
             "subtitle": "Refonte de l'écran le plus dense d'une app de gestion du personnel B2B — la fiche salarié — d'un mur de champs écrasant à quelque chose de lisible et apprenable.",
+            "heroDiagram": {
+                "before": "Avant",
+                "after": "Après",
+                "sections": ["Identité", "Contrat", "Paie"],
+                "caption": "Un mur de champs → des sections",
+                "aria": "Schéma : un mur de champs identiques à gauche devient une fiche organisée en sections étiquetées à droite."
+            },
             "insight": {
                 "label": "Le constat",
                 "body": "<em>Toute l'app était difficile à apprendre.</em> Un outil de gestion dense, à courbe d'apprentissage raide. J'ai pris en charge l'une de ses zones les plus surchargées — la fiche salarié — avec un schéma pensé pour aller plus loin."

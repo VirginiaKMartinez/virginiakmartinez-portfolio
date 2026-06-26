@@ -2,7 +2,7 @@ const selectedWork = [
     {
         id: "staff-and-go",
         year: "2023 — 2024",
-        titleHtml: "Staff&nbsp;<em>&amp;</em>&nbsp;Go",
+        titleHtml: "Design&nbsp;<em>System</em>",
         role: "Product Designer",
         roleDescKey: "work.items.staffAndGo.desc",
         tag: "B2B SaaS · France",

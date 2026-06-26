@@ -8,7 +8,7 @@ const MainLayout = () => {
             <Header />
             <ScrollProgress />
 
-            <main className="flex-grow wrap">
+            <main id="main" tabIndex={-1} className="flex-grow wrap">
                 <Outlet />
             </main>
         </div>

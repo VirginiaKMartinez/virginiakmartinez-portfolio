@@ -27,7 +27,7 @@ export default function CaseHawi() {
     <div data-screen-label="Case · Hawi">
       <CaseTopbar caseLabel={t('case.topbar.hawiOf')} />
 
-      <main className="wrap">
+      <div className="wrap">
         <HawiHero />
 
         {/* 01 · Context */}
@@ -105,7 +105,7 @@ export default function CaseHawi() {
 
         <OtherCases exclude="hawi" />
         <BackFoot mid={t('case.hawi.foot.mid')} />
-      </main>
+      </div>
     </div>
   );
 }

@@ -1,4 +1,7 @@
 {
+    "a11y": {
+        "skip": "Skip to content"
+    },
     "topbar": {
         "role": "Product Designer",
         "mid": "Selected work · Saint-Malo, FR",
@@ -131,8 +134,20 @@
             "teamValue": "Design · Eng · PM",
             "status": "Status",
             "statusValue": "Live · NDA",
-            "title": "Staff <it>&</it> Go.",
-            "sub": "Building the design system and the UI foundations of a B2B HR platform — from a single accent color to twenty-five components, three teams, and one shared vocabulary with engineering."
+            "title": "Design <it>System.</it>",
+            "sub": "Building the design system and the UI foundations of a B2B HR platform — from a single accent color to twenty-five components, three teams, and one shared vocabulary with engineering.",
+            "kit": {
+                "product": "Product",
+                "label": "Reviews table",
+                "built": "Built from the system",
+                "cols": {
+                    "participant": "Participant",
+                    "status": "Status",
+                    "date": "Date"
+                },
+                "caption": "One component, built from the tokens",
+                "aria": "A reviews data table — one component assembled from the Staff & Go design system, with participants, status chips and dates."
+            }
         },
         "context": {
             "num": "01 · Context",
@@ -159,7 +174,7 @@
             "rightBottom": "The point was never to win a Figma file. It was to make every product decision faster than the previous one."
         },
         "engineering": {
-            "num": "03 · Engineering",
+            "num": "04 · Engineering",
             "title": "I don't hand off —",
             "titleIt": "I sit next to it.",
             "gutter": "Practice",
@@ -167,7 +182,7 @@
             "rightTop": "This isn't about being a designer-developer. It's about <em>removing friction</em>: when a component drifts, I notice; when documentation is unclear, I rewrite it; when a token gets named twice, I catch it before review. The product moves forward faster, with fewer surprises."
         },
         "outcomes": {
-            "num": "04 · Outcomes",
+            "num": "05 · Outcomes",
             "title": "One product,",
             "titleIt": "one voice.",
             "gutter": "Result",
@@ -210,19 +225,67 @@
                 "dashboard": "UI · Annual reviews",
                 "filter": "UI · Filter",
                 "dialog": "UI · Dialog",
+                "doc": "DS · Component doc",
                 "library": "DS · Library overview"
             },
             "cap": {
                 "dashboard": "Plate 02 · Annual-review list, with status chip variants",
                 "filter": "Plate 03 · Filter",
                 "dialog": "Plate 04 · Destructive dialog",
-                "library": "Plate 05 · Library · The full surface, documented"
+                "doc": "Plate 05 · Documentation · Button — anatomy, states & usage",
+                "library": "Plate 06 · Library · The full surface, documented"
             },
             "meta": {
                 "dashboard": "Figma → Angular 16",
                 "filter": "Component",
                 "dialog": "Component",
+                "doc": "Recreated from the doc page",
                 "library": "Figma · 25+ components · Angular 16"
+            }
+        },
+        "docShot": {
+            "tag": "DS · Real doc page",
+            "cap": "Plate 05b · Button doc — colour-usage guidance + the full type × state × size matrix",
+            "meta": "Exported from Figma · NDA-safe",
+            "alt": "A page from the Staff & Go button documentation: the Intro, the colour-usage guidance (Primary, Warning, Error, Success, Advance) and the matrix of button types across states and sizes."
+        },
+        "documentation": {
+            "num": "03 · Documentation",
+            "title": "A system you can read,",
+            "titleIt": "not just look at.",
+            "gutter": "Guidance",
+            "left": "A component isn't done when it's drawn — it's done when a developer or PM can use it without asking me. So every component shipped with its own page: an intro on what it's for, its states and variants, the rules for which to use when, do's and don'ts, and the exact tokens and specs to implement it.",
+            "rightTop": "Each page started from the same question: <em>how will this be misused?</em> The do/don't pairs answered it before code review did — and everything was indexed, so the team could self-serve instead of pinging me.",
+            "rightBottom": "Written so a developer could copy-paste the spec and a PM could follow the decision."
+        },
+        "docPlate": {
+            "kicker": "Doc · Component",
+            "component": "Button",
+            "backToIndex": "← Back to index",
+            "introTitle": "Intro",
+            "introBody": "The button's types, sizes and colours cover the combinations a view needs — keeping visual hierarchy and a consistent experience. Icons and colour make each action understandable and accessible.",
+            "statesLabel": "States & variants",
+            "states": {
+                "primary": "Primary",
+                "secondary": "Secondary",
+                "pressed": "Pressed",
+                "disabled": "Disabled"
+            },
+            "doLabel": "Do",
+            "dontLabel": "Don't",
+            "doBtn": "Enregistrer",
+            "dontBtn": "Continuer",
+            "doText": "One primary action per view — the decisive next step.",
+            "dontText": "Two primaries competing — the user can't tell what matters.",
+            "specs": {
+                "radius": "Radius",
+                "radiusV": "4 / 999px",
+                "padding": "Padding",
+                "paddingV": "8 × 16",
+                "icon": "Icon",
+                "iconV": "16px",
+                "token": "Token",
+                "tokenV": "$btn-primary"
             }
         },
         "library": {
@@ -242,7 +305,7 @@
             "om": "Optiva <em>Media</em>",
             "omDesc": "Multi-screen video platforms for Orange, HBO and Filmin. Bug-fixing and feature support — including the UEFA Euro 2020 build. AngularJS, JavaScript, Sass.",
             "omMeta": "Front-End Dev · Madrid",
-            "sg": "Staff <em>& Go</em>",
+            "sg": "Design <em>System</em>",
             "sgDesc": "Design system from scratch for a B2B HR platform. 25+ components, design tokens, three teams aligned.",
             "sgMeta": "Product Designer · Saint-Malo",
             "hw": "Hawi <em>· Akimad</em>",
@@ -575,6 +638,13 @@
                 "outcome": "Shipped in phases"
             },
             "subtitle": "Redesigning the densest screen in a B2B workforce-management app — the employee record — from an overwhelming wall of fields into something legible and learnable.",
+            "heroDiagram": {
+                "before": "Before",
+                "after": "After",
+                "sections": ["Identity", "Contract", "Payroll"],
+                "caption": "A wall of fields → sections",
+                "aria": "Diagram: an undifferentiated wall of equal fields on the left becomes a record organised into labelled sections on the right."
+            },
             "insight": {
                 "label": "The premise",
                 "body": "<em>The whole app was hard to learn.</em> A dense management tool with a steep curve. I took on one of its most overloaded areas — the employee record — with a pattern meant to scale beyond it."

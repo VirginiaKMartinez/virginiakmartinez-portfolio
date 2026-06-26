@@ -1,8 +1,10 @@
 import { useTranslation } from 'react-i18next';
+import { FicheHeroVisual } from './FicheHeroVisual';
 
 /**
  * Hero — cover for Case · Fiche salarié (Staff & Go redesign).
- * Reuses .case-hero chrome; .ff-def lives in fiche.css.
+ * Two-column lead (title + subtitle) with an editorial before→after diagram on
+ * the right. Reuses .case-hero chrome; .ff-def lives in fiche.css.
  */
 export function FicheHero() {
   const { t } = useTranslation();
@@ -21,10 +23,16 @@ export function FicheHero() {
         </div>
       </div>
 
-      <h1 className="hero-title">
-        Fiche <span className="it">salarié.</span>
-      </h1>
-      <p className="sub">{t('case.fiche.subtitle')}</p>
+      <div className="case-hero__cols">
+        <div className="case-hero__lead">
+          <h1 className="hero-title">
+            Fiche <span className="it">salarié.</span>
+          </h1>
+          <p className="sub">{t('case.fiche.subtitle')}</p>
+        </div>
+
+        <FicheHeroVisual />
+      </div>
 
       <div className="ff-def">
         <div className="label">{t('case.fiche.insight.label')}</div>

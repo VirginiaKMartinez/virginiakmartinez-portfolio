@@ -17,4 +17,13 @@ i18n.use(Backend)
         },
     });
 
+// Keep <html lang> in sync so screen readers use the right pronunciation
+// (WCAG 3.1.1). Normalise region variants (e.g. "fr-FR" → "fr").
+const applyHtmlLang = (lng) => {
+    const short = (lng || "en").split("-")[0];
+    document.documentElement.setAttribute("lang", short);
+};
+applyHtmlLang(i18n.language);
+i18n.on("languageChanged", applyHtmlLang);
+
 export default i18n;

@@ -37,7 +37,7 @@ export default function CaseGazella() {
     <div data-screen-label="Case · Gazella">
       <CaseTopbar caseLabel={t('case.topbar.gazellaOf')} />
 
-      <main className="wrap">
+      <div className="wrap">
         <GazellaHero />
 
         {/* 01 · Context */}
@@ -116,7 +116,7 @@ export default function CaseGazella() {
 
         <OtherCases exclude="gazella" />
         <BackFoot mid={t('case.gazella.foot.mid')} />
-      </main>
+      </div>
     </div>
   );
 }

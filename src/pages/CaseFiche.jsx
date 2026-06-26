@@ -24,7 +24,7 @@ export default function CaseFiche() {
     <div data-screen-label="Case · Fiche salarié">
       <CaseTopbar caseLabel={t('case.topbar.ficheOf')} />
 
-      <main className="wrap">
+      <div className="wrap">
         <FicheHero />
 
         {/* 01 · Context */}
@@ -106,7 +106,7 @@ export default function CaseFiche() {
 
         <OtherCases exclude="fiche-salarie" />
         <BackFoot mid={t('case.fiche.foot.mid')} />
-      </main>
+      </div>
     </div>
   );
 }

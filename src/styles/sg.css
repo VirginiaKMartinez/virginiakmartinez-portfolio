@@ -9,7 +9,8 @@
    Keep both in the same selector so .sg-* utilities resolve their vars
    in both contexts. */
 .case-plate,
-.case-snap {
+.case-snap,
+.sg-reviews {
   --sg-primary:   #144D9D;
   --sg-darkest:   #142133;
   --sg-dark:      #475466;
@@ -41,6 +42,153 @@
   font-size: 14px;
   line-height: 1.4;
 }
+
+/* ---------- Documentation entry (recreated doc page) ---------- */
+.doc-entry { font-family: 'Roboto', sans-serif; color: var(--sg-darkest); }
+.doc-entry__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--sg-line);
+  margin-bottom: 18px;
+}
+.doc-entry__id { display: flex; align-items: baseline; gap: 12px; }
+.doc-entry__kicker {
+  font-family: var(--ff-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sg-medium);
+}
+.doc-entry__id strong { font-size: 17px; font-weight: 500; }
+.doc-entry__index { color: var(--sg-primary); font-size: 13px; font-weight: 500; }
+.doc-entry__intro {
+  background: #EFEFEF;
+  border: 1px solid #E6E6E6;
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  max-width: 550px;
+}
+.doc-entry__introTitle { font-weight: 500; margin-bottom: 4px; }
+.doc-entry__intro p { margin: 0; font-size: 13px; line-height: 1.55; color: var(--sg-dark); }
+.doc-entry__label {
+  font-family: var(--ff-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sg-medium);
+  margin-bottom: 10px;
+}
+.doc-entry__states { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 22px; }
+.doc-entry__rules { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 20px; }
+.doc-entry__rule { border-radius: 8px; padding: 14px; border: 1px solid var(--sg-line); }
+.doc-entry__rule--do { background: var(--sg-bg-success); border-color: #CDEBD9; }
+.doc-entry__rule--dont { background: var(--sg-bg-alert); border-color: #F6D2CE; }
+.doc-entry__ruleHead { font-size: 12px; font-weight: 500; margin-bottom: 10px; }
+.doc-entry__ruleHead--do { color: #209D59; }
+.doc-entry__ruleHead--dont { color: #B71F1F; }
+.doc-entry__ruleDemo { display: flex; gap: 8px; flex-wrap: wrap; }
+.doc-entry__rule p { margin: 10px 0 0; font-size: 12px; line-height: 1.5; color: var(--sg-dark); }
+.doc-entry__specs {
+  border-top: 1px solid var(--sg-line);
+  padding-top: 14px;
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+  font-family: var(--ff-mono);
+  font-size: 11px;
+  color: var(--sg-medium);
+}
+.doc-entry__specs strong { color: var(--sg-darkest); font-weight: 500; }
+.doc-entry__token { color: var(--sg-accent) !important; }
+@media (max-width: 560px) {
+  .doc-entry__rules { grid-template-columns: 1fr; }
+}
+
+/* Real exported documentation page (proof artifact) */
+.doc-shot__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--color-divider, #e5e5e5);
+}
+
+/* ---------- Hero reviews table (cover visual) ---------- */
+.sg-reviews {
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+  max-width: 440px;
+  background: var(--sg-white);
+  border: 1px solid var(--sg-line);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px -28px rgba(20, 33, 51, 0.28);
+}
+.sg-reviews__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 13px 18px;
+  background: var(--sg-lightest);
+  border-bottom: 1px solid var(--sg-line);
+}
+.sg-reviews__title {
+  font-family: var(--ff-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sg-medium);
+}
+.sg-reviews__title strong { color: var(--sg-accent); font-weight: 500; }
+.sg-reviews__note {
+  font-family: var(--ff-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sg-medium);
+}
+.sg-reviews__table { width: 100%; border-collapse: collapse; }
+.sg-reviews__table th {
+  text-align: left;
+  padding: 12px 18px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--sg-dark);
+  border-bottom: 1px solid var(--sg-line);
+}
+.sg-reviews__table td {
+  padding: 12px 18px;
+  font-size: 13px;
+  color: var(--sg-darkest);
+  border-bottom: 1px solid var(--sg-line);
+  vertical-align: middle;
+}
+.sg-reviews__table tbody tr:last-child td { border-bottom: 0; }
+/* Row hover/selected uses the lightest blue (--sg-lightest #F5F9FF) so the
+   "À préparer" chip's blue pill (--sg-bg-accent #DEECFE) stays visible. */
+.sg-reviews__table tbody tr.is-selected { background: #F5F9FF; }
+.sg-reviews__person { display: inline-flex; align-items: center; gap: 10px; }
+.sg-reviews__avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: inline-grid;
+  place-items: center;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #fff;
+  flex: 0 0 auto;
+}
+.sg-reviews__avatar--blue   { background: var(--sg-accent); }
+.sg-reviews__avatar--pink   { background: #C73E89; }
+.sg-reviews__avatar--amber  { background: #E89A1C; }
+.sg-reviews__avatar--green  { background: #1FA85C; }
+.sg-reviews__date { color: var(--sg-dark); white-space: nowrap; }
 
 /* ---------- Button ---------- */
 .sg-btn {

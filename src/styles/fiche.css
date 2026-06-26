@@ -31,6 +31,67 @@
 }
 .case-hero .ff-def .def em { font-style: normal; color: var(--accent); }
 
+/* === Hero visual — editorial "wall of fields → sections" diagram ======= */
+
+.fiche-hero-art { margin: 0; display: flex; flex-direction: column; gap: 14px; }
+.fiche-hero-art__pair {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: clamp(10px, 1.6vw, 18px);
+  width: 100%;
+  max-width: 460px;
+  margin: 0 auto;
+}
+.fiche-hero-art__panel {
+  background: var(--paper);
+  border: 0.5px solid var(--line);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-self: stretch;
+}
+.fiche-hero-art__tag {
+  font-family: var(--ff-mono);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mute);
+}
+.fiche-hero-art__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+.fiche-hero-art__cell { height: 8px; background: var(--line); }
+.fiche-hero-art__arrow {
+  font-family: var(--ff-mono);
+  font-size: 20px;
+  color: var(--accent);
+  text-align: center;
+}
+.fiche-hero-art__section { display: flex; flex-direction: column; gap: 5px; }
+.fiche-hero-art__slabel {
+  font-family: var(--ff-mono);
+  font-size: 8px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.fiche-hero-art__line { height: 9px; background: var(--line); }
+.fiche-hero-art__line.is-lg { width: 90%; }
+.fiche-hero-art__line.is-md { width: 68%; }
+.fiche-hero-art__line.is-sm { width: 50%; }
+.fiche-hero-art figcaption {
+  font-family: var(--ff-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mute);
+  text-align: center;
+}
+
 /* === Before / After ==================================================== */
 
 .fiche-ba { margin-top: 56px; display: grid; gap: 28px; }

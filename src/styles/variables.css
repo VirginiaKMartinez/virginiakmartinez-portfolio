@@ -77,6 +77,9 @@ html[data-palette="rosso"] {
     --bg-2: oklch(0.945 0.006 250);
     --fg: oklch(0.18 0.012 260);
     --fg-soft: oklch(0.38 0.012 260);
+    /* Darkened from the :root default so mono captions/meta clear WCAG 1.4.3
+       (4.5:1). At L0.53 it lands ~4.9:1 on --bg while staying clearly muted. */
+    --mute: oklch(0.53 0.01 260);
     --accent: oklch(0.55 0.18 25);
     --accent-ink: oklch(0.3 0.12 25);
     --paper: oklch(0.985 0.004 250);
