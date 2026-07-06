@@ -638,17 +638,6 @@
                 "outcome": "Shipped in phases"
             },
             "subtitle": "Redesigning the densest screen in a B2B workforce-management app — the employee record — from an overwhelming wall of fields into something legible and learnable.",
-            "heroDiagram": {
-                "before": "Before",
-                "after": "After",
-                "sections": [
-                    "Identity",
-                    "Contract",
-                    "Payroll"
-                ],
-                "caption": "A wall of fields → sections",
-                "aria": "Diagram: an undifferentiated wall of equal fields on the left becomes a record organised into labelled sections on the right."
-            },
             "insight": {
                 "label": "The premise",
                 "body": "<em>The whole app was hard to learn.</em> A dense management tool with a steep curve. I took on one of its most overloaded areas — the employee record — with a pattern meant to scale beyond it."
@@ -719,7 +708,14 @@
                     "n": "2023—24",
                     "l": "Staff & Go"
                 }
-            ]
+            ],
+            "heroCard": {
+                "product": "Product",
+                "label": "Employee record",
+                "built": "Built from the redesign",
+                "caption": "The redesigned record — rebuilt in code, fictitious data",
+                "aria": "The redesigned employee record rebuilt as a product card: header with status chips, ordered section tabs and clean fields. Fictitious employee data."
+            }
         }
     },
     "hero": {

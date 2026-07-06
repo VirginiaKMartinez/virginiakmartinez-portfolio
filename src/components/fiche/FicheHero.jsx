@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { FicheHeroVisual } from './FicheHeroVisual';
+import { FicheRecordCard } from './FicheRecordCard';
 
 /**
  * Hero — cover for Case · Fiche salarié (Staff & Go redesign).
@@ -31,7 +31,7 @@ export function FicheHero() {
           <p className="sub">{t('case.fiche.subtitle')}</p>
         </div>
 
-        <FicheHeroVisual />
+        <FicheRecordCard />
       </div>
 
       <div className="ff-def">

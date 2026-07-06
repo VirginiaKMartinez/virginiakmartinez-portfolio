@@ -10,7 +10,8 @@
    in both contexts. */
 .case-plate,
 .case-snap,
-.sg-reviews {
+.sg-reviews,
+.ff-card {
   --sg-primary:   #144D9D;
   --sg-darkest:   #142133;
   --sg-dark:      #475466;

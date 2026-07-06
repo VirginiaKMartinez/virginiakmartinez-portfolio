@@ -638,17 +638,6 @@
                 "outcome": "Déployé par phases"
             },
             "subtitle": "Refonte de l'écran le plus dense d'une app de gestion du personnel B2B — la fiche salarié — d'un mur de champs écrasant à quelque chose de lisible et apprenable.",
-            "heroDiagram": {
-                "before": "Avant",
-                "after": "Après",
-                "sections": [
-                    "Identité",
-                    "Contrat",
-                    "Paie"
-                ],
-                "caption": "Un mur de champs → des sections",
-                "aria": "Schéma : un mur de champs identiques à gauche devient une fiche organisée en sections étiquetées à droite."
-            },
             "insight": {
                 "label": "Le constat",
                 "body": "<em>Toute l'app était difficile à apprendre.</em> Un outil de gestion dense, à courbe d'apprentissage raide. J'ai pris en charge l'une de ses zones les plus surchargées — la fiche salarié — avec un schéma pensé pour aller plus loin."
@@ -719,7 +708,14 @@
                     "n": "2023—24",
                     "l": "Staff & Go"
                 }
-            ]
+            ],
+            "heroCard": {
+                "product": "Produit",
+                "label": "Fiche salarié",
+                "built": "Issu de la refonte",
+                "caption": "La fiche redessinée — reconstruite en code, données fictives",
+                "aria": "La fiche salarié redessinée reconstruite en carte produit : en-tête avec chips de statut, onglets de sections ordonnées et champs lisibles. Données de salarié fictives."
+            }
         }
     },
     "hero": {
