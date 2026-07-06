@@ -13,7 +13,12 @@ export function ScrollPhone({ src, alt, hint }) {
         <div className="scroller">
           <img src={src} alt={alt} loading="lazy" decoding="async" />
         </div>
-        {hint && <span className="scroll-hint" aria-hidden="true">{hint}</span>}
+        {hint && (
+          <span className="scroll-hint" aria-hidden="true">
+            <span className="scroll-hint__ico">↕</span>
+            {hint}
+          </span>
+        )}
       </div>
     </div>
   );

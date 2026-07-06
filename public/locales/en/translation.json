@@ -610,7 +610,7 @@
                 "tag": "UI · Recipe",
                 "cap": "Recipe detail — ingredients, steps, macro breakdown",
                 "alt": "Full Gazella recipe screen for a poke bowl",
-                "scrollHint": "↕ Scroll the screen"
+                "scrollHint": "Scroll the screen"
             },
             "nutShots": {
                 "kicker": "Nutrition · key screens",
@@ -691,7 +691,7 @@
                 "heading": "One order, <em>learned once.</em>",
                 "body": "On every breakpoint the record reads as the same ordered sections — Profile, Identification, Birth, Contact, and so on. The employee and establishment records share that order, so a professional user learns the pattern once and reuses it everywhere.",
                 "alt": "Redesigned employee record on mobile, scrollable (anonymised)",
-                "scrollHint": "↕ Scroll the screen"
+                "scrollHint": "Scroll the screen"
             },
             "outcome": {
                 "num": "04 · Outcome",

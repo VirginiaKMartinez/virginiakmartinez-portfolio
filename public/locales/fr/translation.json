@@ -610,7 +610,7 @@
                 "tag": "UI · Recette",
                 "cap": "Détail d’une recette — ingrédients, étapes, répartition des macros",
                 "alt": "Écran complet d’une recette Gazella",
-                "scrollHint": "↕ Faire défiler"
+                "scrollHint": "Faire défiler"
             },
             "nutShots": {
                 "kicker": "Nutrition · écrans clés",
@@ -691,7 +691,7 @@
                 "heading": "Un seul ordre, <em>appris une fois.</em>",
                 "body": "À chaque breakpoint, la fiche se lit comme les mêmes sections ordonnées — Profil, Identification, Naissance, Coordonnées, etc. Les fiches salarié et établissement partagent cet ordre : l’utilisateur professionnel apprend le schéma une fois et le réutilise partout.",
                 "alt": "Fiche salarié redessinée sur mobile, défilable (anonymisé)",
-                "scrollHint": "↕ Faire défiler"
+                "scrollHint": "Faire défiler"
             },
             "outcome": {
                 "num": "04 · Résultat",
