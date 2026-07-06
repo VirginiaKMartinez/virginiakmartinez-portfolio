@@ -13,6 +13,10 @@ const THUMBS = {
     gazella: "/images/work/gazella.webp",
 };
 
+// Thumbs paused for now (crops not approved). Wiring + CSS kept intact —
+// flip to true to bring them back.
+const SHOW_THUMBS = false;
+
 export default function SelectedWork() {
     const { t, i18n } = useTranslation();
     const lang = i18n.language?.startsWith("fr") ? "fr" : "en";
@@ -30,7 +34,7 @@ export default function SelectedWork() {
                 kicker={t("work.kicker")}
             />
 
-            <div className="works">
+            <div className={`works${SHOW_THUMBS ? "" : " works--no-thumbs"}`}>
                 {items.map((w) => (
                     <a
                         key={w.id}
@@ -42,18 +46,20 @@ export default function SelectedWork() {
                             if (w.disabled) e.preventDefault();
                         }}
                     >
-                        <div className="work-thumb" aria-hidden="true">
-                            {THUMBS[w.id] ? (
-                                <img
-                                    src={THUMBS[w.id]}
-                                    alt=""
-                                    loading="lazy"
-                                    decoding="async"
-                                />
-                            ) : (
-                                <span>{w.id}</span>
-                            )}
-                        </div>
+                        {SHOW_THUMBS && (
+                            <div className="work-thumb" aria-hidden="true">
+                                {THUMBS[w.id] ? (
+                                    <img
+                                        src={THUMBS[w.id]}
+                                        alt=""
+                                        loading="lazy"
+                                        decoding="async"
+                                    />
+                                ) : (
+                                    <span>{w.id}</span>
+                                )}
+                            </div>
+                        )}
                         <div className="yr">{w.year}</div>
                         <div
                             className="title"
