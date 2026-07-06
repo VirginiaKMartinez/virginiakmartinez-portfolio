@@ -513,6 +513,15 @@
                     "inkBlue": "Bleu encre",
                     "sun": "Soleil"
                 }
+            },
+            "epilogue": {
+                "num": "04 · Épilogue",
+                "title": "La passation,",
+                "titleIt": "et ce qui reste.",
+                "gutter": "Passation",
+                "left": "La part de l’agence s’est terminée par une passation : un livre de marque complet — j’ai calqué son périmètre sur celui de Slack, pour être sûre de ne rien oublier — et le prototype Figma interactif. Avec ces deux pièces, le client est parti convaincre des investisseurs pour faire développer l’app.",
+                "rightTop": "Il n’y a pas eu de suivi ensuite, et honnêtement je ne sais pas si Hawi a fini par être développée. Le travail de concept se termine parfois comme ça : on livre la version la plus claire possible de l’idée, et la suite appartient à quelqu’un d’autre.",
+                "rightBottom": "Ce qui m’est resté, c’est l’exercice de designer contre mon propre biais : me mettre à la place de quelqu’un qui a peu ou pas d’expérience du numérique n’avait rien de naturel, et je me surprenais sans cesse à designer pour moi. C’est pour ça que je tiens à ce projet — utile, et beau à la fois."
             }
         },
         "gazella": {

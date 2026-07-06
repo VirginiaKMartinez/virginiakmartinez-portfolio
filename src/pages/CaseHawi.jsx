@@ -103,6 +103,18 @@ export default function CaseHawi() {
         <BrandKit />
         <MockupStage />
 
+        {/* 04 · Epilogue */}
+        <Chapter
+          id="epilogue"
+          num={t('case.hawi.epilogue.num')}
+          title={t('case.hawi.epilogue.title')}
+          titleIt={t('case.hawi.epilogue.titleIt')}
+          gutter={t('case.hawi.epilogue.gutter')}
+          left={t('case.hawi.epilogue.left')}
+          rightTop={t('case.hawi.epilogue.rightTop')}
+          rightBottom={t('case.hawi.epilogue.rightBottom')}
+        />
+
         <OtherCases exclude="hawi" />
         <BackFoot mid={t('case.topbar.hawiOf')} />
       </div>

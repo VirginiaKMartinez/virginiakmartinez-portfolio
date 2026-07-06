@@ -513,6 +513,15 @@
                     "alt": "Hi-fi chat screen mockup",
                     "meta": "Figma · Prototype"
                 }
+            },
+            "epilogue": {
+                "num": "04 · Epilogue",
+                "title": "The handover,",
+                "titleIt": "and what stayed.",
+                "gutter": "Handover",
+                "left": "The agency’s part ended with a handover: a complete brand book — I modelled its scope on Slack’s, to make sure nothing was missing — and the interactive Figma prototype. With those two pieces, the client went off to pitch investors and get the app built.",
+                "rightTop": "There was no follow-up after that, so I honestly don’t know whether Hawi was ever developed. Concept work sometimes ends this way: you hand over the clearest possible version of the idea, and the rest belongs to someone else.",
+                "rightBottom": "What stayed with me is the exercise of designing against my own bias: putting myself in the shoes of someone with little or no digital experience didn’t come naturally, and I kept catching myself designing for me. That’s why I hold on to this project — useful, and beautiful at the same time."
             }
         },
         "gazella": {
