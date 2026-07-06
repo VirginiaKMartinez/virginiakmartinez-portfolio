@@ -116,7 +116,7 @@ export default function CaseStaffAndGo() {
           <LibraryPlate />
         </Chapter>
 
-        <OtherCases />
+        <OtherCases exclude="staff-and-go" />
         <BackFoot />
       </div>
     </div>

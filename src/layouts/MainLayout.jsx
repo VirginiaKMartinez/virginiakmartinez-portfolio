@@ -1,6 +1,7 @@
 import { Outlet, useLocation } from "react-router-dom";
 import Header from "../components/layout/Header";
 import { ScrollProgress } from "../components/layout/ScrollProgress";
+import { ScrollToTop } from "../components/layout/ScrollToTop";
 
 const MainLayout = () => {
     // Case pages bring their own CaseTopbar (with its own lang toggle);
@@ -8,6 +9,7 @@ const MainLayout = () => {
     const isCase = useLocation().pathname.startsWith("/case");
     return (
         <div className="min-h-screen flex flex-col">
+            <ScrollToTop />
             {!isCase && <Header />}
             <ScrollProgress />
 
