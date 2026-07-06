@@ -48,7 +48,7 @@
         "kicker": "A short, honest bio",
         "bio": {
             "line1": "I’m a <em>Product Designer</em> working on B2B digital products. I shape end-to-end flows, draw the interfaces, and build the design systems that keep them coherent over time.",
-            "line2": "Before designing, I wrote code — <em>Angular, TypeScript, Sass</em> — in real production teams. That part of the past isn’t a second job offer; it’s a quiet superpower: I design with implementation in mind, document like a developer reads, and stay close to engineering without losing the product point of view.",
+            "line2": "Before designing, I wrote code (<em>Angular, TypeScript, Sass</em>) in real production teams. I’m not offering that as a second job — it changed how I work: I design with implementation in mind, document the way a developer reads, and stay close to engineering without losing the product point of view.",
             "line3": "Behavioral Design certified, fluent in French, English and Spanish. Based in Saint-Malo since 2023, after a decade of motion and editorial work in Madrid.",
             "line4": "I like quiet interfaces, opinionated documentation, and the moment a developer says “ah, that’s clear.”"
         },
@@ -58,7 +58,7 @@
             "craft": "Craft",
             "craftV": "UX research lite, IA, prototyping, hi-fi UI, component docs, design tokens.",
             "fluency": "Engineering fluency",
-            "fluencyV": "Angular, TypeScript, HTML, Sass, Git. Used in production, kept current as context — not a side hustle.",
+            "fluencyV": "Angular, TypeScript, HTML, Sass, Git. Used in production, kept as context — not a second role on offer.",
             "tools": "Tools",
             "toolsV": "Figma · Adobe CS · Jira · Sourcetree"
         }
@@ -163,7 +163,7 @@
             "gutter": "Brief",
             "left": "Staff & Go is a French B2B platform for human-resources operations: annual reviews, contracts, payslips, leaves, onboarding — across dozens of establishments per client. When I joined, the product had grown faster than its UI: dozens of screens, every button slightly different, every developer choosing their own paddings.",
             "rightTop": "The brief, eventually, became simple: <em>make the product feel like one product</em>. Build a design system from scratch. Document it for developers and project managers. Keep designing new features in parallel.",
-            "rightBottom": "I worked alongside the engineering team in Angular 16. Not as a developer — as a designer who reads code, opens a PR when a class name is wrong, and writes documentation a developer can copy-paste from."
+            "rightBottom": "I worked alongside the engineering team in Angular 16 — as a designer who reads code, opens a PR when a class name is wrong, and writes documentation a developer can copy-paste from."
         },
         "stats": {
             "components": "Components shipped",
@@ -178,15 +178,15 @@
             "gutter": "Method",
             "left": "I started from the bottom: <em>design tokens</em>. Colors, spacing, radii, type, motion. Named them so a developer would name them the same way. Mapped each one to a Sass variable.",
             "rightTop": "Only then I drew components — and only the ones the product actually used. Each component shipped with anatomy, variants, behaviors, usage rules, edge cases, and a short note on how to implement it. The Figma file and the Angular code shared the same vocabulary.",
-            "rightBottom": "The point was never to win a Figma file. It was to make every product decision faster than the previous one."
+            "rightBottom": "A polished Figma library was never the goal here; what mattered was that each product decision came out faster than the one before."
         },
         "engineering": {
             "num": "04 · Engineering",
-            "title": "I don't hand off —",
+            "title": "I don’t hand off —",
             "titleIt": "I sit next to it.",
             "gutter": "Practice",
             "left": "My background in front-end means I review implementations against Figma, open the right files, and propose corrections in a vocabulary the team trusts.",
-            "rightTop": "This isn't about being a designer-developer. It's about <em>removing friction</em>: when a component drifts, I notice; when documentation is unclear, I rewrite it; when a token gets named twice, I catch it before review. The product moves forward faster, with fewer surprises."
+            "rightTop": "None of this makes me a designer-developer. It makes the work smoother: I notice when a component drifts, catch a token named twice before it reaches review, rewrite the documentation when people stop reading it. The product moves forward faster, with fewer surprises."
         },
         "outcomes": {
             "num": "05 · Outcomes",
@@ -194,7 +194,7 @@
             "titleIt": "one voice.",
             "gutter": "Result",
             "left": "After eighteen months, every product screen used the same components. Onboarding a new developer took half the time. New features could be drawn and built in days, not weeks.",
-            "rightTop": "Confidential business numbers stay confidential — but the artifacts and reasoning are available on request. <em>Reach out</em> if you'd like a walkthrough."
+            "rightTop": "Confidential business numbers stay confidential — but the artifacts and reasoning are available on request. <em>Reach out</em> if you’d like a walkthrough."
         },
         "tokens": {
             "col": {
@@ -261,8 +261,8 @@
             "title": "A system you can read,",
             "titleIt": "not just look at.",
             "gutter": "Guidance",
-            "left": "A component isn't done when it's drawn — it's done when a developer or PM can use it without asking me. So every component shipped with its own page: an intro on what it's for, its states and variants, the rules for which to use when, do's and don'ts, and the exact tokens and specs to implement it.",
-            "rightTop": "Each page started from the same question: <em>how will this be misused?</em> The do/don't pairs answered it before code review did — and everything was indexed, so the team could self-serve instead of pinging me.",
+            "left": "A component is finished when a developer or PM can use it without asking me, not when it’s drawn. So every component shipped with its own page: an intro on what it’s for, its states and variants, the rules for which to use when, do’s and don’ts, and the exact tokens and specs to implement it.",
+            "rightTop": "Each page started from the same question: <em>how will this be misused?</em> The do/don’t pairs answered it before code review did. Everything was indexed, so the team could self-serve instead of pinging me.",
             "rightBottom": "Written so a developer could copy-paste the spec and a PM could follow the decision."
         },
         "docPlate": {
@@ -270,7 +270,7 @@
             "component": "Button",
             "backToIndex": "← Back to index",
             "introTitle": "Intro",
-            "introBody": "The button's types, sizes and colours cover the combinations a view needs — keeping visual hierarchy and a consistent experience. Icons and colour make each action understandable and accessible.",
+            "introBody": "The button’s types, sizes and colours cover the combinations a view needs — keeping visual hierarchy and a consistent experience. Icons and colour make each action understandable and accessible.",
             "statesLabel": "States & variants",
             "states": {
                 "primary": "Primary",
@@ -279,11 +279,11 @@
                 "disabled": "Disabled"
             },
             "doLabel": "Do",
-            "dontLabel": "Don't",
+            "dontLabel": "Don’t",
             "doBtn": "Enregistrer",
             "dontBtn": "Continuer",
             "doText": "One primary action per view — the decisive next step.",
-            "dontText": "Two primaries competing — the user can't tell what matters.",
+            "dontText": "Two primaries competing — the user can’t tell what matters.",
             "specs": {
                 "radius": "Radius",
                 "radiusV": "4 / 999px",
@@ -307,7 +307,7 @@
             "title": "More work,",
             "titleIt": "in brief.",
             "pe": "Power <em>Electronics</em>",
-            "peDesc": "B2B industrial software in Angular 12. I held a hybrid role — fixing UI tickets the design team didn't have time for, and pushing implementation closer to the original design intent.",
+            "peDesc": "B2B industrial software in Angular 12. I held a hybrid role — fixing UI tickets the design team didn’t have time for, and pushing implementation closer to the original design intent.",
             "peMeta": "Front-End Dev · Remote, ES",
             "om": "Optiva <em>Media</em>",
             "omDesc": "Multi-screen video platforms for Orange, HBO and Filmin. Bug-fixing and feature support — including the UEFA Euro 2020 build. AngularJS, JavaScript, Sass.",
@@ -319,7 +319,7 @@
             "hwDesc": "Mobile app concept against loneliness in older adults. From discovery workshops to a role-based interactive Figma prototype, presented to ES / EN / FR clients.",
             "hwMeta": "UX/UI · Madrid",
             "gz": "Gazella <em>· Akimad</em>",
-            "gzDesc": "Women's health app that adapts training and nutrition to the menstrual cycle. I led an editable cycle calendar and the premium nutrition section — including an auto-generated shopping list.",
+            "gzDesc": "Women’s health app that adapts training and nutrition to the menstrual cycle. I led an editable cycle calendar and the premium nutrition section — including an auto-generated shopping list.",
             "gzMeta": "UX/UI · Akimad",
             "fs": "Fiche <em>salarié</em>",
             "fsDesc": "Redesign of the densest screen in a B2B workforce app — the employee record. From an overwhelming form to clear, ordered sections, shipped in phases.",
@@ -356,7 +356,7 @@
                 "title": "A concept for",
                 "titleIt": "the forgotten generation.",
                 "gutter": "Brief",
-                "left": "Hawi started as a graduation brief: <em>design a mobile app that addresses loneliness in older adults</em>. Not a medical tool, not a panic button — a presence layer for families and the people around them.",
+                "left": "Hawi started as a graduation brief: <em>design a mobile app that addresses loneliness in older adults</em>. The idea was never a medical tool or a panic button, but a presence layer for the families and the people around them.",
                 "rightTop": "The name comes from Hawaiian. Hawi is a place — a small, remote town. We kept it as a reminder: the people we are designing for are often at a distance, even when they live nearby.",
                 "rightBottom": "Role: UX/UI designer. Timeline: six months from first workshop to interactive prototype. Tools: Figma, paper, a lot of sticky notes."
             },
@@ -384,7 +384,7 @@
                 "titleIt": "not just the elder.",
                 "gutter": "Method",
                 "left": "Discovery ran in Madrid with three groups: older adults aged 68–82, their primary family carers, and care-home coordinators — through co-design workshops and in-depth interviews.",
-                "rightTop": "The pattern was consistent: <em>older adults didn't feel lonely — the people around them felt powerless</em>. The anxiety of not knowing, not reaching, not being present was the real problem to solve."
+                "rightTop": "The same finding came up in every group: <em>the older adults didn’t describe themselves as lonely — it was the people around them who felt powerless</em>. That anxiety of not knowing, of not being able to reach them, was the real problem to solve."
             },
             "design": {
                 "num": "03 · Design",
@@ -461,7 +461,7 @@
                     "kind": "Paper sketch",
                     "heading": "Locator — first sketch",
                     "deviceLabel": "Paper sketch of the Locator screen",
-                    "desc": "Hand-drawn after the first discovery session. The Locator is the family carer's anchor: where is Dad, is he reachable, what can I do right now?"
+                    "desc": "Hand-drawn after the first discovery session. The Locator is the family carer’s anchor: where is Dad, is he reachable, what can I do right now?"
                 },
                 "blockframe": {
                     "kicker": "Stage 02",
@@ -486,7 +486,7 @@
                 "headingPre": "Connected when",
                 "headingIt": "it matters.",
                 "headingPost": "",
-                "body": "The chat screen is the heart of Hawi. Not a messaging app — a presence layer. Read receipts, voice notes, quick reactions. Designed for one-handed use and low visual acuity."
+                "body": "The chat screen is the heart of Hawi. Read receipts, voice notes, quick reactions — all designed for one-handed use and low visual acuity."
             },
             "plates": {
                 "workshop": {
@@ -530,12 +530,12 @@
                 "outcomeL": "Output",
                 "outcome": "Shipped · 10K+ installs"
             },
-            "subtitle": "A women's health app that tunes training and nutrition to the menstrual cycle. I led two new areas: an editable cycle calendar and the premium nutrition section.",
+            "subtitle": "A women’s health app that tunes training and nutrition to the menstrual cycle. I led two new areas: an editable cycle calendar and the premium nutrition section.",
             "heroVisualCap": "Home · today",
-            "heroVisualAlt": "Gazella home screen with the day's training and cycle-based articles",
+            "heroVisualAlt": "Gazella home screen with the day’s training and cycle-based articles",
             "insight": {
                 "label": "The premise",
-                "body": "<em>Bodies aren't clockwork.</em> The app planned everything from one date entered at sign-up — and never let you change it. But cycles shift: different day, different length, some months none at all."
+                "body": "<em>Bodies aren’t clockwork.</em> The app planned everything from one date entered at sign-up — and never let you change it. But cycles shift: different day, different length, some months none at all."
             },
             "context": {
                 "num": "01 · Context",
@@ -575,8 +575,8 @@
             },
             "calShots": {
                 "kicker": "Calendar · key screens",
-                "trainingCap": "Cycle-aware home — today's adapted workout",
-                "trainingAlt": "Gazella home screen showing the cycle and the day's workout",
+                "trainingCap": "Cycle-aware home — today’s adapted workout",
+                "trainingAlt": "Gazella home screen showing the cycle and the day’s workout",
                 "monthCap": "Month view — period and training days marked",
                 "monthAlt": "Gazella calendar month view with marked days",
                 "editCap": "Correcting the start of your period",
@@ -587,14 +587,14 @@
                 "title": "Designing the first",
                 "titleIt": "way to charge.",
                 "gutter": "Premium",
-                "left": "Nutrition was a client mandate: the startup's first attempt at revenue. The brief was a premium tier — recipes adapted to each cycle phase, locked behind a subscription. I designed the UI and the upgrade flow.",
+                "left": "Nutrition was a client mandate: the startup’s first attempt at revenue. The brief was a premium tier — recipes adapted to each cycle phase, locked behind a subscription. I designed the UI and the upgrade flow.",
                 "rightTop": "To stop premium feeling like a wall, I studied how other apps structured recipe content and shopping lists, then gave the paid section <em>a distinct look</em> — so it read as better and different, not just blocked.",
-                "rightBottom": "I was honest about the risk: with countless dedicated nutrition apps out there, I doubted users would pay for it. I said so. The call was the client's — designing it well was mine."
+                "rightBottom": "I was honest about the risk: with so many dedicated nutrition apps out there, I doubted users would pay for this, and I said so. The client made the call — my job was to design it as well as I could."
             },
             "callout": {
                 "tag": "My proposal",
                 "heading": "A shopping list that <em>writes itself.</em>",
-                "body": "The piece I pushed for: generate the shopping list straight from a recipe's ingredients. Want to cook it? The items are already there — no copying by hand. A small, daily kind of useful that gives a premium tier a reason to exist."
+                "body": "The piece I pushed for: generate the shopping list straight from a recipe’s ingredients. Want to cook it? The items are already on the list, nothing to copy by hand. Small, everyday utility — the kind that gives a premium tier a reason to exist."
             },
             "recipe": {
                 "tag": "UI · Recipe",
@@ -615,11 +615,11 @@
             },
             "reflection": {
                 "num": "04 · Reflection",
-                "title": "What I'd keep,",
-                "titleIt": "what I'd question.",
+                "title": "What I’d keep,",
+                "titleIt": "what I’d question.",
                 "gutter": "Takeaway",
-                "left": "Two lessons stuck. <em>Design for the real body, not the ideal one</em> — the editable cycle mattered precisely because nothing is regular. And design within a startup's real limits: ship a first version that's honest about being one.",
-                "rightTop": "I'd still question the premium bet. Charging for nutrition in a crowded market was a leap of faith more than a validated need. Voicing that — and designing it as well as it could be anyway — is the part I'm proud of."
+                "left": "Two lessons stuck. <em>Design for the real body, not the ideal one</em> — the editable cycle mattered precisely because nothing is regular. And design within a startup’s real limits: ship a first version that’s honest about being one.",
+                "rightTop": "I’d still question the premium bet. Charging for nutrition in a crowded market was a leap of faith more than a validated need. Saying so out loud, then designing it as well as it could be anyway, is the part I’m proud of."
             }
         },
         "fiche": {
@@ -648,7 +648,7 @@
                 "titleIt": "hard to learn.",
                 "gutter": "Brief",
                 "left": "Staff & Go is a B2B workforce-management platform — payroll, leave, HR, scheduling. Powerful, but dense: across the whole product, new users faced a steep learning curve. <em>The employee record was its most overloaded screen.</em>",
-                "rightTop": "Every detail of a worker lived there — identity, contracts, social security, banking, documents — crammed into tight forms in small type, spread across views that were hard to find.",
+                "rightTop": "Every detail of a worker lived there: identity, contracts, social security, banking, documents, crammed into tight forms in small type and spread across views that were hard to find.",
                 "rightBottom": "Role: Product Designer, working alongside the PMs and the head of development to keep friction low for users and feasible for engineering."
             },
             "problem": {
@@ -656,7 +656,7 @@
                 "title": "Density,",
                 "titleIt": "and a steep climb.",
                 "gutter": "Friction",
-                "left": "Too much information, too small, too hard to scan. Finding the right view took effort; the screen punished newcomers. <em>The goal wasn't more features — it was less cognitive load.</em>",
+                "left": "Too much information, too small, too hard to scan. Finding the right view took effort; the screen punished newcomers. <em>The goal wasn’t more features, it was less cognitive load.</em>",
                 "rightTop": "Before touching pixels I benchmarked comparable tools and gathered design references, then mapped what the record actually needed to show, and in what order."
             },
             "redesign": {
@@ -689,7 +689,7 @@
                 "titleIt": "built to scale.",
                 "gutter": "Result",
                 "left": "The redesign rolled out in phases — deliberately, to ease users into the change rather than relabel everything overnight. <em>The ordered-section pattern was made to extend</em> from the employee record to establishments and beyond.",
-                "rightTop": "A reminder that in a dense B2B tool the highest-impact design move is often not adding — it's making what's already there legible, consistent, and kind to a first-time user."
+                "rightTop": "In a dense B2B tool, the most useful design move is often not adding anything, but making what’s already there legible and consistent for someone seeing it for the first time."
             },
             "stats": [
                 {

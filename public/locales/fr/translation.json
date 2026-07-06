@@ -38,7 +38,7 @@
                 "desc": "App de santé selon le cycle · calendrier éditable + premium"
             },
             "ficheSalarie": {
-                "desc": "Refonte de la fiche salarié · archi de l'info + UI"
+                "desc": "Refonte de la fiche salarié · archi de l’info + UI"
             }
         }
     },
@@ -48,7 +48,7 @@
         "kicker": "Une biographie courte et honnête",
         "bio": {
             "line1": "Je suis <em>Designeuse Produit</em>, je travaille sur des produits digitaux B2B. Je conçois les flux de bout en bout, je dessine les interfaces, et je construis les design systems qui les gardent cohérents dans le temps.",
-            "line2": "Avant de designer, j’ai écrit du code — <em>Angular, TypeScript, Sass</em> — dans de vraies équipes de production. Ce passage n’est pas une seconde offre d’emploi ; c’est un super-pouvoir discret : je dessine en pensant à l’implémentation, je documente comme les dev’ aiment lire, et je reste proche de l’ingénierie sans perdre le point de vue produit.",
+            "line2": "Avant de designer, j’ai écrit du code (<em>Angular, TypeScript, Sass</em>) dans de vraies équipes de production. Je n’en fais pas un second métier — ça a changé ma façon de travailler : je dessine en pensant à l’implémentation, je documente comme un développeur lit, et je reste proche de l’ingénierie sans perdre le point de vue produit.",
             "line3": "Certifiée en Behavioral Design, je parle couramment français, anglais et espagnol. Installée à Saint-Malo depuis 2023, après dix ans de motion et d’éditorial à Madrid.",
             "line4": "J’aime les interfaces calmes, la documentation tranchée, et l’instant où un dev’ dit « ah, c’est clair »."
         },
@@ -58,7 +58,7 @@
             "craft": "Métier",
             "craftV": "Recherche UX légère, IA, prototypage, UI hi-fi, doc de composants, design tokens.",
             "fluency": "Aisance technique",
-            "fluencyV": "Angular, TypeScript, HTML, Sass, Git. Utilisés en production, gardés comme contexte — pas une activité parallèle.",
+            "fluencyV": "Angular, TypeScript, HTML, Sass, Git. Utilisés en production, gardés comme contexte — pas un second métier.",
             "tools": "Outils",
             "toolsV": "Figma · Adobe CS · Jira · Sourcetree"
         }
@@ -142,7 +142,7 @@
             "status": "Statut",
             "statusValue": "En production · NDA",
             "title": "Design <it>System.</it>",
-            "sub": "Construire le design system et les fondations UI d'une plateforme RH B2B — d'une seule couleur d'accent à vingt-cinq composants, trois équipes, et un vocabulaire partagé avec l'ingénierie.",
+            "sub": "Construire le design system et les fondations UI d’une plateforme RH B2B — d’une seule couleur d’accent à vingt-cinq composants, trois équipes, et un vocabulaire partagé avec l’ingénierie.",
             "kit": {
                 "product": "Produit",
                 "label": "Table des entretiens",
@@ -159,11 +159,11 @@
         "context": {
             "num": "01 · Contexte",
             "title": "Un produit jeune,",
-            "titleIt": "sans système où s'appuyer.",
+            "titleIt": "sans système où s’appuyer.",
             "gutter": "Brief",
-            "left": "Staff & Go est une plateforme française B2B dédiée aux opérations RH : entretiens annuels, contrats, bulletins de paie, congés, embauches — à travers des dizaines d'établissements par client. À mon arrivée, le produit avait grandi plus vite que son UI : des dizaines d'écrans, chaque bouton légèrement différent, chaque développeur choisissant ses propres paddings.",
+            "left": "Staff & Go est une plateforme française B2B dédiée aux opérations RH : entretiens annuels, contrats, bulletins de paie, congés, embauches — à travers des dizaines d’établissements par client. À mon arrivée, le produit avait grandi plus vite que son UI : des dizaines d’écrans, chaque bouton légèrement différent, chaque développeur choisissant ses propres paddings.",
             "rightTop": "Le brief, finalement, est devenu simple : <em>faire en sorte que le produit ressemble à un seul produit</em>. Construire un design system de zéro. Le documenter pour les développeurs et les chefs de projet. Continuer à designer de nouvelles fonctionnalités en parallèle.",
-            "rightBottom": "J'ai travaillé aux côtés de l'équipe d'ingénierie en Angular 16. Pas comme développeuse — comme designeuse qui lit le code, ouvre une PR quand un nom de classe est mauvais, et rédige une documentation dans laquelle un développeur peut copier-coller."
+            "rightBottom": "J’ai travaillé aux côtés de l’équipe d’ingénierie, en Angular 16 — en designeuse qui lit le code, ouvre une PR quand un nom de classe est mauvais, et rédige une documentation qu’un développeur peut copier-coller."
         },
         "stats": {
             "components": "Composants livrés",
@@ -173,27 +173,27 @@
         },
         "approach": {
             "num": "02 · Approche",
-            "title": "D'abord les tokens,",
+            "title": "D’abord les tokens,",
             "titleIt": "ensuite les composants.",
             "gutter": "Méthode",
-            "left": "J'ai commencé par le bas : les <em>design tokens</em>. Couleurs, espacements, rayons, typo, motion. Nommés pour qu'un développeur les nomme de la même manière. Chacun mappé à une variable Sass.",
-            "rightTop": "C'est seulement après que j'ai dessiné les composants — et uniquement ceux que le produit utilisait réellement. Chaque composant livré avec anatomie, variantes, comportements, règles d'usage, cas limites, et une courte note d'implémentation. Le fichier Figma et le code Angular partageaient le même vocabulaire.",
-            "rightBottom": "Le but n'a jamais été de gagner un fichier Figma. C'était de rendre chaque décision produit plus rapide que la précédente."
+            "left": "J’ai commencé par le bas : les <em>design tokens</em>. Couleurs, espacements, rayons, typo, motion. Nommés pour qu’un développeur les nomme de la même manière. Chacun mappé à une variable Sass.",
+            "rightTop": "C’est seulement après que j’ai dessiné les composants — et uniquement ceux que le produit utilisait réellement. Chaque composant livré avec anatomie, variantes, comportements, règles d’usage, cas limites, et une courte note d’implémentation. Le fichier Figma et le code Angular partageaient le même vocabulaire.",
+            "rightBottom": "Une belle bibliothèque Figma n’a jamais été le but ; ce qui comptait, c’était que chaque décision produit sorte plus vite que la précédente."
         },
         "engineering": {
             "num": "04 · Ingénierie",
             "title": "Je ne livre pas en passant —",
-            "titleIt": "je m'assois à côté.",
+            "titleIt": "je m’assois à côté.",
             "gutter": "Pratique",
-            "left": "Mon background front-end me permet de relire les implémentations face à Figma, d'ouvrir les bons fichiers, et de proposer des corrections dans un vocabulaire auquel l'équipe fait confiance.",
-            "rightTop": "Ce n'est pas une histoire de designer-développeur. C'est une histoire de <em>retirer des frictions</em> : quand un composant dérive, je le remarque ; quand la doc n'est pas claire, je la réécris ; quand un token est nommé deux fois, je l'attrape avant la review. Le produit avance plus vite, avec moins de surprises."
+            "left": "Mon background front-end me permet de relire les implémentations face à Figma, d’ouvrir les bons fichiers, et de proposer des corrections dans un vocabulaire auquel l’équipe fait confiance.",
+            "rightTop": "Rien de tout ça ne fait de moi une designer-développeuse. Ça rend surtout le travail plus fluide : je remarque quand un composant dérive, j’attrape un token nommé deux fois avant la review, je réécris la doc quand on ne la lit plus. Le produit avance plus vite, avec moins de surprises."
         },
         "outcomes": {
             "num": "05 · Résultats",
             "title": "Un produit,",
             "titleIt": "une voix.",
             "gutter": "Résultat",
-            "left": "Au bout de dix-huit mois, chaque écran du produit utilisait les mêmes composants. L'onboarding d'un nouveau développeur prenait moitié moins de temps. De nouvelles fonctionnalités pouvaient être dessinées et construites en jours, pas en semaines.",
+            "left": "Au bout de dix-huit mois, chaque écran du produit utilisait les mêmes composants. L’onboarding d’un nouveau développeur prenait moitié moins de temps. De nouvelles fonctionnalités pouvaient être dessinées et construites en jours, pas en semaines.",
             "rightTop": "Les chiffres business confidentiels restent confidentiels — mais les artefacts et le raisonnement sont disponibles sur demande. <em>Contactez-moi</em> pour un walkthrough."
         },
         "tokens": {
@@ -213,14 +213,14 @@
             "inkLightest": "Fonds alternatifs",
             "alert": "Actions destructives, alertes",
             "success": "États de succès",
-            "warning": "États d'avertissement",
+            "warning": "États d’avertissement",
             "advance": "Mode avancé (spécifique SG)",
             "space": "Padding cartes · gap dialogs",
             "radius": "Boutons, inputs · dialogs",
             "type": "Titres de section · corps"
         },
         "snapshot": {
-            "title": "Aperçu de composants · Boutons, inputs, chips d'état",
+            "title": "Aperçu de composants · Boutons, inputs, chips d’état",
             "btnPrimary": "Bouton / primary",
             "btnOutline": "Bouton / outline",
             "btnStatus": "Bouton / état",
@@ -233,10 +233,10 @@
                 "filter": "UI · Filtre",
                 "dialog": "UI · Dialog",
                 "doc": "DS · Doc composant",
-                "library": "DS · Vue d'ensemble"
+                "library": "DS · Vue d’ensemble"
             },
             "cap": {
-                "dashboard": "Plate 02 · Liste d'entretiens, avec variantes de chips d'état",
+                "dashboard": "Plate 02 · Liste d’entretiens, avec variantes de chips d’état",
                 "filter": "Plate 03 · Filtre",
                 "dialog": "Plate 04 · Dialog destructif",
                 "doc": "Plate 05 · Documentation · Button — anatomie, états & usage",
@@ -252,23 +252,23 @@
         },
         "docShot": {
             "tag": "DS · Page de doc réelle",
-            "cap": "Plate 05b · Doc Button — guide d'usage des couleurs + la matrice type × état × taille",
+            "cap": "Plate 05b · Doc Button — guide d’usage des couleurs + la matrice type × état × taille",
             "meta": "Exporté de Figma · conforme NDA",
-            "alt": "Une page de la documentation du bouton de Staff & Go : l'Intro, le guide d'usage des couleurs (Primary, Warning, Error, Success, Advance) et la matrice des types de boutons selon les états et les tailles."
+            "alt": "Une page de la documentation du bouton de Staff & Go : l’Intro, le guide d’usage des couleurs (Primary, Warning, Error, Success, Advance) et la matrice des types de boutons selon les états et les tailles."
         },
         "documentation": {
             "num": "03 · Documentation",
             "title": "Un système qui se lit,",
             "titleIt": "pas seulement qui se regarde.",
             "gutter": "Guide",
-            "left": "Un composant n'est pas fini quand il est dessiné — il l'est quand un dev ou un PM peut l'utiliser sans me demander. Chaque composant est donc livré avec sa propre page : une intro sur son rôle, ses états et variantes, les règles du quand-utiliser-quoi, les do's & don'ts, et les tokens et specs exacts pour l'implémenter.",
-            "rightTop": "Chaque page partait de la même question : <em>comment va-t-on le mal-utiliser ?</em> Les paires do/don't y répondaient avant la revue de code — et tout était indexé, pour que l'équipe se serve seule au lieu de me solliciter.",
-            "rightBottom": "Écrit pour qu'un dev copie-colle la spec et qu'un PM suive la décision."
+            "left": "Un composant est fini quand un dev ou un PM peut l’utiliser sans rien me demander, pas quand il est dessiné. Chaque composant est donc livré avec sa propre page : une intro sur son rôle, ses états et variantes, les règles du quand-utiliser-quoi, les do’s & don’ts, et les tokens et specs exacts pour l’implémenter.",
+            "rightTop": "Chaque page partait de la même question : <em>comment va-t-on le mal-utiliser ?</em> Les paires do/don’t y répondaient avant la revue de code. Tout était indexé, pour que l’équipe se serve seule au lieu de me solliciter.",
+            "rightBottom": "Écrit pour qu’un dev copie-colle la spec et qu’un PM suive la décision."
         },
         "docPlate": {
             "kicker": "Doc · Composant",
             "component": "Button",
-            "backToIndex": "← Retour à l'index",
+            "backToIndex": "← Retour à l’index",
             "introTitle": "Intro",
             "introBody": "Les types, tailles et couleurs du bouton couvrent les combinaisons dont une vue a besoin — en gardant la hiérarchie visuelle et une expérience cohérente. Les icônes et la couleur rendent chaque action compréhensible et accessible.",
             "statesLabel": "États & variantes",
@@ -282,8 +282,8 @@
             "dontLabel": "À éviter",
             "doBtn": "Enregistrer",
             "dontBtn": "Continuer",
-            "doText": "Une seule action primaire par vue — l'étape décisive.",
-            "dontText": "Deux primaires en concurrence — l'utilisateur ne sait plus quoi choisir.",
+            "doText": "Une seule action primaire par vue — l’étape décisive.",
+            "dontText": "Deux primaires en concurrence — l’utilisateur ne sait plus quoi choisir.",
             "specs": {
                 "radius": "Rayon",
                 "radiusV": "4 / 999px",
@@ -297,7 +297,7 @@
         },
         "library": {
             "title": "Staff & Go · Design System",
-            "lead": "Tokens et composants, documentés pour les designers, développeurs et PMs. La bibliothèque reflète l'implémentation Angular un pour un — chaque variable Figma correspond à un token Sass.",
+            "lead": "Tokens et composants, documentés pour les designers, développeurs et PMs. La bibliothèque reflète l’implémentation Angular un pour un — chaque variable Figma correspond à un token Sass.",
             "section": "Tokens et Composants",
             "foot1": "v1.0 · 25+ composants · Roboto · #144D9D",
             "foot2": "Saint-Malo · MMXXIV"
@@ -307,7 +307,7 @@
             "title": "Plus de projets,",
             "titleIt": "en bref.",
             "pe": "Power <em>Electronics</em>",
-            "peDesc": "Logiciel industriel B2B en Angular 12. J'avais un rôle hybride — réparer les tickets UI que l'équipe design n'avait pas le temps de traiter, et pousser l'implémentation au plus près de l'intention design d'origine.",
+            "peDesc": "Logiciel industriel B2B en Angular 12. J’avais un rôle hybride — réparer les tickets UI que l’équipe design n’avait pas le temps de traiter, et pousser l’implémentation au plus près de l’intention design d’origine.",
             "peMeta": "Dév Front-End · Remote, ES",
             "om": "Optiva <em>Media</em>",
             "omDesc": "Plateformes vidéo multi-écrans pour Orange, HBO et Filmin. Correction de bugs et support de fonctionnalités — y compris la build UEFA Euro 2020. AngularJS, JavaScript, Sass.",
@@ -316,13 +316,13 @@
             "sgDesc": "Design system de zéro pour une plateforme RH B2B. 25+ composants, design tokens, trois équipes alignées.",
             "sgMeta": "Designeuse Produit · Saint-Malo",
             "hw": "Hawi <em>· Akimad</em>",
-            "hwDesc": "Concept d'application mobile contre la solitude des aînés. Des ateliers de découverte à un prototype Figma interactif basé sur les rôles, présenté à des clients ES / EN / FR.",
+            "hwDesc": "Concept d’application mobile contre la solitude des aînés. Des ateliers de découverte à un prototype Figma interactif basé sur les rôles, présenté à des clients ES / EN / FR.",
             "hwMeta": "UX/UI · Madrid",
             "gz": "Gazella <em>· Akimad</em>",
-            "gzDesc": "App de santé pour femmes qui adapte l'entraînement et la nutrition au cycle menstruel. J'ai mené un calendrier de cycle éditable et la section nutrition premium — avec une liste de courses générée automatiquement.",
+            "gzDesc": "App de santé pour femmes qui adapte l’entraînement et la nutrition au cycle menstruel. J’ai mené un calendrier de cycle éditable et la section nutrition premium — avec une liste de courses générée automatiquement.",
             "gzMeta": "UX/UI · Akimad",
             "fs": "Fiche <em>salarié</em>",
-            "fsDesc": "Refonte de l'écran le plus dense d'une app RH B2B — la fiche salarié. D'un formulaire écrasant à des sections claires et ordonnées, déployée par phases.",
+            "fsDesc": "Refonte de l’écran le plus dense d’une app RH B2B — la fiche salarié. D’un formulaire écrasant à des sections claires et ordonnées, déployée par phases.",
             "fsMeta": "Designeuse Produit · Staff & Go"
         },
         "foot": {
@@ -345,8 +345,8 @@
                 "outcome": "Prototype interactif"
             },
             "subtitle": "Une application mobile pour réduire la solitude des aînés. Des ateliers de découverte à un prototype Figma interactif basé sur les rôles.",
-            "heroVisualCap": "Concept · l'ohana",
-            "heroVisualAlt": "Illustration d'une famille enlacée regardant l'application Hawi sur un téléphone",
+            "heroVisualCap": "Concept · l’ohana",
+            "heroVisualAlt": "Illustration d’une famille enlacée regardant l’application Hawi sur un téléphone",
             "ohana": {
                 "label": "Ohana /oˈhana/",
                 "body": "<em>n.</em> Hawaïen. Le cercle des personnes qui forment votre famille — par le sang, le choix ou le temps."
@@ -356,8 +356,8 @@
                 "title": "Un concept pour",
                 "titleIt": "la génération oubliée.",
                 "gutter": "Brief",
-                "left": "Hawi a démarré comme un brief de fin d'études : <em>concevoir une application mobile contre la solitude des aînés</em>. Ni un outil médical, ni un bouton panique — une couche de présence pour les familles et leur entourage.",
-                "rightTop": "Le nom vient de l'hawaïen. Hawi est un lieu — une petite ville isolée. On l'a gardé comme rappel : les personnes pour qui on design sont souvent lointaines, même quand elles habitent à côté.",
+                "left": "Hawi a démarré comme un brief de fin d’études : <em>concevoir une application mobile contre la solitude des aînés</em>. L’idée n’a jamais été un outil médical ni un bouton panique, mais une couche de présence pour les familles et l’entourage.",
+                "rightTop": "Le nom vient de l’hawaïen. Hawi est un lieu — une petite ville isolée. On l’a gardé comme rappel : les personnes pour qui on design sont souvent lointaines, même quand elles habitent à côté.",
                 "rightBottom": "Rôle : UX/UI designer. Durée : six mois du premier atelier au prototype interactif. Outils : Figma, papier, beaucoup de post-its."
             },
             "stats": [
@@ -381,18 +381,18 @@
             "research": {
                 "num": "02 · Recherche",
                 "title": "Parler au cercle,",
-                "titleIt": "pas seulement à l'aîné.",
+                "titleIt": "pas seulement à l’aîné.",
                 "gutter": "Méthode",
-                "left": "La découverte s'est déroulée à Madrid avec trois groupes : des aînés de 68 à 82 ans, leurs aidants familiaux principaux, et des coordinateurs de résidences — à travers des ateliers de co-design et des entretiens approfondis.",
-                "rightTop": "Le schéma était constant : <em>les aînés ne se sentaient pas seuls — c'est l'entourage qui se sentait impuissant</em>. L'anxiété de ne pas savoir, de ne pas joindre, de ne pas être présent : c'était ça, le vrai problème."
+                "left": "La découverte s’est déroulée à Madrid avec trois groupes : des aînés de 68 à 82 ans, leurs aidants familiaux principaux, et des coordinateurs de résidences — à travers des ateliers de co-design et des entretiens approfondis.",
+                "rightTop": "Le même constat revenait dans chaque groupe : <em>les aînés ne se disaient pas seuls — c’est l’entourage qui se sentait impuissant</em>. Cette anxiété de ne pas savoir, de ne pas pouvoir les joindre, c’était le vrai problème à résoudre."
             },
             "design": {
                 "num": "03 · Design",
                 "title": "Trois rôles,",
                 "titleIt": "un monde partagé.",
                 "gutter": "Processus",
-                "left": "La décision de design centrale : <em>trois vues séparées sur les mêmes données</em>. L'aîné a la simplicité. L'aidant familial a la tranquillité et la coordination. Le coordinateur a une vue d'ensemble sans intrusion.",
-                "rightTop": "Chaque écran est passé par esquisse papier, blockframe, et wireframe hi-fi avant le prototype. L'écran Localisateur — où est papa — a été le plus difficile à mettre au point."
+                "left": "La décision de design centrale : <em>trois vues séparées sur les mêmes données</em>. L’aîné a la simplicité. L’aidant familial a la tranquillité et la coordination. Le coordinateur a une vue d’ensemble sans intrusion.",
+                "rightTop": "Chaque écran est passé par esquisse papier, blockframe, et wireframe hi-fi avant le prototype. L’écran Localisateur — où est papa — a été le plus difficile à mettre au point."
             },
             "ohanaFlow": [
                 {
@@ -408,7 +408,7 @@
                 {
                     "step": "03",
                     "title": "Design",
-                    "desc": "Flux par rôle : l'aîné, l'aidant familial, le coordinateur. Trois vues, un seul modèle de données."
+                    "desc": "Flux par rôle : l’aîné, l’aidant familial, le coordinateur. Trois vues, un seul modèle de données."
                 },
                 {
                     "step": "04",
@@ -421,22 +421,22 @@
                     "name": "La personne âgée",
                     "avatar": "01",
                     "role": "Utilisateur principal",
-                    "body": "Vit seule, utilise un téléphone avec de l'aide. L'interface est épurée : grandes cibles, une action principale par écran, rien qui ressemble à de la surveillance."
+                    "body": "Vit seule, utilise un téléphone avec de l’aide. L’interface est épurée : grandes cibles, une action principale par écran, rien qui ressemble à de la surveillance."
                 },
                 {
-                    "name": "L'aidant familial",
+                    "name": "L’aidant familial",
                     "avatar": "02",
                     "role": "Usage quotidien",
-                    "body": "Un enfant adulte qui gère la prise en charge à distance. Besoin de réassurance et de coordination — savoir, joindre, agir — sans vivre dans l'app."
+                    "body": "Un enfant adulte qui gère la prise en charge à distance. Besoin de réassurance et de coordination — savoir, joindre, agir — sans vivre dans l’app."
                 },
                 {
                     "name": "Le coordinateur",
                     "avatar": "03",
                     "role": "Professionnel",
-                    "body": "Un professionnel d'EHPAD qui suit plusieurs résidents. Besoin d'une vue d'ensemble et du contrôle des tâches, pas d'intimité."
+                    "body": "Un professionnel d’EHPAD qui suit plusieurs résidents. Besoin d’une vue d’ensemble et du contrôle des tâches, pas d’intimité."
                 },
                 {
-                    "name": "L'ohana",
+                    "name": "L’ohana",
                     "avatar": "04",
                     "role": "Cercle élargi",
                     "body": "Voisins et amis. Présence ponctuelle, points de contact à faible friction — le cercle élargi qui donne son nom au concept."
@@ -447,15 +447,15 @@
                     "kicker": "Étape 01",
                     "kind": "Esquisse papier",
                     "heading": "Localisateur — première esquisse",
-                    "deviceLabel": "Croquis papier de l'écran Localisateur",
-                    "desc": "Dessiné à la main après la première session de découverte. Le Localisateur est l'ancre de l'aidant familial : où est papa, peut-on le joindre, que puis-je faire maintenant ?"
+                    "deviceLabel": "Croquis papier de l’écran Localisateur",
+                    "desc": "Dessiné à la main après la première session de découverte. Le Localisateur est l’ancre de l’aidant familial : où est papa, peut-on le joindre, que puis-je faire maintenant ?"
                 },
                 "blockframe": {
                     "kicker": "Étape 02",
                     "kind": "Blockframe",
                     "heading": "Structure avant le bruit",
-                    "desc": "Blocs uniquement — pas de couleur, pas de texte. Test de la hiérarchie : en-tête de statut, zone carte, bande d'actions. Une question par bloc.",
-                    "deviceLabel": "Blockframe de l'écran Localisateur"
+                    "desc": "Blocs uniquement — pas de couleur, pas de texte. Test de la hiérarchie : en-tête de statut, zone carte, bande d’actions. Une question par bloc.",
+                    "deviceLabel": "Blockframe de l’écran Localisateur"
                 },
                 "wireframe": {
                     "kicker": "Étape 03",
@@ -463,9 +463,9 @@
                     "heading": "Au plus près du final",
                     "offline": "hors ligne",
                     "howToGet": "Comment y aller",
-                    "callOhana": "Appeler l'ohana",
+                    "callOhana": "Appeler l’ohana",
                     "desc": "Tokens de marque appliqués. Vrai texte testé en taille réelle. Trajet et appel séparés par le poids visuel, pas seulement la position.",
-                    "deviceLabel": "Wireframe hi-fi de l'écran Localisateur"
+                    "deviceLabel": "Wireframe hi-fi de l’écran Localisateur"
                 }
             },
             "mockup": {
@@ -473,13 +473,13 @@
                 "headingPre": "Connectée quand",
                 "headingIt": "ça compte.",
                 "headingPost": "",
-                "body": "L'écran chat est le cœur d'Hawi. Pas une messagerie — une couche de présence. Accusés de lecture, notes vocales, réactions rapides. Conçu pour une utilisation à une main et une faible acuité visuelle."
+                "body": "L’écran chat est le cœur d’Hawi. Accusés de lecture, notes vocales, réactions rapides — le tout conçu pour une utilisation à une main et une faible acuité visuelle."
             },
             "plates": {
                 "workshop": {
                     "tag": "Recherche · Atelier",
                     "cap": "Plate 02 · Atelier de découverte — Madrid, 2019",
-                    "alt": "Photo d'atelier de découverte",
+                    "alt": "Photo d’atelier de découverte",
                     "meta": "Recherche qualitative · Madrid"
                 },
                 "flowmap": {
@@ -491,13 +491,13 @@
                 "brand": {
                     "tag": "Brand · Identité",
                     "cap": "Planche 04 · Atelier de marque — des valeurs au concept OHANA",
-                    "alt": "Fiche d'identité de marque",
+                    "alt": "Fiche d’identité de marque",
                     "meta": "Figma · Brand kit"
                 },
                 "chat": {
                     "tag": "UI · Chat",
                     "cap": "Plate 06 · Chat — maquette hi-fi",
-                    "alt": "Maquette hi-fi de l'écran chat",
+                    "alt": "Maquette hi-fi de l’écran chat",
                     "meta": "Figma · Prototype"
                 }
             },
@@ -530,20 +530,20 @@
                 "outcomeL": "Résultat",
                 "outcome": "Publiée · 10K+ installations"
             },
-            "subtitle": "Une app de santé pour femmes qui adapte l'entraînement et la nutrition aux phases du cycle menstruel. J'ai mené deux nouvelles parties : un calendrier de cycle éditable et la section nutrition premium.",
-            "heroVisualCap": "Accueil · aujourd'hui",
-            "heroVisualAlt": "Écran d'accueil de Gazella avec l'entraînement du jour et des articles liés au cycle",
+            "subtitle": "Une app de santé pour femmes qui adapte l’entraînement et la nutrition aux phases du cycle menstruel. J’ai mené deux nouvelles parties : un calendrier de cycle éditable et la section nutrition premium.",
+            "heroVisualCap": "Accueil · aujourd’hui",
+            "heroVisualAlt": "Écran d’accueil de Gazella avec l’entraînement du jour et des articles liés au cycle",
             "insight": {
                 "label": "Le constat",
-                "body": "<em>Le corps n'est pas une horloge.</em> L'app calculait tout à partir d'une seule date saisie à l'inscription — sans jamais permettre de la modifier. Or les cycles varient : un autre jour, une autre durée, parfois aucune règle."
+                "body": "<em>Le corps n’est pas une horloge.</em> L’app calculait tout à partir d’une seule date saisie à l’inscription — sans jamais permettre de la modifier. Or les cycles varient : un autre jour, une autre durée, parfois aucune règle."
             },
             "context": {
                 "num": "01 · Contexte",
                 "title": "Rejoindre un produit",
                 "titleIt": "déjà lancé.",
                 "gutter": "Brief",
-                "left": "Gazella est une app de santé pour femmes qui adapte la course, l'entraînement et la nutrition aux phases du cycle menstruel. J'ai rejoint un produit existant comme seule designer UX/UI, sous la direction d'un directeur créatif, pour <em>mener deux nouvelles parties</em>.",
-                "rightTop": "L'app avait déjà une marque et un moteur fonctionnel. Ce qui manquait, c'était le contrôle : le cycle — ce sur quoi repose tout le produit — n'était qu'une seule donnée figée.",
+                "left": "Gazella est une app de santé pour femmes qui adapte la course, l’entraînement et la nutrition aux phases du cycle menstruel. J’ai rejoint un produit existant comme seule designer UX/UI, sous la direction d’un directeur créatif, pour <em>mener deux nouvelles parties</em>.",
+                "rightTop": "L’app avait déjà une marque et un moteur fonctionnel. Ce qui manquait, c’était le contrôle : le cycle — ce sur quoi repose tout le produit — n’était qu’une seule donnée figée.",
                 "rightBottom": "Rôle : seule designer UX/UI. Studio : Akimad. Les deux parties ont été livrées comme une première version, pensée pour itérer."
             },
             "stats": [
@@ -566,18 +566,18 @@
             ],
             "calendar": {
                 "num": "02 · Le calendrier",
-                "title": "Un cycle qu'on peut",
+                "title": "Un cycle qu’on peut",
                 "titleIt": "vraiment corriger.",
                 "gutter": "Problème",
-                "left": "L'app d'origine demandait votre dernière règle <em>une seule fois</em>, à l'inscription, et calculait chaque entraînement à partir de là. Impossible de la modifier. Dès qu'un cycle était plus court, en retard ou absent, le plan s'éloignait du corps qu'il était censé suivre.",
-                "rightTop": "Le calendrier redonne ce contrôle. Un accès direct dans la barre du bas, le début et la fin des règles définis en touchant les jours, la phase en cours affichée en contexte, et les jours d'entraînement marqués par des points — recalculés à chaque changement de date.",
-                "rightBottom": "J'ai analysé presque toutes les apps de suivi du cycle du marché, puis priorisé le plus petit ensemble de fonctionnalités rendant le calendrier assez fiable pour être livré et itéré."
+                "left": "L’app d’origine demandait votre dernière règle <em>une seule fois</em>, à l’inscription, et calculait chaque entraînement à partir de là. Impossible de la modifier. Dès qu’un cycle était plus court, en retard ou absent, le plan s’éloignait du corps qu’il était censé suivre.",
+                "rightTop": "Le calendrier redonne ce contrôle. Un accès direct dans la barre du bas, le début et la fin des règles définis en touchant les jours, la phase en cours affichée en contexte, et les jours d’entraînement marqués par des points — recalculés à chaque changement de date.",
+                "rightBottom": "J’ai analysé presque toutes les apps de suivi du cycle du marché, puis priorisé le plus petit ensemble de fonctionnalités rendant le calendrier assez fiable pour être livré et itéré."
             },
             "calShots": {
                 "kicker": "Calendrier · écrans clés",
-                "trainingCap": "Accueil selon le cycle — l'entraînement du jour",
-                "trainingAlt": "Écran d'accueil de Gazella avec le cycle et l'entraînement du jour",
-                "monthCap": "Vue mois — règles et jours d'entraînement marqués",
+                "trainingCap": "Accueil selon le cycle — l’entraînement du jour",
+                "trainingAlt": "Écran d’accueil de Gazella avec le cycle et l’entraînement du jour",
+                "monthCap": "Vue mois — règles et jours d’entraînement marqués",
                 "monthAlt": "Vue mois du calendrier Gazella",
                 "editCap": "Corriger le premier jour des règles",
                 "editAlt": "Écran pour décaler le premier jour des règles"
@@ -587,19 +587,19 @@
                 "title": "Concevoir la première",
                 "titleIt": "source de revenus.",
                 "gutter": "Premium",
-                "left": "La nutrition était une commande du client : la première tentative de revenus de la startup. Le brief : une offre premium — des recettes adaptées à chaque phase du cycle, derrière un abonnement. J'ai conçu l'UI et le parcours d'achat.",
-                "rightTop": "Pour que le premium ne ressemble pas à un mur, j'ai étudié comment d'autres apps structuraient recettes et listes de courses, puis j'ai donné à la section payante <em>une allure distincte</em> — pour qu'elle paraisse meilleure et différente, pas seulement bloquée.",
-                "rightBottom": "J'ai été honnête sur le risque : face à d'innombrables apps de nutrition dédiées, je doutais que les utilisatrices paient pour cela. Je l'ai dit. La décision revenait au client — bien la concevoir m'appartenait."
+                "left": "La nutrition était une commande du client : la première tentative de revenus de la startup. Le brief : une offre premium — des recettes adaptées à chaque phase du cycle, derrière un abonnement. J’ai conçu l’UI et le parcours d’achat.",
+                "rightTop": "Pour que le premium ne ressemble pas à un mur, j’ai étudié comment d’autres apps structuraient recettes et listes de courses, puis j’ai donné à la section payante <em>une allure distincte</em> — pour qu’elle paraisse meilleure et différente, pas seulement bloquée.",
+                "rightBottom": "J’ai été honnête sur le risque : face à tant d’apps de nutrition dédiées, je doutais que les utilisatrices paient pour ça, et je l’ai dit. Le client a tranché — mon travail, c’était de le concevoir aussi bien que possible."
             },
             "callout": {
                 "tag": "Ma proposition",
-                "heading": "Une liste de courses qui <em>s'écrit toute seule.</em>",
-                "body": "Ce que j'ai défendu : générer la liste de courses directement depuis les ingrédients d'une recette. Envie de la cuisiner ? Tout y est déjà — sans rien recopier. Une petite utilité du quotidien qui donne une raison d'être à une offre premium."
+                "heading": "Une liste de courses qui <em>s’écrit toute seule.</em>",
+                "body": "Ce que j’ai défendu : générer la liste de courses directement depuis les ingrédients d’une recette. Envie de la cuisiner ? Tout est déjà sur la liste, rien à recopier. Une utilité du quotidien — le genre de chose qui donne une raison d’être à une offre premium."
             },
             "recipe": {
                 "tag": "UI · Recette",
-                "cap": "Détail d'une recette — ingrédients, étapes, répartition des macros",
-                "alt": "Écran complet d'une recette Gazella",
+                "cap": "Détail d’une recette — ingrédients, étapes, répartition des macros",
+                "alt": "Écran complet d’une recette Gazella",
                 "scrollHint": "↕ Faire défiler"
             },
             "nutShots": {
@@ -608,18 +608,18 @@
                 "bookAlt": "Écran recettier de Gazella",
                 "listCap": "Liste de courses, depuis les ingrédients",
                 "listAlt": "Écran liste de courses de Gazella",
-                "emptyCap": "État vide — rien d'ajouté",
+                "emptyCap": "État vide — rien d’ajouté",
                 "emptyAlt": "État vide de la liste de courses",
                 "premiumCap": "Le mur premium",
-                "premiumAlt": "Écran d'upsell premium de Gazella"
+                "premiumAlt": "Écran d’upsell premium de Gazella"
             },
             "reflection": {
                 "num": "04 · Bilan",
                 "title": "Ce que je garde,",
                 "titleIt": "ce que je questionne.",
                 "gutter": "À retenir",
-                "left": "Deux leçons sont restées. <em>Concevoir pour le corps réel, pas l'idéal</em> — le cycle éditable comptait justement parce que rien n'est régulier. Et concevoir avec les vraies limites d'une startup : livrer une première version assumée comme telle.",
-                "rightTop": "Je questionnerais encore le pari du premium. Faire payer la nutrition sur un marché saturé tenait plus de l'acte de foi que du besoin validé. L'avoir dit — et l'avoir conçu aussi bien que possible malgré tout — est ce dont je suis fière."
+                "left": "Deux leçons sont restées. <em>Concevoir pour le corps réel, pas l’idéal</em> — le cycle éditable comptait justement parce que rien n’est régulier. Et concevoir avec les vraies limites d’une startup : livrer une première version assumée comme telle.",
+                "rightTop": "Je questionnerais encore le pari du premium. Faire payer la nutrition sur un marché saturé tenait plus de l’acte de foi que du besoin validé. L’avoir dit à voix haute, puis l’avoir conçu aussi bien que possible malgré tout, c’est la partie dont je suis fière."
             }
         },
         "fiche": {
@@ -633,22 +633,22 @@
                 "sectorL": "Secteur",
                 "sector": "SaaS B2B · RH / Paie",
                 "scopeL": "Périmètre",
-                "scope": "Architecture de l'information · refonte UI",
+                "scope": "Architecture de l’information · refonte UI",
                 "outcomeL": "Résultat",
                 "outcome": "Déployé par phases"
             },
-            "subtitle": "Refonte de l'écran le plus dense d'une app de gestion du personnel B2B — la fiche salarié — d'un mur de champs écrasant à quelque chose de lisible et apprenable.",
+            "subtitle": "Refonte de l’écran le plus dense d’une app de gestion du personnel B2B — la fiche salarié — d’un mur de champs écrasant à quelque chose de lisible et apprenable.",
             "insight": {
                 "label": "Le constat",
-                "body": "<em>Toute l'app était difficile à apprendre.</em> Un outil de gestion dense, à courbe d'apprentissage raide. J'ai pris en charge l'une de ses zones les plus surchargées — la fiche salarié — avec un schéma pensé pour aller plus loin."
+                "body": "<em>Toute l’app était difficile à apprendre.</em> Un outil de gestion dense, à courbe d’apprentissage raide. J’ai pris en charge l’une de ses zones les plus surchargées — la fiche salarié — avec un schéma pensé pour aller plus loin."
             },
             "context": {
                 "num": "01 · Contexte",
                 "title": "Un outil puissant,",
                 "titleIt": "dur à apprendre.",
                 "gutter": "Brief",
-                "left": "Staff & Go est une plateforme B2B de gestion du personnel — paie, congés, RH, planning. Puissante, mais dense : sur tout le produit, les nouveaux utilisateurs affrontaient une courbe raide. <em>La fiche salarié en était l'écran le plus surchargé.</em>",
-                "rightTop": "Tout le détail d'un salarié y vivait — identité, contrats, sécurité sociale, banque, documents — entassé dans des formulaires serrés en petits caractères, réparti sur des vues difficiles à trouver.",
+                "left": "Staff & Go est une plateforme B2B de gestion du personnel — paie, congés, RH, planning. Puissante, mais dense : sur tout le produit, les nouveaux utilisateurs affrontaient une courbe raide. <em>La fiche salarié en était l’écran le plus surchargé.</em>",
+                "rightTop": "Tout le détail d’un salarié y vivait : identité, contrats, sécurité sociale, banque, documents, entassés dans des formulaires serrés en petits caractères et répartis sur des vues difficiles à trouver.",
                 "rightBottom": "Rôle : Designer Produit, en lien avec les PM et le responsable du développement pour garder une friction faible côté utilisateurs et faisable côté ingénierie."
             },
             "problem": {
@@ -656,22 +656,22 @@
                 "title": "La densité,",
                 "titleIt": "et une montée raide.",
                 "gutter": "Friction",
-                "left": "Trop d'information, trop petite, trop dure à parcourir. Trouver la bonne vue demandait un effort ; l'écran punissait les nouveaux venus. <em>L'objectif n'était pas plus de fonctionnalités — c'était moins de charge cognitive.</em>",
-                "rightTop": "Avant de toucher au pixel, j'ai analysé des outils comparables et réuni des références, puis cartographié ce que la fiche devait vraiment montrer, et dans quel ordre."
+                "left": "Trop d’information, trop petite, trop dure à parcourir. Trouver la bonne vue demandait un effort ; l’écran punissait les nouveaux venus. <em>L’objectif n’était pas plus de fonctionnalités, c’était moins de charge cognitive.</em>",
+                "rightTop": "Avant de toucher au pixel, j’ai analysé des outils comparables et réuni des références, puis cartographié ce que la fiche devait vraiment montrer, et dans quel ordre."
             },
             "redesign": {
                 "num": "03 · La refonte",
                 "title": "La structure",
                 "titleIt": "avant la décoration.",
                 "gutter": "Approche",
-                "left": "La solution était l'architecture, pas la peinture. J'ai regroupé la fiche en sections claires et étiquetées, avec de l'air et un ordre prévisible, pour que l'œil sache toujours où regarder. <em>Mêmes données, bien moins d'effort de lecture.</em>",
-                "rightTop": "J'ai aussi conçu les états réels — comptes initialisés, activés, désactivés, non configurés — pour que l'écran reste cohérent dans tous les cas, pas seulement le scénario idéal.",
-                "rightBottom": "Et je l'ai conçue avec l'ingénierie dans la pièce, pour que la structure soit réellement constructible et livrable par étapes."
+                "left": "La solution était l’architecture, pas la peinture. J’ai regroupé la fiche en sections claires et étiquetées, avec de l’air et un ordre prévisible, pour que l’œil sache toujours où regarder. <em>Mêmes données, bien moins d’effort de lecture.</em>",
+                "rightTop": "J’ai aussi conçu les états réels — comptes initialisés, activés, désactivés, non configurés — pour que l’écran reste cohérent dans tous les cas, pas seulement le scénario idéal.",
+                "rightBottom": "Et je l’ai conçue avec l’ingénierie dans la pièce, pour que la structure soit réellement constructible et livrable par étapes."
             },
             "ba": {
                 "beforeLabel": "Avant",
                 "beforeNote": "Formulaire dense, petits caractères, dur à parcourir",
-                "beforeAlt": "Fiche salarié d'origine — formulaire dense (anonymisé)",
+                "beforeAlt": "Fiche salarié d’origine — formulaire dense (anonymisé)",
                 "afterLabel": "Après",
                 "afterNote": "En sections, lisible, ordre prévisible",
                 "afterAlt": "Fiche salarié redessinée — sections claires (anonymisé)"
@@ -679,7 +679,7 @@
             "mobile": {
                 "kicker": "Responsive",
                 "heading": "Un seul ordre, <em>appris une fois.</em>",
-                "body": "À chaque breakpoint, la fiche se lit comme les mêmes sections ordonnées — Profil, Identification, Naissance, Coordonnées, etc. Les fiches salarié et établissement partagent cet ordre : l'utilisateur professionnel apprend le schéma une fois et le réutilise partout.",
+                "body": "À chaque breakpoint, la fiche se lit comme les mêmes sections ordonnées — Profil, Identification, Naissance, Coordonnées, etc. Les fiches salarié et établissement partagent cet ordre : l’utilisateur professionnel apprend le schéma une fois et le réutilise partout.",
                 "alt": "Fiche salarié redessinée sur mobile, défilable (anonymisé)",
                 "scrollHint": "↕ Faire défiler"
             },
@@ -688,8 +688,8 @@
                 "title": "Déployé par phases,",
                 "titleIt": "pensé pour durer.",
                 "gutter": "Résultat",
-                "left": "La refonte a été déployée par phases — volontairement, pour accompagner les utilisateurs dans le changement plutôt que tout renommer du jour au lendemain. <em>Le schéma de sections ordonnées a été conçu pour s'étendre</em> de la fiche salarié aux établissements et au-delà.",
-                "rightTop": "Un rappel : dans un outil B2B dense, le geste de design le plus utile n'est souvent pas d'ajouter — c'est de rendre l'existant lisible, cohérent et accueillant pour un nouvel utilisateur."
+                "left": "La refonte a été déployée par phases — volontairement, pour accompagner les utilisateurs dans le changement plutôt que tout renommer du jour au lendemain. <em>Le schéma de sections ordonnées a été conçu pour s’étendre</em> de la fiche salarié aux établissements et au-delà.",
+                "rightTop": "Un rappel : dans un outil B2B dense, le geste de design le plus utile n’est souvent pas d’ajouter, mais de rendre l’existant lisible et cohérent pour qui le découvre."
             },
             "stats": [
                 {
@@ -757,7 +757,7 @@
             "Design Systems",
             "UX / UI",
             "Prototypage",
-            "Architecture de l'information",
+            "Architecture de l’information",
             "Collaboration Front-End",
             "Angular · TypeScript · Sass",
             "Behavioral Design",
