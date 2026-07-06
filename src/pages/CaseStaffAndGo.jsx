@@ -27,7 +27,7 @@ export default function CaseStaffAndGo() {
 
   return (
     <div data-screen-label="Case · Staff & Go">
-      <CaseTopbar />
+      <CaseTopbar caseLabel={t('case.topbar.sgMid')} caseTitle={t('case.topbar.sgShort')} />
 
       <div className="wrap">
         <CaseHero />
@@ -117,7 +117,7 @@ export default function CaseStaffAndGo() {
         </Chapter>
 
         <OtherCases exclude="staff-and-go" />
-        <BackFoot />
+        <BackFoot mid={t('case.topbar.of')} />
       </div>
     </div>
   );

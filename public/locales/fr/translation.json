@@ -118,7 +118,15 @@
             "hawiOf": "Étude de cas · 03 sur 04",
             "contact": "Contact",
             "gazellaOf": "Étude de cas · 04 sur 04",
-            "ficheOf": "Étude de cas · 02 sur 04"
+            "ficheOf": "Étude de cas · 02 sur 04",
+            "sgMid": "Cas · Design System · SaaS B2B",
+            "sgShort": "Design System",
+            "ficheMid": "Cas · Fiche salarié · SaaS B2B",
+            "ficheShort": "Fiche salarié",
+            "hawiMid": "Cas · Hawi · App mobile",
+            "hawiShort": "Hawi",
+            "gazellaMid": "Cas · Gazella · FemTech",
+            "gazellaShort": "Gazella"
         },
         "hero": {
             "year": "Année",
@@ -319,7 +327,6 @@
         },
         "foot": {
             "back": "← Retour au portfolio",
-            "mid": "Cas · Staff & Go · NDA · Walkthrough sur demande",
             "contact": "Contact →"
         },
         "hawi": {
@@ -494,9 +501,6 @@
                     "meta": "Figma · Prototype"
                 }
             },
-            "foot": {
-                "mid": "Cas · Hawi · Akimad · Prototype sur demande"
-            },
             "brandKit": {
                 "logoLabel": "Variantes du logo",
                 "paletteLabel": "Palette corporate",
@@ -616,9 +620,6 @@
                 "gutter": "À retenir",
                 "left": "Deux leçons sont restées. <em>Concevoir pour le corps réel, pas l'idéal</em> — le cycle éditable comptait justement parce que rien n'est régulier. Et concevoir avec les vraies limites d'une startup : livrer une première version assumée comme telle.",
                 "rightTop": "Je questionnerais encore le pari du premium. Faire payer la nutrition sur un marché saturé tenait plus de l'acte de foi que du besoin validé. L'avoir dit — et l'avoir conçu aussi bien que possible malgré tout — est ce dont je suis fière."
-            },
-            "foot": {
-                "mid": "Cas · Gazella · Akimad · 2019"
             }
         },
         "fiche": {
@@ -718,10 +719,7 @@
                     "n": "2023—24",
                     "l": "Staff & Go"
                 }
-            ],
-            "foot": {
-                "mid": "Cas · Staff & Go · NDA · Écrans anonymisés · Walkthrough sur demande"
-            }
+            ]
         }
     },
     "hero": {

@@ -118,7 +118,15 @@
             "hawiOf": "Case study · 03 of 04",
             "contact": "Contact",
             "gazellaOf": "Case study · 04 of 04",
-            "ficheOf": "Case study · 02 of 04"
+            "ficheOf": "Case study · 02 of 04",
+            "sgMid": "Case · Design System · B2B SaaS",
+            "sgShort": "Design System",
+            "ficheMid": "Case · Fiche salarié · B2B SaaS",
+            "ficheShort": "Fiche salarié",
+            "hawiMid": "Case · Hawi · Mobile app",
+            "hawiShort": "Hawi",
+            "gazellaMid": "Case · Gazella · FemTech",
+            "gazellaShort": "Gazella"
         },
         "hero": {
             "year": "Year",
@@ -319,7 +327,6 @@
         },
         "foot": {
             "back": "← Back to portfolio",
-            "mid": "Case · Staff & Go · NDA · Walkthrough on request",
             "contact": "Contact →"
         },
         "hawi": {
@@ -506,9 +513,6 @@
                     "alt": "Hi-fi chat screen mockup",
                     "meta": "Figma · Prototype"
                 }
-            },
-            "foot": {
-                "mid": "Case · Hawi · Akimad · Prototype on request"
             }
         },
         "gazella": {
@@ -616,9 +620,6 @@
                 "gutter": "Takeaway",
                 "left": "Two lessons stuck. <em>Design for the real body, not the ideal one</em> — the editable cycle mattered precisely because nothing is regular. And design within a startup's real limits: ship a first version that's honest about being one.",
                 "rightTop": "I'd still question the premium bet. Charging for nutrition in a crowded market was a leap of faith more than a validated need. Voicing that — and designing it as well as it could be anyway — is the part I'm proud of."
-            },
-            "foot": {
-                "mid": "Case · Gazella · Akimad · 2019"
             }
         },
         "fiche": {
@@ -718,10 +719,7 @@
                     "n": "2023—24",
                     "l": "Staff & Go"
                 }
-            ],
-            "foot": {
-                "mid": "Case · Staff & Go · NDA · Screens anonymised · Walkthrough on request"
-            }
+            ]
         }
     },
     "hero": {

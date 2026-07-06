@@ -6,7 +6,7 @@ export function BackFoot({ mid }) {
   return (
     <div className="case-foot">
       <Link to="/" className="hover:text-[var(--accent)]">{t('case.foot.back')}</Link>
-      <span>{mid ?? t('case.foot.mid')}</span>
+      <span>{mid}</span>
       <Link to="/#contact" className="hover:text-[var(--accent)]">{t('case.foot.contact')}</Link>
     </div>
   );
