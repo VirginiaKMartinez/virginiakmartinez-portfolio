@@ -33,6 +33,9 @@ export default function SelectedWork() {
                             if (w.disabled) e.preventDefault();
                         }}
                     >
+                        <div className="work-thumb" aria-hidden="true">
+                            <span>{w.id}</span>
+                        </div>
                         <div className="yr">{w.year}</div>
                         <div
                             className="title"

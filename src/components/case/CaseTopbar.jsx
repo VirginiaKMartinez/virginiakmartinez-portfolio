@@ -4,14 +4,35 @@ import { useTranslation } from 'react-i18next';
 /**
  * Sticky topbar for case study pages.
  * `caseLabel` overrides the default "01 of 04" centre string.
+ * Carries its own EN·FR toggle — the home Header is not rendered on /case/*.
  */
 export function CaseTopbar({ caseLabel }) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const currentLang = i18n.language?.startsWith('fr') ? 'fr' : 'en';
   return (
     <header className="case-topbar">
       <div><Link to="/" className="hover:text-[var(--accent)]">{t('case.topbar.back')}</Link></div>
       <div className="mid">{caseLabel ?? t('case.topbar.of')}</div>
-      <div className="text-right"><Link to="/#contact" className="hover:text-[var(--accent)]">{t('case.topbar.contact')}</Link></div>
+      <div className="right">
+        <div className="lang-pill" role="group" aria-label="Language">
+          <button
+            type="button"
+            onClick={() => i18n.changeLanguage('en')}
+            aria-pressed={currentLang === 'en'}
+          >
+            EN
+          </button>
+          <span>·</span>
+          <button
+            type="button"
+            onClick={() => i18n.changeLanguage('fr')}
+            aria-pressed={currentLang === 'fr'}
+          >
+            FR
+          </button>
+        </div>
+        <Link to="/#contact" className="hover:text-[var(--accent)]">{t('case.topbar.contact')}</Link>
+      </div>
     </header>
   );
 }

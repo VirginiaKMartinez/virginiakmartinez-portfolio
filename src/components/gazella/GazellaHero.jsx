@@ -36,6 +36,7 @@ export function GazellaHero() {
           <DeviceFrame
             src="/case/gazella/gz-home.png"
             alt={t('case.gazella.heroVisualAlt')}
+            loading="eager"
           />
           <figcaption>{t('case.gazella.heroVisualCap')}</figcaption>
         </figure>

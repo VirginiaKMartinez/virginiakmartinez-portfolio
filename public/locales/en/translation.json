@@ -20,7 +20,7 @@
     "work": {
         "h1": "Selected",
         "h2": "work.",
-        "kicker": "Four projects · 2019 — 2024 · Case studies on request",
+        "kicker": "Four case studies · 2019 — 2024",
         "items": {
             "staffAndGo": {
                 "desc": "Design system from scratch · 25+ components"
@@ -108,8 +108,7 @@
         },
         "colophon": {
             "copy": "© MMXXVI · Virginia Martínez",
-            "set": "Set in Instrument Serif & Helvetica · Hand-built in React",
-            "egg": "Press ⌘K to open the console"
+            "set": "Set in Instrument Serif & Helvetica · Hand-built in React"
         }
     },
     "case": {
@@ -641,7 +640,11 @@
             "heroDiagram": {
                 "before": "Before",
                 "after": "After",
-                "sections": ["Identity", "Contract", "Payroll"],
+                "sections": [
+                    "Identity",
+                    "Contract",
+                    "Payroll"
+                ],
                 "caption": "A wall of fields → sections",
                 "aria": "Diagram: an undifferentiated wall of equal fields on the left becomes a record organised into labelled sections on the right."
             },
@@ -766,55 +769,5 @@
             "Behavioral Design",
             "Accessibility"
         ]
-    },
-    "header": {
-        "experience": "Experience",
-        "education": "Education",
-        "caseStudies": "Case Studies",
-        "testimonials": "What people say",
-        "contact": "Contact"
-    },
-    "contact": {
-        "title": "I love making connections, so please reach out if you want to work with me or just say hello!",
-        "subtitle": "Feel free to drop me a line and let's create something amazing together.",
-        "cta": "Get in touch"
-    },
-    "footer": {
-        "copyright": "© Virginia Martínez. All rights reserved.",
-        "madeWith": "Designed in Figma, built with React & Tailwind CSS",
-        "linkedin": "LinkedIn",
-        "github": "GitHub",
-        "email": "Email"
-    },
-    "projects": {
-        "backToProjects": "Back to all Case Studies",
-        "sections": {
-            "intro": "Design System",
-            "overview": "Overview",
-            "tokens": "Foundations (Tokens)",
-            "library": "Components Library",
-            "governance": "Docs & Governance",
-            "devhandoff": "Dev handoff",
-            "challenges": "Challenges & Solutions",
-            "results": "Results & Impact",
-            "learnings": "Learnings",
-            "next": "Next steps",
-            "problem": "The problem",
-            "goals": "Goals"
-        },
-        "labels": {
-            "role": "Role",
-            "company": "Company",
-            "timeframe": "Timeframe",
-            "stack": "Stack",
-            "solution": "Solution"
-        },
-        "common": {
-            "onThisPage": "On this page"
-        },
-        "welcome": "Hi, my name is Virginia",
-        "description": "I’m a Product Designer with more than 6 years experience and a background in FrontEnd development.",
-        "downloadResume": "Download resume",
-        "tradTest": "English mode"
     }
 }

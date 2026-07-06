@@ -27,10 +27,10 @@ export default function CaseGazella() {
   ];
 
   const nutScreens = [
-    { src: '/case/gazella/gz-recetario.png',  alt: t('case.gazella.nutShots.bookAlt'),    cap: t('case.gazella.nutShots.bookCap') },
+    { src: '/case/gazella/gz-recetario.webp',  alt: t('case.gazella.nutShots.bookAlt'),    cap: t('case.gazella.nutShots.bookCap') },
     { src: '/case/gazella/gz-list.png',       alt: t('case.gazella.nutShots.listAlt'),    cap: t('case.gazella.nutShots.listCap') },
     { src: '/case/gazella/gz-list-empty.png', alt: t('case.gazella.nutShots.emptyAlt'),   cap: t('case.gazella.nutShots.emptyCap') },
-    { src: '/case/gazella/gz-premium.png',    alt: t('case.gazella.nutShots.premiumAlt'), cap: t('case.gazella.nutShots.premiumCap') },
+    { src: '/case/gazella/gz-premium.webp',    alt: t('case.gazella.nutShots.premiumAlt'), cap: t('case.gazella.nutShots.premiumCap') },
   ];
 
   return (
@@ -91,7 +91,7 @@ export default function CaseGazella() {
 
           <figure className="gz-recipe">
             <ScrollPhone
-              src="/case/gazella/gz-recipe-full.png"
+              src="/case/gazella/gz-recipe-full.webp"
               alt={t('case.gazella.recipe.alt')}
               hint={t('case.gazella.recipe.scrollHint')}
             />

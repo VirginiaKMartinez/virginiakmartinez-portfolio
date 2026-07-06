@@ -1,6 +1,6 @@
 // src/components/home/Hero.jsx — v2 editorial cover · Portrait Chrome (Rosso)
 import { useTranslation } from "react-i18next";
-import portrait from "../../assets/images/portrait.png";
+import portrait from "../../assets/images/portrait.webp";
 
 export default function Hero() {
     const { t } = useTranslation();

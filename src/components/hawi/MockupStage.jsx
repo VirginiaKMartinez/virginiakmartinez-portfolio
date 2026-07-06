@@ -19,7 +19,7 @@ export function MockupStage() {
         <p>{h.body}</p>
       </div>
       <DeviceFrame
-        src="/case/hawi/hawi-chat-hifi.png"
+        src="/case/hawi/hawi-chat-hifi.webp"
         alt={t('case.hawi.plates.chat.alt')}
       />
     </section>

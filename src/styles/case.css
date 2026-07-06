@@ -26,6 +26,12 @@
   color: var(--fg-soft);
 }
 .case-topbar .mid { color: var(--fg); letter-spacing: 0.16em; }
+.case-topbar .right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 18px;
+}
 
 /* ---------- Hero ---------- */
 .case-hero {

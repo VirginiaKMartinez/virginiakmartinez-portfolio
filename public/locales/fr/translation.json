@@ -20,7 +20,7 @@
     "work": {
         "h1": "Travaux",
         "h2": "choisis.",
-        "kicker": "Quatre projets · 2019 — 2024 · Études de cas sur demande",
+        "kicker": "Quatre études de cas · 2019 — 2024",
         "items": {
             "staffAndGo": {
                 "desc": "Design system de zéro · 25+ composants"
@@ -38,7 +38,7 @@
                 "desc": "App de santé selon le cycle · calendrier éditable + premium"
             },
             "ficheSalarie": {
-                "desc": "Refonte de la fiche salarié · AI + UI"
+                "desc": "Refonte de la fiche salarié · archi de l'info + UI"
             }
         }
     },
@@ -108,8 +108,7 @@
         },
         "colophon": {
             "copy": "© MMXXVI · Virginia Martínez",
-            "set": "Composé en Instrument Serif & Helvetica · Codé à la main en React",
-            "egg": "Tape ⌘K pour ouvrir la console"
+            "set": "Composé en Instrument Serif & Helvetica · Codé à la main en React"
         }
     },
     "case": {
@@ -328,7 +327,7 @@
                 "yearL": "Année",
                 "year": "2019 — 2020",
                 "roleL": "Rôle",
-                "role": "UX/UI Designer",
+                "role": "Designeuse UX/UI",
                 "clientL": "Client",
                 "client": "Akimad",
                 "sectorL": "Secteur",
@@ -386,7 +385,7 @@
                 "titleIt": "un monde partagé.",
                 "gutter": "Processus",
                 "left": "La décision de design centrale : <em>trois vues séparées sur les mêmes données</em>. L'aîné a la simplicité. L'aidant familial a la tranquillité et la coordination. Le coordinateur a une vue d'ensemble sans intrusion.",
-                "rightTop": "Chaque écran est passé par esquisse papier, blockframe, et wireframe hi-fi avant le prototype. L'écran Localisateur — où est papa — a été le plus difficile à trouver."
+                "rightTop": "Chaque écran est passé par esquisse papier, blockframe, et wireframe hi-fi avant le prototype. L'écran Localisateur — où est papa — a été le plus difficile à mettre au point."
             },
             "ohanaFlow": [
                 {
@@ -410,15 +409,6 @@
                     "desc": "Prototype Figma interactif, présenté en ES / EN / FR à des clients et parties prenantes."
                 }
             ],
-            "brand": {
-                "kicker": "Brand · Identité",
-                "heading": "Chaleureux, accessible,",
-                "headingIt": "jamais clinique.",
-                "body": "Nunito pour la chaleur et la lisibilité en grand corps. Une palette de brun-rouille, ardoise et blanc chaud — accessible pour les aînés, distincte des applications médicales.",
-                "logoAlt": "Logomark Hawi — trois cercles qui se chevauchent",
-                "paletteLabel": "Palette de marque",
-                "typeLabel": "Spécimen typographique"
-            },
             "actors": [
                 {
                     "name": "La personne âgée",
@@ -450,7 +440,7 @@
                     "kicker": "Étape 01",
                     "kind": "Esquisse papier",
                     "heading": "Localisateur — première esquisse",
-                    "deviceLabel": "Croquis papier de l'écran Locator",
+                    "deviceLabel": "Croquis papier de l'écran Localisateur",
                     "desc": "Dessiné à la main après la première session de découverte. Le Localisateur est l'ancre de l'aidant familial : où est papa, peut-on le joindre, que puis-je faire maintenant ?"
                 },
                 "blockframe": {
@@ -458,7 +448,7 @@
                     "kind": "Blockframe",
                     "heading": "Structure avant le bruit",
                     "desc": "Blocs uniquement — pas de couleur, pas de texte. Test de la hiérarchie : en-tête de statut, zone carte, bande d'actions. Une question par bloc.",
-                    "deviceLabel": "Blockframe de l'écran Locator"
+                    "deviceLabel": "Blockframe de l'écran Localisateur"
                 },
                 "wireframe": {
                     "kicker": "Étape 03",
@@ -468,7 +458,7 @@
                     "howToGet": "Comment y aller",
                     "callOhana": "Appeler l'ohana",
                     "desc": "Tokens de marque appliqués. Vrai texte testé en taille réelle. Trajet et appel séparés par le poids visuel, pas seulement la position.",
-                    "deviceLabel": "Wireframe hi-fi de l'écran Locator"
+                    "deviceLabel": "Wireframe hi-fi de l'écran Localisateur"
                 }
             },
             "mockup": {
@@ -526,7 +516,7 @@
                 "yearL": "Année",
                 "year": "2019",
                 "roleL": "Rôle",
-                "role": "Designer UX/UI",
+                "role": "Designeuse UX/UI",
                 "clientL": "Client",
                 "client": "Akimad",
                 "sectorL": "Secteur",
@@ -636,7 +626,7 @@
                 "yearL": "Année",
                 "year": "2023 — 2024",
                 "roleL": "Rôle",
-                "role": "Designer Produit",
+                "role": "Designeuse Produit",
                 "clientL": "Client",
                 "client": "Staff & Go",
                 "sectorL": "Secteur",
@@ -650,7 +640,11 @@
             "heroDiagram": {
                 "before": "Avant",
                 "after": "Après",
-                "sections": ["Identité", "Contrat", "Paie"],
+                "sections": [
+                    "Identité",
+                    "Contrat",
+                    "Paie"
+                ],
                 "caption": "Un mur de champs → des sections",
                 "aria": "Schéma : un mur de champs identiques à gauche devient une fiche organisée en sections étiquetées à droite."
             },
@@ -726,7 +720,7 @@
                 }
             ],
             "foot": {
-                "mid": "Cas · Staff & Go · NDA · Écrans anonymisés · Démo sur demande"
+                "mid": "Cas · Staff & Go · NDA · Écrans anonymisés · Walkthrough sur demande"
             }
         }
     },
@@ -775,55 +769,5 @@
             "Behavioral Design",
             "Accessibilité"
         ]
-    },
-    "header": {
-        "experience": "Expérience",
-        "education": "Formation",
-        "caseStudies": "Études de cas",
-        "testimonials": "Ce que disent les gens",
-        "contact": "Contact"
-    },
-    "contact": {
-        "title": "J'adore créer des connexions, contactez-moi si vous souhaitez travailler ensemble ou simplement dire bonjour !",
-        "subtitle": "N'hésitez pas à m'envoyer un message pour créer quelque chose d'incroyable ensemble.",
-        "cta": "Entrer en contact"
-    },
-    "footer": {
-        "copyright": "© Virginia Martínez. Tous droits réservés.",
-        "madeWith": "Conçu sous Figma, développé avec React & Tailwind CSS",
-        "linkedin": "LinkedIn",
-        "github": "GitHub",
-        "email": "Email"
-    },
-    "projects": {
-        "backToProjects": "Retour à toutes les études de cas",
-        "sections": {
-            "intro": "Design System",
-            "overview": "Présentation",
-            "tokens": "Fondations (Tokens)",
-            "library": "Bibliothèque de composants",
-            "governance": "Docs & Gouvernance",
-            "devhandoff": "Handoff dev",
-            "challenges": "Défis & Solutions",
-            "results": "Résultats & Impact",
-            "learnings": "Enseignements",
-            "next": "Prochaines étapes",
-            "problem": "Le problème",
-            "goals": "Objectifs"
-        },
-        "labels": {
-            "role": "Rôle",
-            "company": "Entreprise",
-            "timeframe": "Période",
-            "stack": "Stack",
-            "solution": "Solution"
-        },
-        "common": {
-            "onThisPage": "Sur cette page"
-        },
-        "welcome": "Bonjour, je m'appelle Virginia",
-        "description": "Je suis Product Designer avec plus de 6 ans d’expérience et une formation en développement FrontEnd.",
-        "downloadResume": "Télécharger le CV",
-        "tradTest": "Mode français"
     }
 }

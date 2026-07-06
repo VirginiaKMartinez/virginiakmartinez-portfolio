@@ -58,7 +58,7 @@ export default function CaseHawi() {
         />
 
         <figure className="artifact ratio-16x9 artifact--inset artifact--photo">
-          <img src="/case/hawi/hawi-workshop.jpg" alt={t('case.hawi.plates.workshop.alt')} />
+          <img src="/case/hawi/hawi-workshop.jpg" alt={t('case.hawi.plates.workshop.alt')} loading="lazy" decoding="async" />
           <span className="tag">{t('case.hawi.plates.workshop.tag')}</span>
           <figcaption className="cap">
             <span>{t('case.hawi.plates.workshop.cap')}</span>
@@ -82,7 +82,7 @@ export default function CaseHawi() {
         </Chapter>
 
         <figure className="artifact paper-frame">
-          <img src="/case/hawi/hawi-flowmap.png" alt={t('case.hawi.plates.flowmap.alt')} />
+          <img src="/case/hawi/hawi-flowmap.webp" alt={t('case.hawi.plates.flowmap.alt')} loading="lazy" decoding="async" />
           <span className="tag">{t('case.hawi.plates.flowmap.tag')}</span>
           <figcaption className="cap">
             <span>{t('case.hawi.plates.flowmap.cap')}</span>
@@ -92,7 +92,7 @@ export default function CaseHawi() {
 
         {/* 04 · Brand */}
         <figure className="artifact ratio-portrait">
-          <img src="/case/hawi/hawi-brand-discovery.png" alt={t('case.hawi.plates.brand.alt')} />
+          <img src="/case/hawi/hawi-brand-discovery.webp" alt={t('case.hawi.plates.brand.alt')} loading="lazy" decoding="async" />
           <span className="tag">{t('case.hawi.plates.brand.tag')}</span>
           <figcaption className="cap">
             <span>{t('case.hawi.plates.brand.cap')}</span>

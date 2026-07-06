@@ -14,7 +14,7 @@ export function BeforeAfter({ before, after }) {
           <span className="d">{before.note}</span>
         </figcaption>
         <div className="fiche-ba__shot">
-          <img src={before.src} alt={before.alt} />
+          <img src={before.src} alt={before.alt} loading="lazy" decoding="async" />
         </div>
       </figure>
 
@@ -26,7 +26,7 @@ export function BeforeAfter({ before, after }) {
           <span className="d">{after.note}</span>
         </figcaption>
         <div className="fiche-ba__shot">
-          <img src={after.src} alt={after.alt} />
+          <img src={after.src} alt={after.alt} loading="lazy" decoding="async" />
         </div>
       </figure>
     </div>

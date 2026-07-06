@@ -83,7 +83,7 @@ export default function Contact() {
                             {t("contactSection.foot.downloadCV")}
                         </a>
                         <br />
-                        <a href="/case-studies/design-system">
+                        <a href="/case/staff-and-go">
                             {t("contactSection.foot.caseStudy")}
                         </a>
                     </p>
@@ -93,21 +93,6 @@ export default function Contact() {
             <div className="colophon">
                 <span>{t("contactSection.colophon.copy")}</span>
                 <span>{t("contactSection.colophon.set")}</span>
-                <span>
-                    {t("contactSection.colophon.egg")
-                        .split("⌘K")
-                        .map((part, i, arr) => (
-                            <span key={i}>
-                                {part}
-                                {i < arr.length - 1 && (
-                                    <>
-                                        <kbd>⌘</kbd>
-                                        <kbd>K</kbd>
-                                    </>
-                                )}
-                            </span>
-                        ))}
-                </span>
             </div>
         </section>
     );

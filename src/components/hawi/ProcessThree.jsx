@@ -27,7 +27,7 @@ export function ProcessThree() {
             </div>
             <h5>{l.heading}</h5>
             <div className="device device--shot">
-              <img src={src} alt={l.deviceLabel ?? l.heading} />
+              <img src={src} alt={l.deviceLabel ?? l.heading} loading="lazy" decoding="async" />
               <span className="arrow" aria-hidden="true">›</span>
             </div>
             <p className="step-desc">{l.desc}</p>
