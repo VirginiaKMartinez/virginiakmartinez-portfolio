@@ -161,8 +161,8 @@
             "title": "A young product,",
             "titleIt": "no system to lean on.",
             "gutter": "Brief",
-            "left": "Staff & Go is a French B2B platform for human-resources operations: annual reviews, contracts, payslips, leaves, onboarding — across dozens of establishments per client. When I joined, the product had grown faster than its UI: dozens of screens, every button slightly different, every developer choosing their own paddings.",
-            "rightTop": "The brief, eventually, became simple: <em>make the product feel like one product</em>. Build a design system from scratch. Document it for developers and project managers. Keep designing new features in parallel.",
+            "left": "Staff & Go is a French B2B platform for human-resources operations: annual reviews, contracts, payslips, leaves, onboarding — across dozens of establishments per client. When I joined as its first designer — no Figma, screens drawn straight in code — the product had grown faster than its UI: dozens of screens, every button slightly different, every developer choosing their own paddings.",
+            "rightTop": "A design base wasn’t an easy sell at first: to a team used to shipping straight to code, it read as time lost. So I started the system almost for myself — puzzle pieces that would let me design faster and keep things coherent. The team came around, and the brief became simple: <em>make the product feel like one product</em>.",
             "rightBottom": "I worked alongside the engineering team in Angular 16 — as a designer who reads code, opens a PR when a class name is wrong, and writes documentation a developer can copy-paste from."
         },
         "stats": {
@@ -193,8 +193,9 @@
             "title": "One product,",
             "titleIt": "one voice.",
             "gutter": "Result",
-            "left": "After eighteen months, every product screen used the same components. Onboarding a new developer took half the time. New features could be drawn and built in days, not weeks.",
-            "rightTop": "Confidential business numbers stay confidential — but the artifacts and reasoning are available on request. <em>Reach out</em> if you’d like a walkthrough."
+            "left": "Eighteen months in, every product screen used the same components. But the clearest sign it worked: PMs started drafting development proposals themselves, using the system to see which pieces existed and how they could — and couldn’t — be combined. The documentation became the team’s source of truth, client proposals gained value, and developers stopped guessing how components worked.",
+            "rightTop": "My last push was an internal library of the components in code, so developers could copy-paste instead of rebuilding. I supervised the interns who developed it and reviewed that every piece behaved as specified; the lead developer signed off on the final code. I didn’t get to see it finished, but builds were already coming out noticeably faster.",
+            "rightBottom": "A design system is never finished — least of all with one person creating, maintaining and growing it alongside the daily product work; the team kept asking for more. The artifacts and the reasoning are available on request: <em>reach out</em> if you’d like a walkthrough."
         },
         "tokens": {
             "col": {

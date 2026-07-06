@@ -112,6 +112,7 @@ export default function CaseStaffAndGo() {
           gutter={t('case.outcomes.gutter')}
           left={t('case.outcomes.left')}
           rightTop={t('case.outcomes.rightTop')}
+          rightBottom={t('case.outcomes.rightBottom')}
         >
           <LibraryPlate />
         </Chapter>

@@ -161,8 +161,8 @@
             "title": "Un produit jeune,",
             "titleIt": "sans système où s’appuyer.",
             "gutter": "Brief",
-            "left": "Staff & Go est une plateforme française B2B dédiée aux opérations RH : entretiens annuels, contrats, bulletins de paie, congés, embauches — à travers des dizaines d’établissements par client. À mon arrivée, le produit avait grandi plus vite que son UI : des dizaines d’écrans, chaque bouton légèrement différent, chaque développeur choisissant ses propres paddings.",
-            "rightTop": "Le brief, finalement, est devenu simple : <em>faire en sorte que le produit ressemble à un seul produit</em>. Construire un design system de zéro. Le documenter pour les développeurs et les chefs de projet. Continuer à designer de nouvelles fonctionnalités en parallèle.",
+            "left": "Staff & Go est une plateforme française B2B dédiée aux opérations RH : entretiens annuels, contrats, bulletins de paie, congés, embauches — à travers des dizaines d’établissements par client. À mon arrivée — première designer de l’équipe, pas de Figma, des écrans dessinés directement dans le code — le produit avait grandi plus vite que son UI : des dizaines d’écrans, chaque bouton légèrement différent, chaque développeur choisissant ses propres paddings.",
+            "rightTop": "Une base de design n’était pas facile à vendre au départ : pour une équipe habituée à livrer directement en code, ça ressemblait à du temps perdu. J’ai donc commencé le système presque pour moi — des pièces de puzzle pour designer plus vite et rester cohérente. L’équipe a fini par y venir, et le brief est devenu simple : <em>faire en sorte que le produit ressemble à un seul produit</em>.",
             "rightBottom": "J’ai travaillé aux côtés de l’équipe d’ingénierie, en Angular 16 — en designeuse qui lit le code, ouvre une PR quand un nom de classe est mauvais, et rédige une documentation qu’un développeur peut copier-coller."
         },
         "stats": {
@@ -193,8 +193,9 @@
             "title": "Un produit,",
             "titleIt": "une voix.",
             "gutter": "Résultat",
-            "left": "Au bout de dix-huit mois, chaque écran du produit utilisait les mêmes composants. L’onboarding d’un nouveau développeur prenait moitié moins de temps. De nouvelles fonctionnalités pouvaient être dessinées et construites en jours, pas en semaines.",
-            "rightTop": "Les chiffres business confidentiels restent confidentiels — mais les artefacts et le raisonnement sont disponibles sur demande. <em>Contactez-moi</em> pour un walkthrough."
+            "left": "Dix-huit mois plus tard, chaque écran du produit utilisait les mêmes composants. Mais le signe le plus clair que ça marchait : les PM se sont mis à esquisser eux-mêmes des propositions de développement, en s’appuyant sur le système pour voir quelles pièces existaient et comment elles pouvaient — ou non — se combiner. La documentation est devenue la source de vérité de l’équipe, les propositions clients ont gagné en valeur, et les développeurs ont cessé de deviner comment fonctionnaient les composants.",
+            "rightTop": "Mon dernier chantier : une bibliothèque interne des composants en code, pour que les développeurs copient-collent au lieu de reconstruire. J’ai encadré les stagiaires qui l’ont développée et vérifié que chaque pièce se comportait comme prévu ; le développeur principal validait le code final. Je ne l’ai pas vue aboutir, mais les développements sortaient déjà nettement plus vite.",
+            "rightBottom": "Un design system n’est jamais fini — encore moins quand une seule personne le crée, le maintient et le fait grandir en plus du travail produit quotidien ; l’équipe en redemandait. Les artefacts et le raisonnement sont disponibles sur demande : <em>contactez-moi</em> pour un walkthrough."
         },
         "tokens": {
             "col": {

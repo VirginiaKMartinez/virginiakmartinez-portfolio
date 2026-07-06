@@ -801,9 +801,10 @@ html[data-projects="cards"] .work-thumb {
     align-self: center;
     width: 100%;
     aspect-ratio: 1 / 1;
-    border: 1px dashed var(--line);
+    border: 1px solid var(--line);
     border-radius: 4px;
     background: var(--bg-2);
+    overflow: hidden;
     font-family: var(--ff-mono);
     font-size: 9px;
     letter-spacing: 0.06em;
@@ -833,6 +834,13 @@ html[data-projects="cards"] .work {
 /* Text column stays on the left; the detail/thumb sits to its right. */
 html[data-projects="cards"] .work > :not(.work-thumb) {
     grid-column: 1;
+}
+html[data-projects="cards"] .work-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top left;
+    display: block;
 }
 html[data-projects="cards"] .work:first-child {
     border-top: 1px solid var(--line);

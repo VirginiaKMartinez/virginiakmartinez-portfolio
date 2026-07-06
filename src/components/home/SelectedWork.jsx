@@ -4,6 +4,15 @@ import selectedWorkEN from "../../data/selectedWork.en";
 import selectedWorkFR from "../../data/selectedWork.fr";
 import SectionHeader from "../layout/SectionHeader";
 
+// Square thumbs — crops of each case's own visual. Staff & Go uses the real
+// documentation SVG (vector, cropped via object-fit) — the doc IS the deliverable.
+const THUMBS = {
+    "staff-and-go": "/case/staff-and-go/sg-doc-buttons.svg",
+    "fiche-salarie": "/images/work/fiche-salarie.webp",
+    hawi: "/images/work/hawi.webp",
+    gazella: "/images/work/gazella.webp",
+};
+
 export default function SelectedWork() {
     const { t, i18n } = useTranslation();
     const lang = i18n.language?.startsWith("fr") ? "fr" : "en";
@@ -34,7 +43,16 @@ export default function SelectedWork() {
                         }}
                     >
                         <div className="work-thumb" aria-hidden="true">
-                            <span>{w.id}</span>
+                            {THUMBS[w.id] ? (
+                                <img
+                                    src={THUMBS[w.id]}
+                                    alt=""
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                            ) : (
+                                <span>{w.id}</span>
+                            )}
                         </div>
                         <div className="yr">{w.year}</div>
                         <div
