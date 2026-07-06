@@ -162,7 +162,10 @@
   padding: 7px 16px; border-radius: 999px;
 }
 .gz-scrollphone .scroll-hint__ico {
-  font-size: 15px; line-height: 1; letter-spacing: 0; transform: translateY(0.5px);
+  display: inline-flex; align-items: center;
+}
+.gz-scrollphone .scroll-hint__ico svg {
+  display: block; width: 13px; height: 15px;
 }
 
 /* === Responsive ======================================================== */
