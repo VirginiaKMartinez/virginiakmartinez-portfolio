@@ -215,5 +215,5 @@
 @media (max-width: 920px) {
   .case-hero .ff-def { grid-template-columns: 1fr; gap: 12px; }
   .fiche-mobile { grid-template-columns: 1fr; gap: 32px; }
-  .fiche-mobile .gz-scrollphone { margin: 0 auto; }
+  .fiche-mobile .scrollphone { margin: 0 auto; }
 }

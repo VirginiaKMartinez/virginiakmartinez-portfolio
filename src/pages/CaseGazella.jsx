@@ -8,7 +8,7 @@ import { BackFoot } from '@/components/case/BackFoot';
 
 import { GazellaHero } from '@/components/gazella/GazellaHero';
 import { ScreenStrip } from '@/components/gazella/ScreenStrip';
-import { ScrollPhone } from '@/components/gazella/ScrollPhone';
+import { ScrollPhone } from '@/components/case/ScrollPhone';
 
 /**
  * Case study — Gazella · Akimad.

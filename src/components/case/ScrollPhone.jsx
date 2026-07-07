@@ -1,6 +1,7 @@
 /**
  * ScrollPhone — a phone bezel whose screen scrolls vertically, so a long
- * screenshot can be explored in place like a prototype.
+ * screenshot can be explored in place like a prototype. Cross-case reusable
+ * (Gazella, Fiche…); styles live in case.css under `.scrollphone`.
  *
  * @param {string} src   full-length screenshot (tall)
  * @param {string} alt   accessible description
@@ -8,7 +9,7 @@
  */
 export function ScrollPhone({ src, alt, hint }) {
   return (
-    <div className="gz-scrollphone">
+    <div className="scrollphone">
       <div className="screen">
         <div className="scroller">
           <img src={src} alt={alt} loading="lazy" decoding="async" />

@@ -8,7 +8,7 @@ import { BackFoot } from '@/components/case/BackFoot';
 
 import { FicheHero } from '@/components/fiche/FicheHero';
 import { BeforeAfter } from '@/components/fiche/BeforeAfter';
-import { ScrollPhone } from '@/components/gazella/ScrollPhone';
+import { ScrollPhone } from '@/components/case/ScrollPhone';
 
 /**
  * Case study — Fiche salarié redesign · Staff & Go.
